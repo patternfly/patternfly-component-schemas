@@ -1,5 +1,5 @@
 {
-  "name": "@patternfly/component-metadata",
+  "name": "patternfly-component-schemas",
   "version": "1.0.0",
   "description": "JSON Schema metadata for PatternFly React components",
   "main": "index.js",

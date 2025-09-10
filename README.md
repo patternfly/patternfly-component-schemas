@@ -1,11 +1,11 @@
-# @patternfly/component-metadata
+# patternfly-component-schemas
 
 JSON Schema metadata for PatternFly React components, providing structured validation and documentation for component props.
 
 ## 📦 Installation
 
 ```bash
-npm install @patternfly/component-metadata
+npm install patternfly-component-schemas
 ```
 
 ## 🏗️ Structure
@@ -13,172 +13,111 @@ npm install @patternfly/component-metadata
 This package uses a split structure for optimal performance and modularity:
 
 ```
-@patternfly/component-metadata/
+patternfly-component-schemas/
 ├── components/
 │   ├── AboutModal/
 │   │   ├── schema.json     # JSON Schema for AboutModal props
 │   │   └── index.js        # Component metadata exports
-│   ├── ActionList/
+│   ├── Button/
 │   │   ├── schema.json
 │   │   └── index.js
-│   └── ...
+│   ├── Alert/
+│   │   ├── schema.json
+│   │   └── index.js
+│   └── ... (462 total components)
 ├── scripts/
 │   └── generate-schemas.js # Generation script
 ├── index.js                # Main export file
+├── component-metadata.json # Source metadata (dev only)
 └── package.json
 ```
 
-## 🚀 Usage
+## 🤖 AI Integration
 
-### Import Individual Components
+This package is specifically designed for AI-assisted development tools and Model Context Protocol (MCP) servers. AI systems can consume these schemas to:
 
+- **Understand component structure** and available props
+- **Validate component usage** in generated code
+- **Provide intelligent suggestions** for prop values
+- **Generate documentation** and examples
+- **Assist with component selection** based on requirements
+
+### MCP Server Integration
 ```javascript
-// Import specific component schema
-import { default as AboutModalSchema } from '@patternfly/component-metadata/components/AboutModal';
+// MCP servers can load and query component schemas
+import { componentNames, getComponentSchema } from 'patternfly-component-schemas';
 
-// Or use the named export
-import { schema } from '@patternfly/component-metadata/components/AboutModal';
+// Discover available components
+const components = componentNames; // 462 PatternFly components
 
-// Validate props against schema
-import Ajv from 'ajv';
-const ajv = new Ajv();
-const validate = ajv.compile(AboutModalSchema);
-
-const props = {
-  brandImageAlt: "My App Logo",
-  brandImageSrc: "/logo.png",
-  children: "About my application"
-};
-
-const isValid = validate(props);
-if (!isValid) {
-  console.log(validate.errors);
-}
+// Get detailed component information
+const buttonSchema = await getComponentSchema('Button');
+// Returns: { schema, componentName, propsCount, requiredProps }
 ```
 
-### Import All Schemas
+### AI Assistant Examples
+- **"What props does the Button component accept?"** → AI reads Button schema
+- **"Generate a PatternFly Alert component"** → AI uses Alert schema for validation
+- **"Show me all navigation components"** → AI filters components by name/description
+- **"Create a form with proper PatternFly components"** → AI selects appropriate form components
 
-```javascript
-// Import from main package
-import { 
-  AboutModal, 
-  ActionList, 
-  componentNames,
-  getComponentSchema,
-  getAllSchemas 
-} from '@patternfly/component-metadata';
+## 🔧 Development
 
-// Get component by name (async)
-const schema = await getComponentSchema('AboutModal');
-
-// Get all schemas (async)
-const allSchemas = await getAllSchemas();
-
-// List all available components
-console.log(componentNames); // ['AboutModal', 'ActionList', ...]
-```
-
-### Component Metadata
-
-Each component export includes helpful metadata:
-
-```javascript
-import { 
-  componentName,
-  componentDescription,
-  propsCount,
-  requiredProps 
-} from '@patternfly/component-metadata/components/AboutModal';
-
-console.log(componentName);        // "AboutModal"
-console.log(componentDescription); // "An about modal displays..."
-console.log(propsCount);          // 13
-console.log(requiredProps);       // ["brandImageAlt", "brandImageSrc", "children"]
-```
-
-## 🛠️ Development
-
-### Generating Schemas
-
-To generate component schemas from metadata:
-
+### Building from Source
 ```bash
-# Generate from your metadata file
+# Install dependencies
+npm install
+
+# Regenerate schemas from metadata
 npm run build
 
-# Or run the script directly
-node scripts/generate-schemas.js your-metadata.json
+# Clean and rebuild
+npm run rebuild
 ```
 
-### Input Format
+### Source Data
+The package is generated from `component-metadata.json` which contains the raw PatternFly component metadata for the latest release. This file is included in the git repository for development but excluded from the NPM package.
 
-The generation script expects metadata in this format:
+### Updating Component Metadata
+**Current Process - (Manual)**
+1. Clone https://github.com/patternfly/patternfly-doc-core
+2. Run `npm run build:props` in the doc-core directory
+3. Copy `dist/props.json` content to `component-metadata.json` of this repo. 
+4. Run `npm run build` to regenerate schemas
+5. Test and publish
 
-```json
-{
-  "ComponentName": {
-    "name": "ComponentName",
-    "description": "Component description",
-    "props": [
-      {
-        "name": "propName",
-        "type": "string",
-        "description": "Prop description",
-        "required": true
-      }
-    ]
-  }
-}
-```
+**Future**: This will be automated to sync with PatternFly releases.
 
-### Available Scripts
+## 📊 Package Contents
 
-- `npm run build` - Generate schemas from metadata
-- `npm run clean` - Remove all generated component directories
-- `npm run rebuild` - Clean and rebuild all schemas
+- **462 PatternFly components** with JSON Schema validation
+- **Individual exports** for tree-shaking optimization
+- **TypeScript-friendly** prop definitions
+- **Enum validation** for variant props
+- **Required prop** indicators
+- **Default value** documentation
 
-## 📋 Schema Features
+## 🤖 AI & Tooling Benefits
 
-- ✅ **JSON Schema Draft 7** compliance
-- ✅ **Type validation** for common types (string, boolean, number)
-- ✅ **Required props** validation
-- ✅ **Union types** with enum support
-- ✅ **Complex types** documented in descriptions
-- ✅ **Default values** when available
-- ✅ **React-specific types** (ReactNode, event handlers)
-
-## 🎯 Use Cases
-
-- **Prop Validation**: Validate component props at runtime
-- **Form Generation**: Auto-generate forms from component schemas
-- **Documentation**: Generate prop tables and documentation
-- **IDE Support**: Enhanced autocomplete and validation in editors
-- **Testing**: Validate test fixtures and mock data
-- **AI Development**: Provide structured component information
-
-## 📝 Example Schema
-
-```json
-{
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "type": "object",
-  "title": "AboutModal Props",
-  "description": "Props for the AboutModal component",
-  "properties": {
-    "brandImageSrc": {
-      "type": "string",
-      "description": "The URL of the image for the brand"
-    },
-    "isOpen": {
-      "type": "boolean", 
-      "description": "Flag to show the about modal"
-    }
-  },
-  "required": ["brandImageSrc"],
-  "additionalProperties": false
-}
-```
+This package is specifically designed for:
+- **AI/LLM consumption** via Model Context Protocol
+- **IDE autocompletion** and IntelliSense
+- **Component validation** and linting
+- **Documentation generation** 
+- **Form builders** and UI tools
+- **Code generation** assistants
 
 ## 📄 License
 
 MIT
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Update `component-metadata.json` with your changes
+3. Run `npm run build` to regenerate schemas
+4. Submit a pull request
+
+---
+
+Generated schemas follow [JSON Schema Draft 7](https://json-schema.org/specification-links.html#draft-7) specification.
