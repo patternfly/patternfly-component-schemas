@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "TextInputGroup Props",
+  "description": "Props for the TextInputGroup component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the text input group (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes applied to the text input group container",
+      "type": "string"
+    },
+    "isDisabled": {
+      "description": "Adds disabled styling and a disabled context value which text input group main hooks into for the input itself",
+      "type": "boolean"
+    },
+    "isPlain": {
+      "description": "Flag to indicate the toggle has no border or background",
+      "type": "boolean"
+    },
+    "validated": {
+      "description": "Status variant of the text input group.",
+      "enum": [
+        "success",
+        "warning",
+        "error"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

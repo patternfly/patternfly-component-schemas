@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Progress Props",
+  "description": "Props for the Progress component",
+  "properties": {
+    "aria-label": {
+      "description": "Adds accessible text to the ProgressBar. Required when title not used and there is not any label associated with the progress bar",
+      "type": "string",
+      "default": null
+    },
+    "aria-labelledby": {
+      "description": "Associates the ProgressBar with it's label for accessibility purposes. Required when title not used",
+      "type": "string",
+      "default": null
+    },
+    "className": {
+      "description": "Classname for progress component.",
+      "type": "string",
+      "default": "''"
+    },
+    "helperText": {
+      "description": "Content which can be used to convey additional information about the progress component.\nWe recommend the helper text component as it was designed for this purpose. (React component or element)"
+    },
+    "id": {
+      "description": "DOM id for progress component.",
+      "type": "string",
+      "default": "''"
+    },
+    "isTitleTruncated": {
+      "description": "Indicate whether to truncate the string title",
+      "type": "boolean",
+      "default": false
+    },
+    "label": {
+      "description": "Text description of current progress value to display instead of percentage. (React component or element)",
+      "default": null
+    },
+    "max": {
+      "description": "Maximum value of progress.",
+      "type": "number",
+      "default": 100
+    },
+    "measureLocation": {
+      "description": "Where the measure percent will be located.",
+      "enum": [
+        "outside",
+        "inside",
+        "top",
+        "none"
+      ],
+      "default": "ProgressMeasureLocation.top"
+    },
+    "min": {
+      "description": "Minimal value of progress.",
+      "type": "number",
+      "default": 0
+    },
+    "size": {
+      "description": "Size variant of progress.",
+      "enum": [
+        "sm",
+        "md",
+        "lg"
+      ],
+      "default": null
+    },
+    "title": {
+      "description": "Title above progress. The isTitleTruncated property will only affect string titles. Node title truncation must be handled manually. (React component or element)",
+      "default": "''"
+    },
+    "tooltipPosition": {
+      "description": "Position of the tooltip which is displayed if title is truncated",
+      "enum": [
+        "auto",
+        "top",
+        "bottom",
+        "left",
+        "right"
+      ],
+      "default": "'top'"
+    },
+    "value": {
+      "description": "Actual value of progress.",
+      "type": "number",
+      "default": 0
+    },
+    "valueText": {
+      "description": "Accessible text description of current progress value, for when value is not a percentage. Use with label.",
+      "type": "string",
+      "default": null
+    },
+    "variant": {
+      "description": "Status variant of progress.",
+      "enum": [
+        "danger",
+        "success",
+        "warning"
+      ],
+      "default": null
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,148 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "SearchInput Props",
+  "description": "The main search input component.",
+  "properties": {
+    "advancedSearchDelimiter": {
+      "description": "Delimiter in the query string for pairing attributes with search values.\nRequired whenever attributes are passed as props.",
+      "type": "string"
+    },
+    "appendTo": {
+      "description": "The container to append the menu to.\nIf your menu is being cut off you can append it to an element higher up the DOM tree.\nSome examples:\nappendTo={() => document.body}\nappendTo={document.getElementById('target')}",
+      "enum": [
+        "inline"
+      ]
+    },
+    "areUtilitiesDisplayed": {
+      "description": "Flag to indicate utilities should be displayed. By default if this prop is undefined or false, utilities will only be displayed when the search input has a value.",
+      "type": "boolean"
+    },
+    "aria-label": {
+      "description": "An accessible label for the search input.",
+      "type": "string"
+    },
+    "attributes": {
+      "description": "Array of attribute values used for dynamically generated advanced search. (Type: string[] | SearchInputSearchAttribute[])",
+      "default": []
+    },
+    "className": {
+      "description": "Additional classes added to the advanced search menu.",
+      "type": "string"
+    },
+    "expandableInput": {
+      "description": "Object that makes the search input expandable/collapsible. (Type: SearchInputExpandable)"
+    },
+    "formAdditionalItems": {
+      "description": " (React component or element)"
+    },
+    "hasWordsAttrLabel": {
+      "description": "Attribute label for strings unassociated with one of the provided listed attributes. (React component or element)",
+      "default": "'Has words'"
+    },
+    "hint": {
+      "description": "A suggestion for autocompleting.",
+      "type": "string"
+    },
+    "inputProps": {
+      "description": "Additional props to spread to the search input element. (Type: any)"
+    },
+    "isAdvancedSearchOpen": {
+      "description": "A flag for controlling the open state of a custom advanced search implementation.",
+      "type": "boolean"
+    },
+    "isDisabled": {
+      "description": "Flag indicating if search input is disabled.",
+      "type": "boolean"
+    },
+    "isNextNavigationButtonDisabled": {
+      "description": "Flag indicating if the next navigation button is disabled.",
+      "type": "boolean"
+    },
+    "isPreviousNavigationButtonDisabled": {
+      "description": "Flag indicating if the previous navigation button is disabled.",
+      "type": "boolean"
+    },
+    "name": {
+      "description": "Name attribute for the search input",
+      "type": "string"
+    },
+    "nextNavigationButtonAriaLabel": {
+      "description": "Accessible label for the button to navigate to next result.",
+      "type": "string"
+    },
+    "onChange": {
+      "description": "A callback for when the input value changes. (Function: (event: React.FormEvent<HTMLInputElement>, value: string) => void)"
+    },
+    "onClear": {
+      "description": "A callback for when the user clicks the clear button. (Function: (event: React.SyntheticEvent<HTMLButtonElement>) => void)"
+    },
+    "onNextClick": {
+      "description": "A callback for when the user clicks to navigate to next result. (Function: (event: React.SyntheticEvent<HTMLButtonElement>) => void)"
+    },
+    "onPreviousClick": {
+      "description": "A callback for when the user clicks to navigate to previous result. (Function: (event: React.SyntheticEvent<HTMLButtonElement>) => void)"
+    },
+    "onSearch": {
+      "description": "A callback for when the search button is clicked. (Function: (\n  event: React.SyntheticEvent<HTMLButtonElement>,\n  value: string,\n  attrValueMap: { [key: string]: string }\n) => void)"
+    },
+    "onToggleAdvancedSearch": {
+      "description": "A callback for when the open advanced search button is clicked. (Function: (event: React.SyntheticEvent<HTMLButtonElement>, isOpen?: boolean) => void)"
+    },
+    "openMenuButtonAriaLabel": {
+      "description": "Accessible label for the button which opens the advanced search form menu.",
+      "type": "string"
+    },
+    "placeholder": {
+      "description": "Placeholder text of the search input.",
+      "type": "string"
+    },
+    "previousNavigationButtonAriaLabel": {
+      "description": "Accessible label for the button to navigate to previous result.",
+      "type": "string"
+    },
+    "resetButtonLabel": {
+      "description": "Label for the button which resets the advanced search form and clears the search input.",
+      "type": "string",
+      "default": "'Reset'"
+    },
+    "resultsCount": {
+      "description": "The number of search results returned. Either a total number of results,\nor a string representing the current result over the total number of results. i.e. \"1 / 5\". (Type: number | string)"
+    },
+    "searchInputId": {
+      "description": "Id for the search input",
+      "type": "string"
+    },
+    "submitSearchButtonLabel": {
+      "description": "Label for the button which calls the onSearch event handler.",
+      "type": "string",
+      "default": "'Search'"
+    },
+    "value": {
+      "description": "Value of the search input.",
+      "type": "string",
+      "default": "''"
+    },
+    "zIndex": {
+      "description": "z-index of the advanced search form when appendTo is not inline.",
+      "type": "number"
+    },
+    "getAttrValueMap": {
+      "description": "Function which builds an attribute-value map by parsing the value in the search input. (Function: () => { [key: string]: string })"
+    },
+    "isSearchMenuOpen": {
+      "description": "Flag for toggling the open/close state of the advanced search menu.",
+      "type": "boolean"
+    },
+    "onToggleAdvancedMenu": {
+      "description": "A callback for when the open advanced search button is clicked. (Function: (e: React.SyntheticEvent<HTMLButtonElement>) => void)"
+    },
+    "parentInputRef": {
+      "description": "Ref of the input element within the search input. (Type: React.RefObject<any>)"
+    },
+    "parentRef": {
+      "description": "Ref of the div wrapping the whole search input. (Type: React.RefObject<any>)"
+    }
+  },
+  "additionalProperties": false
+}

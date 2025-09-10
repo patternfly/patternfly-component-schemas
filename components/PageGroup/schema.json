@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "PageGroup Props",
+  "description": "Props for the PageGroup component",
+  "properties": {
+    "aria-label": {
+      "description": "Adds an accessible name to the page group when the hasOverflowScroll prop is set to true.",
+      "type": "string"
+    },
+    "children": {
+      "description": "Content rendered inside of the PageGroup (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes to apply to the PageGroup",
+      "type": "string",
+      "default": "''"
+    },
+    "hasOverflowScroll": {
+      "description": "Flag indicating if the PageGroup has a scrolling overflow",
+      "type": "boolean",
+      "default": false
+    },
+    "hasShadowBottom": {
+      "description": "Modifier indicating if PageGroup should have a shadow at the bottom",
+      "type": "boolean",
+      "default": false
+    },
+    "hasShadowTop": {
+      "description": "Modifier indicating if PageGroup should have a shadow at the top",
+      "type": "boolean",
+      "default": false
+    },
+    "isFilled": {
+      "description": "Enables the page group to fill the available vertical space if true, or disable filling if false.",
+      "type": "boolean"
+    },
+    "stickyOnBreakpoint": {
+      "description": "Modifier indicating if the PageBreadcrumb is sticky to the top or bottom at various breakpoints",
+      "enum": [
+        "top",
+        "bottom",
+        "top",
+        "bottom",
+        "top",
+        "bottom",
+        "top",
+        "bottom",
+        "top",
+        "bottom",
+        "2xl",
+        "top",
+        "bottom"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

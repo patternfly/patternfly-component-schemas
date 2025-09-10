@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ExpandableSectionState Props",
+  "description": "Props for the ExpandableSectionState component",
+  "properties": {
+    "hasToggle": {
+      "description": "",
+      "type": "boolean"
+    },
+    "isExpanded": {
+      "description": "",
+      "type": "boolean"
+    },
+    "previousWidth": {
+      "description": "",
+      "type": "number"
+    }
+  },
+  "required": [
+    "hasToggle",
+    "isExpanded",
+    "previousWidth"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Backdrop Props",
+  "description": "Props for the Backdrop component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the backdrop (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional classes added to the backdrop",
+      "type": "string",
+      "default": "''"
+    }
+  },
+  "additionalProperties": false
+}

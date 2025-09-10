@@ -1,0 +1,160 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Wizard Props",
+  "description": "Props for the Wizard component",
+  "properties": {
+    "appendTo": {
+      "description": "The parent container to append the modal to. Defaults to document.body (Type: HTMLElement | (() => HTMLElement))",
+      "default": null
+    },
+    "backButtonText": {
+      "description": "(Unused if footer is controlled) The Back button text (React component or element)",
+      "default": "'Back'"
+    },
+    "cancelButtonText": {
+      "description": "(Unused if footer is controlled) The Cancel button text (React component or element)",
+      "default": "'Cancel'"
+    },
+    "className": {
+      "description": "Additional classes spread to the Wizard",
+      "type": "string",
+      "default": "''"
+    },
+    "closeButtonAriaLabel": {
+      "description": "(Unused if footer is controlled) aria-label for the close button",
+      "type": "string",
+      "default": "'Close'"
+    },
+    "description": {
+      "description": "The wizard description (React component or element)",
+      "default": "''"
+    },
+    "descriptionComponent": {
+      "description": "Component type of the description",
+      "enum": [
+        "div",
+        "p"
+      ],
+      "default": "'p'"
+    },
+    "descriptionId": {
+      "description": "An optional id for the description",
+      "type": "string"
+    },
+    "footer": {
+      "description": "(Use to control the footer) Passing in a footer component lets you control the buttons yourself (React component or element)",
+      "default": null
+    },
+    "hasDrawer": {
+      "description": "Flag indicating the wizard has a drawer for at least one of the wizard steps",
+      "type": "boolean",
+      "default": false
+    },
+    "hasNoBodyPadding": {
+      "description": "Can remove the default padding around the main body content by setting this to true",
+      "type": "boolean",
+      "default": false
+    },
+    "height": {
+      "description": "Custom height of the wizard (Type: number | string)",
+      "default": null
+    },
+    "hideClose": {
+      "description": "Flag indicating whether the close button should be in the header",
+      "type": "boolean",
+      "default": false
+    },
+    "isDrawerExpanded": {
+      "description": "Flag indicating the wizard drawer is expanded",
+      "type": "boolean",
+      "default": false
+    },
+    "isNavExpandable": {
+      "description": "Flag indicating nav items with sub steps are expandable",
+      "type": "boolean",
+      "default": false
+    },
+    "isOpen": {
+      "description": "Flag indicating Wizard modal is open. Wizard will be placed into a modal if this prop is provided",
+      "type": "boolean",
+      "default": "undefined"
+    },
+    "mainAriaLabel": {
+      "description": "Adds an accessible name to the wizard body when the body content overflows and renders\na scrollbar.",
+      "type": "string",
+      "default": null
+    },
+    "mainAriaLabelledBy": {
+      "description": "Adds an accessible name to the wizard body by passing the the id of one or more elements.\nThe aria-labelledby will only be applied when the body content overflows and renders a scrollbar.",
+      "type": "string",
+      "default": null
+    },
+    "navAriaLabel": {
+      "description": "Aria-label for the Nav",
+      "type": "string",
+      "default": null
+    },
+    "navAriaLabelledBy": {
+      "description": "Sets aria-labelledby on nav element",
+      "type": "string",
+      "default": null
+    },
+    "nextButtonText": {
+      "description": "(Unused if footer is controlled) The Next button text (React component or element)",
+      "default": "'Next'"
+    },
+    "onBack": {
+      "description": "(Unused if footer is controlled) Callback function after Back button is clicked (React component or element)",
+      "default": null
+    },
+    "onClose": {
+      "description": "Callback function to close the wizard (Function: () => void)",
+      "default": "() => undefined as any"
+    },
+    "onCurrentStepChanged": {
+      "description": "Callback function to signal the current step in the wizard (Function: (step: WizardStep) => void)"
+    },
+    "onExpandDrawer": {
+      "description": "Callback function for when the drawer is toggled. Can be used to set browser focus in the drawer. (Function: () => void)",
+      "default": "() => undefined as any"
+    },
+    "onGoToStep": {
+      "description": "Callback function when a step in the nav is clicked (React component or element)",
+      "default": null
+    },
+    "onNext": {
+      "description": "(Unused if footer is controlled) Callback function after Next button is clicked (React component or element)",
+      "default": null
+    },
+    "onSave": {
+      "description": "(Unused if footer is controlled) Callback function to save at the end of the wizard, if not specified uses onClose (Function: () => void)"
+    },
+    "startAtStep": {
+      "description": "The current step the wizard is on (1 or higher)",
+      "type": "number",
+      "default": 1
+    },
+    "steps": {
+      "description": "The wizard steps configuration object (Type: WizardStep[])",
+      "type": "array"
+    },
+    "title": {
+      "description": "The wizard title to display if header is desired",
+      "type": "string",
+      "default": null
+    },
+    "titleId": {
+      "description": "An optional id for the title",
+      "type": "string"
+    },
+    "width": {
+      "description": "Custom width of the wizard (Type: number | string)",
+      "default": null
+    }
+  },
+  "required": [
+    "steps"
+  ],
+  "additionalProperties": false
+}

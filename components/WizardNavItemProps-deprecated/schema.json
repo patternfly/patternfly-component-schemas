@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "WizardNavItemProps Props",
+  "description": "Props for the WizardNavItemProps component",
+  "properties": {
+    "children": {
+      "description": "Can nest a WizardNav component for substeps (React component or element)"
+    },
+    "content": {
+      "description": "The content to display in the nav item (React component or element)"
+    },
+    "href": {
+      "description": "An optional url to use for when using an anchor component",
+      "type": "string"
+    },
+    "id": {
+      "description": "The id for the nav item (Type: string | number)"
+    },
+    "isCurrent": {
+      "description": "Whether the nav item is the currently active item",
+      "type": "boolean"
+    },
+    "isDisabled": {
+      "description": "Whether the nav item is disabled",
+      "type": "boolean"
+    },
+    "isExpandable": {
+      "description": "Flag indicating that this NavItem has child steps and is expandable",
+      "type": "boolean"
+    },
+    "navItemComponent": {
+      "description": "Component used to render WizardNavItem",
+      "enum": [
+        "button",
+        "a"
+      ]
+    },
+    "onNavItemClick": {
+      "description": "Callback for when the nav item is clicked (Function: (step: number) => any)"
+    },
+    "step": {
+      "description": "The step passed into the onNavItemClick callback",
+      "type": "number"
+    }
+  },
+  "required": [
+    "step"
+  ],
+  "additionalProperties": false
+}

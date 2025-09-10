@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "CustomWizardNavItemFunction Props",
+  "description": "Callback for the Wizard's 'navItem' property. Returns element which replaces the WizardStep's default navigation item.",
+  "properties": {},
+  "additionalProperties": false
+}

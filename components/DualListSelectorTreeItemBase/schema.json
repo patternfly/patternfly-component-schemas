@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DualListSelectorTreeItemBase Props",
+  "description": "Props for the DualListSelectorTreeItemBase component",
+  "properties": {
+    "badgeProps": {
+      "description": "Additional properties to pass to the option badge. (Type: any)"
+    },
+    "checkProps": {
+      "description": "Additional properties to pass to the option checkbox. (Type: any)"
+    },
+    "children": {
+      "description": "Content rendered inside the dual list selector. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes applied to the dual list selector.",
+      "type": "string"
+    },
+    "defaultExpanded": {
+      "description": "Flag indicating this option is expanded by default.",
+      "type": "boolean"
+    },
+    "hasBadge": {
+      "description": "Flag indicating this option has a badge.",
+      "type": "boolean"
+    },
+    "id": {
+      "description": "ID of the option.",
+      "type": "string"
+    },
+    "isChecked": {
+      "description": "Flag indicating if this open is checked.",
+      "type": "boolean"
+    },
+    "isDisabled": {
+      "description": "Flag indicating whether the component is disabled.",
+      "type": "boolean",
+      "default": false
+    },
+    "itemData": {
+      "description": "Raw data of the option. (Type: DualListSelectorTreeItemData)"
+    },
+    "onOptionCheck": {
+      "description": "Callback fired when an option is checked. (Type: (\n  event: React.MouseEvent | React.ChangeEvent<HTMLInputElement> | React.KeyboardEvent,\n  isChecked: boolean,\n  itemData: DualListSelectorTreeItemData\n) => void)"
+    },
+    "text": {
+      "description": "Text of the option.",
+      "type": "string"
+    },
+    "useMemo": {
+      "description": "Flag indicating the DualListSelector tree should utilize memoization to help render large data sets.",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "text"
+  ],
+  "additionalProperties": false
+}

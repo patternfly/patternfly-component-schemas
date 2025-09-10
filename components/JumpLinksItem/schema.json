@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "JumpLinksItem Props",
+  "description": "Props for the JumpLinksItem component",
+  "properties": {
+    "children": {
+      "description": "Text to be rendered inside span (React component or element)"
+    },
+    "className": {
+      "description": "Class to add to li",
+      "type": "string"
+    },
+    "href": {
+      "description": "Href for this link",
+      "type": "string"
+    },
+    "isActive": {
+      "description": "Whether this item is active. Parent JumpLinks component sets this when passed a `scrollableSelector`.",
+      "type": "boolean"
+    },
+    "node": {
+      "description": "Selector or HTMLElement to spy on (Type: string | HTMLElement)"
+    },
+    "onClick": {
+      "description": "Click handler for anchor tag. Parent JumpLinks components tap into this. (Function: (ev: React.MouseEvent) => void)"
+    }
+  },
+  "required": [
+    "href"
+  ],
+  "additionalProperties": false
+}

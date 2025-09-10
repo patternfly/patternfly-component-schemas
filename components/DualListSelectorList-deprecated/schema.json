@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DualListSelectorList Props",
+  "description": "Acts as the container for DualListSelectorListItem sub-components.",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the dual list selector list (React component or element)"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "TreeViewSearch Props",
+  "description": "Renders a search input for the tree view. This sub-component should be passed into the\ntree view component's toolbar property.",
+  "properties": {
+    "aria-label": {
+      "description": "Accessible label for the search input.",
+      "type": "string"
+    },
+    "className": {
+      "description": "Classes applied to the wrapper for the search input.",
+      "type": "string"
+    },
+    "id": {
+      "description": "Id for the search input.",
+      "type": "string"
+    },
+    "name": {
+      "description": "Name for the search input.",
+      "type": "string"
+    },
+    "onSearch": {
+      "description": "Callback for search input. (Function: (event: React.ChangeEvent<HTMLInputElement>) => void)"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,94 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Divider Props",
+  "description": "Props for the Divider component",
+  "properties": {
+    "className": {
+      "description": "Additional classes added to the divider",
+      "type": "string"
+    },
+    "component": {
+      "description": "The component type to use",
+      "enum": [
+        "hr",
+        "li",
+        "div"
+      ],
+      "default": "DividerVariant.hr"
+    },
+    "inset": {
+      "description": "Insets at various breakpoints.",
+      "enum": [
+        "insetNone",
+        "insetXs",
+        "insetSm",
+        "insetMd",
+        "insetLg",
+        "insetXl",
+        "inset2xl",
+        "inset3xl",
+        "insetNone",
+        "insetXs",
+        "insetSm",
+        "insetMd",
+        "insetLg",
+        "insetXl",
+        "inset2xl",
+        "inset3xl",
+        "insetNone",
+        "insetXs",
+        "insetSm",
+        "insetMd",
+        "insetLg",
+        "insetXl",
+        "inset2xl",
+        "inset3xl",
+        "insetNone",
+        "insetXs",
+        "insetSm",
+        "insetMd",
+        "insetLg",
+        "insetXl",
+        "inset2xl",
+        "inset3xl",
+        "insetNone",
+        "insetXs",
+        "insetSm",
+        "insetMd",
+        "insetLg",
+        "insetXl",
+        "inset2xl",
+        "inset3xl",
+        "2xl",
+        "insetNone",
+        "insetXs",
+        "insetSm",
+        "insetMd",
+        "insetLg",
+        "insetXl",
+        "inset2xl",
+        "inset3xl"
+      ]
+    },
+    "orientation": {
+      "description": "Indicates how the divider will display at various breakpoints. Vertical divider must be in a flex layout.",
+      "enum": [
+        "vertical",
+        "horizontal",
+        "vertical",
+        "horizontal",
+        "vertical",
+        "horizontal",
+        "vertical",
+        "horizontal",
+        "vertical",
+        "horizontal",
+        "2xl",
+        "vertical",
+        "horizontal"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

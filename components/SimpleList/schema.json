@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "SimpleList Props",
+  "description": "Props for the SimpleList component",
+  "properties": {
+    "aria-label": {
+      "description": "aria-label for the <ul> element that wraps the SimpleList items.",
+      "type": "string"
+    },
+    "children": {
+      "description": "Content rendered inside the SimpleList (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional classes added to the SimpleList container",
+      "type": "string",
+      "default": "''"
+    },
+    "isControlled": {
+      "description": "Indicates whether component is controlled by its internal state",
+      "type": "boolean",
+      "default": true
+    },
+    "onSelect": {
+      "description": "Callback when an item is selected (Type: (\n  ref: React.RefObject<HTMLButtonElement | null> | React.RefObject<HTMLAnchorElement | null>,\n  props: SimpleListItemProps\n) => void)"
+    }
+  },
+  "additionalProperties": false
+}

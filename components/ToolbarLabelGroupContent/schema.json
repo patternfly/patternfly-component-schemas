@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ToolbarLabelGroupContent Props",
+  "description": "Props for the ToolbarLabelGroupContent component",
+  "properties": {
+    "className": {
+      "description": "Classes applied to root element of the data toolbar content row",
+      "type": "string"
+    },
+    "clearAllFilters": {
+      "description": "optional callback for clearing all filters in the toolbar (Function: () => void)"
+    },
+    "clearFiltersButtonText": {
+      "description": "Text to display in the clear all filters button",
+      "type": "string",
+      "default": "'Clear all filters'"
+    },
+    "collapseListedFiltersBreakpoint": {
+      "description": "The breakpoint at which the listed filters in label groups are collapsed down to a summary",
+      "enum": [
+        "all",
+        "md",
+        "lg",
+        "xl",
+        "2xl"
+      ],
+      "default": "'lg'"
+    },
+    "customLabelGroupContent": {
+      "description": "Custom additional content appended to the generated labels. To maintain spacing and styling, each node should be a ToolbarItem or ToolbarGroup. This property will remove the built in \"Clear all filters\" button. (React component or element)"
+    },
+    "isExpanded": {
+      "description": "Flag indicating if a data toolbar toggle group's expandable content is expanded",
+      "type": "boolean"
+    },
+    "labelGroupContentRef": {
+      "description": "Label group content reference for passing to data toolbar children (Type: RefObject<any>)"
+    },
+    "numberOfFilters": {
+      "description": "Total number of filters currently being applied across all ToolbarFilter components",
+      "type": "number"
+    },
+    "numberOfFiltersText": {
+      "description": "Text to display in the total number of applied filters ToolbarFilter (Function: (numberOfFilters: number) => string)",
+      "default": "(numberOfFilters: number) => `${numberOfFilters} filters applied`"
+    },
+    "showClearFiltersButton": {
+      "description": "Flag indicating that the clear all filters button should be visible",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "numberOfFilters",
+    "showClearFiltersButton"
+  ],
+  "additionalProperties": false
+}

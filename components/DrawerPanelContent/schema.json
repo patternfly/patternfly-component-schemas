@@ -1,0 +1,97 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DrawerPanelContent Props",
+  "description": "Props for the DrawerPanelContent component",
+  "properties": {
+    "children": {
+      "description": "Content to be rendered in the drawer panel. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the drawer.",
+      "type": "string"
+    },
+    "colorVariant": {
+      "description": "Color variant of the background of the drawer panel",
+      "enum": [
+        "no-background",
+        "default",
+        "secondary"
+      ],
+      "default": "DrawerColorVariant.default"
+    },
+    "defaultSize": {
+      "description": "The starting size of a drawer.",
+      "type": "string"
+    },
+    "focusTrap": {
+      "description": "Adds and customizes a focus trap on the drawer panel content. (Type: DrawerPanelFocusTrapObject)"
+    },
+    "hasNoBorder": {
+      "description": "Flag indicating that the drawer panel should not have a border.",
+      "type": "boolean",
+      "default": false
+    },
+    "id": {
+      "description": "ID of the drawer panel",
+      "type": "string"
+    },
+    "increment": {
+      "description": "The increment amount for keyboard drawer resizing.",
+      "type": "number",
+      "default": 5
+    },
+    "isResizable": {
+      "description": "Flag indicating that the drawer panel should be resizable.",
+      "type": "boolean",
+      "default": false
+    },
+    "maxSize": {
+      "description": "The maximum size of a drawer.",
+      "type": "string"
+    },
+    "minSize": {
+      "description": "The minimum size of a drawer.",
+      "type": "string"
+    },
+    "onResize": {
+      "description": "Callback for resize end. (Type: (event: MouseEvent | TouchEvent | React.KeyboardEvent, width: number, id: string) => void)"
+    },
+    "resizeAriaLabel": {
+      "description": "Aria label for the resizable drawer splitter.",
+      "type": "string",
+      "default": "'Resize'"
+    },
+    "widths": {
+      "description": "Width for drawer panel at various breakpoints. Overridden by resizable drawer minSize and defaultSize.",
+      "enum": [
+        "width_25",
+        "width_33",
+        "width_50",
+        "width_66",
+        "width_75",
+        "width_100",
+        "width_25",
+        "width_33",
+        "width_50",
+        "width_66",
+        "width_75",
+        "width_100",
+        "width_25",
+        "width_33",
+        "width_50",
+        "width_66",
+        "width_75",
+        "width_100",
+        "2xl",
+        "width_25",
+        "width_33",
+        "width_50",
+        "width_66",
+        "width_75",
+        "width_100"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

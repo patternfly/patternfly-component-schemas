@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "SkipToContent Props",
+  "description": "Props for the SkipToContent component",
+  "properties": {
+    "children": {
+      "description": "Content to display within the skip to content component, typically a string. (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional styles to apply to the skip to content component.",
+      "type": "string",
+      "default": "''"
+    },
+    "href": {
+      "description": "The skip to content link.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "href"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "CardSelectableActions Props",
+  "description": "Props for the CardSelectableActions component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the card action (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the action",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "LoginFooterItem Props",
+  "description": "Props for the LoginFooterItem component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the footer link item (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional classes added to the footer link item",
+      "type": "string"
+    },
+    "href": {
+      "description": "The URL of the footer link item",
+      "type": "string",
+      "default": "'#'"
+    },
+    "target": {
+      "description": "Specifies where to open the linked document",
+      "type": "string",
+      "default": "'_blank'"
+    }
+  },
+  "additionalProperties": false
+}

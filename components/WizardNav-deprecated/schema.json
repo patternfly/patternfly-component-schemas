@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "WizardNav Props",
+  "description": "Props for the WizardNav component",
+  "properties": {
+    "aria-label": {
+      "description": "Aria-label applied to the nav element",
+      "type": "string"
+    },
+    "aria-labelledby": {
+      "description": "Sets the aria-labelledby attribute on the nav element",
+      "type": "string"
+    },
+    "children": {
+      "description": "children should be WizardNavItem components (Type: any)"
+    },
+    "isOpen": {
+      "description": "Whether the nav is expanded",
+      "type": "boolean",
+      "default": false
+    },
+    "ouiaId": {
+      "description": " (Type: number | string)"
+    },
+    "ouiaSafe": {
+      "description": "",
+      "type": "boolean",
+      "default": true
+    },
+    "returnList": {
+      "description": "True to return the inner list without the wrapping nav element",
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "additionalProperties": false
+}

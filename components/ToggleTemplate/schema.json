@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ToggleTemplate Props",
+  "description": "Props for the ToggleTemplate component",
+  "properties": {
+    "firstIndex": {
+      "description": "The first index of the items being paginated",
+      "type": "number",
+      "default": 0
+    },
+    "itemCount": {
+      "description": "The total number of items being paginated",
+      "type": "number",
+      "default": 0
+    },
+    "itemsTitle": {
+      "description": "The type or title of the items being paginated",
+      "type": "string",
+      "default": "'items'"
+    },
+    "lastIndex": {
+      "description": "The last index of the items being paginated",
+      "type": "number",
+      "default": 0
+    },
+    "ofWord": {
+      "description": "The word that joins the index and itemCount/itemsTitle (React component or element)",
+      "default": "'of'"
+    }
+  },
+  "additionalProperties": false
+}

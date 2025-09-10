@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ActionListItem Props",
+  "description": "Props for the ActionListItem component",
+  "properties": {
+    "children": {
+      "description": "Children of the action list item (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the action list item",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

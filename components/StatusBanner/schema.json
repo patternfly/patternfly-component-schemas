@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "StatusBanner Props",
+  "description": "Props for the StatusBanner component",
+  "properties": {
+    "color": {
+      "description": " (Type: never)"
+    },
+    "status": {
+      "description": " (Type: BannerStatus)"
+    }
+  },
+  "additionalProperties": false
+}

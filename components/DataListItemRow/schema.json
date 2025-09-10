@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DataListItemRow Props",
+  "description": "Props for the DataListItemRow component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the DataListItemRow (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the DataListItemRow",
+      "type": "string",
+      "default": "''"
+    },
+    "rowid": {
+      "description": "Id for the row item",
+      "type": "string",
+      "default": "''"
+    },
+    "wrapModifier": {
+      "description": "Determines which wrapping modifier to apply to the DataListItemRow",
+      "enum": [
+        "nowrap",
+        "truncate",
+        "breakWord"
+      ],
+      "default": null
+    }
+  },
+  "required": [
+    "children"
+  ],
+  "additionalProperties": false
+}

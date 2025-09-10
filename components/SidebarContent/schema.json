@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "SidebarContent Props",
+  "description": "Props for the SidebarContent component",
+  "properties": {
+    "backgroundVariant": {
+      "description": "Variant of the sidebar content background.",
+      "enum": [
+        "default",
+        "secondary"
+      ],
+      "default": "'default'"
+    },
+    "children": {
+      "description": " (React component or element)"
+    },
+    "hasNoBackground": {
+      "description": "Removes the background color.",
+      "type": "boolean"
+    },
+    "hasPadding": {
+      "description": "Adds padding to the content.",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "children"
+  ],
+  "additionalProperties": false
+}

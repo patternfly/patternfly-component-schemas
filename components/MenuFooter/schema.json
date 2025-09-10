@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "MenuFooter Props",
+  "description": "Props for the MenuFooter component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the footer (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the footer",
+      "type": "string",
+      "default": "''"
+    }
+  },
+  "additionalProperties": false
+}

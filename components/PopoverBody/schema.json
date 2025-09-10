@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "PopoverBody Props",
+  "description": "Props for the PopoverBody component",
+  "properties": {
+    "children": {
+      "description": "Popover body content (React component or element)"
+    },
+    "className": {
+      "description": "Classes to be applied to the popover body.",
+      "type": "string"
+    },
+    "id": {
+      "description": "Popover body id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "children",
+    "id"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "PaginationTitles Props",
+  "description": "Properties to customize various pagination titles. The following properties should be\npassed into the pagination component's title property.",
+  "properties": {
+    "currPageAriaLabel": {
+      "description": "Accessible label for the input displaying the current page.",
+      "type": "string"
+    },
+    "items": {
+      "description": "The type or title of the items being paginated.",
+      "type": "string"
+    },
+    "itemsPerPage": {
+      "description": "The title of the pagination options menu.",
+      "type": "string"
+    },
+    "ofWord": {
+      "description": "Label for the English word \"of\".",
+      "type": "string"
+    },
+    "optionsToggleAriaLabel": {
+      "description": "Accessible label for the options toggle.",
+      "type": "string"
+    },
+    "page": {
+      "description": "The title of a page displayed beside the page number.",
+      "type": "string"
+    },
+    "pages": {
+      "description": "The title of a page displayed beside the page number (plural form).",
+      "type": "string"
+    },
+    "paginationAriaLabel": {
+      "description": "Accessible label for the pagination component.",
+      "type": "string"
+    },
+    "perPageSuffix": {
+      "description": "The suffix to be displayed after each option on the options menu dropdown.",
+      "type": "string"
+    },
+    "toFirstPageAriaLabel": {
+      "description": "Accessible label for the button which moves to the first page.",
+      "type": "string"
+    },
+    "toLastPageAriaLabel": {
+      "description": "Accessible label for the button which moves to the last page.",
+      "type": "string"
+    },
+    "toNextPageAriaLabel": {
+      "description": "Accessible label for the button which moves to the next page.",
+      "type": "string"
+    },
+    "toPreviousPageAriaLabel": {
+      "description": "Accessible label for the button which moves to the previous page.",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

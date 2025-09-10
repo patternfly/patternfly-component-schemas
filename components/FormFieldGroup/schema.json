@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "FormFieldGroup Props",
+  "description": "Props for the FormFieldGroup component",
+  "properties": {
+    "children": {
+      "description": "Anything that can be rendered as form field group content. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the form field group.",
+      "type": "string"
+    },
+    "header": {
+      "description": "Form field group header (React component or element)"
+    }
+  },
+  "additionalProperties": false
+}

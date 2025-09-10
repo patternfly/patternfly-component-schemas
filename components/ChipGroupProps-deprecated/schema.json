@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ChipGroupProps Props",
+  "description": "Props for the ChipGroupProps component",
+  "properties": {
+    "categoryName": {
+      "description": "Category name text for the chip group category.  If this prop is supplied the chip group with have a label and category styling applied",
+      "type": "string"
+    },
+    "children": {
+      "description": "Content rendered inside the chip group. Should be <Chip> elements. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the chip item",
+      "type": "string"
+    },
+    "closeBtnAriaLabel": {
+      "description": "Aria label for close button",
+      "type": "string"
+    },
+    "collapsedText": {
+      "description": "Customizable template string. Use variable \"${remaining}\" for the overflow chip count.",
+      "type": "string"
+    },
+    "defaultIsOpen": {
+      "description": "Flag for having the chip group default to expanded",
+      "type": "boolean"
+    },
+    "expandedText": {
+      "description": "Customizable \"Show Less\" text string",
+      "type": "string"
+    },
+    "isClosable": {
+      "description": "Flag if chip group can be closed",
+      "type": "boolean"
+    },
+    "numChips": {
+      "description": "Set number of chips to show before overflow",
+      "type": "number"
+    },
+    "onClick": {
+      "description": "Function that is called when clicking on the chip group close button or on an overflow chip (Function: (event: React.MouseEvent) => void)"
+    },
+    "onOverflowChipClick": {
+      "description": " (Function: (event: React.MouseEvent) => void)"
+    },
+    "ouiaId": {
+      "description": "Value to overwrite the randomly generated data-ouia-component-id. (Type: number | string)"
+    },
+    "tooltipPosition": {
+      "description": "Position of the tooltip which is displayed if the category name text is longer",
+      "enum": [
+        "auto",
+        "top",
+        "bottom",
+        "left",
+        "right",
+        "top-start",
+        "top-end",
+        "bottom-start",
+        "bottom-end",
+        "left-start",
+        "left-end",
+        "right-start",
+        "right-end"
+      ]
+    },
+    "Unknown": {
+      "description": "Aria label for chip group that does not have a category name",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

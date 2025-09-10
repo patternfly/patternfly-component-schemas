@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Breadcrumb Props",
+  "description": "Props for the Breadcrumb component",
+  "properties": {
+    "aria-label": {
+      "description": "Aria label added to the breadcrumb nav.",
+      "type": "string",
+      "default": "'Breadcrumb'"
+    },
+    "children": {
+      "description": "Children nodes be rendered to the BreadCrumb. Should be of type BreadCrumbItem. (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional classes added to the breadcrumb nav.",
+      "type": "string",
+      "default": "''"
+    },
+    "ouiaId": {
+      "description": "Value to overwrite the randomly generated data-ouia-component-id. (Type: number | string)"
+    },
+    "ouiaSafe": {
+      "description": "Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false.",
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "additionalProperties": false
+}

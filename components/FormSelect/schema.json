@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "FormSelect Props",
+  "description": "Props for the FormSelect component",
+  "properties": {
+    "aria-label": {
+      "description": "Custom flag to show that the FormSelect requires an associated id or aria-label.",
+      "type": "string"
+    },
+    "children": {
+      "description": "content rendered inside the FormSelect (React component or element)"
+    },
+    "className": {
+      "description": "additional classes added to the FormSelect control",
+      "type": "string",
+      "default": "''"
+    },
+    "isDisabled": {
+      "description": "Flag indicating the FormSelect is disabled",
+      "type": "boolean",
+      "default": false
+    },
+    "isRequired": {
+      "description": "Sets the FormSelect required.",
+      "type": "boolean",
+      "default": false
+    },
+    "onBlur": {
+      "description": "Optional callback for updating when selection loses focus (Function: (event: React.FormEvent<HTMLSelectElement>) => void)",
+      "default": "(): any => undefined"
+    },
+    "onChange": {
+      "description": "Optional callback for updating when selection changes (Function: (event: React.FormEvent<HTMLSelectElement>, value: string) => void)",
+      "default": "(): any => undefined"
+    },
+    "onFocus": {
+      "description": "Optional callback for updating when selection gets focus (Function: (event: React.FormEvent<HTMLSelectElement>) => void)",
+      "default": "(): any => undefined"
+    },
+    "ouiaId": {
+      "description": "Value to overwrite the randomly generated data-ouia-component-id. (Type: number | string)"
+    },
+    "ouiaSafe": {
+      "description": "Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false.",
+      "type": "boolean",
+      "default": true
+    },
+    "validated": {
+      "description": "Value to indicate if the select is modified to show that validation state.\nIf set to success, select will be modified to indicate valid state.\nIf set to error, select will be modified to indicate error state.",
+      "enum": [
+        "success",
+        "warning",
+        "error",
+        "default"
+      ],
+      "default": "'default'"
+    },
+    "value": {
+      "description": "value of selected option (Type: any)",
+      "default": "''"
+    }
+  },
+  "required": [
+    "children"
+  ],
+  "additionalProperties": false
+}

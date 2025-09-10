@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "MultipleFileUpload Props",
+  "description": "Acts as a container for all other MultipleFileUpload sub-components. This sub-component\nalso provides the functionality for file uploads, and access to the uploaded files via\na callback.",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the multi upload field (React component or element)"
+    },
+    "className": {
+      "description": "Class to add to outer div",
+      "type": "string"
+    },
+    "dropzoneProps": {
+      "description": "Optional extra props to customize react-dropzone. (Type: DropzoneOptions)",
+      "default": {}
+    },
+    "isHorizontal": {
+      "description": "Flag setting the component to horizontal styling mode",
+      "type": "boolean"
+    },
+    "onFileDrop": {
+      "description": "When files are dropped or uploaded this callback will be called with all accepted files (Type: (event: DropEvent, data: File[]) => void)",
+      "type": "array",
+      "default": "() => {}"
+    }
+  },
+  "additionalProperties": false
+}

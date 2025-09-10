@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "MastheadLogo Props",
+  "description": "Props for the MastheadLogo component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside of the masthead logo. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the masthead logo.",
+      "type": "string"
+    },
+    "component": {
+      "description": "Component type of the masthead logo. (Type: React.ElementType<any> | React.ComponentType<any>)"
+    }
+  },
+  "additionalProperties": false
+}

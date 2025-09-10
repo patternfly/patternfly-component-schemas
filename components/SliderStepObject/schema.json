@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "SliderStepObject Props",
+  "description": "Properties for creating custom steps in a slider. These properties should be passed in as\nan object within an array to the slider component's customSteps property.",
+  "properties": {
+    "isLabelHidden": {
+      "description": "Flag to hide the label.",
+      "type": "boolean"
+    },
+    "label": {
+      "description": "The display label for the step value. This is also used for the aria-valuetext attribute.",
+      "type": "string"
+    },
+    "value": {
+      "description": "Value of the step. This value is a percentage of the slider where the tick is drawn.",
+      "type": "number"
+    }
+  },
+  "required": [
+    "label",
+    "value"
+  ],
+  "additionalProperties": false
+}

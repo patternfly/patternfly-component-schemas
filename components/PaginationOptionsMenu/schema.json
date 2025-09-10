@@ -1,0 +1,126 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "PaginationOptionsMenu Props",
+  "description": "Props for the PaginationOptionsMenu component",
+  "properties": {
+    "appendTo": {
+      "description": "The container to append the pagination options menu to. Overrides the containerRef prop.",
+      "enum": [
+        "inline"
+      ]
+    },
+    "className": {
+      "description": "Custom class name added to the pagination options menu.",
+      "type": "string"
+    },
+    "containerRef": {
+      "description": "React ref for the container to append the options menu to. This is a static ref provided by the main pagination component. (Type: React.RefObject<HTMLDivElement | null>)"
+    },
+    "dropDirection": {
+      "description": "Menu will open up or open down from the options menu toggle.",
+      "enum": [
+        "up",
+        "down"
+      ],
+      "default": "'down'"
+    },
+    "firstIndex": {
+      "description": "The first index of the items being paginated.",
+      "type": "number",
+      "default": 0
+    },
+    "focusTimeoutDelay": {
+      "description": "Time in ms to wait before firing the toggles' focus event. Defaults to 0",
+      "type": "number",
+      "default": 0
+    },
+    "isDisabled": {
+      "description": "Flag indicating if pagination options menu is disabled.",
+      "type": "boolean",
+      "default": false
+    },
+    "isLastFullPageShown": {
+      "description": "Flag to indicate whether to show last full page of results when user selects perPage\nvalue that is greater than remaining rows.",
+      "type": "boolean",
+      "default": false
+    },
+    "itemCount": {
+      "description": "The total number of items being paginated.",
+      "type": "number"
+    },
+    "itemsPerPageTitle": {
+      "description": "The title of the pagination options menu.",
+      "type": "string",
+      "default": "'Items per page'"
+    },
+    "itemsTitle": {
+      "description": "The type or title of the items being paginated.",
+      "type": "string",
+      "default": "''"
+    },
+    "lastIndex": {
+      "description": "The last index of the items being paginated.",
+      "type": "number",
+      "default": 0
+    },
+    "lastPage": {
+      "description": "The number of the last page.",
+      "type": "number"
+    },
+    "minWidth": {
+      "description": "Minimum width of the pagination options menu. If set to \"trigger\", the minimum width will be set to the toggle width.",
+      "enum": [
+        "trigger"
+      ]
+    },
+    "ofWord": {
+      "description": "Label for the English word \"of\".",
+      "type": "string",
+      "default": "'of'"
+    },
+    "onPerPageSelect": {
+      "description": "Function called when user selects number of items per page. (Type: (\n  event: React.MouseEvent | React.KeyboardEvent | MouseEvent,\n  newPerPage: number,\n  newPage: number,\n  startIdx?: number,\n  endIdx?: number\n) => void)",
+      "default": "() => null as any"
+    },
+    "optionsToggleAriaLabel": {
+      "description": "Accessible label for the options toggle.",
+      "type": "string"
+    },
+    "page": {
+      "description": "Current page number.",
+      "type": "number"
+    },
+    "perPage": {
+      "description": "The number of items to be displayed per page.",
+      "type": "number",
+      "default": 0
+    },
+    "perPageOptions": {
+      "description": "Array of titles and values which will be the options on the options menu dropdown. (Type: PerPageOptions[])",
+      "type": "array",
+      "default": []
+    },
+    "perPageSuffix": {
+      "description": "The suffix to be displayed after each option on the options menu dropdown.",
+      "type": "string",
+      "default": "'per page'"
+    },
+    "shouldPreventScrollOnItemFocus": {
+      "description": "Flag indicating if scroll on focus of the first menu item should occur.",
+      "type": "boolean",
+      "default": true
+    },
+    "toggleTemplate": {
+      "description": "This will be shown in pagination toggle span. You can use firstIndex, lastIndex,\nitemCount, and/or itemsTitle props. (Type: ((props: PaginationToggleTemplateProps) => React.ReactElement<any>) | string)"
+    },
+    "widgetId": {
+      "description": "Id added to the title of the pagination options menu.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "toggleTemplate"
+  ],
+  "additionalProperties": false
+}

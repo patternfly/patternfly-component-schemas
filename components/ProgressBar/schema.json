@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ProgressBar Props",
+  "description": "Props for the ProgressBar component",
+  "properties": {
+    "children": {
+      "description": "What should be rendered inside progress bar. (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional classes for Progres bar.",
+      "type": "string",
+      "default": "''"
+    },
+    "progressBarAriaProps": {
+      "description": "Minimal value of progress. (Type: AriaProps)"
+    },
+    "value": {
+      "description": "Actual progress value.",
+      "type": "number"
+    }
+  },
+  "required": [
+    "value"
+  ],
+  "additionalProperties": false
+}

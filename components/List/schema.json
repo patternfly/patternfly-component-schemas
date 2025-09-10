@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "List Props",
+  "description": "Props for the List component",
+  "properties": {
+    "aria-label": {
+      "description": "Adds an accessible label to the list.",
+      "type": "string"
+    },
+    "children": {
+      "description": "Anything that can be rendered inside of the list (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional classes added to the list",
+      "type": "string",
+      "default": "''"
+    },
+    "component": {
+      "description": "Sets the type of the list component.",
+      "enum": [
+        "ol",
+        "ul"
+      ],
+      "default": "ListComponent.ul"
+    },
+    "iconSize": {
+      "description": "Modifies the size of the icons in the list",
+      "enum": [
+        "default",
+        "large"
+      ],
+      "default": "'default'"
+    },
+    "isBordered": {
+      "description": "Modifies the list to add borders between items",
+      "type": "boolean",
+      "default": false
+    },
+    "isPlain": {
+      "description": "Modifies the list to include plain styling",
+      "type": "boolean",
+      "default": false
+    },
+    "ref": {
+      "description": " (Type: No type info)",
+      "default": null
+    },
+    "type": {
+      "description": "Sets the way items are numbered if component is set to \"ol\". (Type: OrderType)",
+      "default": "OrderType.number"
+    },
+    "variant": {
+      "description": "Adds list variant styles (Type: ListVariant.inline)",
+      "default": null
+    }
+  },
+  "additionalProperties": false
+}

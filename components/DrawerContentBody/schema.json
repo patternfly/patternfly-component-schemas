@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DrawerContentBody Props",
+  "description": "Props for the DrawerContentBody component",
+  "properties": {
+    "children": {
+      "description": "Content to be rendered in the drawer (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the Drawer.",
+      "type": "string",
+      "default": "''"
+    },
+    "hasPadding": {
+      "description": "Indicates if there should be padding around the drawer content body",
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "NotificationDrawerListItem Props",
+  "description": "Props for the NotificationDrawerListItem component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the list item (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional classes added to the list item",
+      "type": "string",
+      "default": "''"
+    },
+    "isHoverable": {
+      "description": "Modifies the list item to include hover styles on :hover",
+      "type": "boolean",
+      "default": true
+    },
+    "isRead": {
+      "description": "Adds styling to the list item to indicate it has been read",
+      "type": "boolean",
+      "default": false
+    },
+    "onClick": {
+      "description": "Callback for when a list item is clicked (Function: (event: any) => void)",
+      "default": "(event: React.MouseEvent) => undefined as any"
+    },
+    "readStateScreenReaderText": {
+      "description": "Visually hidden text that conveys the current read state of the notification list item",
+      "type": "string"
+    },
+    "tabIndex": {
+      "description": "Tab index for the list item",
+      "type": "number",
+      "default": 0
+    },
+    "variant": {
+      "description": "Variant indicates the severity level",
+      "enum": [
+        "custom",
+        "success",
+        "danger",
+        "warning",
+        "info"
+      ],
+      "default": "'custom'"
+    }
+  },
+  "additionalProperties": false
+}

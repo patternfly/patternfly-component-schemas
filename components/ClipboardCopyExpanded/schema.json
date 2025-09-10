@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ClipboardCopyExpanded Props",
+  "description": "Props for the ClipboardCopyExpanded component",
+  "properties": {
+    "className": {
+      "description": "",
+      "type": "string",
+      "default": "''"
+    },
+    "isCode": {
+      "description": "",
+      "type": "boolean",
+      "default": false
+    },
+    "isReadOnly": {
+      "description": "",
+      "type": "boolean",
+      "default": false
+    },
+    "onChange": {
+      "description": " (Function: (e: React.FormEvent<HTMLDivElement>, text: string) => void)",
+      "default": "(): any => undefined"
+    }
+  },
+  "additionalProperties": false
+}

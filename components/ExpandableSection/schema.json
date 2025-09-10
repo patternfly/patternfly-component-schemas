@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ExpandableSection Props",
+  "description": "The main expandable section component.",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the expandable section. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the expandable section.",
+      "type": "string",
+      "default": "''"
+    },
+    "contentId": {
+      "description": "Id of the content of the expandable section. When passing in the isDetached property, this\nproperty's value should match the contentId property of the expandable section toggle sub-component.",
+      "type": "string"
+    },
+    "displaySize": {
+      "description": "Display size variant. Set to \"lg\" for disclosure styling.",
+      "enum": [
+        "default",
+        "lg"
+      ],
+      "default": "'default'"
+    },
+    "isDetached": {
+      "description": "Indicates the expandable section has a detached toggle.",
+      "type": "boolean",
+      "default": false
+    },
+    "isExpanded": {
+      "description": "Flag to indicate if the content is expanded.",
+      "type": "boolean"
+    },
+    "isIndented": {
+      "description": "Flag to indicate if the content is indented.",
+      "type": "boolean",
+      "default": false
+    },
+    "isWidthLimited": {
+      "description": "Flag to indicate the width of the component is limited. Set to \"true\" for disclosure styling.",
+      "type": "boolean",
+      "default": false
+    },
+    "onToggle": {
+      "description": "Callback function to toggle the expandable section. Detached expandable sections should\nuse the onToggle property of the expandable section toggle sub-component. (Function: (event: React.MouseEvent, isExpanded: boolean) => void)",
+      "default": "(event, isExpanded): void => undefined"
+    },
+    "toggleContent": {
+      "description": "React node that appears in the attached toggle in place of the toggleText property. (React component or element)"
+    },
+    "toggleId": {
+      "description": "Id of the toggle of the expandable section, which provides an accessible name to the\nexpandable section content via the aria-labelledby attribute. When the isDetached property\nis also passed in, the value of this property must match the toggleId property of the\nexpandable section toggle sub-component.",
+      "type": "string"
+    },
+    "toggleText": {
+      "description": "Text that appears in the attached toggle.",
+      "type": "string",
+      "default": "''"
+    },
+    "toggleTextCollapsed": {
+      "description": "Text that appears in the attached toggle when collapsed (will override toggleText if\nboth are specified; used for uncontrolled expandable with dynamic toggle text).",
+      "type": "string",
+      "default": "''"
+    },
+    "toggleTextExpanded": {
+      "description": "Text that appears in the attached toggle when expanded (will override toggleText if\nboth are specified; used for uncontrolled expandable with dynamic toggle text).",
+      "type": "string",
+      "default": "''"
+    },
+    "truncateMaxLines": {
+      "description": "Truncates the expandable content to the specified number of lines when using the\n\"truncate\" variant.",
+      "type": "number"
+    },
+    "variant": {
+      "description": "Determines the variant of the expandable section. When passing in \"truncate\" as the\nvariant, the expandable content will be truncated after 3 lines by default.",
+      "enum": [
+        "default",
+        "truncate"
+      ],
+      "default": "'default'"
+    }
+  },
+  "additionalProperties": false
+}

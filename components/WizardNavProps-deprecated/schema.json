@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "WizardNavProps Props",
+  "description": "Props for the WizardNavProps component",
+  "properties": {
+    "children": {
+      "description": "children should be WizardNavItem components (Type: any)"
+    },
+    "isOpen": {
+      "description": "Whether the nav is expanded",
+      "type": "boolean"
+    },
+    "returnList": {
+      "description": "True to return the inner list without the wrapping nav element",
+      "type": "boolean"
+    },
+    "Unknown": {
+      "description": "Sets the aria-labelledby attribute on the nav element",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

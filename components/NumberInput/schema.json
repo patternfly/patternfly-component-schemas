@@ -1,0 +1,97 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "NumberInput Props",
+  "description": "Props for the NumberInput component",
+  "properties": {
+    "className": {
+      "description": "Additional classes added to the number input",
+      "type": "string"
+    },
+    "inputAriaLabel": {
+      "description": "Aria label of the input",
+      "type": "string",
+      "default": "'Input'"
+    },
+    "inputName": {
+      "description": "Name of the input",
+      "type": "string"
+    },
+    "inputProps": {
+      "description": "Additional properties added to the text input (Type: any)"
+    },
+    "isDisabled": {
+      "description": "Indicates the whole number input should be disabled",
+      "type": "boolean",
+      "default": false
+    },
+    "max": {
+      "description": "Maximum value of the number input, disabling the plus button when reached",
+      "type": "number"
+    },
+    "min": {
+      "description": "Minimum value of the number input, disabling the minus button when reached",
+      "type": "number"
+    },
+    "minusBtnAriaLabel": {
+      "description": "Aria label of the minus button",
+      "type": "string",
+      "default": "'Minus'"
+    },
+    "minusBtnProps": {
+      "description": "Additional properties added to the minus button (Type: ButtonProps)"
+    },
+    "onBlur": {
+      "description": "Callback function when text input is blurred (focus leaves) (Function: (event?: any) => void)"
+    },
+    "onChange": {
+      "description": "Callback for the text input changing (Function: (event: React.FormEvent<HTMLInputElement>) => void)"
+    },
+    "onMinus": {
+      "description": "Callback for the minus button (Function: (event: React.MouseEvent, name?: string) => void)",
+      "default": "() => {}"
+    },
+    "onPlus": {
+      "description": "Callback for the plus button (Function: (event: React.MouseEvent, name?: string) => void)",
+      "default": "() => {}"
+    },
+    "plusBtnAriaLabel": {
+      "description": "Aria label of the plus button",
+      "type": "string",
+      "default": "'Plus'"
+    },
+    "plusBtnProps": {
+      "description": "Additional properties added to the plus button (Type: ButtonProps)"
+    },
+    "unit": {
+      "description": "Adds the given unit to the number input (React component or element)"
+    },
+    "unitPosition": {
+      "description": "Position of the number input unit in relation to the number input",
+      "enum": [
+        "before",
+        "after"
+      ],
+      "default": "'after'"
+    },
+    "validated": {
+      "description": "Value to indicate if the input is modified to show that validation state",
+      "enum": [
+        "default",
+        "error",
+        "warning",
+        "success"
+      ],
+      "default": "ValidatedOptions.default"
+    },
+    "value": {
+      "description": "Value of the number input (Type: number | '')",
+      "default": 0
+    },
+    "widthChars": {
+      "description": "Sets the width of the number input to a number of characters",
+      "type": "number"
+    }
+  },
+  "additionalProperties": false
+}

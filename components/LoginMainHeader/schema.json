@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "LoginMainHeader Props",
+  "description": "Props for the LoginMainHeader component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the login main header (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional classes added to the login main header",
+      "type": "string",
+      "default": "''"
+    },
+    "headerUtilities": {
+      "description": "Actions that render for the login main header (React component or element)",
+      "default": null
+    },
+    "subtitle": {
+      "description": "Subtitle that contains the text, URL, and URL text for the login main header",
+      "type": "string",
+      "default": "''"
+    },
+    "title": {
+      "description": "Title for the login main header",
+      "type": "string",
+      "default": "''"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "TreeViewDataItem Props",
+  "description": "Properties that make up a tree view data item. These properties should be passed in as an\nobject to one of the various tree view component properties which accept TreeViewDataItem as\na type.",
+  "properties": {
+    "action": {
+      "description": "Action of a tree view item, which can be either a button or dropdown component. (React component or element)"
+    },
+    "badgeProps": {
+      "description": "Additional properties of the tree view item badge. (Type: any)"
+    },
+    "checkProps": {
+      "description": "Additional properties of the tree view item checkbox. (Type: TreeViewCheckProps)"
+    },
+    "children": {
+      "description": "Child nodes of a tree view item. (Type: TreeViewDataItem[])",
+      "type": "array"
+    },
+    "customBadgeContent": {
+      "description": "Optional prop for a custom badge. (React component or element)"
+    },
+    "defaultExpanded": {
+      "description": "Flag indicating if node is expanded by default.",
+      "type": "boolean"
+    },
+    "expandedIcon": {
+      "description": "Expanded icon of a tree view item. (React component or element)"
+    },
+    "hasBadge": {
+      "description": "Flag indicating if a tree view item has a badge.",
+      "type": "boolean"
+    },
+    "hasCheckbox": {
+      "description": "Flag indicating if a tree view item has a checkbox.",
+      "type": "boolean"
+    },
+    "icon": {
+      "description": "Default icon of a tree view item. (React component or element)"
+    },
+    "id": {
+      "description": "ID of a tree view item.",
+      "type": "string"
+    },
+    "name": {
+      "description": "Internal content of a tree view item. (React component or element)"
+    },
+    "title": {
+      "description": "Title of a tree view item. Only used in compact presentations. (React component or element)"
+    }
+  },
+  "required": [
+    "name"
+  ],
+  "additionalProperties": false
+}

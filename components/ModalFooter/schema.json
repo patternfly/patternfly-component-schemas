@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ModalFooter Props",
+  "description": "Renders content in the footer of the modal",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the modal footer. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the modal footer.",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ToggleGroup Props",
+  "description": "Props for the ToggleGroup component",
+  "properties": {
+    "areAllGroupsDisabled": {
+      "description": "Disable all toggle group items under this component.",
+      "type": "boolean",
+      "default": false
+    },
+    "aria-label": {
+      "description": "Accessible label for the toggle group",
+      "type": "string"
+    },
+    "children": {
+      "description": "Content rendered inside the toggle group (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the toggle group",
+      "type": "string"
+    },
+    "isCompact": {
+      "description": "Modifies the toggle group to include compact styling.",
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "additionalProperties": false
+}

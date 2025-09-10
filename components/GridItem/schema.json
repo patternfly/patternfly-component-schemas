@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "GridItem Props",
+  "description": "Props for the GridItem component",
+  "properties": {
+    "children": {
+      "description": "content rendered inside the Grid Layout Item (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "additional classes added to the Grid Layout Item",
+      "type": "string",
+      "default": "''"
+    },
+    "component": {
+      "description": "Sets the base component to render. defaults to div (Type: React.ElementType<any> | React.ComponentType<any>)",
+      "default": "'div'"
+    },
+    "lg": {
+      "description": "the number of columns the grid item spans on large device. Value should be a number 1-12 (Type: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12)"
+    },
+    "lgOffset": {
+      "description": "the number of columns the grid item is offset on large device. Value should be a number 1-12 (Type: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12)"
+    },
+    "lgRowSpan": {
+      "description": "the number of rows the grid item spans on large device. Value should be a number 1-12 (Type: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12)"
+    },
+    "md": {
+      "description": "the number of columns the grid item spans on medium device. Value should be a number 1-12 (Type: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12)"
+    },
+    "mdOffset": {
+      "description": "the number of columns the grid item is offset on medium device. Value should be a number 1-12 (Type: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12)"
+    },
+    "mdRowSpan": {
+      "description": "the number of rows the grid item spans on medium device. Value should be a number 1-12 (Type: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12)"
+    },
+    "offset": {
+      "description": "the number of columns a grid item is offset (Type: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12)",
+      "default": null
+    },
+    "order": {
+      "description": "Modifies the flex layout element order property (Type: {\n  default?: string;\n  md?: string;\n  lg?: string;\n  xl?: string;\n  '2xl'?: string;\n})"
+    },
+    "rowSpan": {
+      "description": "the number of rows the grid item spans. Value should be a number 1-12 (Type: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12)",
+      "default": null
+    },
+    "sm": {
+      "description": "the number of columns the grid item spans on small device. Value should be a number 1-12 (Type: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12)"
+    },
+    "smOffset": {
+      "description": "the number of columns the grid item is offset on small device. Value should be a number 1-12 (Type: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12)"
+    },
+    "smRowSpan": {
+      "description": "the number of rows the grid item spans on medium device. Value should be a number 1-12 (Type: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12)"
+    },
+    "span": {
+      "description": "the number of columns the grid item spans. Value should be a number 1-12 (Type: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12)",
+      "default": null
+    },
+    "xl": {
+      "description": "the number of columns the grid item spans on xLarge device. Value should be a number 1-12 (Type: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12)"
+    },
+    "xl2": {
+      "description": "the number of columns the grid item spans on 2xLarge device. Value should be a number 1-12 (Type: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12)"
+    },
+    "xl2Offset": {
+      "description": "the number of columns the grid item is offset on 2xLarge device. Value should be a number 1-12 (Type: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12)"
+    },
+    "xl2RowSpan": {
+      "description": "the number of rows the grid item spans on 2xLarge device. Value should be a number 1-12 (Type: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12)"
+    },
+    "xlOffset": {
+      "description": "the number of columns the grid item is offset on xLarge device. Value should be a number 1-12 (Type: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12)"
+    },
+    "xlRowSpan": {
+      "description": "the number of rows the grid item spans on large device. Value should be a number 1-12 (Type: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12)"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "PageBody Props",
+  "description": "Props for the PageBody component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the section (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the section",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ToolbarLabelGroup Props",
+  "description": "Props for the ToolbarLabelGroup component",
+  "properties": {
+    "key": {
+      "description": "A unique key to identify this label group category",
+      "type": "string"
+    },
+    "name": {
+      "description": "The category name to display for the label group",
+      "type": "string"
+    }
+  },
+  "required": [
+    "key",
+    "name"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "AlertGroup Props",
+  "description": "Props for the AlertGroup component",
+  "properties": {
+    "appendTo": {
+      "description": "Determine where the alert is appended to (Type: HTMLElement | (() => HTMLElement))"
+    },
+    "aria-label": {
+      "description": "Adds an accessible label to the alert group.",
+      "type": "string"
+    },
+    "children": {
+      "description": "Alerts to be rendered in the AlertGroup (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the AlertGroup",
+      "type": "string"
+    },
+    "hasAnimations": {
+      "description": "Flag to indicate whether Alerts are animated upon rendering and being dismissed. This is intended\nto remain false for testing purposes only.",
+      "type": "boolean"
+    },
+    "isLiveRegion": {
+      "description": "Turns the container into a live region so that changes to content within the AlertGroup, such as appending an Alert, are reliably announced to assistive technology.",
+      "type": "boolean"
+    },
+    "isToast": {
+      "description": "Toast notifications are positioned at the top right corner of the viewport",
+      "type": "boolean"
+    },
+    "onOverflowClick": {
+      "description": "Function to call if user clicks on overflow message (Function: () => void)"
+    },
+    "overflowMessage": {
+      "description": "Custom text to show for the overflow message",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

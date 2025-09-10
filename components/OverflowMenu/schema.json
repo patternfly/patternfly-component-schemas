@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "OverflowMenu Props",
+  "description": "Props for the OverflowMenu component",
+  "properties": {
+    "breakpoint": {
+      "description": "Indicates breakpoint at which to switch between horizontal menu and vertical dropdown",
+      "enum": [
+        "sm",
+        "md",
+        "lg",
+        "xl",
+        "2xl"
+      ]
+    },
+    "breakpointReference": {
+      "description": "A container reference to base the specified breakpoint on instead of the viewport width. (Type: HTMLElement | (() => HTMLElement) | React.RefObject<any>)"
+    },
+    "children": {
+      "description": "Any elements that can be rendered in the menu (Type: any)"
+    },
+    "className": {
+      "description": "Additional classes added to the OverflowMenu.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "breakpoint"
+  ],
+  "additionalProperties": false
+}

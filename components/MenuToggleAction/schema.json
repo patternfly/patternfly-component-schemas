@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "MenuToggleAction Props",
+  "description": "Props for the MenuToggleAction component",
+  "properties": {
+    "children": {
+      "description": "Element to be rendered inside the <button> (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the MenuToggleAction",
+      "type": "string",
+      "default": "''"
+    },
+    "id": {
+      "description": "Id of the action button",
+      "type": "string"
+    },
+    "isDisabled": {
+      "description": "Flag to show if the action button is disabled",
+      "type": "boolean",
+      "default": false
+    },
+    "onClick": {
+      "description": "A callback for when the action button is clicked (Function: (event: React.MouseEvent<HTMLButtonElement>) => void)",
+      "default": "() => {}"
+    }
+  },
+  "additionalProperties": false
+}

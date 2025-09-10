@@ -1,0 +1,290 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ToolbarToggleGroup Props",
+  "description": "Props for the ToolbarToggleGroup component",
+  "properties": {
+    "align": {
+      "description": "Applies to a child of a flex layout, and aligns that child (and any adjacent children on the other side of it) to one side of the main axis",
+      "enum": [
+        "alignEnd",
+        "alignStart",
+        "alignCenter",
+        "alignEnd",
+        "alignStart",
+        "alignCenter",
+        "alignEnd",
+        "alignStart",
+        "alignCenter",
+        "alignEnd",
+        "alignStart",
+        "alignCenter",
+        "2xl",
+        "alignEnd",
+        "alignStart",
+        "alignCenter"
+      ]
+    },
+    "alignItems": {
+      "description": "Vertical alignment of children",
+      "enum": [
+        "start",
+        "center",
+        "baseline",
+        "default",
+        "end",
+        "stretch"
+      ]
+    },
+    "alignSelf": {
+      "description": "Vertical alignment",
+      "enum": [
+        "start",
+        "center",
+        "baseline",
+        "default",
+        "end",
+        "stretch"
+      ]
+    },
+    "breakpoint": {
+      "description": "Controls when filters are shown and when the toggle button is hidden.",
+      "enum": [
+        "md",
+        "lg",
+        "xl",
+        "2xl"
+      ]
+    },
+    "children": {
+      "description": "Content to be rendered inside the data toolbar group (React component or element)"
+    },
+    "className": {
+      "description": "Classes applied to root element of the data toolbar group",
+      "type": "string"
+    },
+    "clearAllFilters": {
+      "description": "Optional callback for clearing all filters in the toolbar toggle group (Function: () => void)"
+    },
+    "clearFiltersButtonText": {
+      "description": "Text to display in the clear all filters button of the toolbar toggle group",
+      "type": "string"
+    },
+    "columnGap": {
+      "description": "Sets only the column gap at various breakpoints.",
+      "enum": [
+        "columnGapNone",
+        "columnGapXs",
+        "columnGapSm",
+        "columnGapMd",
+        "columnGapLg",
+        "columnGapXl",
+        "columnGap_2xl",
+        "columnGap_3xl",
+        "columnGap_4xl",
+        "columnGapNone",
+        "columnGapXs",
+        "columnGapSm",
+        "columnGapMd",
+        "columnGapLg",
+        "columnGapXl",
+        "columnGap_2xl",
+        "columnGap_3xl",
+        "columnGap_4xl",
+        "columnGapNone",
+        "columnGapXs",
+        "columnGapSm",
+        "columnGapMd",
+        "columnGapLg",
+        "columnGapXl",
+        "columnGap_2xl",
+        "columnGap_3xl",
+        "columnGap_4xl",
+        "columnGapNone",
+        "columnGapXs",
+        "columnGapSm",
+        "columnGapMd",
+        "columnGapLg",
+        "columnGapXl",
+        "columnGap_2xl",
+        "columnGap_3xl",
+        "columnGap_4xl",
+        "2xl",
+        "columnGapNone",
+        "columnGapXs",
+        "columnGapSm",
+        "columnGapMd",
+        "columnGapLg",
+        "columnGapXl",
+        "columnGap_2xl",
+        "columnGap_3xl",
+        "columnGap_4xl"
+      ]
+    },
+    "gap": {
+      "description": "Sets both the column and row gap at various breakpoints.",
+      "enum": [
+        "gapNone",
+        "gapXs",
+        "gapSm",
+        "gapMd",
+        "gapLg",
+        "gapXl",
+        "gap_2xl",
+        "gap_3xl",
+        "gap_4xl",
+        "gapNone",
+        "gapXs",
+        "gapSm",
+        "gapMd",
+        "gapLg",
+        "gapXl",
+        "gap_2xl",
+        "gap_3xl",
+        "gap_4xl",
+        "gapNone",
+        "gapXs",
+        "gapSm",
+        "gapMd",
+        "gapLg",
+        "gapXl",
+        "gap_2xl",
+        "gap_3xl",
+        "gap_4xl",
+        "gapNone",
+        "gapXs",
+        "gapSm",
+        "gapMd",
+        "gapLg",
+        "gapXl",
+        "gap_2xl",
+        "gap_3xl",
+        "gap_4xl",
+        "2xl",
+        "gapNone",
+        "gapXs",
+        "gapSm",
+        "gapMd",
+        "gapLg",
+        "gapXl",
+        "gap_2xl",
+        "gap_3xl",
+        "gap_4xl"
+      ]
+    },
+    "isExpanded": {
+      "description": "Flag indicating when toggle group is expanded for non-managed toolbar toggle groups.",
+      "type": "boolean"
+    },
+    "isOverflowContainer": {
+      "description": "Flag that modifies the toolbar group to hide overflow and respond to available space. Used for horizontal navigation.",
+      "type": "boolean"
+    },
+    "labelContainerRef": {
+      "description": "Reference to a label container group for filters inside the toolbar toggle group (Type: React.RefObject<any>)"
+    },
+    "onToggle": {
+      "description": "Callback for toggle group click event for non-managed toolbar toggle groups. (Function: (event: React.MouseEvent) => void)"
+    },
+    "rowGap": {
+      "description": "Sets only the row gap at various breakpoints.",
+      "enum": [
+        "rowGapNone",
+        "rowGapXs",
+        "rowGapSm",
+        "rowGapMd",
+        "rowGapLg",
+        "rowGapXl",
+        "rowGap_2xl",
+        "rowGap_3xl",
+        "rowGap_4xl",
+        "rowGapNone",
+        "rowGapXs",
+        "rowGapSm",
+        "rowGapMd",
+        "rowGapLg",
+        "rowGapXl",
+        "rowGap_2xl",
+        "rowGap_3xl",
+        "rowGap_4xl",
+        "rowGapNone",
+        "rowGapXs",
+        "rowGapSm",
+        "rowGapMd",
+        "rowGapLg",
+        "rowGapXl",
+        "rowGap_2xl",
+        "rowGap_3xl",
+        "rowGap_4xl",
+        "rowGapNone",
+        "rowGapXs",
+        "rowGapSm",
+        "rowGapMd",
+        "rowGapLg",
+        "rowGapXl",
+        "rowGap_2xl",
+        "rowGap_3xl",
+        "rowGap_4xl",
+        "2xl",
+        "rowGapNone",
+        "rowGapXs",
+        "rowGapSm",
+        "rowGapMd",
+        "rowGapLg",
+        "rowGapXl",
+        "rowGap_2xl",
+        "rowGap_3xl",
+        "rowGap_4xl"
+      ]
+    },
+    "rowWrap": {
+      "description": "Value to set for row wrapping at various breakpoints",
+      "enum": [
+        "wrap",
+        "nowrap",
+        "wrap",
+        "nowrap",
+        "wrap",
+        "nowrap",
+        "wrap",
+        "nowrap",
+        "wrap",
+        "nowrap",
+        "2xl",
+        "wrap",
+        "nowrap"
+      ]
+    },
+    "showClearFiltersButton": {
+      "description": "Flag indicating that the clear all filters button should be visible in the toolbar toggle group",
+      "type": "boolean"
+    },
+    "toggleIcon": {
+      "description": "An icon to be rendered when the toggle group has collapsed down (React component or element)"
+    },
+    "variant": {
+      "description": "A type modifier which modifies spacing specifically depending on the type of group (Type: | ToolbarGroupVariant\n| 'filter-group'\n| 'action-group'\n| 'action-group-inline'\n| 'action-group-plain'\n| 'label-group')"
+    },
+    "visibility": {
+      "description": "Visibility at various breakpoints.",
+      "enum": [
+        "hidden",
+        "visible",
+        "hidden",
+        "visible",
+        "hidden",
+        "visible",
+        "hidden",
+        "visible",
+        "2xl",
+        "hidden",
+        "visible"
+      ]
+    }
+  },
+  "required": [
+    "breakpoint",
+    "toggleIcon"
+  ],
+  "additionalProperties": false
+}

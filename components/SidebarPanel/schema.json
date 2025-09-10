@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "SidebarPanel Props",
+  "description": "Props for the SidebarPanel component",
+  "properties": {
+    "backgroundVariant": {
+      "description": "Variant of the sidebar panel background.",
+      "enum": [
+        "default",
+        "secondary"
+      ],
+      "default": "'default'"
+    },
+    "children": {
+      "description": " (React component or element)"
+    },
+    "hasNoBackground": {
+      "description": "Removes the background color.",
+      "type": "boolean"
+    },
+    "hasPadding": {
+      "description": "Adds padding to the panel.",
+      "type": "boolean"
+    },
+    "variant": {
+      "description": "Indicates whether the panel is positioned statically or sticky to the top. Default is sticky on small screens when the orientation is stack, and static on medium and above screens when the orientation is split.",
+      "enum": [
+        "default",
+        "sticky",
+        "static"
+      ],
+      "default": "'default'"
+    },
+    "width": {
+      "description": "Sets the panel width at various breakpoints. Default is 250px when the orientation is split.",
+      "enum": [
+        "default",
+        "width_25",
+        "width_33",
+        "width_50",
+        "width_66",
+        "width_75",
+        "width_100",
+        "default",
+        "width_25",
+        "width_33",
+        "width_50",
+        "width_66",
+        "width_75",
+        "width_100",
+        "default",
+        "width_25",
+        "width_33",
+        "width_50",
+        "width_66",
+        "width_75",
+        "width_100",
+        "default",
+        "width_25",
+        "width_33",
+        "width_50",
+        "width_66",
+        "width_75",
+        "width_100",
+        "default",
+        "width_25",
+        "width_33",
+        "width_50",
+        "width_66",
+        "width_75",
+        "width_100",
+        "2xl",
+        "default",
+        "width_25",
+        "width_33",
+        "width_50",
+        "width_66",
+        "width_75",
+        "width_100"
+      ]
+    }
+  },
+  "required": [
+    "children"
+  ],
+  "additionalProperties": false
+}

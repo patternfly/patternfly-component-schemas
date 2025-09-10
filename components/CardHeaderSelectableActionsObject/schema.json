@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "CardHeaderSelectableActionsObject Props",
+  "description": "Props for the CardHeaderSelectableActionsObject component",
+  "properties": {
+    "className": {
+      "description": "Additional classes added to the selectable actions wrapper",
+      "type": "string"
+    },
+    "hasNoOffset": {
+      "description": "Flag indicating that the actions have no offset",
+      "type": "boolean"
+    },
+    "isChecked": {
+      "description": "",
+      "type": "boolean"
+    },
+    "isExternalLink": {
+      "description": "Flag to indicate whether a clickable-only card's link should open in a new tab/window.",
+      "type": "boolean"
+    },
+    "isHidden": {
+      "description": "Flag indicating the action is hidden",
+      "type": "boolean"
+    },
+    "name": {
+      "description": "Name for the input element of a selectable card.",
+      "type": "string"
+    },
+    "onChange": {
+      "description": "Callback for when a selectable card input changes (Function: (event: React.FormEvent<HTMLInputElement>, checked: boolean) => void)"
+    },
+    "onClickAction": {
+      "description": "Action to call when a clickable-only card is clicked. This cannot be combined with the to prop. (Function: (event: React.MouseEvent) => void)"
+    },
+    "selectableActionAriaLabel": {
+      "description": "Adds an accessible name to the input of a selectable card or clickable button/anchor of a clickable-only card.\nThis or selectableActionAriaLabelledby is required for clickable-only cards.",
+      "type": "string"
+    },
+    "selectableActionAriaLabelledby": {
+      "description": "A single or list of space-delimited ID's that provide an accessible name to the input of a selectable card\nor clickable button/anchor of a clickable-only card. This or selectableActionAriaLabelledby is required\nfor clickable-only cards.",
+      "type": "string"
+    },
+    "selectableActionId": {
+      "description": "Custom ID passed to the selectable card's input or a clickable-only card's button/anchor.\nIf omitted, a random unique ID will be assigned to a selectable card's input.",
+      "type": "string"
+    },
+    "selectableActionProps": {
+      "description": "Additional props spread to a selectable card input or clickable-only card's button/anchor. (Type: any)"
+    },
+    "to": {
+      "description": "Link to navigate to when a clickable-only card is clicked. This cannot be combined with the onClickAction prop.",
+      "type": "string"
+    },
+    "variant": {
+      "description": "Determines the type of input to be used for a selectable card.",
+      "enum": [
+        "single",
+        "multiple"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

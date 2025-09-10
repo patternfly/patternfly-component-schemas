@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "WizardParentStep Props",
+  "description": "Type used to define parent steps.",
+  "properties": {
+    "isExpandable": {
+      "description": "Flag to determine whether the step can expand or not.",
+      "type": "boolean"
+    },
+    "subStepIds": {
+      "description": "Nested step IDs (Type: (string | number)[])"
+    }
+  },
+  "required": [
+    "subStepIds"
+  ],
+  "additionalProperties": false
+}

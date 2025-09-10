@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "TooltipContent Props",
+  "description": "Props for the TooltipContent component",
+  "properties": {
+    "children": {
+      "description": "PopoverContent content (React component or element)"
+    },
+    "className": {
+      "description": "PopoverContent additional class",
+      "type": "string"
+    },
+    "isLeftAligned": {
+      "description": "Flag to align text to the left",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "children"
+  ],
+  "additionalProperties": false
+}

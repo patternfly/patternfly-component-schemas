@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "AboutModalBoxBrand Props",
+  "description": "Props for the AboutModalBoxBrand component",
+  "properties": {
+    "alt": {
+      "description": "The alternate text of the brand image.",
+      "type": "string"
+    },
+    "src": {
+      "description": "The URL of the image for the brand.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "alt",
+    "src"
+  ],
+  "additionalProperties": false
+}

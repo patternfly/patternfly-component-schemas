@@ -1,0 +1,147 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Dropdown Props",
+  "description": "See the Menu documentation for additional props that may be passed.",
+  "properties": {
+    "activeItemId": {
+      "description": "itemId of the currently active item. You can also specify isActive on the MenuItem. (Type: string | number)"
+    },
+    "activeMenu": {
+      "description": "ID of the currently active menu for the drilldown variant",
+      "type": "string"
+    },
+    "children": {
+      "description": "Anything that can be rendered inside of the Menu (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the Menu",
+      "type": "string"
+    },
+    "containsDrilldown": {
+      "description": "Indicates if menu contains a drilldown menu",
+      "type": "boolean"
+    },
+    "containsFlyout": {
+      "description": "Indicates if menu contains a flyout menu",
+      "type": "boolean"
+    },
+    "drilldownItemPath": {
+      "description": "Indicates the path of drilled in menu itemIds (Type: string[])",
+      "type": "array"
+    },
+    "drilledInMenus": {
+      "description": "Array of menus that are drilled in (Type: string[])",
+      "type": "array"
+    },
+    "focusTimeoutDelay": {
+      "description": "Time in ms to wait before firing the toggles' focus event. Defaults to 0",
+      "type": "number"
+    },
+    "id": {
+      "description": "ID of the menu",
+      "type": "string"
+    },
+    "isMenuDrilledIn": {
+      "description": "Indicates if a menu is drilled into",
+      "type": "boolean"
+    },
+    "isNavFlyout": {
+      "description": "Indicating that the menu should have nav flyout styling",
+      "type": "boolean"
+    },
+    "isOpen": {
+      "description": "Flag to indicate if menu is opened.",
+      "type": "boolean"
+    },
+    "isPlain": {
+      "description": "Indicates if the menu should be without the outer box-shadow",
+      "type": "boolean"
+    },
+    "isRootMenu": {
+      "description": "Internal flag indicating if the Menu is the root of a menu tree",
+      "type": "boolean"
+    },
+    "isScrollable": {
+      "description": "Indicates if the menu should be srollable",
+      "type": "boolean"
+    },
+    "maxMenuHeight": {
+      "description": "Maximum height of dropdown menu",
+      "type": "string"
+    },
+    "menuHeight": {
+      "description": "Height of the dropdown menu",
+      "type": "string"
+    },
+    "onActionClick": {
+      "description": "Callback called when an MenuItems's action button is clicked. You can also specify it within a MenuItemAction. (Function: (event?: any, itemId?: any, actionId?: any) => void)"
+    },
+    "onDrillIn": {
+      "description": "Callback for drilling into a submenu (Type: (\n  event: React.KeyboardEvent | React.MouseEvent,\n  fromItemId: string,\n  toItemId: string,\n  itemId: string\n) => void)"
+    },
+    "onDrillOut": {
+      "description": "Callback for drilling out of a submenu (Type: (event: React.KeyboardEvent | React.MouseEvent, toItemId: string, itemId: string) => void)"
+    },
+    "onGetMenuHeight": {
+      "description": "Callback for collecting menu heights (Function: (menuId: string, height: number) => void)"
+    },
+    "onOpenChange": {
+      "description": "Callback to allow the dropdown component to change the open state of the menu.\nTriggered by clicking outside of the menu, or by pressing any keys specified in onOpenChangeKeys. (Function: (isOpen: boolean) => void)"
+    },
+    "onOpenChangeKeys": {
+      "description": "Keys that trigger onOpenChange, defaults to tab and escape. It is highly recommended to include Escape in the array, while Tab may be omitted if the menu contains non-menu items that are focusable. (Type: string[])",
+      "type": "array"
+    },
+    "onSelect": {
+      "description": "Callback for updating when item selection changes. You can also specify onClick on the MenuItem. (Type: (event?: React.MouseEvent<Element, MouseEvent>, value?: string | number) => void)"
+    },
+    "onToggleKeydown": {
+      "description": "Callback to override the toggle keydown behavior. By default, when the toggle has focus and the menu is open, pressing the up/down arrow keys will focus a valid non-disabled menu item - the first item for the down arrow key and last item for the up arrow key. (Function: (event: KeyboardEvent) => void)"
+    },
+    "ouiaId": {
+      "description": "Value to overwrite the randomly generated data-ouia-component-id. (Type: number | string)"
+    },
+    "ouiaSafe": {
+      "description": "Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false.",
+      "type": "boolean"
+    },
+    "parentMenu": {
+      "description": "ID of parent menu for drilldown menus",
+      "type": "string"
+    },
+    "popperProps": {
+      "description": "Additional properties to pass to the Popper (Type: DropdownPopperProps)"
+    },
+    "role": {
+      "description": "Determines the accessible role of the menu. For a non-checkbox menu that can have\none or more items selected, pass in \"listbox\".",
+      "type": "string"
+    },
+    "selected": {
+      "description": "Single itemId for single select menus, or array of itemIds for multi select. You can also specify isSelected on the MenuItem. (Type: any | any[])"
+    },
+    "shouldFocusFirstItemOnOpen": {
+      "description": "Flag indicating the first menu item should be focused after opening the dropdown.",
+      "type": "boolean"
+    },
+    "shouldFocusToggleOnSelect": {
+      "description": "Flag indicating the toggle should be focused after a selection. If this use case is too restrictive, the optional toggleRef property with a node toggle may be used to control focus.",
+      "type": "boolean"
+    },
+    "shouldPreventScrollOnItemFocus": {
+      "description": "Flag indicating if scroll on focus of the first menu item should occur.",
+      "type": "boolean"
+    },
+    "toggle": {
+      "description": "Dropdown toggle. The toggle should either be a renderer function which forwards the given toggle ref, or a direct ReactNode that should be passed along with the toggleRef property. (React component or element)"
+    },
+    "zIndex": {
+      "description": "z-index of the dropdown menu",
+      "type": "number"
+    }
+  },
+  "required": [
+    "toggle"
+  ],
+  "additionalProperties": false
+}

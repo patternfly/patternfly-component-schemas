@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "AlertGroupContext Props",
+  "description": "Props for the AlertGroupContext component",
+  "properties": {
+    "hasAnimations": {
+      "description": "",
+      "type": "boolean"
+    },
+    "updateTransitionEnd": {
+      "description": " (Function: (onTransitionEnd: () => void) => void)"
+    }
+  },
+  "additionalProperties": false
+}

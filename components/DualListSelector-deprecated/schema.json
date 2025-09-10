@@ -1,0 +1,156 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DualListSelector Props",
+  "description": "Acts as a container for all other DualListSelector sub-components when using a\ncomposable dual list selector.",
+  "properties": {
+    "addAll": {
+      "description": "Optional callback for the dynamically built add all button (React component or element)"
+    },
+    "addAllAriaLabel": {
+      "description": "Accessible label for the dynamically built add all button",
+      "type": "string",
+      "default": "'Add all'"
+    },
+    "addAllTooltip": {
+      "description": "Tooltip content for the dynamically built add all button (React component or element)"
+    },
+    "addAllTooltipProps": {
+      "description": "Additional tooltip properties for the dynamically built add all tooltip (Type: any)"
+    },
+    "addSelected": {
+      "description": "Optional callback for the dynamically built add selected button (React component or element)"
+    },
+    "addSelectedAriaLabel": {
+      "description": "Accessible label for the dynamically built add selected button",
+      "type": "string",
+      "default": "'Add selected'"
+    },
+    "addSelectedTooltip": {
+      "description": "Tooltip content for the dynamically built add selected button (React component or element)"
+    },
+    "addSelectedTooltipProps": {
+      "description": "Additional tooltip properties for the dynamically built add selected tooltip (Type: any)"
+    },
+    "availableOptions": {
+      "description": "Options to display in the dynamically built available options pane. When using trees, the options should be in the DualListSelectorTreeItemData[] format. (React component or element)",
+      "default": []
+    },
+    "availableOptionsActions": {
+      "description": "Actions to be displayed above the dynamically built available options pane. (React component or element)"
+    },
+    "availableOptionsSearchAriaLabel": {
+      "description": "Accessible label for the search input on the dynamically built available options pane.",
+      "type": "string",
+      "default": "'Available search input'"
+    },
+    "availableOptionsStatus": {
+      "description": "Status message to display above the dynamically built available options pane.",
+      "type": "string"
+    },
+    "availableOptionsTitle": {
+      "description": "Title applied to the dynamically built available options pane.",
+      "type": "string",
+      "default": "'Available options'"
+    },
+    "children": {
+      "description": "Content to be rendered in the dual list selector. Panes & controls will not be built dynamically when children are provided. (React component or element)",
+      "default": "''"
+    },
+    "chosenOptions": {
+      "description": "Options to display in the dynamically built chosen options pane. When using trees, the options should be in the DualListSelectorTreeItemData[] format. (React component or element)",
+      "default": []
+    },
+    "chosenOptionsActions": {
+      "description": "Actions to be displayed above the dynamically built chosen options pane. (React component or element)"
+    },
+    "chosenOptionsSearchAriaLabel": {
+      "description": "Accessible label for the search input on the dynamically built chosen options pane.",
+      "type": "string",
+      "default": "'Chosen search input'"
+    },
+    "chosenOptionsStatus": {
+      "description": "Status message to display above the dynamically built chosen options pane.",
+      "type": "string"
+    },
+    "chosenOptionsTitle": {
+      "description": "Title applied to the dynamically built chosen options pane.",
+      "type": "string",
+      "default": "'Chosen options'"
+    },
+    "className": {
+      "description": "Additional classes applied to the dual list selector.",
+      "type": "string"
+    },
+    "controlsAriaLabel": {
+      "description": "Accessible label for the dynamically built controls between the two panes.",
+      "type": "string",
+      "default": "'Selector controls'"
+    },
+    "filterOption": {
+      "description": "Optional filter function for custom filtering based on search string. Used with a dynamically built search input. (React component or element)"
+    },
+    "id": {
+      "description": "Id of the dual list selector.",
+      "type": "string"
+    },
+    "isDisabled": {
+      "description": "Flag indicating if the dual list selector is in a disabled state",
+      "type": "boolean",
+      "default": false
+    },
+    "isSearchable": {
+      "description": "Flag indicating a search bar should be included above both the dynamically built available and chosen panes.",
+      "type": "boolean"
+    },
+    "isTree": {
+      "description": "Flag indicating if the dual list selector uses trees instead of simple lists",
+      "type": "boolean",
+      "default": false
+    },
+    "onAvailableOptionsSearchInputChanged": {
+      "description": "A callback for when the search input value for the dynamically built available options changes. (Function: (event: React.FormEvent<HTMLInputElement>, value: string) => void)"
+    },
+    "onChosenOptionsSearchInputChanged": {
+      "description": "A callback for when the search input value for the dynamically built chosen options changes. (Function: (event: React.FormEvent<HTMLInputElement>, value: string) => void)"
+    },
+    "onListChange": {
+      "description": "Callback fired every time dynamically built options are chosen or removed (React component or element)"
+    },
+    "onOptionCheck": {
+      "description": "Optional callback fired when a dynamically built option is checked (Type: (\n  event: React.MouseEvent | React.ChangeEvent<HTMLInputElement> | React.KeyboardEvent,\n  checked: boolean,\n  checkedId: string,\n  newCheckedItems: string[]\n) => void)"
+    },
+    "onOptionSelect": {
+      "description": "Optional callback fired when a dynamically built option is selected (Type: (\n  event: React.MouseEvent | React.ChangeEvent | React.KeyboardEvent,\n  index: number,\n  isChosen: boolean,\n  id: string,\n  itemData: any,\n  parentData: any\n) => void)"
+    },
+    "removeAll": {
+      "description": "Optional callback for the dynamically built remove all button (React component or element)"
+    },
+    "removeAllAriaLabel": {
+      "description": "Accessible label for the dynamically built remove all button",
+      "type": "string",
+      "default": "'Remove all'"
+    },
+    "removeAllTooltip": {
+      "description": "Tooltip content for the dynamically built remove all button (React component or element)"
+    },
+    "removeAllTooltipProps": {
+      "description": "Additional tooltip properties for the dynamically built remove all tooltip (Type: any)"
+    },
+    "removeSelected": {
+      "description": "Optional callback for the dynamically built remove selected button (React component or element)"
+    },
+    "removeSelectedAriaLabel": {
+      "description": "Accessible label for the dynamically built remove selected button",
+      "type": "string",
+      "default": "'Remove selected'"
+    },
+    "removeSelectedTooltip": {
+      "description": "Tooltip content for the dynamically built remove selected button (React component or element)"
+    },
+    "removeSelectedTooltipProps": {
+      "description": "Additional tooltip properties for the dynamically built remove selected tooltip (Type: any)"
+    }
+  },
+  "additionalProperties": false
+}

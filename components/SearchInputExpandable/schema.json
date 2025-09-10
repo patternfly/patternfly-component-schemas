@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "SearchInputExpandable Props",
+  "description": "Properties for creating an expandable search input. These properties should be passed into\nthe search input component's expandableInput property.",
+  "properties": {
+    "isExpanded": {
+      "description": "Flag to indicate if the search input is expanded.",
+      "type": "boolean"
+    },
+    "onToggleExpand": {
+      "description": "Callback function to toggle the expandable search input. (Function: (event: React.SyntheticEvent<HTMLButtonElement>, isExpanded: boolean) => void)"
+    },
+    "toggleAriaLabel": {
+      "description": "An accessible label for the expandable search input toggle.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "isExpanded",
+    "onToggleExpand",
+    "toggleAriaLabel"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "WizardNav Props",
+  "description": "Props for the WizardNav component",
+  "properties": {
+    "aria-label": {
+      "description": "Aria-label applied to the navigation element",
+      "type": "string"
+    },
+    "aria-labelledby": {
+      "description": "Sets the aria-labelledby attribute on the navigation element",
+      "type": "string"
+    },
+    "children": {
+      "description": "children should be WizardNavItem components (Type: any)"
+    },
+    "className": {
+      "description": "Additional classes spread to the wizard nav",
+      "type": "string"
+    },
+    "isExpanded": {
+      "description": "Whether the navigation is expanded",
+      "type": "boolean",
+      "default": false
+    },
+    "isInnerList": {
+      "description": "True to return the inner list without the wrapping navigation element",
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "additionalProperties": false
+}

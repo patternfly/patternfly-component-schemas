@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "gridItemSpanValueShape Props",
+  "description": "Props for the gridItemSpanValueShape component",
+  "properties": {},
+  "additionalProperties": false
+}

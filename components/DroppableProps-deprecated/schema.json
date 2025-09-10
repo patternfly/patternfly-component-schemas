@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DroppableProps Props",
+  "description": "Props for the DroppableProps component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside DragDrop (React component or element)"
+    },
+    "className": {
+      "description": "Class to add to outer div",
+      "type": "string"
+    },
+    "droppableId": {
+      "description": "Id to be passed back on drop events",
+      "type": "string"
+    },
+    "hasNoWrapper": {
+      "description": "Don't wrap the component in a div. Requires passing a single child.",
+      "type": "boolean"
+    },
+    "zone": {
+      "description": "Name of zone that items can be dragged between. Should specify if there is more than one Droppable on the page.",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

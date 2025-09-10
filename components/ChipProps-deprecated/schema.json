@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ChipProps Props",
+  "description": "Props for the ChipProps component",
+  "properties": {
+    "badge": {
+      "description": "Badge to add to the chip. The badge will be rendered after the chip text. (React component or element)"
+    },
+    "children": {
+      "description": "Content rendered inside the chip text (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the chip item",
+      "type": "string"
+    },
+    "closeBtnAriaLabel": {
+      "description": "Aria Label for close button",
+      "type": "string"
+    },
+    "component": {
+      "description": " (React component or element)"
+    },
+    "isOverflowChip": {
+      "description": "Flag indicating if the chip is an overflow chip",
+      "type": "boolean"
+    },
+    "isReadOnly": {
+      "description": "Flag indicating if chip is read only",
+      "type": "boolean"
+    },
+    "onClick": {
+      "description": "Function that is called when clicking on the chip close button (Function: (event: React.MouseEvent) => void)"
+    },
+    "ouiaId": {
+      "description": "Value to overwrite the randomly generated data-ouia-component-id. (Type: number | string)"
+    },
+    "textMaxWidth": {
+      "description": "Css property expressed in percentage or any css unit that overrides the default value of the max-width of the chip's text",
+      "type": "string"
+    },
+    "tooltipPosition": {
+      "description": "Position of the tooltip which is displayed if text is longer",
+      "enum": [
+        "auto",
+        "top",
+        "bottom",
+        "left",
+        "right",
+        "top-start",
+        "top-end",
+        "bottom-start",
+        "bottom-end",
+        "left-start",
+        "left-end",
+        "right-start",
+        "right-end"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

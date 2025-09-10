@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Gallery Props",
+  "description": "Props for the Gallery component",
+  "properties": {
+    "children": {
+      "description": "content rendered inside the Gallery layout (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "additional classes added to the Gallery layout",
+      "type": "string",
+      "default": "''"
+    },
+    "component": {
+      "description": "Sets the base component to render. defaults to div (Type: React.ElementType<any> | React.ComponentType<any>)",
+      "default": "'div'"
+    },
+    "hasGutter": {
+      "description": "Adds space between children.",
+      "type": "boolean",
+      "default": false
+    },
+    "maxWidths": {
+      "description": "Maximum widths at various breakpoints. (Type: {\n  default?: string;\n  sm?: string;\n  md?: string;\n  lg?: string;\n  xl?: string;\n  '2xl'?: string;\n})"
+    },
+    "minWidths": {
+      "description": "Minimum widths at various breakpoints. (Type: {\n  default?: string;\n  sm?: string;\n  md?: string;\n  lg?: string;\n  xl?: string;\n  '2xl'?: string;\n})"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Timestamp Props",
+  "description": "Props for the Timestamp component",
+  "properties": {
+    "children": {
+      "description": "Displays custom content inside the timestamp, such as a relative time. This prop will\noverride the default content that is displayed. Custom content will not be affected by\nany props that format or add to displayed content. (React component or element)"
+    },
+    "className": {
+      "description": "Class to add to the outer span.",
+      "type": "string"
+    },
+    "customFormat": {
+      "description": "Applies custom formatting to the displayed date and/or time. Passing this prop in will\noverride the dateFormat and timeFormat props. (Type: { [key: string]: string })"
+    },
+    "date": {
+      "description": "Determines the default content that is displayed inside the timestamp and the value of\nthe inner time element's datetime attribute. (Type: Date)"
+    },
+    "dateFormat": {
+      "description": "Determines the format of the displayed date in the timestamp and UTC tooltip. Examples:\n\"Full\" => Tuesday, August 9, 2022;\n\"Long\" => August 9, 2022;\n\"Medium\" => Aug 9, 2022;\n\"Short\" => 8/9/22",
+      "enum": [
+        "full",
+        "long",
+        "medium",
+        "short"
+      ]
+    },
+    "displaySuffix": {
+      "description": "Applies a custom suffix to the displayed content, usually after the time, such as a\ncustom time zone.",
+      "type": "string",
+      "default": "''"
+    },
+    "is12Hour": {
+      "description": "Flag for displaying the time in a 12 hour format. If this prop is not passed in,\nthe hour format will be based on the locale prop's value.",
+      "type": "boolean"
+    },
+    "locale": {
+      "description": "Determines which locale to use in the displayed content. Defaults to the current locale\nwhen this prop is not passed in. For more information about locale's:\nhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_identification_and_negotiation",
+      "type": "string"
+    },
+    "shouldDisplayUTC": {
+      "description": "Flag indicating whether the default content should be displayed as a UTC string\ninstead of a local string.",
+      "type": "boolean"
+    },
+    "timeFormat": {
+      "description": "Determines the format of the displayed time in the timestamp and UTC tooltip. Examples:\n\"Full\" => 11:25:00 AM Eastern Daylight Time\n\"Long\" => 11:25:00 AM EDT\n\"Medium\" => 11:25:00 AM\n\"Short\" => 11:25 AM",
+      "enum": [
+        "full",
+        "long",
+        "medium",
+        "short"
+      ]
+    },
+    "tooltip": {
+      "description": "Adds a tooltip to the timestamp. (Type: TimestampTooltip)"
+    }
+  },
+  "additionalProperties": false
+}

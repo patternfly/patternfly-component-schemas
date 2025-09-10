@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "LoginHeader Props",
+  "description": "Props for the LoginHeader component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the header of the login layout (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional classes added to the login header",
+      "type": "string",
+      "default": "''"
+    },
+    "headerBrand": {
+      "description": "Header brand component (e.g. <LoginHeader />) (React component or element)",
+      "default": null
+    }
+  },
+  "additionalProperties": false
+}

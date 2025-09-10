@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DataListItem Props",
+  "description": "Props for the DataListItem component",
+  "properties": {
+    "aria-labelledby": {
+      "description": "Adds an accessible name to the selectable input if one is rendered",
+      "type": "string",
+      "default": "''"
+    },
+    "children": {
+      "description": "Content rendered inside the DataList item (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional classes added to the DataList item should be either <DataListItemRow> or <DataListContent>",
+      "type": "string",
+      "default": "''"
+    },
+    "id": {
+      "description": "Unique id for the DataList item",
+      "type": "string",
+      "default": "''"
+    },
+    "isExpanded": {
+      "description": "Flag to show if the expanded content of the DataList item is visible",
+      "type": "boolean",
+      "default": false
+    },
+    "selectableInputAriaLabel": {
+      "description": "Aria label to apply to the selectable input if one is rendered",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

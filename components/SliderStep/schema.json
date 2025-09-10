@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "SliderStep Props",
+  "description": "Props for the SliderStep component",
+  "properties": {
+    "className": {
+      "description": "Additional classes added to the slider step.",
+      "type": "string"
+    },
+    "isActive": {
+      "description": "Flag indicating the step is active.",
+      "type": "boolean",
+      "default": false
+    },
+    "isLabelHidden": {
+      "description": "Flag indicating that the label should be hidden.",
+      "type": "boolean",
+      "default": false
+    },
+    "isTickHidden": {
+      "description": "Flag indicating that the tick should be hidden.",
+      "type": "boolean",
+      "default": false
+    },
+    "label": {
+      "description": "Step label. *",
+      "type": "string"
+    },
+    "value": {
+      "description": "Step value. *",
+      "type": "number"
+    }
+  },
+  "additionalProperties": false
+}

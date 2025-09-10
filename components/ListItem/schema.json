@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ListItem Props",
+  "description": "Props for the ListItem component",
+  "properties": {
+    "children": {
+      "description": "Anything that can be rendered inside of list item (React component or element)",
+      "default": null
+    },
+    "icon": {
+      "description": "Icon for the list item (React component or element)",
+      "default": null
+    }
+  },
+  "additionalProperties": false
+}

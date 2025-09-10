@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Hint Props",
+  "description": "Props for the Hint component",
+  "properties": {
+    "actions": {
+      "description": "Actions of the hint. (React component or element)"
+    },
+    "children": {
+      "description": "Content rendered inside the hint. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes applied to the hint.",
+      "type": "string"
+    },
+    "hasNoActionsOffset": {
+      "description": "Flag indicating that the actions have no offset",
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "additionalProperties": false
+}

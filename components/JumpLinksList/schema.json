@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "JumpLinksList Props",
+  "description": "Props for the JumpLinksList component",
+  "properties": {
+    "children": {
+      "description": "Text to be rendered inside span (React component or element)"
+    },
+    "className": {
+      "description": "Classname to add to ul.",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

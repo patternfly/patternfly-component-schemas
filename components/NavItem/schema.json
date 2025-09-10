@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "NavItem Props",
+  "description": "Props for the NavItem component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the nav item. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the nav item",
+      "type": "string"
+    },
+    "component": {
+      "description": "Component used to render NavItems if  React.isValidElement(children) is false (Type: React.ElementType<any> | React.ComponentType<any>)",
+      "default": "'a'"
+    },
+    "flyout": {
+      "description": "Flyout of a nav item. This should be a Menu component. Should not be used if the to prop is defined. (Type: React.ReactElement<any>)"
+    },
+    "groupId": {
+      "description": "Group identifier, will be returned with the onToggle and onSelect callback passed to the Nav component (Type: string | number | null)",
+      "default": null
+    },
+    "icon": {
+      "description": "Icon added before the nav item children. (React component or element)"
+    },
+    "isActive": {
+      "description": "Flag indicating whether the item is active",
+      "type": "boolean",
+      "default": false
+    },
+    "itemId": {
+      "description": "Item identifier, will be returned with the onToggle and onSelect callback passed to the Nav component (Type: string | number | null)",
+      "default": null
+    },
+    "onClick": {
+      "description": "Callback for item click (Type: (\n  event: React.FormEvent<HTMLInputElement>,\n  itemId: number | string,\n  groupId: number | string,\n  to: string\n) => void)"
+    },
+    "onShowFlyout": {
+      "description": "Callback when flyout is opened or closed (Function: () => void)"
+    },
+    "ouiaId": {
+      "description": "Value to overwrite the randomly generated data-ouia-component-id. (Type: number | string)"
+    },
+    "ouiaSafe": {
+      "description": "Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false.",
+      "type": "boolean"
+    },
+    "preventDefault": {
+      "description": "If true prevents the default anchor link action to occur. Set to true if you want to handle navigation yourself.",
+      "type": "boolean",
+      "default": false
+    },
+    "styleChildren": {
+      "description": "Whether to set className on children when React.isValidElement(children)",
+      "type": "boolean",
+      "default": true
+    },
+    "to": {
+      "description": "Target navigation link. Should not be used if the flyout prop is defined.",
+      "type": "string"
+    },
+    "zIndex": {
+      "description": "z-index of the flyout nav item",
+      "type": "number",
+      "default": 9999
+    }
+  },
+  "additionalProperties": false
+}

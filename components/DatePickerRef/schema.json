@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DatePickerRef Props",
+  "description": "Allows finer control over the calendar's open state when a React ref is passed into the\ndate picker component. Accessed via ref.current[property], e.g. ref.current.toggleCalendar().",
+  "properties": {
+    "isCalendarOpen": {
+      "description": "Current calendar open status.",
+      "type": "boolean"
+    },
+    "setCalendarOpen": {
+      "description": "Sets the calendar open status. (Function: (isOpen: boolean) => void)"
+    },
+    "toggleCalendar": {
+      "description": "Toggles the calendar open status. If no parameters are passed, the calendar will simply\ntoggle its open status.\nIf the isOpen parameter is passed, that will set the calendar open status to the value\nof the isOpen parameter.\nIf the eventKey parameter is set to 'Escape', that will invoke the date pickers\nonEscapePress event to toggle the correct control appropriately. (Function: (isOpen?: boolean) => void)"
+    }
+  },
+  "required": [
+    "isCalendarOpen",
+    "setCalendarOpen",
+    "toggleCalendar"
+  ],
+  "additionalProperties": false
+}

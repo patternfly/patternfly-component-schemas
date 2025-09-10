@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "MenuToggle Props",
+  "description": "Props for the MenuToggle component",
+  "properties": {
+    "badge": {
+      "description": "Optional badge rendered inside the toggle, after the children content (React component or element)"
+    },
+    "children": {
+      "description": "Content rendered inside the toggle (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the toggle",
+      "type": "string"
+    },
+    "icon": {
+      "description": "Optional icon or image rendered inside the toggle, before the children content. It is\nrecommended to wrap most basic icons in our icon component. (React component or element)"
+    },
+    "isDisabled": {
+      "description": "Flag indicating the toggle is disabled",
+      "type": "boolean"
+    },
+    "isExpanded": {
+      "description": "Flag indicating the toggle has expanded styling",
+      "type": "boolean"
+    },
+    "isFullHeight": {
+      "description": "Flag indicating the toggle is full height",
+      "type": "boolean"
+    },
+    "isFullWidth": {
+      "description": "Flag indicating the toggle takes up the full width of its parent",
+      "type": "boolean"
+    },
+    "isPlaceholder": {
+      "description": "Flag indicating the toggle contains placeholder text",
+      "type": "boolean"
+    },
+    "ouiaId": {
+      "description": "Value to overwrite the randomly generated data-ouia-component-id. It will always target the toggle button. (Type: number | string)"
+    },
+    "ouiaSafe": {
+      "description": "Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false.",
+      "type": "boolean"
+    },
+    "size": {
+      "description": "Adds styling which affects the size of the menu toggle",
+      "enum": [
+        "default",
+        "sm"
+      ]
+    },
+    "splitButtonItems": {
+      "description": "Elements to display before the toggle button. When included, renders the menu toggle as a split button. (React component or element)"
+    },
+    "status": {
+      "description": "Status styles of the menu toggle",
+      "enum": [
+        "success",
+        "warning",
+        "danger"
+      ]
+    },
+    "statusIcon": {
+      "description": "Overrides the status icon (React component or element)"
+    },
+    "variant": {
+      "description": "Variant styles of the menu toggle",
+      "enum": [
+        "default",
+        "plain",
+        "primary",
+        "plainText",
+        "secondary",
+        "typeahead"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DrawerContent Props",
+  "description": "Props for the DrawerContent component",
+  "properties": {
+    "children": {
+      "description": "Content to be rendered in the drawer. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the Drawer.",
+      "type": "string"
+    },
+    "colorVariant": {
+      "description": "Color variant of the background of the drawer panel",
+      "enum": [
+        "default",
+        "primary",
+        "secondary"
+      ],
+      "default": "DrawerContentColorVariant.default"
+    },
+    "panelContent": {
+      "description": "Content rendered in the drawer panel. (React component or element)"
+    }
+  },
+  "required": [
+    "panelContent"
+  ],
+  "additionalProperties": false
+}

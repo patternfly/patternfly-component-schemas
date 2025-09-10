@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "PageSidebar Props",
+  "description": "Props for the PageSidebar component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the page sidebar (e.g. <PageSidebarBody /> (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the page sidebar",
+      "type": "string",
+      "default": "''"
+    },
+    "id": {
+      "description": "Sidebar id",
+      "type": "string",
+      "default": "'page-sidebar'"
+    },
+    "isManagedSidebar": {
+      "description": "If true, manages the sidebar open/close state and there is no need to pass the isSidebarOpen boolean into\nthe sidebar component or add a callback onSidebarToggle function into the Masthead component",
+      "type": "boolean"
+    },
+    "isSidebarOpen": {
+      "description": "Programmatically manage if the sidebar is shown, if isManagedSidebar is set to true in the Page component, this prop is managed",
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Brand Props",
+  "description": "Props for the Brand component",
+  "properties": {
+    "alt": {
+      "description": "Attribute that specifies the alt text of a <img> Brand. For a <picture> Brand this specifies the fallback <img> alt text.",
+      "type": "string"
+    },
+    "children": {
+      "description": "Transforms the Brand into a <picture> element from an <img> element. Container for <source> child elements. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the either type of Brand.",
+      "type": "string",
+      "default": "''"
+    },
+    "heights": {
+      "description": "Heights at various breakpoints for a <picture> Brand. (Type: {\n  default?: string;\n  sm?: string;\n  md?: string;\n  lg?: string;\n  xl?: string;\n  '2xl'?: string;\n})"
+    },
+    "src": {
+      "description": "Attribute that specifies the URL of a <img> Brand. For a <picture> Brand this specifies the fallback <img> URL.",
+      "type": "string",
+      "default": "''"
+    },
+    "widths": {
+      "description": "Widths at various breakpoints for a <picture> Brand. (Type: {\n  default?: string;\n  sm?: string;\n  md?: string;\n  lg?: string;\n  xl?: string;\n  '2xl'?: string;\n})"
+    }
+  },
+  "required": [
+    "alt"
+  ],
+  "additionalProperties": false
+}

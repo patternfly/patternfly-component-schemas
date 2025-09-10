@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DualListSelectorTreeProps Props",
+  "description": "Used in place of the DualListSelectorListItem sub-component when building a\ncomposable dual list selector with a tree.",
+  "properties": {
+    "data": {
+      "description": "Data of the tree view (Type: DualListSelectorTreeItemData[] | (() => DualListSelectorTreeItemData[]))"
+    },
+    "defaultAllExpanded": {
+      "description": "Sets the default expanded behavior",
+      "type": "boolean"
+    },
+    "hasBadges": {
+      "description": "Flag indicating if all options should have badges",
+      "type": "boolean"
+    },
+    "id": {
+      "description": "ID of the tree view",
+      "type": "string"
+    },
+    "isDisabled": {
+      "description": "Flag indicating if the dual list selector tree is in the disabled state",
+      "type": "boolean"
+    },
+    "isNested": {
+      "description": "",
+      "type": "boolean"
+    },
+    "onOptionCheck": {
+      "description": "Callback fired when an option is checked (Type: (\n    event: React.MouseEvent | React.ChangeEvent<HTMLInputElement> | React.KeyboardEvent,\n    isChecked: boolean,\n    itemData: DualListSelectorTreeItemData\n  ) => void)"
+    }
+  },
+  "required": [
+    "data"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "HelperTextItem Props",
+  "description": "Props for the HelperTextItem component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the helper text item. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes applied to the helper text item.",
+      "type": "string"
+    },
+    "component": {
+      "description": "Sets the component type of the helper text item.",
+      "enum": [
+        "div",
+        "li"
+      ],
+      "default": "'div'"
+    },
+    "icon": {
+      "description": "Custom icon prefixing the helper text. This property will override the default icon when the variant property is passed in. (React component or element)"
+    },
+    "id": {
+      "description": "ID for the helper text item. The value of this prop can be passed into a form component's\naria-describedby prop when you intend for only specific helper text items to be announced to\nassistive technologies.",
+      "type": "string"
+    },
+    "screenReaderText": {
+      "description": "Text that is only accessible to screen readers in order to announce the variant of a helper text item.\nThis prop can only be used when the variant prop has a value other than \"default\".",
+      "type": "string"
+    },
+    "variant": {
+      "description": "Variant styling of the helper text item. Will also render a default icon, which can be overridden\nwith the icon prop.",
+      "enum": [
+        "default",
+        "indeterminate",
+        "warning",
+        "success",
+        "error"
+      ],
+      "default": "'default'"
+    }
+  },
+  "additionalProperties": false
+}

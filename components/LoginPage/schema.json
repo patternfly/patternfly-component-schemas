@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "LoginPage Props",
+  "description": "Props for the LoginPage component",
+  "properties": {
+    "backgroundImgSrc": {
+      "description": "Attribute that specifies the URL of the background image for the login page",
+      "type": "string",
+      "default": "''"
+    },
+    "brandImgAlt": {
+      "description": "Attribute that specifies the alt text of the brand image for the login page",
+      "type": "string",
+      "default": "''"
+    },
+    "brandImgSrc": {
+      "description": "Attribute that specifies the URL of the brand image for the login page",
+      "type": "string",
+      "default": "''"
+    },
+    "children": {
+      "description": "Anything that can be rendered inside of the login page (e.g. <LoginPageForm>) (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional classes added to the login page",
+      "type": "string",
+      "default": "''"
+    },
+    "footerListItems": {
+      "description": "Items rendered inside of the footer list component of the login page (React component or element)",
+      "default": null
+    },
+    "footerListVariants": {
+      "description": "Adds list variant styles for the footer list component of the login page. The only current value is'inline' (Type: ListVariant.inline)"
+    },
+    "forgotCredentials": {
+      "description": "Content rendered inside of login main footer band to display a forgot credentials link. (React component or element)",
+      "default": null
+    },
+    "headerUtilities": {
+      "description": "Header utilities for the login main body header of the login page (React component or element)"
+    },
+    "loginSubtitle": {
+      "description": "Subtitle for the login main body header of the login page",
+      "type": "string"
+    },
+    "loginTitle": {
+      "description": "Title for the login main body header of the login page",
+      "type": "string"
+    },
+    "signUpForAccountMessage": {
+      "description": "Content rendered inside of login main footer band to display a sign up for account message (React component or element)",
+      "default": null
+    },
+    "socialMediaLoginAriaLabel": {
+      "description": "Adds an accessible name to the social media login list.",
+      "type": "string"
+    },
+    "socialMediaLoginContent": {
+      "description": "Content rendered inside of social media login footer section (React component or element)",
+      "default": null
+    },
+    "textContent": {
+      "description": "Content rendered inside of the text component of the login page",
+      "type": "string",
+      "default": "''"
+    }
+  },
+  "required": [
+    "loginTitle"
+  ],
+  "additionalProperties": false
+}

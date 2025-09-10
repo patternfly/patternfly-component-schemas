@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Switch Props",
+  "description": "Props for the Switch component",
+  "properties": {
+    "aria-label": {
+      "description": "Adds an accessible name to the switch when the label prop is not passed, and must describe the isChecked=\"true\" state.",
+      "type": "string",
+      "default": "undefined"
+    },
+    "aria-labelledby": {
+      "description": "Adds an accessible name to the switch via one or more referenced id(s). The computed accessible name must describe the isChecked=\"true\" state.",
+      "type": "string",
+      "default": "undefined"
+    },
+    "className": {
+      "description": "Additional classes added to the switch",
+      "type": "string"
+    },
+    "defaultChecked": {
+      "description": "Flag to set the default checked value of the switch when it is uncontrolled by React state.\nTo make the switch controlled instead use the isChecked prop, but do not use both.",
+      "type": "boolean"
+    },
+    "hasCheckIcon": {
+      "description": "Flag to show if the switch has a check icon.",
+      "type": "boolean"
+    },
+    "id": {
+      "description": "id for the label.",
+      "type": "string"
+    },
+    "isChecked": {
+      "description": "Flag to show if the switch is checked when it is controlled by React state.\nTo make the switch uncontrolled instead use the defaultChecked prop, but do not use both.",
+      "type": "boolean",
+      "default": true
+    },
+    "isDisabled": {
+      "description": "Flag to show if the switch is disabled.",
+      "type": "boolean",
+      "default": false
+    },
+    "isReversed": {
+      "description": "Flag to reverse the layout of toggle and label (label at start, toggle at end).",
+      "type": "boolean",
+      "default": false
+    },
+    "label": {
+      "description": "Text value for the visible label (React component or element)"
+    },
+    "onChange": {
+      "description": "A callback for when the switch selection changes. (event, isChecked) => {} (Function: (event: React.FormEvent<HTMLInputElement>, checked: boolean) => void)",
+      "default": "() => undefined as any"
+    },
+    "ouiaId": {
+      "description": "Value to overwrite the randomly generated data-ouia-component-id. (Type: number | string)"
+    },
+    "ouiaSafe": {
+      "description": "Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false.",
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}

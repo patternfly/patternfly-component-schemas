@@ -1,0 +1,118 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "LoginForm Props",
+  "description": "Props for the LoginForm component",
+  "properties": {
+    "className": {
+      "description": "Additional classes added to the login main body's form",
+      "type": "string",
+      "default": "''"
+    },
+    "helperText": {
+      "description": "Content displayed in the helper text component * (React component or element)",
+      "default": null
+    },
+    "helperTextIcon": {
+      "description": "Icon displayed to the left in the helper text (React component or element)",
+      "default": null
+    },
+    "hidePasswordAriaLabel": {
+      "description": "Accessible label for the hide password button",
+      "type": "string",
+      "default": "'Hide password'"
+    },
+    "isLoginButtonDisabled": {
+      "description": "Flag indicating if the login button is disabled",
+      "type": "boolean",
+      "default": false
+    },
+    "isPasswordRequired": {
+      "description": "Flag indicating if password is required",
+      "type": "boolean",
+      "default": true
+    },
+    "isRememberMeChecked": {
+      "description": "Flag indicating if the remember me checkbox is checked.",
+      "type": "boolean",
+      "default": false
+    },
+    "isShowPasswordEnabled": {
+      "description": "Flag indicating if the user can toggle hiding the password",
+      "type": "boolean",
+      "default": false
+    },
+    "isValidPassword": {
+      "description": "Flag indicating if the password is valid",
+      "type": "boolean",
+      "default": true
+    },
+    "isValidUsername": {
+      "description": "Flag indicating if the username is valid",
+      "type": "boolean",
+      "default": true
+    },
+    "loginButtonLabel": {
+      "description": "Label for the log in button input",
+      "type": "string",
+      "default": "'Log In'"
+    },
+    "noAutoFocus": {
+      "description": "Flag to indicate if the first dropdown item should not gain initial focus",
+      "type": "boolean",
+      "default": false
+    },
+    "onChangePassword": {
+      "description": "Function that handles the onChange event for the password (Function: (event: React.FormEvent<HTMLInputElement>, value: string) => void)",
+      "default": "() => undefined as any"
+    },
+    "onChangeRememberMe": {
+      "description": "Function that handles the onChange event for the remember me checkbox (Function: (event: React.FormEvent<HTMLInputElement>, checked: boolean) => void)",
+      "default": "() => undefined as any"
+    },
+    "onChangeUsername": {
+      "description": "Function that handles the onChange event for the username (Function: (event: React.FormEvent<HTMLInputElement>, value: string) => void)",
+      "default": "() => undefined as any"
+    },
+    "onLoginButtonClick": {
+      "description": "Function that is called when the login button is clicked (Function: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+      "default": "() => undefined as any"
+    },
+    "passwordLabel": {
+      "description": "Label for the password input field",
+      "type": "string",
+      "default": "'Password'"
+    },
+    "passwordValue": {
+      "description": "Value for the password",
+      "type": "string",
+      "default": "''"
+    },
+    "rememberMeLabel": {
+      "description": "Label for the remember me checkbox that indicates the user should be kept logged in.  If the label is not provided, the checkbox will not show.",
+      "type": "string",
+      "default": "''"
+    },
+    "showHelperText": {
+      "description": "Flag indicating the helper text is visible *",
+      "type": "boolean",
+      "default": false
+    },
+    "showPasswordAriaLabel": {
+      "description": "Accessible label for the show password button",
+      "type": "string",
+      "default": "'Show password'"
+    },
+    "usernameLabel": {
+      "description": "Label for the username input field",
+      "type": "string",
+      "default": "'Username'"
+    },
+    "usernameValue": {
+      "description": "Value for the username",
+      "type": "string",
+      "default": "''"
+    }
+  },
+  "additionalProperties": false
+}

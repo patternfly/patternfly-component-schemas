@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "PageState Props",
+  "description": "Props for the PageState component",
+  "properties": {
+    "desktopIsSidebarOpen": {
+      "description": "",
+      "type": "boolean"
+    },
+    "height": {
+      "description": "",
+      "type": "number"
+    },
+    "mobileIsSidebarOpen": {
+      "description": "",
+      "type": "boolean"
+    },
+    "mobileView": {
+      "description": "",
+      "type": "boolean"
+    },
+    "width": {
+      "description": "",
+      "type": "number"
+    }
+  },
+  "required": [
+    "desktopIsSidebarOpen",
+    "height",
+    "mobileIsSidebarOpen",
+    "mobileView",
+    "width"
+  ],
+  "additionalProperties": false
+}

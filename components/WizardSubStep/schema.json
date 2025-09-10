@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "WizardSubStep Props",
+  "description": "Type used to define sub-steps.",
+  "properties": {
+    "parentId": {
+      "description": "Unique identifier of the parent step (Type: string | number)"
+    }
+  },
+  "required": [
+    "parentId"
+  ],
+  "additionalProperties": false
+}

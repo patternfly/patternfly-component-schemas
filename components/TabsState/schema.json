@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "TabsState Props",
+  "description": "Props for the TabsState component",
+  "properties": {
+    "disableBackScrollButton": {
+      "description": "",
+      "type": "boolean"
+    },
+    "disableForwardScrollButton": {
+      "description": "",
+      "type": "boolean"
+    },
+    "enableScrollButtons": {
+      "description": "Used to signal if the scroll buttons should be used",
+      "type": "boolean"
+    },
+    "ouiaStateId": {
+      "description": "",
+      "type": "string"
+    },
+    "overflowingTabCount": {
+      "description": "",
+      "type": "number"
+    },
+    "renderScrollButtons": {
+      "description": "Used to control if the scroll buttons should be rendered. Rendering must occur before the scroll buttons are\nshown and rendering must be stopped after they stop being shown to preserve CSS transitions.",
+      "type": "boolean"
+    },
+    "shownKeys": {
+      "description": " (Type: (string | number)[])"
+    },
+    "showScrollButtons": {
+      "description": "Used to control if the scroll buttons should be shown to the user via the pf-m-scrollable class",
+      "type": "boolean"
+    },
+    "uncontrolledActiveKey": {
+      "description": " (Type: number | string)"
+    },
+    "uncontrolledIsExpandedLocal": {
+      "description": "",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "disableBackScrollButton",
+    "disableForwardScrollButton",
+    "enableScrollButtons",
+    "ouiaStateId",
+    "overflowingTabCount",
+    "renderScrollButtons",
+    "shownKeys",
+    "showScrollButtons",
+    "uncontrolledActiveKey",
+    "uncontrolledIsExpandedLocal"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "FormControlIcon Props",
+  "description": "Props for the FormControlIcon component",
+  "properties": {
+    "className": {
+      "description": "Additional class names added to the text input icon wrapper.",
+      "type": "string"
+    },
+    "customIcon": {
+      "description": "A custom icon to render instead of a status icon. (React component or element)"
+    },
+    "status": {
+      "description": "The status icon to render.",
+      "enum": [
+        "success",
+        "error",
+        "warning"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

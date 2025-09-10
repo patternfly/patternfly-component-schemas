@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "PopoverContent Props",
+  "description": "Props for the PopoverContent component",
+  "properties": {
+    "children": {
+      "description": "PopoverContent content (React component or element)"
+    },
+    "className": {
+      "description": "PopoverContent additional class",
+      "type": "string",
+      "default": null
+    }
+  },
+  "required": [
+    "children"
+  ],
+  "additionalProperties": false
+}

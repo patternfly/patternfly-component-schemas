@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DescriptionListGroup Props",
+  "description": "Props for the DescriptionListGroup component",
+  "properties": {
+    "children": {
+      "description": "Any elements that can be rendered in the list group (Type: any)"
+    },
+    "className": {
+      "description": "Additional classes added to the DescriptionListGroup",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

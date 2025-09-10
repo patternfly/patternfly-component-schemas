@@ -1,0 +1,105 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "TreeViewListItemBase Props",
+  "description": "Props for the TreeViewListItemBase component",
+  "properties": {
+    "action": {
+      "description": "Action of a tree view item, which can be either a button or dropdown component. (React component or element)"
+    },
+    "activeItems": {
+      "description": "Active items of tree view. (Type: TreeViewDataItem[])",
+      "type": "array",
+      "default": []
+    },
+    "badgeProps": {
+      "description": "Additional properties of the tree view item badge. (Type: any)",
+      "default": "{ isRead: true }"
+    },
+    "checkProps": {
+      "description": "Additional properties of the tree view item checkbox. (Type: TreeViewCheckProps)",
+      "default": "{\n  checked: false\n}"
+    },
+    "children": {
+      "description": "Child nodes of a tree view item. (React component or element)",
+      "default": null
+    },
+    "compareItems": {
+      "description": "Callback for item comparison function. (Function: (item: TreeViewDataItem, itemToCheck: TreeViewDataItem) => boolean)"
+    },
+    "customBadgeContent": {
+      "description": "Optional prop for a custom badge. (React component or element)"
+    },
+    "defaultExpanded": {
+      "description": "Flag indicating if node is expanded by default.",
+      "type": "boolean",
+      "default": false
+    },
+    "expandedIcon": {
+      "description": "Expanded icon of a tree view item. (React component or element)"
+    },
+    "hasBadge": {
+      "description": "Flag indicating if a tree view item has a badge.",
+      "type": "boolean",
+      "default": false
+    },
+    "hasCheckbox": {
+      "description": "Flag indicating if a tree view item has a checkbox.",
+      "type": "boolean",
+      "default": false
+    },
+    "icon": {
+      "description": "Default icon of a tree view item. (React component or element)"
+    },
+    "id": {
+      "description": "ID of a tree view item.",
+      "type": "string"
+    },
+    "isCompact": {
+      "description": "Flag indicating if the tree view is using a compact variation.",
+      "type": "boolean"
+    },
+    "isExpanded": {
+      "description": "Flag indicating if the node is expanded, overrides internal state.",
+      "type": "boolean"
+    },
+    "isSelectable": {
+      "description": "Flag indicating that tree nodes should be independently selectable, even when having\nchildren.",
+      "type": "boolean",
+      "default": false
+    },
+    "itemData": {
+      "description": "Data structure of tree view item. (Type: TreeViewDataItem)"
+    },
+    "name": {
+      "description": "Internal content of a tree view item. (React component or element)"
+    },
+    "onCheck": {
+      "description": "Callback for item checkbox selection. (Function: (event: React.ChangeEvent<HTMLInputElement>, item: TreeViewDataItem, parent: TreeViewDataItem) => void)"
+    },
+    "onCollapse": {
+      "description": "Callback for collapsing a node with children. (Function: (event: React.MouseEvent, item: TreeViewDataItem, parentItem: TreeViewDataItem) => void)"
+    },
+    "onExpand": {
+      "description": "Callback for expanding a node with children. (Function: (event: React.MouseEvent, item: TreeViewDataItem, parentItem: TreeViewDataItem) => void)"
+    },
+    "onSelect": {
+      "description": "Callback for item selection. Note: calling event.preventDefault() will prevent the node\nfrom toggling. (Function: (event: React.MouseEvent, item: TreeViewDataItem, parent: TreeViewDataItem) => void)"
+    },
+    "parentItem": {
+      "description": "Parent item of tree view item. (Type: TreeViewDataItem)"
+    },
+    "title": {
+      "description": "Title of a tree view item. (React component or element)"
+    },
+    "useMemo": {
+      "description": "Flag indicating the tree view should utilize memoization to help render large data sets.\nSetting this property requires that the activeItems property is passed an array containing\nevery node in the selected item's path.",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "name",
+    "title"
+  ],
+  "additionalProperties": false
+}

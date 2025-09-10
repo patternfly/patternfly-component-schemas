@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "LabelGroupState Props",
+  "description": "Props for the LabelGroupState component",
+  "properties": {
+    "isOpen": {
+      "description": "",
+      "type": "boolean"
+    },
+    "isTooltipVisible": {
+      "description": "",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "isOpen",
+    "isTooltipVisible"
+  ],
+  "additionalProperties": false
+}

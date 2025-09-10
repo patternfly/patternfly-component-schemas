@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "MenuContent Props",
+  "description": "Props for the MenuContent component",
+  "properties": {
+    "children": {
+      "description": "Items within group (React component or element)"
+    },
+    "getHeight": {
+      "description": "Callback to return the height of the menu content (Function: (height: string) => void)"
+    },
+    "maxMenuHeight": {
+      "description": "Maximum height of menu content",
+      "type": "string"
+    },
+    "menuHeight": {
+      "description": "Height of the menu content",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

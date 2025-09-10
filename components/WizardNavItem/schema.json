@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "WizardNavItem Props",
+  "description": "Props for the WizardNavItem component",
+  "properties": {
+    "children": {
+      "description": "Can nest a WizardNav component for substeps (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional classes spread to the wizard nav item",
+      "type": "string"
+    },
+    "component": {
+      "description": "Component used to render WizardNavItem",
+      "enum": [
+        "button",
+        "a"
+      ],
+      "default": "'button'"
+    },
+    "content": {
+      "description": "The content to display in the navigation item (React component or element)",
+      "default": "''"
+    },
+    "href": {
+      "description": "An optional url to use for when using an anchor component",
+      "type": "string"
+    },
+    "id": {
+      "description": "The id for the navigation item (Type: string | number)"
+    },
+    "isCurrent": {
+      "description": "Whether the navigation item is the currently active item",
+      "type": "boolean",
+      "default": false
+    },
+    "isDisabled": {
+      "description": "Whether the navigation item is disabled",
+      "type": "boolean",
+      "default": false
+    },
+    "isExpandable": {
+      "description": "Flag indicating that this NavItem has child steps and is expandable",
+      "type": "boolean",
+      "default": false
+    },
+    "isVisited": {
+      "description": "Whether the navigation item has been visited",
+      "type": "boolean",
+      "default": false
+    },
+    "onClick": {
+      "description": "Callback for when the navigation item is clicked (Type: (event: React.MouseEvent<HTMLButtonElement> | React.MouseEvent<HTMLAnchorElement>, index: number) => any)"
+    },
+    "ouiaId": {
+      "description": " (Type: number | string)"
+    },
+    "ouiaSafe": {
+      "description": "",
+      "type": "boolean",
+      "default": true
+    },
+    "status": {
+      "description": "Used to determine the icon displayed next to content. Default has no icon.",
+      "enum": [
+        "default",
+        "error",
+        "success"
+      ],
+      "default": "'default'"
+    },
+    "stepIndex": {
+      "description": "The step index passed into the onNavItemClick callback",
+      "type": "number"
+    },
+    "target": {
+      "description": "Where to display the linked URL when using an anchor component (Type: React.HTMLAttributeAnchorTarget)"
+    }
+  },
+  "required": [
+    "stepIndex"
+  ],
+  "additionalProperties": false
+}

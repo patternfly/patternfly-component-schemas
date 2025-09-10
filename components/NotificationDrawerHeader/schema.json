@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "NotificationDrawerHeader Props",
+  "description": "Props for the NotificationDrawerHeader component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the drawer (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes for notification drawer header.",
+      "type": "string",
+      "default": "''"
+    },
+    "closeButtonAriaLabel": {
+      "description": "Adds custom accessible text to the notification drawer close button.",
+      "type": "string",
+      "default": "'Close'"
+    },
+    "count": {
+      "description": "Notification drawer heading count",
+      "type": "number"
+    },
+    "customText": {
+      "description": "Notification drawer heading custom text which can be used instead of providing count/unreadText",
+      "type": "string"
+    },
+    "onClose": {
+      "description": "Callback for when close button is clicked (Type: (event: KeyboardEvent | React.MouseEvent) => void)"
+    },
+    "title": {
+      "description": "Notification drawer heading title",
+      "type": "string",
+      "default": "'Notifications'"
+    },
+    "unreadText": {
+      "description": "Notification drawer heading unread text used in combination with a count",
+      "type": "string",
+      "default": "'unread'"
+    }
+  },
+  "additionalProperties": false
+}

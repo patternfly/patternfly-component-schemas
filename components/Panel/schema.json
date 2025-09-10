@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Panel Props",
+  "description": "Props for the Panel component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the panel (React component or element)"
+    },
+    "className": {
+      "description": "Class to add to outer div",
+      "type": "string"
+    },
+    "isScrollable": {
+      "description": "Flag to add scrollable styling to the panel",
+      "type": "boolean"
+    },
+    "variant": {
+      "description": "Adds panel variant styles",
+      "enum": [
+        "raised",
+        "bordered",
+        "secondary"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

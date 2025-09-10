@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "FormSelectOptionGroup Props",
+  "description": "Props for the FormSelectOptionGroup component",
+  "properties": {
+    "children": {
+      "description": "content rendered inside the Select Option Group (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "additional classes added to the Select Option",
+      "type": "string",
+      "default": "''"
+    },
+    "isDisabled": {
+      "description": "flag indicating if the Option Group is disabled",
+      "type": "boolean",
+      "default": false
+    },
+    "label": {
+      "description": "the label for the option",
+      "type": "string"
+    }
+  },
+  "required": [
+    "label"
+  ],
+  "additionalProperties": false
+}

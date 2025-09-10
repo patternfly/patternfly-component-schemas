@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "PerPageOptions Props",
+  "description": "Properties to customize the content and behavior of the pagination dropdown options. These\nproperties should be passed into the pagination component's perPageOptions property.",
+  "properties": {
+    "title": {
+      "description": "The text title of the option, which is rendered inside the pagination dropdown menu.",
+      "type": "string"
+    },
+    "value": {
+      "description": "The value of the option, which determines how many items are displayed per page.",
+      "type": "number"
+    }
+  },
+  "additionalProperties": false
+}

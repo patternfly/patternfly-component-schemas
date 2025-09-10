@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DrawerCloseButton Props",
+  "description": "Props for the DrawerCloseButton component",
+  "properties": {
+    "aria-label": {
+      "description": "Accessible label for the drawer close button",
+      "type": "string",
+      "default": "'Close drawer panel'"
+    },
+    "className": {
+      "description": "Additional classes added to the drawer close button outer <div>.",
+      "type": "string",
+      "default": "''"
+    },
+    "onClose": {
+      "description": "A callback for when the close button is clicked (Function: () => void)",
+      "default": "() => undefined as any"
+    }
+  },
+  "additionalProperties": false
+}

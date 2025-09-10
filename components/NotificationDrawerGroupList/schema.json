@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "NotificationDrawerGroupList Props",
+  "description": "Props for the NotificationDrawerGroupList component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the notification drawer list body (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the notification drawer list body",
+      "type": "string",
+      "default": "''"
+    }
+  },
+  "additionalProperties": false
+}

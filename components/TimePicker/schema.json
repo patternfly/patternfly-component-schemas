@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "TimePicker Props",
+  "description": "Props for the TimePicker component",
+  "properties": {
+    "aria-label": {
+      "description": "Accessible label for the time picker",
+      "type": "string",
+      "default": "'Time picker'"
+    },
+    "className": {
+      "description": "Additional classes added to the time picker.",
+      "type": "string",
+      "default": "''"
+    },
+    "delimiter": {
+      "description": "Character to display between the hour and minute",
+      "type": "string",
+      "default": "':'"
+    },
+    "id": {
+      "description": "Id of the time picker",
+      "type": "string"
+    },
+    "includeSeconds": {
+      "description": "Includes number of seconds with the chosen time and allows users to manually edit the seconds value.",
+      "type": "boolean"
+    },
+    "inputProps": {
+      "description": "Additional props for input field (Type: TextInputProps)",
+      "default": {}
+    },
+    "invalidFormatErrorMessage": {
+      "description": "Error message to display when the time is provided in an invalid format.",
+      "type": "string",
+      "default": "'Invalid time format'"
+    },
+    "invalidMinMaxErrorMessage": {
+      "description": "Error message to display when the time provided is not within the minTime/maxTime constraints",
+      "type": "string",
+      "default": "'Invalid time entered'"
+    },
+    "is24Hour": {
+      "description": "True if the time is 24 hour time. False if the time is 12 hour time",
+      "type": "boolean",
+      "default": false
+    },
+    "isDisabled": {
+      "description": "Flag indicating the time picker is disabled",
+      "type": "boolean",
+      "default": false
+    },
+    "isOpen": {
+      "description": "Flag to control the opened state of the time picker menu",
+      "type": "boolean",
+      "default": false
+    },
+    "maxTime": {
+      "description": "A time string indicating the maximum value allowed. The format could be an ISO 8601 formatted date string or in 'HH{delimiter}MM' format (Type: string | Date)",
+      "default": "''"
+    },
+    "menuAppendTo": {
+      "description": "The container to append the menu to. Defaults to 'inline'.\nIf your menu is being cut off you can append it to an element higher up the DOM tree.\nSome examples:\nmenuAppendTo=\"parent\"\nmenuAppendTo={() => document.body}\nmenuAppendTo={document.getElementById('target')}",
+      "enum": [
+        "inline",
+        "parent"
+      ],
+      "default": "'inline'"
+    },
+    "minTime": {
+      "description": "A time string indicating the minimum value allowed. The format could be an ISO 8601 formatted date string or in 'HH{delimiter}MM' format (Type: string | Date)",
+      "default": "''"
+    },
+    "onChange": {
+      "description": "Optional event handler called each time the value in the time picker input changes. (Function: (\n  event: React.FormEvent<HTMLInputElement>,\n  time: string,\n  hour?: number,\n  minute?: number,\n  seconds?: number,\n  isValid?: boolean\n) => void)"
+    },
+    "placeholder": {
+      "description": "String to display in the empty time picker field as a hint for the expected time format",
+      "type": "string",
+      "default": "'hh:mm'"
+    },
+    "setIsOpen": {
+      "description": "Handler invoked each time the open state of time picker updates (Function: (isOpen?: boolean) => void)",
+      "default": "() => {}"
+    },
+    "stepMinutes": {
+      "description": "Size of step between time options in minutes.",
+      "type": "number",
+      "default": 30
+    },
+    "time": {
+      "description": "A time string. The format could be  an ISO 8601 formatted date string or in 'HH{delimiter}MM' format (Type: string | Date)",
+      "default": "''"
+    },
+    "validateTime": {
+      "description": "Optional validator can be provided to override the internal time validator. (Function: (time: string) => boolean)"
+    },
+    "width": {
+      "description": "Width of the time picker.",
+      "type": "string",
+      "default": "'150px'"
+    },
+    "zIndex": {
+      "description": "z-index of the time picker",
+      "type": "number",
+      "default": 9999
+    }
+  },
+  "additionalProperties": false
+}

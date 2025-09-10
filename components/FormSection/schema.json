@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "FormSection Props",
+  "description": "Props for the FormSection component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the section (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the section",
+      "type": "string",
+      "default": "''"
+    },
+    "title": {
+      "description": "Title for the section (React component or element)",
+      "default": "''"
+    },
+    "titleElement": {
+      "description": "Element to wrap the section title",
+      "enum": [
+        "div",
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ],
+      "default": "'div'"
+    }
+  },
+  "additionalProperties": false
+}

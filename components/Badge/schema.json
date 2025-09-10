@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Badge Props",
+  "description": "Props for the Badge component",
+  "properties": {
+    "children": {
+      "description": "content rendered inside the Badge (React component or element)",
+      "default": "''"
+    },
+    "className": {
+      "description": "additional classes added to the Badge",
+      "type": "string",
+      "default": "''"
+    },
+    "isDisabled": {
+      "description": "Adds styling to the badge to indicate it is disabled",
+      "type": "boolean",
+      "default": false
+    },
+    "isRead": {
+      "description": "Adds styling to the badge to indicate it has been read",
+      "type": "boolean",
+      "default": false
+    },
+    "screenReaderText": {
+      "description": "Text announced by screen readers to indicate the current content/status of the badge.",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ProgressStepper Props",
+  "description": "Props for the ProgressStepper component",
+  "properties": {
+    "aria-label": {
+      "description": "Adds an accessible label to the progress stepper.",
+      "type": "string"
+    },
+    "children": {
+      "description": "Content rendered inside the progress stepper. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes applied to the progress stepper container.",
+      "type": "string"
+    },
+    "isCenterAligned": {
+      "description": "Flag indicating the progress stepper should be centered.",
+      "type": "boolean"
+    },
+    "isCompact": {
+      "description": "Flag indicating the progress stepper should be rendered compactly.",
+      "type": "boolean"
+    },
+    "isVertical": {
+      "description": "Flag indicating the progress stepper has a vertical layout.",
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}

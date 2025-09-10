@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "TabContent Props",
+  "description": "Props for the TabContent component",
+  "properties": {
+    "activeKey": {
+      "description": "Identifies the active Tab (Type: number | string)"
+    },
+    "aria-label": {
+      "description": "title of controlling Tab if used outside Tabs component",
+      "type": "string"
+    },
+    "child": {
+      "description": "Child to show in the content area (Type: React.ReactElement<any>)"
+    },
+    "children": {
+      "description": "content rendered inside the tab content area if used outside Tabs component (Type: any)"
+    },
+    "className": {
+      "description": "class of tab content area if used outside Tabs component",
+      "type": "string"
+    },
+    "eventKey": {
+      "description": "uniquely identifies the controlling Tab if used outside Tabs component (Type: number | string)"
+    },
+    "id": {
+      "description": "id passed from parent to identify the content section",
+      "type": "string"
+    },
+    "ouiaId": {
+      "description": "Value to overwrite the randomly generated data-ouia-component-id. (Type: number | string)"
+    },
+    "ouiaSafe": {
+      "description": "Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false.",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "additionalProperties": false
+}

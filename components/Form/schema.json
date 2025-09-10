@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Form Props",
+  "description": "Props for the Form component",
+  "properties": {
+    "children": {
+      "description": "Anything that can be rendered as Form content. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the Form.",
+      "type": "string"
+    },
+    "isHorizontal": {
+      "description": "Sets the Form to horizontal.",
+      "type": "boolean"
+    },
+    "isWidthLimited": {
+      "description": "Limits the max-width of the form.",
+      "type": "boolean"
+    },
+    "maxWidth": {
+      "description": "Sets a custom max-width for the form.",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

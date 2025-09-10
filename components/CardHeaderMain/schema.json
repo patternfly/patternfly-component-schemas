@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "CardHeaderMain Props",
+  "description": "Props for the CardHeaderMain component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the Card Head Main (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the Card Head Main",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

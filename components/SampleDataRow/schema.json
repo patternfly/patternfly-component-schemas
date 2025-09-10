@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "SampleDataRow Props",
+  "description": "Props for the SampleDataRow component",
+  "properties": {
+    "applications": {
+      "description": "",
+      "type": "number"
+    },
+    "lastModified": {
+      "description": "",
+      "type": "string"
+    },
+    "name": {
+      "description": "",
+      "type": "string"
+    },
+    "threads": {
+      "description": "",
+      "type": "number"
+    },
+    "url": {
+      "description": "",
+      "type": "string"
+    },
+    "workspaces": {
+      "description": "",
+      "type": "number"
+    }
+  },
+  "required": [
+    "applications",
+    "lastModified",
+    "name",
+    "threads",
+    "url",
+    "workspaces"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "HorizontalOverflowObject Props",
+  "description": "Props for the HorizontalOverflowObject component",
+  "properties": {
+    "defaultTitleText": {
+      "description": "The text which displays when an overflowing tab isn't selected",
+      "type": "string"
+    },
+    "showTabCount": {
+      "description": "Flag which shows the count of overflowing tabs when enabled",
+      "type": "boolean"
+    },
+    "toggleAriaLabel": {
+      "description": "The aria label applied to the button which toggles the tab overflow menu",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

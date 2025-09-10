@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Split Props",
+  "description": "Props for the Split component",
+  "properties": {
+    "children": {
+      "description": "content rendered inside the split layout. (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional classes added to the split layout.",
+      "type": "string",
+      "default": "''"
+    },
+    "component": {
+      "description": "Sets the base component to render. Defaults to div. (React component or element)",
+      "default": "'div'"
+    },
+    "hasGutter": {
+      "description": "Adds space between children.",
+      "type": "boolean",
+      "default": false
+    },
+    "isWrappable": {
+      "description": "Allows children to wrap.",
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "additionalProperties": false
+}

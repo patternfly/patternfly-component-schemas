@@ -1,0 +1,158 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "FileUploadField Props",
+  "description": "A more customizable file upload component for implementing custom logic. Drag and drop\nfunctionality is not built in by default.",
+  "properties": {
+    "allowEditingUploadedText": {
+      "description": "Flag to allow editing of a text file's contents after it is selected from disk.",
+      "type": "boolean",
+      "default": false
+    },
+    "aria-label": {
+      "description": "Aria-label for the text area.",
+      "type": "string",
+      "default": "'File upload'"
+    },
+    "browseButtonAriaDescribedby": {
+      "description": "ID or ID's of elements that describe the browse button. Typically this should refer\nto elements such as helper text when there are file restrictions.",
+      "type": "string"
+    },
+    "browseButtonText": {
+      "description": "Text for the browse button.",
+      "type": "string",
+      "default": "'Browse...'"
+    },
+    "children": {
+      "description": "Additional children to render after (or instead of) the file preview. (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional classes added to the file upload field container element.",
+      "type": "string",
+      "default": "''"
+    },
+    "clearButtonText": {
+      "description": "Text for the clear button.",
+      "type": "string",
+      "default": "'Clear'"
+    },
+    "containerRef": {
+      "description": "A reference object to attach to the file upload field container element. (Type: React.Ref<HTMLDivElement>)",
+      "default": null
+    },
+    "filename": {
+      "description": "Value to be shown in the read-only filename field.",
+      "type": "string",
+      "default": "''"
+    },
+    "filenameAriaLabel": {
+      "description": "Aria-label for the read-only filename field.",
+      "type": "string",
+      "default": "filename ? 'Read only filename' : filenamePlaceholder"
+    },
+    "filenamePlaceholder": {
+      "description": "Placeholder string to display in the empty filename field.",
+      "type": "string",
+      "default": "'Drag a file here or browse to upload'"
+    },
+    "hideDefaultPreview": {
+      "description": "Flag to hide the built-in preview of the file (where available). If true, you can use\nthe children property to render an alternate preview.",
+      "type": "boolean",
+      "default": false
+    },
+    "id": {
+      "description": "Unique id for the text area. Also used to generate ids for accessible labels.",
+      "type": "string"
+    },
+    "isBrowseButtonDisabled": {
+      "description": "Flag to disable the browse button.",
+      "type": "boolean",
+      "default": false
+    },
+    "isClearButtonDisabled": {
+      "description": "Flag to disable the clear button.",
+      "type": "boolean",
+      "default": "!filename && !value"
+    },
+    "isDisabled": {
+      "description": "Flag to show if the field is disabled.",
+      "type": "boolean",
+      "default": false
+    },
+    "isDragActive": {
+      "description": "Flag to show if a file is being dragged over the file upload field.",
+      "type": "boolean",
+      "default": false
+    },
+    "isLoading": {
+      "description": "Flag to show if a file is being loaded.",
+      "type": "boolean",
+      "default": false
+    },
+    "isReadOnly": {
+      "description": "Flag to show if the field is read only.",
+      "type": "boolean",
+      "default": false
+    },
+    "isRequired": {
+      "description": "Flag to show if the field is required.",
+      "type": "boolean",
+      "default": false
+    },
+    "name": {
+      "description": "Name property for the text input.",
+      "type": "string"
+    },
+    "onBrowseButtonClick": {
+      "description": "A callback for when the browse button is clicked. (Function: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+      "default": "() => {}"
+    },
+    "onClearButtonClick": {
+      "description": "A callback for when the clear button is clicked. (Function: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+      "default": "() => {}"
+    },
+    "onTextAreaBlur": {
+      "description": "Callback for when focus is lost on the text area field. (Function: (event?: any) => void)"
+    },
+    "onTextAreaClick": {
+      "description": "A callback for when the text area is clicked. Can also be set via the onClick property\nof the file upload component. (Function: (event: React.MouseEvent<HTMLTextAreaElement, MouseEvent>) => void)"
+    },
+    "onTextChange": {
+      "description": "Text area text changed. (Function: (event: React.ChangeEvent<HTMLTextAreaElement>, text: string) => void)"
+    },
+    "spinnerAriaValueText": {
+      "description": "Aria-valuetext for the loading spinner.",
+      "type": "string"
+    },
+    "textAreaPlaceholder": {
+      "description": "Placeholder string to display in the empty text area field.",
+      "type": "string",
+      "default": "''"
+    },
+    "type": {
+      "description": "What type of file. Determines what is is expected by the value property (a string for\n'text' and 'dataURL', or a File object otherwise).",
+      "enum": [
+        "text",
+        "dataURL"
+      ]
+    },
+    "validated": {
+      "description": "Value to indicate if the field is modified to show that validation state.\nIf set to success, field will be modified to indicate valid state.\nIf set to error,  field will be modified to indicate error state.",
+      "enum": [
+        "success",
+        "error",
+        "default"
+      ],
+      "default": "'default'"
+    },
+    "value": {
+      "description": "Value of the file's contents (string if text file, File object otherwise). (Type: string | File)",
+      "default": "''"
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "additionalProperties": false
+}

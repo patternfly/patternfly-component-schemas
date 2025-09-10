@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "InputGroupText Props",
+  "description": "Props for the InputGroupText component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the input group text. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the input group text.",
+      "type": "string"
+    },
+    "component": {
+      "description": "Component that wraps the input group text. (React component or element)",
+      "default": "'span'"
+    },
+    "isDisabled": {
+      "description": "Flag to indicate if the input group text is disabled.",
+      "type": "boolean"
+    },
+    "isPlain": {
+      "description": "Flag to to indicate if the input group item is plain.",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "children"
+  ],
+  "additionalProperties": false
+}

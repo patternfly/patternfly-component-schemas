@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Accordion Props",
+  "description": "Props for the Accordion component",
+  "properties": {
+    "aria-label": {
+      "description": "Adds accessible text to the Accordion",
+      "type": "string"
+    },
+    "asDefinitionList": {
+      "description": "Flag to indicate whether use definition list or div",
+      "type": "boolean",
+      "default": true
+    },
+    "children": {
+      "description": "Content rendered inside the Accordion (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional classes added to the Accordion",
+      "type": "string",
+      "default": "''"
+    },
+    "displaySize": {
+      "description": "Display size variant.",
+      "enum": [
+        "default",
+        "lg"
+      ],
+      "default": "'default'"
+    },
+    "headingLevel": {
+      "description": "Heading level to use",
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ],
+      "default": "'h3'"
+    },
+    "isBordered": {
+      "description": "Flag to indicate the accordion had a border",
+      "type": "boolean",
+      "default": false
+    },
+    "togglePosition": {
+      "description": "Sets the toggle icon position for all accordion toggles.",
+      "enum": [
+        "start",
+        "end"
+      ],
+      "default": "'end'"
+    }
+  },
+  "additionalProperties": false
+}

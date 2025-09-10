@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "OnSetPage Props",
+  "description": "Props for the OnSetPage component",
+  "properties": {},
+  "additionalProperties": false
+}

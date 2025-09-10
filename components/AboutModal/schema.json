@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "AboutModal Props",
+  "description": "Props for the AboutModal component",
+  "properties": {
+    "appendTo": {
+      "description": "The parent container to append the modal to. Defaults to document.body (Type: HTMLElement | (() => HTMLElement))"
+    },
+    "aria-label": {
+      "description": "Aria label for the about modal.  This should be used when no productName prop is provided",
+      "type": "string"
+    },
+    "backgroundImageSrc": {
+      "description": "The URL or file path of the image for the background",
+      "type": "string"
+    },
+    "brandImageAlt": {
+      "description": "The alternate text of the brand image",
+      "type": "string"
+    },
+    "brandImageSrc": {
+      "description": "The URL of the image for the brand",
+      "type": "string"
+    },
+    "children": {
+      "description": "Content rendered inside the about modal (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the about modal",
+      "type": "string"
+    },
+    "closeButtonAriaLabel": {
+      "description": "Set aria label to the close button",
+      "type": "string"
+    },
+    "disableFocusTrap": {
+      "description": "Flag to disable focus trap",
+      "type": "boolean"
+    },
+    "hasNoContentContainer": {
+      "description": "Prevents the about modal from rendering content inside a container; allows for more flexible layouts",
+      "type": "boolean",
+      "default": false
+    },
+    "isOpen": {
+      "description": "Flag to show the about modal",
+      "type": "boolean",
+      "default": false
+    },
+    "onClose": {
+      "description": "A callback for when the close button is clicked (Type: (event: React.MouseEvent | MouseEvent | KeyboardEvent) => void)",
+      "default": "(_e): any => undefined"
+    },
+    "productName": {
+      "description": "Product name",
+      "type": "string"
+    },
+    "trademark": {
+      "description": "Trademark information",
+      "type": "string"
+    }
+  },
+  "required": [
+    "brandImageAlt",
+    "brandImageSrc",
+    "children"
+  ],
+  "additionalProperties": false
+}

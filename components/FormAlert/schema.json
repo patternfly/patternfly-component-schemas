@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "FormAlert Props",
+  "description": "Props for the FormAlert component",
+  "properties": {
+    "children": {
+      "description": "An inline PatternFly Alert. (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional classes added to the FormGroup.",
+      "type": "string",
+      "default": "''"
+    }
+  },
+  "additionalProperties": false
+}

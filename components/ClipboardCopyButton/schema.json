@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ClipboardCopyButton Props",
+  "description": "Props for the ClipboardCopyButton component",
+  "properties": {
+    "aria-label": {
+      "description": "Aria-label for the copy button",
+      "type": "string",
+      "default": "'Copyable input'"
+    },
+    "children": {
+      "description": "Content of the copy button (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the copy button",
+      "type": "string"
+    },
+    "entryDelay": {
+      "description": "Entry delay on the copy button tooltip",
+      "type": "number",
+      "default": 300
+    },
+    "exitDelay": {
+      "description": "Exit delay on the copy button tooltip",
+      "type": "number",
+      "default": 0
+    },
+    "hasNoPadding": {
+      "description": "Removes padding from clipboard copy button. This is used for inline-compact variant",
+      "type": "boolean",
+      "default": false
+    },
+    "id": {
+      "description": "ID of the copy button",
+      "type": "string"
+    },
+    "maxWidth": {
+      "description": "Max width of the copy button tooltip",
+      "type": "string",
+      "default": "'100px'"
+    },
+    "onClick": {
+      "description": "Callback for the copy when the button is clicked (Function: (event: React.MouseEvent) => void)"
+    },
+    "onTooltipHidden": {
+      "description": "Callback when tooltip's hide transition has finished executing (Function: () => void)",
+      "default": "() => {}"
+    },
+    "position": {
+      "description": "Position of the copy button tooltip (Type: | TooltipPosition\n| 'auto'\n| 'top'\n| 'bottom'\n| 'left'\n| 'right'\n| 'top-start'\n| 'top-end'\n| 'bottom-start'\n| 'bottom-end'\n| 'left-start'\n| 'left-end'\n| 'right-start'\n| 'right-end')",
+      "default": "'top'"
+    },
+    "textId": {
+      "description": "ID of the content that is being copied",
+      "type": "string"
+    },
+    "variant": {
+      "description": "Variant of the copy button",
+      "enum": [
+        "control",
+        "plain"
+      ],
+      "default": "'control'"
+    }
+  },
+  "required": [
+    "children",
+    "id",
+    "onClick",
+    "textId"
+  ],
+  "additionalProperties": false
+}

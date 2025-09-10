@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DataListAction Props",
+  "description": "Props for the DataListAction component",
+  "properties": {
+    "aria-label": {
+      "description": "Adds accessible text to the DataList Action",
+      "type": "string"
+    },
+    "aria-labelledby": {
+      "description": "Adds accessible text to the DataList Action",
+      "type": "string"
+    },
+    "children": {
+      "description": "Content rendered as DataList Action  (e.g <Button> or <Dropdown>) (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the DataList Action",
+      "type": "string"
+    },
+    "id": {
+      "description": "Identify the DataList toggle number",
+      "type": "string"
+    },
+    "visibility": {
+      "description": "What breakpoints to hide/show the data list action",
+      "enum": [
+        "hidden",
+        "visible",
+        "hidden",
+        "visible",
+        "hidden",
+        "visible",
+        "hidden",
+        "visible",
+        "hidden",
+        "visible",
+        "2xl",
+        "hidden",
+        "visible"
+      ]
+    }
+  },
+  "required": [
+    "aria-label",
+    "aria-labelledby",
+    "children",
+    "id"
+  ],
+  "additionalProperties": false
+}

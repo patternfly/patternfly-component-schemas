@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ModalContent Props",
+  "description": "Props for the ModalContent component",
+  "properties": {
+    "aria-describedby": {
+      "description": "Id to use for the modal box description. This should match the ModalHeader labelId or descriptorId.",
+      "type": "string"
+    },
+    "aria-label": {
+      "description": "Accessible descriptor of the modal.",
+      "type": "string"
+    },
+    "aria-labelledby": {
+      "description": "Id to use for the modal box label. This should include the ModalHeader labelId.",
+      "type": "string"
+    },
+    "backdropClassName": {
+      "description": "Additional classes added to the modal backdrop.",
+      "type": "string"
+    },
+    "backdropId": {
+      "description": "Id of the backdrop.",
+      "type": "string"
+    },
+    "boxId": {
+      "description": "Id of the modal box container.",
+      "type": "string"
+    },
+    "children": {
+      "description": "Content rendered inside the modal. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the modal box.",
+      "type": "string"
+    },
+    "disableFocusTrap": {
+      "description": "Flag to disable focus trap.",
+      "type": "boolean",
+      "default": false
+    },
+    "elementToFocus": {
+      "description": "The element to focus when the modal opens. By default the first\nfocusable element will receive focus. (Type: HTMLElement | SVGElement | string)"
+    },
+    "isOpen": {
+      "description": "Flag to show the modal.",
+      "type": "boolean",
+      "default": false
+    },
+    "maxWidth": {
+      "description": "Maximum width of the modal. (Type: number | string)"
+    },
+    "onClose": {
+      "description": "A callback for when the close button is clicked. (Type: (event: KeyboardEvent | React.MouseEvent) => void)"
+    },
+    "ouiaId": {
+      "description": "Value to overwrite the randomly generated data-ouia-component-id. (Type: number | string)"
+    },
+    "ouiaSafe": {
+      "description": "Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false.",
+      "type": "boolean",
+      "default": true
+    },
+    "position": {
+      "description": "Position of the modal. By default a modal will be positioned vertically and horizontally centered.",
+      "enum": [
+        "default",
+        "top"
+      ]
+    },
+    "positionOffset": {
+      "description": "Offset from alternate position. Can be any valid CSS length/percentage.",
+      "type": "string"
+    },
+    "variant": {
+      "description": "Variant of the modal.",
+      "enum": [
+        "small",
+        "medium",
+        "large",
+        "default"
+      ],
+      "default": "'default'"
+    },
+    "width": {
+      "description": "Default width of the modal. (Type: number | string)"
+    }
+  },
+  "required": [
+    "boxId",
+    "children"
+  ],
+  "additionalProperties": false
+}

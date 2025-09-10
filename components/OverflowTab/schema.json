@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "OverflowTab Props",
+  "description": "Props for the OverflowTab component",
+  "properties": {
+    "className": {
+      "description": "Additional classes added to the overflow tab",
+      "type": "string"
+    },
+    "defaultTitleText": {
+      "description": "The text which displays when an overflowing tab isn't selected",
+      "type": "string",
+      "default": "'More'"
+    },
+    "focusTimeoutDelay": {
+      "description": "Time in ms to wait before firing the toggles' focus event. Defaults to 0",
+      "type": "number",
+      "default": 0
+    },
+    "overflowingTabs": {
+      "description": "The tabs that should be displayed in the menu (Type: TabProps[])",
+      "type": "array",
+      "default": []
+    },
+    "shouldPreventScrollOnItemFocus": {
+      "description": "Flag indicating if scroll on focus of the first menu item should occur.",
+      "type": "boolean",
+      "default": true
+    },
+    "showTabCount": {
+      "description": "Flag which shows the count of overflowing tabs when enabled",
+      "type": "boolean"
+    },
+    "toggleAriaLabel": {
+      "description": "The aria label applied to the button which toggles the tab overflow menu",
+      "type": "string"
+    },
+    "zIndex": {
+      "description": "z-index of the overflow tab",
+      "type": "number",
+      "default": 9999
+    }
+  },
+  "additionalProperties": false
+}

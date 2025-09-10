@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "TextInputGroupMain Props",
+  "description": "Props for the TextInputGroupMain component",
+  "properties": {
+    "aria-activedescendant": {
+      "description": "The id of the active element. Required if role has a value of \"combobox\", and focus\nshould remain on the input.",
+      "type": "string"
+    },
+    "aria-controls": {
+      "description": "The id of the element(s) controlled by the input. Required if role has a value of \"combobox\".",
+      "type": "string"
+    },
+    "aria-label": {
+      "description": "Accessibility label for the input",
+      "type": "string"
+    },
+    "children": {
+      "description": "Content rendered inside the text input group main div (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes applied to the text input group main container",
+      "type": "string"
+    },
+    "hint": {
+      "description": "Suggestion that will show up like a placeholder even with text in the input",
+      "type": "string"
+    },
+    "icon": {
+      "description": "Icon to be shown on the left side of the text input group main container (React component or element)"
+    },
+    "inputId": {
+      "description": "The id of the input element",
+      "type": "string"
+    },
+    "inputProps": {
+      "description": "Additional props to spread to the input element. (Type: any)"
+    },
+    "isExpanded": {
+      "description": "Flag for whether an associated element controlled by the input is visible. Required if\nrole has a value of \"combobox\".",
+      "type": "boolean"
+    },
+    "name": {
+      "description": "Name for the input",
+      "type": "string"
+    },
+    "onBlur": {
+      "description": "Callback for when focus is lost on the input field (Function: (event?: any) => void)"
+    },
+    "onChange": {
+      "description": "Callback for when there is a change in the input field (Function: (event: React.FormEvent<HTMLInputElement>, value: string) => void)"
+    },
+    "onFocus": {
+      "description": "Callback for when the input field is focused (Function: (event?: any) => void)"
+    },
+    "placeholder": {
+      "description": "Placeholder value for the input",
+      "type": "string"
+    },
+    "role": {
+      "description": "Determines the accessible role of the input.",
+      "type": "string"
+    },
+    "type": {
+      "description": "Type that the input accepts. (Type: | 'text'\n| 'date'\n| 'datetime-local'\n| 'email'\n| 'month'\n| 'number'\n| 'password'\n| 'search'\n| 'tel'\n| 'time'\n| 'url')"
+    },
+    "value": {
+      "description": "Value for the input (Type: string | number)"
+    }
+  },
+  "additionalProperties": false
+}

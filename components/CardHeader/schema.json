@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "CardHeader Props",
+  "description": "Props for the CardHeader component",
+  "properties": {
+    "actions": {
+      "description": "Actions of the card header (Type: CardHeaderActionsObject)"
+    },
+    "children": {
+      "description": "Content rendered inside the card header (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the card header",
+      "type": "string"
+    },
+    "hasWrap": {
+      "description": "Flag indicating that header wrapping is enabled",
+      "type": "boolean"
+    },
+    "id": {
+      "description": "ID of the card header.",
+      "type": "string"
+    },
+    "isToggleRightAligned": {
+      "description": "Whether to right-align expandable toggle button",
+      "type": "boolean"
+    },
+    "onExpand": {
+      "description": "Callback expandable card (Function: (event: React.MouseEvent, id: string) => void)"
+    },
+    "selectableActions": {
+      "description": "Selectable actions of the card header (Type: CardHeaderSelectableActionsObject)"
+    },
+    "toggleButtonProps": {
+      "description": "Additional props for expandable toggle button (Type: any)"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DrilldownMenu Props",
+  "description": "Props for the DrilldownMenu component",
+  "properties": {
+    "children": {
+      "description": "Items within drilldown sub-menu (React component or element)"
+    },
+    "getHeight": {
+      "description": "Optional callback to get the height of the sub menu (Function: (height: string) => void)"
+    },
+    "id": {
+      "description": "ID of the drilldown sub-menu",
+      "type": "string"
+    },
+    "isMenuDrilledIn": {
+      "description": "Flag indicating whether the menu is drilled in",
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "additionalProperties": false
+}

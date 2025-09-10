@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "EmptyStateHeader Props",
+  "description": "Props for the EmptyStateHeader component",
+  "properties": {
+    "className": {
+      "description": "Additional classes added to the empty state header",
+      "type": "string"
+    },
+    "headingLevel": {
+      "description": "The heading level to use, default is h1",
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ],
+      "default": "EmptyStateHeadingLevel.h1"
+    },
+    "icon": {
+      "description": "Empty state icon element to be rendered. Can also be a spinner component (Type: React.ComponentType<any>)"
+    },
+    "titleClassName": {
+      "description": "Additional classes added to the title inside empty state header",
+      "type": "string"
+    },
+    "titleText": {
+      "description": "Text of the title inside empty state header, will be wrapped in headingLevel (React component or element)"
+    }
+  },
+  "additionalProperties": false
+}

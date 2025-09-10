@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "CheckboxState Props",
+  "description": "Props for the CheckboxState component",
+  "properties": {
+    "ouiaStateId": {
+      "description": "",
+      "type": "string"
+    }
+  },
+  "required": [
+    "ouiaStateId"
+  ],
+  "additionalProperties": false
+}

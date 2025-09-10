@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DualListSelectorControlsWrapperProps Props",
+  "description": "Acts as the container for the DualListSelectorControl sub-components.",
+  "properties": {
+    "children": {
+      "description": "Anything that can be rendered inside of the wrapper. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the wrapper.",
+      "type": "string"
+    },
+    "innerRef": {
+      "description": " (Type: React.RefObject<HTMLDivElement | null>)"
+    },
+    "Unknown": {
+      "description": "Accessible label for the dual list selector controls wrapper.",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

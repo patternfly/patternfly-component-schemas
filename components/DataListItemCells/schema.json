@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DataListItemCells Props",
+  "description": "Props for the DataListItemCells component",
+  "properties": {
+    "className": {
+      "description": "Additional classes added to the DataList item Content Wrapper.  Children should be one ore more <DataListCell> nodes",
+      "type": "string",
+      "default": "''"
+    },
+    "dataListCells": {
+      "description": "Array of <DataListCell> nodes that are rendered one after the other. (React component or element)"
+    },
+    "rowid": {
+      "description": "Id for the row",
+      "type": "string",
+      "default": "''"
+    }
+  },
+  "additionalProperties": false
+}

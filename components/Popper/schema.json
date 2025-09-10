@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Popper Props",
+  "description": "Props for the Popper component",
+  "properties": {
+    "animationDuration": {
+      "description": " (Type: No type info)",
+      "default": 0
+    },
+    "appendTo": {
+      "description": " (Type: No type info)",
+      "default": "() => document.body"
+    },
+    "direction": {
+      "description": " (Type: No type info)",
+      "default": "'down'"
+    },
+    "distance": {
+      "description": " (Type: No type info)",
+      "default": 0
+    },
+    "enableFlip": {
+      "description": " (Type: No type info)",
+      "default": true
+    },
+    "entryDelay": {
+      "description": " (Type: No type info)",
+      "default": 0
+    },
+    "exitDelay": {
+      "description": " (Type: No type info)",
+      "default": 0
+    },
+    "flipBehavior": {
+      "description": " (Type: No type info)",
+      "default": "'flip'"
+    },
+    "isVisible": {
+      "description": " (Type: No type info)",
+      "default": true
+    },
+    "minWidth": {
+      "description": " (Type: No type info)",
+      "default": "'trigger'"
+    },
+    "onHidden": {
+      "description": " (Type: No type info)",
+      "default": "() => {}"
+    },
+    "onHide": {
+      "description": " (Type: No type info)",
+      "default": "() => {}"
+    },
+    "onMount": {
+      "description": " (Type: No type info)",
+      "default": "() => {}"
+    },
+    "onShow": {
+      "description": " (Type: No type info)",
+      "default": "() => {}"
+    },
+    "onShown": {
+      "description": " (Type: No type info)",
+      "default": "() => {}"
+    },
+    "position": {
+      "description": " (Type: No type info)",
+      "default": "'start'"
+    },
+    "preventOverflow": {
+      "description": " (Type: No type info)",
+      "default": false
+    },
+    "zIndex": {
+      "description": " (Type: No type info)",
+      "default": 9999
+    }
+  },
+  "additionalProperties": false
+}

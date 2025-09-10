@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ProgressContainer Props",
+  "description": "Props for the ProgressContainer component",
+  "properties": {
+    "helperText": {
+      "description": "Content which can be used to convey additional information about the progress component.\nWe recommend the helper text component as it was designed for this purpose. (React component or element)"
+    },
+    "isTitleTruncated": {
+      "description": "Whether string title should be truncated",
+      "type": "boolean",
+      "default": false
+    },
+    "label": {
+      "description": "Label to indicate what progress is showing. (React component or element)",
+      "default": null
+    },
+    "measureLocation": {
+      "description": "Location of progress value.",
+      "enum": [
+        "outside",
+        "inside",
+        "top",
+        "none"
+      ],
+      "default": "ProgressMeasureLocation.top"
+    },
+    "parentId": {
+      "description": "Progress component DOM ID.",
+      "type": "string"
+    },
+    "progressBarAriaProps": {
+      "description": "Properties needed for aria support (Type: AriaProps)"
+    },
+    "title": {
+      "description": "Progress title. The isTitleTruncated property will only affect string titles. Node title truncation must be handled manually. (React component or element)",
+      "default": "''"
+    },
+    "tooltipPosition": {
+      "description": "Position of the tooltip which is displayed if title is truncated (Type: | TooltipPosition\n| 'auto'\n| 'top'\n| 'bottom'\n| 'left'\n| 'right'\n| 'top-start'\n| 'top-end'\n| 'bottom-start'\n| 'bottom-end'\n| 'left-start'\n| 'left-end'\n| 'right-start'\n| 'right-end')"
+    },
+    "value": {
+      "description": "Actual progress value.",
+      "type": "number"
+    },
+    "variant": {
+      "description": "Type of progress status.",
+      "enum": [
+        "danger",
+        "success",
+        "warning"
+      ],
+      "default": null
+    }
+  },
+  "required": [
+    "parentId",
+    "value"
+  ],
+  "additionalProperties": false
+}

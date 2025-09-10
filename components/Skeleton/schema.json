@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Skeleton Props",
+  "description": "Props for the Skeleton component",
+  "properties": {
+    "className": {
+      "description": "Additional classes added to the Skeleton",
+      "type": "string"
+    },
+    "fontSize": {
+      "description": "The font size height of the Skeleton",
+      "enum": [
+        "sm",
+        "md",
+        "lg",
+        "xl",
+        "2xl",
+        "3xl",
+        "4xl"
+      ]
+    },
+    "height": {
+      "description": "The height of the Skeleton. Must specify pixels or percentage.",
+      "type": "string"
+    },
+    "screenreaderText": {
+      "description": "Text read just to screen reader users",
+      "type": "string"
+    },
+    "shape": {
+      "description": "The shape of the Skeleton",
+      "enum": [
+        "circle",
+        "square"
+      ]
+    },
+    "width": {
+      "description": "The width of the Skeleton. Must specify pixels or percentage.",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

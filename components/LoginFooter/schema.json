@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "LoginFooter Props",
+  "description": "Props for the LoginFooter component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the footer of the login layout (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional props are spread to the container <footer>",
+      "type": "string",
+      "default": "''"
+    }
+  },
+  "additionalProperties": false
+}

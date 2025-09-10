@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ModalHeader Props",
+  "description": "Renders content in the header of the modal",
+  "properties": {
+    "children": {
+      "description": "Custom content rendered inside the modal header. If children are supplied then the tile, tileIconVariant and titleScreenReaderText props are ignored. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the modal header.",
+      "type": "string"
+    },
+    "description": {
+      "description": "Description of the modal. (React component or element)"
+    },
+    "descriptorId": {
+      "description": "Id of the modal description.",
+      "type": "string"
+    },
+    "help": {
+      "description": "Optional help section for the modal header. (React component or element)"
+    },
+    "labelId": {
+      "description": "Id of the modal title.",
+      "type": "string"
+    },
+    "title": {
+      "description": "Content rendered inside the modal title. (React component or element)"
+    },
+    "titleIconVariant": {
+      "description": "Optional alert icon (or other) to show before the title. When the predefined alert types\nare used the default styling will be automatically applied.",
+      "enum": [
+        "success",
+        "danger",
+        "warning",
+        "info",
+        "custom"
+      ]
+    },
+    "titleScreenReaderText": {
+      "description": "Optional title label text for screen readers.",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

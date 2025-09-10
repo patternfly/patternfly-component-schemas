@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "WizardStep Props",
+  "description": "Props for the WizardStep component",
+  "properties": {
+    "canJumpTo": {
+      "description": "Enables or disables the step in the navigation. Enabled by default.",
+      "type": "boolean"
+    },
+    "component": {
+      "description": "The component to render in the main body (Type: any)"
+    },
+    "drawerPanelContent": {
+      "description": "The content to render in the drawer panel (use when hasDrawer prop is set on the wizard). (Type: any)"
+    },
+    "drawerToggleButton": {
+      "description": "Custom drawer toggle button that opens the drawer. (React component or element)"
+    },
+    "enableNext": {
+      "description": "(Unused if footer is controlled) The condition needed to enable the Next button",
+      "type": "boolean"
+    },
+    "hideBackButton": {
+      "description": "(Unused if footer is controlled) True to hide the Back button",
+      "type": "boolean"
+    },
+    "hideCancelButton": {
+      "description": "(Unused if footer is controlled) True to hide the Cancel button",
+      "type": "boolean"
+    },
+    "id": {
+      "description": "Optional identifier (Type: string | number)"
+    },
+    "isDisabled": {
+      "description": "Flag to disable the step in the navigation",
+      "type": "boolean"
+    },
+    "isFinishedStep": {
+      "description": "Setting to true hides the side nav and footer",
+      "type": "boolean"
+    },
+    "name": {
+      "description": "The name of the step (React component or element)"
+    },
+    "nextButtonText": {
+      "description": "(Unused if footer is controlled) Can change the Next button text. If nextButtonText is also set for the Wizard, this step specific one overrides it. (React component or element)"
+    },
+    "stepNavItemProps": {
+      "description": "Props to pass to the WizardNavItem (Type: React.HTMLProps<HTMLButtonElement | HTMLAnchorElement> | WizardNavItemProps)"
+    },
+    "steps": {
+      "description": "Sub steps (Type: WizardStep[])",
+      "type": "array"
+    }
+  },
+  "required": [
+    "name"
+  ],
+  "additionalProperties": false
+}

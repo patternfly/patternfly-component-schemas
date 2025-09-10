@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "TabButton Props",
+  "description": "Props for the TabButton component",
+  "properties": {
+    "children": {
+      "description": "content rendered inside the Tab content area. (React component or element)"
+    },
+    "className": {
+      "description": "additional classes added to the Tab",
+      "type": "string"
+    },
+    "href": {
+      "description": "URL associated with the Tab. A Tab with an href will render as an <a> instead of a <button>. A Tab inside a <Tabs component=\"nav\"> should have an href.",
+      "type": "string"
+    },
+    "ouiaId": {
+      "description": " (Type: number | string)"
+    },
+    "ouiaSafe": {
+      "description": "",
+      "type": "boolean"
+    },
+    "parentInnerRef": {
+      "description": "Parents' innerRef passed down for properly displaying Tooltips (Type: React.Ref<any>)"
+    },
+    "tabContentRef": {
+      "description": "child reference for case in which a TabContent section is defined outside of a Tabs component (Type: React.Ref<any>)"
+    }
+  },
+  "additionalProperties": false
+}

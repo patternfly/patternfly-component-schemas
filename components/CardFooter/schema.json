@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "CardFooter Props",
+  "description": "Props for the CardFooter component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the Card Footer (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the Footer",
+      "type": "string"
+    },
+    "component": {
+      "description": "Sets the base component to render. defaults to div (Type: JSX.IntrinsicElements)",
+      "default": "'div'"
+    }
+  },
+  "additionalProperties": false
+}

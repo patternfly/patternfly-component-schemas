@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Icon Props",
+  "description": "Props for the Icon component",
+  "properties": {
+    "children": {
+      "description": "Icon content (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes applied to the icon container",
+      "type": "string"
+    },
+    "defaultProgressArialabel": {
+      "description": "Aria-label for the default progress icon",
+      "type": "string",
+      "default": "'Loading...'"
+    },
+    "iconSize": {
+      "description": "Size of icon. Overrides the icon size set by the size property. (Type: | 'sm'\n| 'md'\n| 'lg'\n| 'xl'\n| '2xl'\n| '3xl'\n| 'headingSm'\n| 'headingMd'\n| 'headingLg'\n| 'headingXl'\n| 'heading_2xl'\n| 'heading_3xl'\n| 'bodySm'\n| 'bodyDefault'\n| 'bodyLg')"
+    },
+    "isInline": {
+      "description": "Indicates the icon is inline and should inherit the text font size and color. Overriden by size and iconSize properties.",
+      "type": "boolean",
+      "default": false
+    },
+    "isInProgress": {
+      "description": "Indicates the icon is in progress. Setting this property to true will swap the icon with the progressIcon.",
+      "type": "boolean",
+      "default": false
+    },
+    "progressIcon": {
+      "description": "Icon when isInProgress is set to true. Defaults to a 1em spinner. (React component or element)"
+    },
+    "progressIconSize": {
+      "description": "Size of progress icon. Overrides the icon size set by the size property. (Type: | 'sm'\n| 'md'\n| 'lg'\n| 'xl'\n| '2xl'\n| '3xl'\n| 'headingSm'\n| 'headingMd'\n| 'headingLg'\n| 'headingXl'\n| 'heading_2xl'\n| 'heading_3xl'\n| 'bodySm'\n| 'bodyDefault'\n| 'bodyLg')"
+    },
+    "shouldMirrorRTL": {
+      "description": "Flag indicating whether the icon passed as children should be mirrored for\nright to left (RTL) languages. This will not mirror the icon passed to progressIcon.",
+      "type": "boolean",
+      "default": false
+    },
+    "size": {
+      "description": "Size of the icon component container and icon. (Type: | 'sm'\n| 'md'\n| 'lg'\n| 'xl'\n| '2xl'\n| '3xl'\n| 'headingSm'\n| 'headingMd'\n| 'headingLg'\n| 'headingXl'\n| 'heading_2xl'\n| 'heading_3xl'\n| 'bodySm'\n| 'bodyDefault'\n| 'bodyLg')"
+    },
+    "status": {
+      "description": "Status color of the icon",
+      "enum": [
+        "custom",
+        "info",
+        "success",
+        "warning",
+        "danger"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

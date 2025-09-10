@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "CardExpandableContent Props",
+  "description": "Props for the CardExpandableContent component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the Card Body (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the Card Body",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

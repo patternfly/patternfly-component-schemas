@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "CustomWizardNavFunction Props",
+  "description": "Callback for the Wizard's 'nav' property. Returns element which replaces the Wizard's default navigation.",
+  "properties": {},
+  "additionalProperties": false
+}

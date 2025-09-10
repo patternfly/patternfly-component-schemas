@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DrawerPanelFocusTrapObject Props",
+  "description": "Props for the DrawerPanelFocusTrapObject component",
+  "properties": {
+    "elementToFocusOnExpand": {
+      "description": "The element to focus when the drawer panel content expands. By default the\nfirst focusable element will receive focus. If there are no focusable elements, the\npanel itself will receive focus. (Type: HTMLElement | SVGElement | string)"
+    },
+    "enabled": {
+      "description": "Enables a focus trap on the drawer panel content. This will also automatically\nhandle focus management when the panel expands and when it collapses. Do not pass\nthis prop if the isStatic prop on the drawer component is true.",
+      "type": "boolean"
+    },
+    "Unknown": {
+      "description": "One or more id's to use for the drawer panel content's accessible label.",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

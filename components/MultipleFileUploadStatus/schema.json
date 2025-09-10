@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "MultipleFileUploadStatus Props",
+  "description": "Acts as an expandable container for all uploaded file statuses.\nAn optional text and/or icon can also be passed into this sub-component.\nThis sub-component can be conditionally rendered when at least 1 file has been\nattempted to be uploaded.",
+  "properties": {
+    "aria-label": {
+      "description": "Adds an accessible label to the list of status items.",
+      "type": "string"
+    },
+    "children": {
+      "description": "Content rendered inside multi file upload status list (React component or element)"
+    },
+    "className": {
+      "description": "Class to add to outer div",
+      "type": "string"
+    },
+    "statusToggleIcon": {
+      "description": "Icon to show in the status toggle (React component or element)"
+    },
+    "statusToggleText": {
+      "description": "String to show in the status toggle",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

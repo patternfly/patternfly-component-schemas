@@ -1,0 +1,118 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "PaginationNavigation Props",
+  "description": "Props for the PaginationNavigation component",
+  "properties": {
+    "className": {
+      "description": "Additional classes for the pagination navigation container.",
+      "type": "string",
+      "default": "''"
+    },
+    "currPageAriaLabel": {
+      "description": "Accessible label for the input displaying the current page.",
+      "type": "string",
+      "default": "'Current page'"
+    },
+    "firstPage": {
+      "description": "The number of first page where pagination starts.",
+      "type": "number",
+      "default": 0
+    },
+    "isCompact": {
+      "description": "Flag indicating if the pagination is compact.",
+      "type": "boolean",
+      "default": false
+    },
+    "isDisabled": {
+      "description": "Flag indicating if the pagination is disabled.",
+      "type": "boolean",
+      "default": false
+    },
+    "itemCount": {
+      "description": "Total number of items.",
+      "type": "number"
+    },
+    "lastPage": {
+      "description": "The number of the last page.",
+      "type": "number",
+      "default": 0
+    },
+    "ofWord": {
+      "description": "Label for the English word \"of\".",
+      "type": "string",
+      "default": "'of'"
+    },
+    "onFirstClick": {
+      "description": "Function called when user clicks to navigate to first page. (Function: (event: React.SyntheticEvent<HTMLButtonElement>, page: number) => void)",
+      "default": "() => undefined as any"
+    },
+    "onLastClick": {
+      "description": "Function called when user clicks to navigate to last page. (Function: (event: React.SyntheticEvent<HTMLButtonElement>, page: number) => void)",
+      "default": "() => undefined as any"
+    },
+    "onNextClick": {
+      "description": "Function called when user clicks to navigate to next page. (Function: (event: React.SyntheticEvent<HTMLButtonElement>, page: number) => void)",
+      "default": "() => undefined as any"
+    },
+    "onPageInput": {
+      "description": "Function called when user inputs page number. (Function: (event: React.KeyboardEvent<HTMLInputElement>, page: number) => void)",
+      "default": "() => undefined as any"
+    },
+    "onPreviousClick": {
+      "description": "Function called when user clicks to navigate to previous page. (Function: (event: React.SyntheticEvent<HTMLButtonElement>, page: number) => void)",
+      "default": "() => undefined as any"
+    },
+    "onSetPage": {
+      "description": "Function called when page is changed. (Type: (\n  event: React.MouseEvent | React.KeyboardEvent | MouseEvent,\n  newPage: number,\n  perPage?: number,\n  startIdx?: number,\n  endIdx?: number\n) => void)"
+    },
+    "page": {
+      "description": "The number of the current page.",
+      "type": "number"
+    },
+    "pagesTitle": {
+      "description": "The title of a page displayed beside the page number.",
+      "type": "string",
+      "default": "''"
+    },
+    "pagesTitlePlural": {
+      "description": "The title of a page displayed beside the page number (the plural form).",
+      "type": "string",
+      "default": "''"
+    },
+    "paginationAriaLabel": {
+      "description": "Accessible label for the pagination component.",
+      "type": "string",
+      "default": "'Pagination'"
+    },
+    "perPage": {
+      "description": "Number of items per page.",
+      "type": "number"
+    },
+    "toFirstPageAriaLabel": {
+      "description": "Accessible label for the button which moves to the first page.",
+      "type": "string",
+      "default": "'Go to first page'"
+    },
+    "toLastPageAriaLabel": {
+      "description": "Accessible label for the button which moves to the last page.",
+      "type": "string",
+      "default": "'Go to last page'"
+    },
+    "toNextPageAriaLabel": {
+      "description": "Accessible label for the button which moves to the next page.",
+      "type": "string",
+      "default": "'Go to next page'"
+    },
+    "toPreviousPageAriaLabel": {
+      "description": "Accessible label for the button which moves to the previous page.",
+      "type": "string",
+      "default": "'Go to previous page'"
+    }
+  },
+  "required": [
+    "onSetPage",
+    "page"
+  ],
+  "additionalProperties": false
+}

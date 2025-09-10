@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "HintBody Props",
+  "description": "Props for the HintBody component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the hint body. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes applied to the hint body.",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

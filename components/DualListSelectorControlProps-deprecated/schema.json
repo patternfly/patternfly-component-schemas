@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DualListSelectorControlProps Props",
+  "description": "Renders an individual control button for moving selected options between each\ndual list selector pane.",
+  "properties": {
+    "children": {
+      "description": "Content to be rendered in the dual list selector control. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes applied to the dual list selector control.",
+      "type": "string"
+    },
+    "innerRef": {
+      "description": " (Type: React.Ref<any>)"
+    },
+    "isDisabled": {
+      "description": "Flag indicating the control is disabled.",
+      "type": "boolean"
+    },
+    "onClick": {
+      "description": "Callback fired when dual list selector control is selected. (Function: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void)"
+    },
+    "tooltipContent": {
+      "description": "Content to be displayed in a tooltip on hover of control. (React component or element)"
+    },
+    "tooltipProps": {
+      "description": "Additional tooltip properties passed to the tooltip. (Type: any)"
+    },
+    "Unknown": {
+      "description": "Accessible label for the dual list selector control.",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

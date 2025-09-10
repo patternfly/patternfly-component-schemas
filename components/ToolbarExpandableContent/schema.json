@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ToolbarExpandableContent Props",
+  "description": "Props for the ToolbarExpandableContent component",
+  "properties": {
+    "className": {
+      "description": "Classes added to the root element of the data toolbar expandable content",
+      "type": "string"
+    },
+    "clearAllFilters": {
+      "description": "optional callback for clearing all filters in the toolbar (Function: () => void)"
+    },
+    "clearFiltersButtonText": {
+      "description": "Text to display in the clear all filters button",
+      "type": "string",
+      "default": "'Clear all filters'"
+    },
+    "expandableContentRef": {
+      "description": "Expandable content reference for passing to data toolbar children (Type: RefObject<HTMLDivElement | null>)"
+    },
+    "isExpanded": {
+      "description": "Flag indicating the expandable content is expanded",
+      "type": "boolean",
+      "default": false
+    },
+    "labelContainerRef": {
+      "description": "Label container reference for passing to data toolbar children (Type: RefObject<any>)"
+    },
+    "showClearFiltersButton": {
+      "description": "Flag indicating that the clear all filters button should be visible",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "showClearFiltersButton"
+  ],
+  "additionalProperties": false
+}

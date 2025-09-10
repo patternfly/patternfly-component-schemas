@@ -1,0 +1,138 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "FormGroupLabelHelp Props",
+  "description": "A help button to be passed to the FormGroup's labelHelp property. This should be wrapped or linked\nto our Popover component.",
+  "properties": {
+    "aria-label": {
+      "description": "Adds accessible text to the button.",
+      "type": "string"
+    },
+    "children": {
+      "description": "Content rendered inside the button (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the button",
+      "type": "string"
+    },
+    "component": {
+      "description": "Sets the base component to render. defaults to button (Type: React.ElementType<any> | React.ComponentType<any>)"
+    },
+    "countOptions": {
+      "description": "Adds count number to button (Type: BadgeCountObject)"
+    },
+    "hasNoPadding": {
+      "description": "Applies no padding on a plain button variant. Use when plain button is placed inline with text",
+      "type": "boolean"
+    },
+    "icon": {
+      "description": "Icon for the button. (React component or element)"
+    },
+    "iconPosition": {
+      "description": "Sets position of the icon. Note: \"left\" and \"right\" are deprecated. Use \"start\" and \"end\" instead",
+      "enum": [
+        "start",
+        "end",
+        "left",
+        "right"
+      ]
+    },
+    "inoperableEvents": {
+      "description": "Events to prevent when the button is in an aria-disabled state (Type: string[])",
+      "type": "array"
+    },
+    "isAriaDisabled": {
+      "description": "Adds disabled styling and communicates that the button is disabled using the aria-disabled html attribute",
+      "type": "boolean"
+    },
+    "isBlock": {
+      "description": "Adds block styling to button",
+      "type": "boolean"
+    },
+    "isClicked": {
+      "description": "Adds clicked styling to button.",
+      "type": "boolean"
+    },
+    "isDanger": {
+      "description": "Adds danger styling to secondary or link button variants",
+      "type": "boolean"
+    },
+    "isDisabled": {
+      "description": "Adds disabled styling and disables the button using the disabled html attribute",
+      "type": "boolean"
+    },
+    "isInline": {
+      "description": "Adds inline styling to a link button",
+      "type": "boolean"
+    },
+    "isLoading": {
+      "description": "Adds progress styling to button",
+      "type": "boolean"
+    },
+    "ouiaId": {
+      "description": "Value to overwrite the randomly generated data-ouia-component-id. (Type: number | string)"
+    },
+    "ouiaSafe": {
+      "description": "Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false.",
+      "type": "boolean"
+    },
+    "size": {
+      "description": "Adds styling which affects the size of the button",
+      "enum": [
+        "default",
+        "sm",
+        "lg"
+      ]
+    },
+    "spinnerAriaLabel": {
+      "description": "Accessible label for the spinner to describe what is loading",
+      "type": "string"
+    },
+    "spinnerAriaLabelledBy": {
+      "description": "Id of element which describes what is being loaded",
+      "type": "string"
+    },
+    "spinnerAriaValueText": {
+      "description": "Text describing that current loading status or progress",
+      "type": "string"
+    },
+    "state": {
+      "description": "Sets state of the stateful button variant. Default is \"unread\"",
+      "enum": [
+        "read",
+        "unread",
+        "attention"
+      ]
+    },
+    "tabIndex": {
+      "description": "Sets the button tabindex.",
+      "type": "number"
+    },
+    "type": {
+      "description": "Sets button type",
+      "enum": [
+        "button",
+        "submit",
+        "reset"
+      ]
+    },
+    "variant": {
+      "description": "Adds button variant styles",
+      "enum": [
+        "primary",
+        "secondary",
+        "tertiary",
+        "danger",
+        "warning",
+        "link",
+        "plain",
+        "control",
+        "stateful"
+      ]
+    }
+  },
+  "required": [
+    "aria-label"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DashboardWrapper Props",
+  "description": "Props for the DashboardWrapper component",
+  "properties": {
+    "hasDefaultBreadcrumb": {
+      "description": "Flag to render sample breadcrumb if custom breadcrumb not passed",
+      "type": "boolean"
+    },
+    "hasPageTemplateTitle": {
+      "description": "Flag to render sample page title if custom title not passed",
+      "type": "boolean"
+    },
+    "sidebarNavOpen": {
+      "description": "Programmatically manage if the sidebar nav is shown",
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}

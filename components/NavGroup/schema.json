@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "NavGroup Props",
+  "description": "Props for the NavGroup component",
+  "properties": {
+    "children": {
+      "description": "Anything that can be rendered inside of the group (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional classes added to the container",
+      "type": "string",
+      "default": "''"
+    },
+    "id": {
+      "description": "Identifier to use for the section aria label",
+      "type": "string",
+      "default": "getUniqueId()"
+    },
+    "title": {
+      "description": "Title shown for the group",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "FormFieldGroupHeaderTitleTextObject Props",
+  "description": "Props for the FormFieldGroupHeaderTitleTextObject component",
+  "properties": {
+    "id": {
+      "description": "The id applied to the title div for accessibility",
+      "type": "string"
+    },
+    "text": {
+      "description": "Title text. (React component or element)"
+    }
+  },
+  "required": [
+    "id",
+    "text"
+  ],
+  "additionalProperties": false
+}

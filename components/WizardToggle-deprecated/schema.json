@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "WizardToggle Props",
+  "description": "Props for the WizardToggle component",
+  "properties": {
+    "activeStep": {
+      "description": "The currently active WizardStep (Type: WizardStep)"
+    },
+    "aria-label": {
+      "description": "The button's aria-label",
+      "type": "string",
+      "default": "'Wizard Toggle'"
+    },
+    "children": {
+      "description": "The WizardFooter (React component or element)"
+    },
+    "hasDrawer": {
+      "description": "Flag indicating the wizard has a drawer for at least one of the wizard steps",
+      "type": "boolean"
+    },
+    "hasNoBodyPadding": {
+      "description": "Set to true to remove body padding",
+      "type": "boolean",
+      "default": false
+    },
+    "isDrawerExpanded": {
+      "description": "Flag indicating the wizard drawer is expanded",
+      "type": "boolean"
+    },
+    "isInPage": {
+      "description": "If the wizard is in-page",
+      "type": "boolean",
+      "default": true
+    },
+    "isNavOpen": {
+      "description": "If the nav is open",
+      "type": "boolean"
+    },
+    "mainAriaLabel": {
+      "description": "Adds an accessible name to the wizard body when the body content overflows and renders\na scrollbar.",
+      "type": "string",
+      "default": null
+    },
+    "mainAriaLabelledBy": {
+      "description": "Adds an accessible name to the wizard body by passing the the id of one or more elements.\nThe aria-labelledby will only be applied when the body content overflows and renders a scrollbar.",
+      "type": "string",
+      "default": null
+    },
+    "nav": {
+      "description": "Function that returns the WizardNav component (Function: (isWizardNavOpen: boolean) => React.ReactElement<any>)"
+    },
+    "onExpandDrawer": {
+      "description": "Callback function for when the drawer is toggled (Function: () => void)"
+    },
+    "onNavToggle": {
+      "description": "Callback function for when the nav is toggled (Function: (isOpen: boolean) => void)"
+    },
+    "steps": {
+      "description": "The wizard steps (Type: WizardStep[])",
+      "type": "array"
+    }
+  },
+  "required": [
+    "activeStep",
+    "isNavOpen",
+    "nav",
+    "onNavToggle",
+    "steps"
+  ],
+  "additionalProperties": false
+}

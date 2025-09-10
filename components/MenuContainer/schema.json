@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "MenuContainer Props",
+  "description": "Container that links a menu and menu toggle together, to handle basic keyboard input and control the opening and closing of a menu.",
+  "properties": {
+    "focusTimeoutDelay": {
+      "description": "Time in ms to wait before firing the toggles' focus event. Defaults to 0",
+      "type": "number",
+      "default": 0
+    },
+    "isOpen": {
+      "description": "Flag to indicate if menu is opened.",
+      "type": "boolean"
+    },
+    "menu": {
+      "description": "Menu to be rendered (Type: React.ReactElement<any, string | React.JSXElementConstructor<any>>)"
+    },
+    "menuRef": {
+      "description": "Reference to the menu (Type: React.RefObject<any>)"
+    },
+    "onOpenChange": {
+      "description": "Callback to change the open state of the menu.\nTriggered by clicking outside of the menu, or by pressing any keys specified in onOpenChangeKeys. (Function: (isOpen: boolean) => void)"
+    },
+    "onOpenChangeKeys": {
+      "description": "Keys that trigger onOpenChange, defaults to tab and escape. It is highly recommended to include Escape in the array, while Tab may be omitted if the menu contains non-menu items that are focusable. (Type: string[])",
+      "type": "array",
+      "default": "['Escape', 'Tab']"
+    },
+    "onToggleKeydown": {
+      "description": "Callback to override the toggle keydown behavior. By default, when the toggle has focus and the menu is open, pressing the up/down arrow keys will focus a valid non-disabled menu item - the first item for the down arrow key and last item for the up arrow key. (Function: (event: KeyboardEvent) => void)"
+    },
+    "popperProps": {
+      "description": "Additional properties to pass to the Popper (Type: MenuPopperProps)"
+    },
+    "shouldFocusFirstItemOnOpen": {
+      "description": "Flag indicating the first menu item should be focused after opening the dropdown.",
+      "type": "boolean",
+      "default": false
+    },
+    "shouldPreventScrollOnItemFocus": {
+      "description": "Flag indicating if scroll on focus of the first menu item should occur.",
+      "type": "boolean",
+      "default": true
+    },
+    "toggle": {
+      "description": "Toggle to be rendered (React component or element)"
+    },
+    "toggleRef": {
+      "description": "Reference to the toggle (Type: React.RefObject<any>)"
+    },
+    "zIndex": {
+      "description": "z-index of the dropdown menu",
+      "type": "number",
+      "default": 9999
+    }
+  },
+  "required": [
+    "isOpen",
+    "menu",
+    "menuRef",
+    "toggle",
+    "toggleRef"
+  ],
+  "additionalProperties": false
+}

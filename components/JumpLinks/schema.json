@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "JumpLinks Props",
+  "description": "Props for the JumpLinks component",
+  "properties": {
+    "activeIndex": {
+      "description": "The index of the child Jump link to make active.",
+      "type": "number",
+      "default": 0
+    },
+    "alwaysShowLabel": {
+      "description": "Flag to always show the label when using `expandable`",
+      "type": "boolean",
+      "default": true
+    },
+    "aria-label": {
+      "description": "Adds an accessible label to the internal nav element. Defaults to the value of the label prop.",
+      "type": "string",
+      "default": "typeof label === 'string' ? label : null"
+    },
+    "children": {
+      "description": "Children nodes (React component or element)"
+    },
+    "className": {
+      "description": "Class for nav",
+      "type": "string"
+    },
+    "expandable": {
+      "description": "When to collapse/expand at different breakpoints",
+      "enum": [
+        "expandable",
+        "nonExpandable",
+        "expandable",
+        "nonExpandable",
+        "expandable",
+        "nonExpandable",
+        "expandable",
+        "nonExpandable",
+        "expandable",
+        "nonExpandable",
+        "2xl",
+        "expandable",
+        "nonExpandable"
+      ]
+    },
+    "isCentered": {
+      "description": "Whether to center children.",
+      "type": "boolean"
+    },
+    "isExpanded": {
+      "description": "On mobile whether or not the JumpLinks starts out expanded",
+      "type": "boolean",
+      "default": false
+    },
+    "isVertical": {
+      "description": "Whether the layout of children is vertical or horizontal.",
+      "type": "boolean"
+    },
+    "label": {
+      "description": "Label to add to nav element. (React component or element)"
+    },
+    "offset": {
+      "description": "Offset to add to `scrollPosition`, potentially for a masthead which content scrolls under.",
+      "type": "number",
+      "default": 0
+    },
+    "scrollableRef": {
+      "description": "Reference to the scrollable element to spy on. Takes precedence over scrollableSelector. Not passing a scrollableRef or scrollableSelector disables spying. (Type: HTMLElement | (() => HTMLElement) | React.RefObject<HTMLElement | null>)"
+    },
+    "scrollableSelector": {
+      "description": "Selector for the scrollable element to spy on. Not passing a scrollableSelector or scrollableRef disables spying.",
+      "type": "string"
+    },
+    "shouldReplaceNavHistory": {
+      "description": "Whether the current entry in the navigation history should be replaced when a JumpLinksItem is clicked. By default a new entry will be pushed to the navigation history.",
+      "type": "boolean",
+      "default": false
+    },
+    "toggleAriaLabel": {
+      "description": "Aria label for expandable toggle",
+      "type": "string",
+      "default": "'Toggle jump links'"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DescriptionListTermHelpText Props",
+  "description": "Props for the DescriptionListTermHelpText component",
+  "properties": {
+    "children": {
+      "description": "Anything that can be rendered inside of list term (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the DescriptionListTermHelpText",
+      "type": "string"
+    }
+  },
+  "required": [
+    "children"
+  ],
+  "additionalProperties": false
+}

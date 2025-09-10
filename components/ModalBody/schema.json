@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ModalBody Props",
+  "description": "Renders content in the body of the modal",
+  "properties": {
+    "aria-label": {
+      "description": "Accessible label applied to the modal body. This should be used to communicate\nimportant information about the modal body div element if needed, such as when it is scrollable.",
+      "type": "string"
+    },
+    "children": {
+      "description": "Content rendered inside the modal body. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the modal body.",
+      "type": "string"
+    },
+    "role": {
+      "description": "Accessible role applied to the modal body. This will default to \"region\" if the\naria-label property is passed in. Set to a more appropriate role as applicable\nbased on the modal content and context.",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

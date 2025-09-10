@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Sidebar Props",
+  "description": "Props for the Sidebar component",
+  "properties": {
+    "children": {
+      "description": " (React component or element)"
+    },
+    "hasBorder": {
+      "description": "Adds a border between the panel and content.",
+      "type": "boolean"
+    },
+    "hasGutter": {
+      "description": "Adds space between the panel and content.",
+      "type": "boolean"
+    },
+    "hasNoBackground": {
+      "description": "Removes the background color.",
+      "type": "boolean"
+    },
+    "isPanelRight": {
+      "description": "Indicates that the panel is displayed to the right of the content when the oritentation is split.",
+      "type": "boolean",
+      "default": false
+    },
+    "orientation": {
+      "description": "Indicates the direction of the layout. Default orientation is stack on small screens, and split on medium screens and above.",
+      "enum": [
+        "stack",
+        "split"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

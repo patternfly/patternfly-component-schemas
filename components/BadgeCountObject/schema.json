@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "BadgeCountObject Props",
+  "description": "Props for the BadgeCountObject component",
+  "properties": {
+    "className": {
+      "description": "Additional classes added to the badge count",
+      "type": "string"
+    },
+    "count": {
+      "description": "Adds count number right of button",
+      "type": "number"
+    },
+    "isRead": {
+      "description": "Adds styling to the badge to indicate it has been read",
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}

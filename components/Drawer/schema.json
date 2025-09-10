@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Drawer Props",
+  "description": "Props for the Drawer component",
+  "properties": {
+    "children": {
+      "description": "Content rendered in the drawer panel (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the Drawer.",
+      "type": "string",
+      "default": "''"
+    },
+    "isExpanded": {
+      "description": "Indicates if the drawer is expanded",
+      "type": "boolean",
+      "default": false
+    },
+    "isInline": {
+      "description": "Indicates if the content element and panel element are displayed side by side.",
+      "type": "boolean",
+      "default": false
+    },
+    "isStatic": {
+      "description": "Indicates if the drawer will always show both content and panel.",
+      "type": "boolean",
+      "default": false
+    },
+    "onExpand": {
+      "description": "Callback when drawer panel is expanded after waiting 250ms for animation to complete. (Type: (event: KeyboardEvent | React.MouseEvent | React.TransitionEvent) => void)",
+      "default": "() => {}"
+    },
+    "position": {
+      "description": "Position of the drawer panel. left and right are deprecated, use start and end instead.",
+      "enum": [
+        "start",
+        "end",
+        "bottom",
+        "left",
+        "right"
+      ],
+      "default": "'end'"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Avatar Props",
+  "description": "Props for the Avatar component",
+  "properties": {
+    "alt": {
+      "description": "Attribute that specifies the alternate text of the image for the avatar.",
+      "type": "string"
+    },
+    "className": {
+      "description": "Additional classes added to the avatar.",
+      "type": "string"
+    },
+    "isBordered": {
+      "description": "Flag to indicate the avatar should have a border.",
+      "type": "boolean"
+    },
+    "size": {
+      "description": "Size variant of avatar.",
+      "enum": [
+        "sm",
+        "md",
+        "lg",
+        "xl"
+      ]
+    },
+    "src": {
+      "description": "Attribute that specifies the URL of the image for the avatar.",
+      "type": "string",
+      "default": "''"
+    }
+  },
+  "required": [
+    "alt"
+  ],
+  "additionalProperties": false
+}

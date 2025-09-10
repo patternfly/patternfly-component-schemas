@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "EmptyState Props",
+  "description": "Props for the EmptyState component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the empty state (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the empty state",
+      "type": "string"
+    },
+    "headerClassName": {
+      "description": "Additional class names to apply to the empty state header",
+      "type": "string"
+    },
+    "headingLevel": {
+      "description": "The heading level to use, default is h1",
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ]
+    },
+    "icon": {
+      "description": "Empty state icon element to be rendered. Can also be a spinner component (Type: React.ComponentType<any>)"
+    },
+    "isFullHeight": {
+      "description": "Cause component to consume the available height of its container",
+      "type": "boolean"
+    },
+    "status": {
+      "description": "Status of the empty state, will set a default status icon and color. Icon can be overwritten using the icon prop",
+      "enum": [
+        "danger",
+        "warning",
+        "success",
+        "info",
+        "custom"
+      ]
+    },
+    "titleClassName": {
+      "description": "Additional classes added to the title inside empty state header",
+      "type": "string"
+    },
+    "titleText": {
+      "description": "Text of the title inside empty state header, will be wrapped in headingLevel (React component or element)"
+    },
+    "variant": {
+      "description": "Modifies empty state max-width and sizes of icon, title and body",
+      "enum": [
+        "xs",
+        "sm",
+        "lg",
+        "xl",
+        "full"
+      ],
+      "default": "EmptyStateVariant.full"
+    }
+  },
+  "additionalProperties": false
+}

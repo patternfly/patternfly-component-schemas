@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "PopoverCloseButton Props",
+  "description": "Props for the PopoverCloseButton component",
+  "properties": {
+    "aria-label": {
+      "description": "Aria label for the Close button",
+      "type": "string"
+    },
+    "onClose": {
+      "description": "PopoverCloseButton onClose function (Function: (event: any) => void)",
+      "default": "() => undefined as void"
+    }
+  },
+  "required": [
+    "aria-label"
+  ],
+  "additionalProperties": false
+}

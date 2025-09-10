@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "WizardBasicStep Props",
+  "description": "Type used to define 'basic' steps, or in other words, steps that are neither parents or children of parents.",
+  "properties": {
+    "component": {
+      "description": "Content shown when the step's navigation item is selected. When treated as a parent step, only sub-step content will be shown. (Type: React.ReactElement<any>)"
+    },
+    "footer": {
+      "description": "Replaces the step's footer. The step's footer takes precedence over the wizard's footer. (Type: React.ReactElement<any> | Partial<WizardFooterProps>)"
+    },
+    "id": {
+      "description": "Unique identifier (Type: string | number)"
+    },
+    "index": {
+      "description": "Order index of step (starts at 1)",
+      "type": "number"
+    },
+    "isDisabled": {
+      "description": "Flag to disable the step's navigation item",
+      "type": "boolean"
+    },
+    "isHidden": {
+      "description": "Flag to determine whether the step is hidden",
+      "type": "boolean"
+    },
+    "isVisited": {
+      "description": "Flag to represent whether the step has been visited (navigated to)",
+      "type": "boolean"
+    },
+    "name": {
+      "description": "Name of the step's navigation item (React component or element)"
+    },
+    "navItem": {
+      "description": "Replaces the step's navigation item or its properties. (Type: WizardNavItemType)"
+    },
+    "status": {
+      "description": "Used to determine icon next to the step's navItem",
+      "enum": [
+        "default",
+        "error",
+        "success"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "index",
+    "name"
+  ],
+  "additionalProperties": false
+}

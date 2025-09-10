@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ProgressStep Props",
+  "description": "Props for the ProgressStep component",
+  "properties": {
+    "aria-label": {
+      "description": "Accessible label for the progress step. Should communicate all information being communicated by the progress\nstep's icon, including the variant and the completed status.",
+      "type": "string"
+    },
+    "children": {
+      "description": "Content rendered inside the progress step. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes applied to the progress step container.",
+      "type": "string"
+    },
+    "description": {
+      "description": "Description text of a progress step. (React component or element)"
+    },
+    "icon": {
+      "description": "Custom icon of a progress step. Will override default icons provided by the variant. (React component or element)"
+    },
+    "isCurrent": {
+      "description": "Flag indicating the progress step is the current step.",
+      "type": "boolean"
+    },
+    "popoverRender": {
+      "description": "Forwards the step ref to rendered function.  Use this prop to add a popover to the step. (React component or element)"
+    },
+    "titleId": {
+      "description": "ID of the title of the progress step.",
+      "type": "string"
+    },
+    "variant": {
+      "description": "Variant of the progress step. Each variant has a default icon.",
+      "enum": [
+        "default",
+        "success",
+        "info",
+        "pending",
+        "warning",
+        "danger"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Masthead Props",
+  "description": "Props for the Masthead component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside of the masthead (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the masthead",
+      "type": "string"
+    },
+    "display": {
+      "description": "Display type at various breakpoints",
+      "enum": [
+        "inline",
+        "stack",
+        "inline",
+        "stack",
+        "inline",
+        "stack",
+        "inline",
+        "stack",
+        "inline",
+        "stack",
+        "2xl",
+        "inline",
+        "stack"
+      ],
+      "default": "{\n  md: 'inline'\n}"
+    },
+    "inset": {
+      "description": "Insets at various breakpoints",
+      "enum": [
+        "insetNone",
+        "insetXs",
+        "insetSm",
+        "insetMd",
+        "insetLg",
+        "insetXl",
+        "inset2xl",
+        "inset3xl",
+        "insetNone",
+        "insetXs",
+        "insetSm",
+        "insetMd",
+        "insetLg",
+        "insetXl",
+        "inset2xl",
+        "inset3xl",
+        "insetNone",
+        "insetXs",
+        "insetSm",
+        "insetMd",
+        "insetLg",
+        "insetXl",
+        "inset2xl",
+        "inset3xl",
+        "insetNone",
+        "insetXs",
+        "insetSm",
+        "insetMd",
+        "insetLg",
+        "insetXl",
+        "inset2xl",
+        "inset3xl",
+        "insetNone",
+        "insetXs",
+        "insetSm",
+        "insetMd",
+        "insetLg",
+        "insetXl",
+        "inset2xl",
+        "inset3xl",
+        "2xl",
+        "insetNone",
+        "insetXs",
+        "insetSm",
+        "insetMd",
+        "insetLg",
+        "insetXl",
+        "inset2xl",
+        "inset3xl"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

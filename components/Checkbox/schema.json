@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Checkbox Props",
+  "description": "Props for the Checkbox component",
+  "properties": {
+    "aria-label": {
+      "description": "Aria-label of the checkbox.",
+      "type": "string"
+    },
+    "body": {
+      "description": "Body text of the checkbox (React component or element)"
+    },
+    "checked": {
+      "description": "",
+      "type": "boolean"
+    },
+    "className": {
+      "description": "Additional classes added to the checkbox wrapper. This wrapper will be div element by default. It will be a label element if\nisLabelWrapped is true, or it can be overridden by any element specified in the component prop.",
+      "type": "string",
+      "default": "''"
+    },
+    "component": {
+      "description": "Sets the checkbox wrapper component to render. Defaults to \"div\". If set to \"label\", behaves the same as if isLabelWrapped prop was specified. (Type: React.ElementType)"
+    },
+    "description": {
+      "description": "Description text of the checkbox. (React component or element)"
+    },
+    "id": {
+      "description": "Id of the checkbox.",
+      "type": "string"
+    },
+    "inputClassName": {
+      "description": "Additional classes added to the checkbox input.",
+      "type": "string"
+    },
+    "isChecked": {
+      "description": "Flag to show if the checkbox is checked. If null, the checkbox will be indeterminate (partially checked). (Type: boolean | null)",
+      "default": false
+    },
+    "isDisabled": {
+      "description": "Flag to show if the checkbox is disabled.",
+      "type": "boolean",
+      "default": false
+    },
+    "isLabelWrapped": {
+      "description": "Flag to indicate whether the checkbox wrapper element is a <label> element for the checkbox input. Will not apply if a component prop (with a value other than a \"label\") is specified.",
+      "type": "boolean",
+      "default": false
+    },
+    "isRequired": {
+      "description": "Flag to show if the checkbox is required.",
+      "type": "boolean",
+      "default": false
+    },
+    "isValid": {
+      "description": "Flag to show if the checkbox selection is valid or invalid.",
+      "type": "boolean",
+      "default": true
+    },
+    "label": {
+      "description": "Label text of the checkbox. (React component or element)"
+    },
+    "labelPosition": {
+      "description": "Sets the position of the label. Defaults to 'end' (after the checkbox input).",
+      "enum": [
+        "start",
+        "end"
+      ]
+    },
+    "onChange": {
+      "description": "A callback for when the checkbox selection changes. (Function: (event: React.FormEvent<HTMLInputElement>, checked: boolean) => void)",
+      "default": "() => {}"
+    },
+    "ouiaId": {
+      "description": "Value to overwrite the randomly generated data-ouia-component-id. (Type: number | string)"
+    },
+    "ouiaSafe": {
+      "description": "Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false.",
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "additionalProperties": false
+}

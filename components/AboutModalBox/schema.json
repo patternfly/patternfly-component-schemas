@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "AboutModalBox Props",
+  "description": "Props for the AboutModalBox component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the about modal box (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the about modal box",
+      "type": "string"
+    }
+  },
+  "required": [
+    "children"
+  ],
+  "additionalProperties": false
+}

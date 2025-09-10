@@ -1,0 +1,114 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Label Props",
+  "description": "Props for the Label component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the label. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the label.",
+      "type": "string",
+      "default": "''"
+    },
+    "closeBtn": {
+      "description": "Node for custom close button. (React component or element)"
+    },
+    "closeBtnAriaLabel": {
+      "description": "Aria label for close button",
+      "type": "string"
+    },
+    "closeBtnProps": {
+      "description": "Additional properties for the default close button. (Type: any)"
+    },
+    "color": {
+      "description": "Color of the label.",
+      "enum": [
+        "blue",
+        "teal",
+        "green",
+        "orange",
+        "purple",
+        "red",
+        "orangered",
+        "grey",
+        "yellow"
+      ],
+      "default": "'grey'"
+    },
+    "editableProps": {
+      "description": "Additional props passed to the editable label text div. Optionally passing onInput and onBlur callbacks will allow finer custom text input control. (Type: any)"
+    },
+    "href": {
+      "description": "Href for a label that is a link. If present, the label will change to an anchor element. This should not be passed in if the onClick prop is also passed in.",
+      "type": "string"
+    },
+    "icon": {
+      "description": "Icon added to the left of the label text. Overrides the icon set by the status property. (React component or element)"
+    },
+    "isClickable": {
+      "description": "Flag indicating the label is clickable. This flag will automatically be set if a href is passed, or if an onClick handler is passed and the label is not an overflow or add variant. This should be manually set when using the render prop.",
+      "type": "boolean",
+      "default": false
+    },
+    "isCompact": {
+      "description": "Flag indicating the label is compact.",
+      "type": "boolean",
+      "default": false
+    },
+    "isDisabled": {
+      "description": "Flag indicating the label is disabled. Works only on clickable labels, so either href or onClick props must be passed in.",
+      "type": "boolean",
+      "default": false
+    },
+    "isEditable": {
+      "description": "Flag indicating the label is editable.",
+      "type": "boolean",
+      "default": false
+    },
+    "onClick": {
+      "description": "Callback for when the label is clicked. This should not be passed in if the href or isEditable props are also passed in. (Function: (event: React.MouseEvent) => void)"
+    },
+    "onClose": {
+      "description": "Close click callback for removable labels. If present, label will have a close button. (Function: (event: React.MouseEvent) => void)"
+    },
+    "onEditCancel": {
+      "description": "Callback when an editable label cancels an edit. (Function: (event: KeyboardEvent, previousText: string) => void)"
+    },
+    "onEditComplete": {
+      "description": "Callback when an editable label completes an edit. (Type: (event: MouseEvent | KeyboardEvent, newText: string) => void)"
+    },
+    "render": {
+      "description": "Forwards the label content and className to rendered function.  Use this prop for react router support. (React component or element)"
+    },
+    "status": {
+      "description": "Status of the label with a respective icon and color. Overrides the color set by the color property.",
+      "enum": [
+        "success",
+        "warning",
+        "danger",
+        "info",
+        "custom"
+      ]
+    },
+    "textMaxWidth": {
+      "description": "The max width of the label before it is truncated. Can be any valid CSS unit, such as '100%', '100px', or '16ch'.",
+      "type": "string"
+    },
+    "tooltipPosition": {
+      "description": "Position of the tooltip which is displayed if text is truncated (Type: | TooltipPosition\n| 'auto'\n| 'top'\n| 'bottom'\n| 'left'\n| 'right'\n| 'top-start'\n| 'top-end'\n| 'bottom-start'\n| 'bottom-end'\n| 'left-start'\n| 'left-end'\n| 'right-start'\n| 'right-end')"
+    },
+    "variant": {
+      "description": "Variant of the label.",
+      "enum": [
+        "outline",
+        "filled",
+        "overflow",
+        "add"
+      ],
+      "default": "'filled'"
+    }
+  },
+  "additionalProperties": false
+}

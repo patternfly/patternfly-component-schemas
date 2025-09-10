@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DrawerPanelDescription Props",
+  "description": "Provides a description within the drawer panel. This should typically follow the drawer head.",
+  "properties": {
+    "children": {
+      "description": "Content to be rendered in the drawer description (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the drawer description.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "children"
+  ],
+  "additionalProperties": false
+}

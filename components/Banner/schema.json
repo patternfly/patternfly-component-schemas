@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Banner Props",
+  "description": "Props for the Banner component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the banner. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the banner.",
+      "type": "string"
+    },
+    "color": {
+      "description": "Color options for the banner, will be overwritten by any applied using the status prop.",
+      "enum": [
+        "red",
+        "orangered",
+        "orange",
+        "yellow",
+        "green",
+        "teal",
+        "blue",
+        "purple"
+      ]
+    },
+    "isSticky": {
+      "description": "If set to true, the banner sticks to the top of its container",
+      "type": "boolean",
+      "default": false
+    },
+    "screenReaderText": {
+      "description": "Text announced by screen readers to indicate the type of banner. This prop should only\nbe passed in when the banner conveys status/severity.",
+      "type": "string"
+    },
+    "status": {
+      "description": "Status style options for the banner, will overwrite any color applied using the color prop.",
+      "enum": [
+        "success",
+        "warning",
+        "danger",
+        "info",
+        "custom"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

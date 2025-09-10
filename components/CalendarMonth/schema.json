@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "CalendarMonth Props",
+  "description": "The main calendar month component.",
+  "properties": {
+    "cellAriaLabel": {
+      "description": "Accessible label for the date cells. (Function: (date: Date) => string)"
+    },
+    "className": {
+      "description": "Additional classes to add to the outer div of the calendar month.",
+      "type": "string"
+    },
+    "date": {
+      "description": "Month/year to base other dates around. (Type: Date)"
+    },
+    "dayFormat": {
+      "description": "How to format days in buttons in table cells. (React component or element)",
+      "default": "(date) => date.getDate()"
+    },
+    "inlineProps": {
+      "description": "Props used to ensure accessibility when displaying the calendar month inline. (Type: CalendarMonthInlineProps)"
+    },
+    "isDateFocused": {
+      "description": "Flag to set browser focus on the passed date. *",
+      "type": "boolean",
+      "default": false
+    },
+    "locale": {
+      "description": "If using the default formatters which locale to use. Undefined defaults to current locale.\nSee https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_identification_and_negotiation",
+      "type": "string",
+      "default": "undefined"
+    },
+    "longWeekdayFormat": {
+      "description": "How to format days in header for screen readers. (React component or element)",
+      "default": "(date) => date.toLocaleDateString(locale, { weekday: 'long' })"
+    },
+    "monthFormat": {
+      "description": "How to format months in month select. (React component or element)",
+      "default": "(date) => date.toLocaleDateString(locale, { month: 'long' })"
+    },
+    "nextMonthAriaLabel": {
+      "description": "Accessible label for the next month button.",
+      "type": "string",
+      "default": "'Next month'"
+    },
+    "onChange": {
+      "description": "Callback when date is selected. (Function: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, date: Date) => void)",
+      "default": "() => {}"
+    },
+    "onMonthChange": {
+      "description": "Callback when month or year is changed. (Type: (\n  event?: React.MouseEvent | React.ChangeEvent | React.FormEvent<HTMLInputElement>,\n  newDate?: Date\n) => void)",
+      "default": "() => {}"
+    },
+    "prevMonthAriaLabel": {
+      "description": "Accessible label for the previous month button.",
+      "type": "string",
+      "default": "'Previous month'"
+    },
+    "rangeStart": {
+      "description": "Which date to start range styles from. (Type: Date)"
+    },
+    "validators": {
+      "description": "Functions that returns if a date is valid and selectable. (Type: ((date: Date) => boolean)[])",
+      "type": "array",
+      "default": "[() => true]"
+    },
+    "weekdayFormat": {
+      "description": "How to format week days in header. (React component or element)",
+      "default": "(date) => date.toLocaleDateString(locale, { weekday: 'narrow' })"
+    },
+    "weekStart": {
+      "description": "Day of week that starts the week. 0 is Sunday, 6 is Saturday. (Type: 0 | 1 | 2 | 3 | 4 | 5 | 6 | Weekday)",
+      "default": 0
+    },
+    "yearInputAriaLabel": {
+      "description": "Accessible label for the year input.",
+      "type": "string",
+      "default": "'Select year'"
+    }
+  },
+  "additionalProperties": false
+}

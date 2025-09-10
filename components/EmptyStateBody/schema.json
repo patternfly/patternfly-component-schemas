@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "EmptyStateBody Props",
+  "description": "Props for the EmptyStateBody component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the empty state body (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the empty state body",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

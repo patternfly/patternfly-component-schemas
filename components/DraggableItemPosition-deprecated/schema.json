@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DraggableItemPosition Props",
+  "description": "Props for the DraggableItemPosition component",
+  "properties": {
+    "droppableId": {
+      "description": "Parent droppableId",
+      "type": "string"
+    },
+    "index": {
+      "description": "Index of item in parent Droppable",
+      "type": "number"
+    }
+  },
+  "required": [
+    "droppableId",
+    "index"
+  ],
+  "additionalProperties": false
+}

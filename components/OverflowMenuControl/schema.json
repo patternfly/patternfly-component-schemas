@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "OverflowMenuControl Props",
+  "description": "Props for the OverflowMenuControl component",
+  "properties": {
+    "children": {
+      "description": "Any elements that can be rendered in the menu (Type: any)"
+    },
+    "className": {
+      "description": "Additional classes added to the OverflowMenuControl",
+      "type": "string"
+    },
+    "hasAdditionalOptions": {
+      "description": "Triggers the overflow dropdown to persist at all viewport sizes",
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}

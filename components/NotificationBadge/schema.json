@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "NotificationBadge Props",
+  "description": "Props for the NotificationBadge component",
+  "properties": {
+    "aria-label": {
+      "description": "Adds an accessible label to the notification badge.",
+      "type": "string"
+    },
+    "attentionIcon": {
+      "description": "Icon to display for attention variant. (React component or element)",
+      "default": "<AttentionBellIcon />"
+    },
+    "children": {
+      "description": "Content rendered inside the notification badge. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the notification badge.",
+      "type": "string"
+    },
+    "count": {
+      "description": "A number displayed in the badge alongside the icon.",
+      "type": "number",
+      "default": 0
+    },
+    "icon": {
+      "description": "Icon to display in the notification badge. (React component or element)",
+      "default": "<BellIcon />"
+    },
+    "isExpanded": {
+      "description": "Flag for applying expanded styling and setting the aria-expanded attribute on the\nnotification badge.",
+      "type": "boolean",
+      "default": false
+    },
+    "onAnimationEnd": {
+      "description": "Callback for when the animation of the notification badge icon ends. (Function: (event: React.AnimationEvent<HTMLButtonElement>) => void)"
+    },
+    "shouldNotify": {
+      "description": "Flag indicating whether the notification badge animation should be triggered. Each\ntime this prop is true, the animation will be triggered a single time.",
+      "type": "boolean",
+      "default": false
+    },
+    "variant": {
+      "description": "Determines the variant of the notification badge.",
+      "enum": [
+        "read",
+        "unread",
+        "attention"
+      ],
+      "default": "NotificationBadgeVariant.read"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "BannerStatus Props",
+  "description": "Props for the BannerStatus component",
+  "properties": {},
+  "additionalProperties": false
+}

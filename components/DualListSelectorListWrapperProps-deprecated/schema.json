@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DualListSelectorListWrapperProps Props",
+  "description": "Props for the DualListSelectorListWrapperProps component",
+  "properties": {
+    "children": {
+      "description": "Anything that can be rendered inside of the list (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes applied to the dual list selector.",
+      "type": "string"
+    },
+    "displayOption": {
+      "description": " (React component or element)"
+    },
+    "id": {
+      "description": "Id of the dual list selector list",
+      "type": "string"
+    },
+    "innerRef": {
+      "description": " (Type: React.RefObject<HTMLDivElement | null>)"
+    },
+    "isDisabled": {
+      "description": "Flag indicating whether the component is disabled.",
+      "type": "boolean"
+    },
+    "onOptionSelect": {
+      "description": " (Type: (e: React.MouseEvent | React.ChangeEvent | React.KeyboardEvent, index: number, id: string) => void)"
+    },
+    "options": {
+      "description": " (React component or element)"
+    },
+    "selectedOptions": {
+      "description": " (Type: string[] | number[])"
+    },
+    "Unknown": {
+      "description": "Accessibly label for the list",
+      "type": "string"
+    }
+  },
+  "required": [
+    "Unknown"
+  ],
+  "additionalProperties": false
+}

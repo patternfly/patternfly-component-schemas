@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DataListCheck Props",
+  "description": "Props for the DataListCheck component",
+  "properties": {
+    "aria-labelledby": {
+      "description": "Aria-labelledby of the DataList checkbox",
+      "type": "string"
+    },
+    "checked": {
+      "description": "Flag to show if the DataList checkbox is checked when it is controlled by React state. Both isChecked and checked are valid,\nbut only use one.\nTo make the DataList checkbox uncontrolled, instead use the defaultChecked prop, but do not use both.",
+      "type": "boolean"
+    },
+    "className": {
+      "description": "Additional classes added to the DataList item checkbox",
+      "type": "string"
+    },
+    "defaultChecked": {
+      "description": "Flag to set default value of DataList checkbox when it is uncontrolled by React state.\nTo make the DataList checkbox controlled, instead use the isChecked prop, but do not use both.",
+      "type": "boolean"
+    },
+    "id": {
+      "description": "Id of the DataList checkbox.",
+      "type": "string"
+    },
+    "isChecked": {
+      "description": "Flag to show if the DataList checkbox is checked when it is controlled by React state. Both isChecked and checked are valid,\nbut only use one.\nTo make the DataList checkbox uncontrolled, instead use the defaultChecked prop, but do not use both.",
+      "type": "boolean"
+    },
+    "isDisabled": {
+      "description": "Flag to show if the DataList checkbox is disabled",
+      "type": "boolean",
+      "default": false
+    },
+    "isValid": {
+      "description": "Flag to show if the DataList checkbox selection is valid or invalid",
+      "type": "boolean",
+      "default": true
+    },
+    "onChange": {
+      "description": "A callback for when the DataList checkbox selection changes (Function: (event: React.FormEvent<HTMLInputElement>, checked: boolean) => void)"
+    },
+    "otherControls": {
+      "description": "Flag to indicate if other controls are used in the DataListItem",
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "aria-labelledby"
+  ],
+  "additionalProperties": false
+}

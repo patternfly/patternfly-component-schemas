@@ -1,0 +1,214 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Tabs Props",
+  "description": "Props for the Tabs component",
+  "properties": {
+    "activeKey": {
+      "description": "The index of the active tab (Type: number | string)",
+      "default": 0
+    },
+    "addButtonAriaLabel": {
+      "description": "Aria-label for the add button",
+      "type": "string"
+    },
+    "aria-label": {
+      "description": "Provides an accessible label for the tabs. Labels should be unique for each set of tabs that are present on a page. When component is set to nav, this prop should be defined to differentiate the tabs from other navigation regions on the page.",
+      "type": "string"
+    },
+    "backScrollAriaLabel": {
+      "description": "Aria-label for the back scroll button",
+      "type": "string",
+      "default": "'Scroll back'"
+    },
+    "children": {
+      "description": "Content rendered inside the tabs component. Only `Tab` components or expressions resulting in a falsy value are allowed here. (Type: TabsChild | TabsChild[])"
+    },
+    "className": {
+      "description": "Additional classes added to the tabs",
+      "type": "string"
+    },
+    "component": {
+      "description": "Determines what tag is used around the tabs. Use \"nav\" to define the tabs inside a navigation region",
+      "enum": [
+        "div",
+        "nav"
+      ],
+      "default": "TabsComponent.div"
+    },
+    "defaultActiveKey": {
+      "description": "The index of the default active tab. Set this for uncontrolled Tabs (Type: number | string)"
+    },
+    "defaultIsExpanded": {
+      "description": "Flag indicating the default expanded state for uncontrolled expand/collapse of",
+      "type": "boolean"
+    },
+    "expandable": {
+      "description": "Enable expandable vertical tabs at various breakpoints. (isVertical should be set to true for this to work)",
+      "enum": [
+        "expandable",
+        "nonExpandable",
+        "expandable",
+        "nonExpandable",
+        "expandable",
+        "nonExpandable",
+        "expandable",
+        "nonExpandable",
+        "expandable",
+        "nonExpandable",
+        "2xl",
+        "expandable",
+        "nonExpandable"
+      ]
+    },
+    "forwardScrollAriaLabel": {
+      "description": "Aria-label for the forward scroll button",
+      "type": "string",
+      "default": "'Scroll forward'"
+    },
+    "hasNoBorderBottom": {
+      "description": "Disables border bottom tab styling on tabs. Defaults to false. To remove the bottom border, set this prop to true.",
+      "type": "boolean",
+      "default": false
+    },
+    "id": {
+      "description": "Uniquely identifies the tabs",
+      "type": "string"
+    },
+    "inset": {
+      "description": "Insets at various breakpoints.",
+      "enum": [
+        "insetNone",
+        "insetSm",
+        "insetMd",
+        "insetLg",
+        "insetXl",
+        "inset2xl",
+        "insetNone",
+        "insetSm",
+        "insetMd",
+        "insetLg",
+        "insetXl",
+        "inset2xl",
+        "insetNone",
+        "insetSm",
+        "insetMd",
+        "insetLg",
+        "insetXl",
+        "inset2xl",
+        "insetNone",
+        "insetSm",
+        "insetMd",
+        "insetLg",
+        "insetXl",
+        "inset2xl",
+        "insetNone",
+        "insetSm",
+        "insetMd",
+        "insetLg",
+        "insetXl",
+        "inset2xl",
+        "2xl",
+        "insetNone",
+        "insetSm",
+        "insetMd",
+        "insetLg",
+        "insetXl",
+        "inset2xl"
+      ]
+    },
+    "isBox": {
+      "description": "Enables box styling to the tab component",
+      "type": "boolean",
+      "default": false
+    },
+    "isExpanded": {
+      "description": "Flag to indicate if the vertical tabs are expanded",
+      "type": "boolean"
+    },
+    "isFilled": {
+      "description": "Enables the filled tab list layout",
+      "type": "boolean",
+      "default": false
+    },
+    "isOverflowHorizontal": {
+      "description": "Flag which places overflowing tabs into a menu triggered by the last tab. Additionally an object can be passed with custom settings for the overflow tab. (Type: boolean | HorizontalOverflowObject)"
+    },
+    "isSubtab": {
+      "description": "Enables subtab tab styling",
+      "type": "boolean",
+      "default": false
+    },
+    "isVertical": {
+      "description": "Enables vertical tab styling",
+      "type": "boolean",
+      "default": false
+    },
+    "leftScrollAriaLabel": {
+      "description": "Please use backScrollAriaLabel. Aria-label for the left scroll button",
+      "type": "string",
+      "default": "'Scroll left'"
+    },
+    "mountOnEnter": {
+      "description": "Waits until the first \"enter\" transition to mount tab children (add them to the DOM)",
+      "type": "boolean",
+      "default": false
+    },
+    "onAdd": {
+      "description": "Callback for the add button. Passing this property inserts the add button (Function: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void)"
+    },
+    "onClose": {
+      "description": "Callback to handle tab closing and adds a basic close button to all tabs. This is overridden by the tab actions property. (Type: (event: React.MouseEvent<HTMLElement, MouseEvent>, eventKey: number | string) => void)"
+    },
+    "onSelect": {
+      "description": "Callback to handle tab selection (Type: (event: React.MouseEvent<HTMLElement, MouseEvent>, eventKey: number | string) => void)",
+      "default": "() => undefined as any"
+    },
+    "onToggle": {
+      "description": "Callback function to toggle the expandable tabs. (Function: (event: React.MouseEvent, isExpanded: boolean) => void)",
+      "default": "(_event: React.MouseEvent, _isExpanded: boolean): void => undefined"
+    },
+    "ouiaId": {
+      "description": "Value to overwrite the randomly generated data-ouia-component-id. (Type: number | string)"
+    },
+    "ouiaSafe": {
+      "description": "Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false.",
+      "type": "boolean",
+      "default": true
+    },
+    "rightScrollAriaLabel": {
+      "description": "Please use forwardScrollAriaLabel. Aria-label for the right scroll button",
+      "type": "string",
+      "default": "'Scroll right'"
+    },
+    "toggleAriaLabel": {
+      "description": "Aria-label for the expandable toggle",
+      "type": "string"
+    },
+    "toggleText": {
+      "description": "Text that appears in the expandable toggle",
+      "type": "string"
+    },
+    "unmountOnExit": {
+      "description": "Unmounts tab children (removes them from the DOM) when they are no longer visible",
+      "type": "boolean",
+      "default": false
+    },
+    "usePageInsets": {
+      "description": "Flag indicates that the tabs should use page insets.",
+      "type": "boolean"
+    },
+    "variant": {
+      "description": "Tabs background color variant",
+      "enum": [
+        "default",
+        "secondary"
+      ],
+      "default": "'default'"
+    }
+  },
+  "required": [
+    "children"
+  ],
+  "additionalProperties": false
+}

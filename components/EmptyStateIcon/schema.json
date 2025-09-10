@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "EmptyStateIcon Props",
+  "description": "Props for the EmptyStateIcon component",
+  "properties": {
+    "className": {
+      "description": "Additional classes added to the empty state icon",
+      "type": "string"
+    },
+    "icon": {
+      "description": "Icon component to be rendered. Can also be a spinner component (Type: React.ComponentType<any>)"
+    }
+  },
+  "required": [
+    "icon"
+  ],
+  "additionalProperties": false
+}

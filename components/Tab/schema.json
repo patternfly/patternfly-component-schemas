@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Tab Props",
+  "description": "Props for the Tab component",
+  "properties": {
+    "actions": {
+      "description": "Actions rendered beside the tab content (React component or element)"
+    },
+    "children": {
+      "description": "content rendered inside the Tab content area. (React component or element)"
+    },
+    "className": {
+      "description": "additional classes added to the Tab",
+      "type": "string"
+    },
+    "closeButtonAriaLabel": {
+      "description": "Aria-label for the close button added by passing the onClose property to Tabs.",
+      "type": "string"
+    },
+    "eventKey": {
+      "description": "uniquely identifies the tab (Type: number | string)"
+    },
+    "href": {
+      "description": "URL associated with the Tab. A Tab with an href will render as an <a> instead of a <button>. A Tab inside a <Tabs component=\"nav\"> should have an href.",
+      "type": "string"
+    },
+    "inoperableEvents": {
+      "description": "Events to prevent when the button is in an aria-disabled state (Type: string[])",
+      "type": "array"
+    },
+    "isAriaDisabled": {
+      "description": "Adds disabled styling and communicates that the button is disabled using the aria-disabled html attribute",
+      "type": "boolean"
+    },
+    "isCloseDisabled": {
+      "description": "Flag indicating the close button should be disabled",
+      "type": "boolean"
+    },
+    "isDisabled": {
+      "description": "Adds disabled styling and disables the button using the disabled html attribute",
+      "type": "boolean"
+    },
+    "isHidden": {
+      "description": "whether to render the tab or not",
+      "type": "boolean"
+    },
+    "ouiaId": {
+      "description": "Value to set the data-ouia-component-id for the tab button. (Type: number | string)"
+    },
+    "ouiaSafe": {
+      "description": "",
+      "type": "boolean"
+    },
+    "tabContentId": {
+      "description": "child id for case in which a TabContent section is defined outside of a Tabs component (Type: string | number)"
+    },
+    "tabContentRef": {
+      "description": "child reference for case in which a TabContent section is defined outside of a Tabs component (Type: React.RefObject<any>)"
+    },
+    "title": {
+      "description": "Content rendered in the tab title. Should be <TabTitleText> and/or <TabTitleIcon> for proper styling. (React component or element)"
+    },
+    "tooltip": {
+      "description": "Optional Tooltip rendered to a Tab. Should be <Tooltip> with appropriate props for proper rendering. (Type: React.ReactElement<any>)"
+    }
+  },
+  "required": [
+    "eventKey",
+    "title"
+  ],
+  "additionalProperties": false
+}

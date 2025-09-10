@@ -1,0 +1,117 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Alert Props",
+  "description": "The main alert component.",
+  "properties": {
+    "actionClose": {
+      "description": "Close button; use the alert action close button component. (React component or element)"
+    },
+    "actionLinks": {
+      "description": "Action links; use a single alert action link component or multiple wrapped in an array\nor React fragment. (React component or element)"
+    },
+    "children": {
+      "description": "Content rendered inside the alert. (React component or element)",
+      "default": "''"
+    },
+    "className": {
+      "description": "Additional classes to add to the alert.",
+      "type": "string",
+      "default": "''"
+    },
+    "component": {
+      "description": "Sets the element to use as the alert title. Default is h4. (Type: React.JSX.IntrinsicElements)",
+      "default": "'h4'"
+    },
+    "customIcon": {
+      "description": "Set a custom icon to the alert. If not set the icon is set according to the variant. (React component or element)"
+    },
+    "id": {
+      "description": "Uniquely identifies the alert.",
+      "type": "string"
+    },
+    "isExpandable": {
+      "description": "Flag indicating that the alert is expandable.",
+      "type": "boolean",
+      "default": false
+    },
+    "isInline": {
+      "description": "Flag to indicate if the alert is inline.",
+      "type": "boolean",
+      "default": false
+    },
+    "isLiveRegion": {
+      "description": "Flag to indicate if the alert is in a live region.",
+      "type": "boolean",
+      "default": false
+    },
+    "isPlain": {
+      "description": "Flag to indicate if the alert is plain.",
+      "type": "boolean",
+      "default": false
+    },
+    "onMouseEnter": {
+      "description": " (Type: No type info)",
+      "default": "() => {}"
+    },
+    "onMouseLeave": {
+      "description": " (Type: No type info)",
+      "default": "() => {}"
+    },
+    "onTimeout": {
+      "description": "Function to be executed on alert timeout. Relevant when the timeout prop is set. (Function: () => void)",
+      "default": "() => {}"
+    },
+    "ouiaId": {
+      "description": "Value to overwrite the randomly generated data-ouia-component-id. (Type: number | string)"
+    },
+    "ouiaSafe": {
+      "description": "Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false.",
+      "type": "boolean",
+      "default": true
+    },
+    "timeout": {
+      "description": "If set to true, the timeout is 8000 milliseconds. If a number is provided, alert will\nbe dismissed after that amount of time in milliseconds. (Type: number | boolean)",
+      "default": false
+    },
+    "timeoutAnimation": {
+      "description": "If the user hovers over the alert and `timeout` expires, this is how long to wait\nbefore finally dismissing the alert.",
+      "type": "number",
+      "default": 3000
+    },
+    "title": {
+      "description": "Title of the alert. (React component or element)"
+    },
+    "toggleAriaLabel": {
+      "description": "Adds accessible text to the alert toggle.",
+      "type": "string"
+    },
+    "tooltipPosition": {
+      "description": "Position of the tooltip which is displayed if text is truncated. (Type: | TooltipPosition\n| 'auto'\n| 'top'\n| 'bottom'\n| 'left'\n| 'right'\n| 'top-start'\n| 'top-end'\n| 'bottom-start'\n| 'bottom-end'\n| 'left-start'\n| 'left-end'\n| 'right-start'\n| 'right-end')"
+    },
+    "truncateTitle": {
+      "description": "Truncate title to number of lines.",
+      "type": "number",
+      "default": 0
+    },
+    "variant": {
+      "description": "Adds alert variant styles.",
+      "enum": [
+        "success",
+        "danger",
+        "warning",
+        "info",
+        "custom"
+      ],
+      "default": "AlertVariant.custom"
+    },
+    "variantLabel": {
+      "description": "Variant label text for screen readers.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "title"
+  ],
+  "additionalProperties": false
+}

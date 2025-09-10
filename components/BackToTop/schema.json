@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "BackToTop Props",
+  "description": "Props for the BackToTop component",
+  "properties": {
+    "className": {
+      "description": "Additional classes added to the back to top.",
+      "type": "string"
+    },
+    "isAlwaysVisible": {
+      "description": "Flag to always show back to top button, defaults to false.",
+      "type": "boolean"
+    },
+    "scrollableSelector": {
+      "description": "Selector for the scrollable element to spy on. Not passing a selector defaults to spying on window scroll events.",
+      "type": "string"
+    },
+    "title": {
+      "description": "Title to appear in back to top button.",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Content Props",
+  "description": "Props for the Content component",
+  "properties": {
+    "children": {
+      "description": "Children rendered within the Content. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the Content.",
+      "type": "string",
+      "default": "''"
+    },
+    "component": {
+      "description": "The content component. If none provided, it will be a 'div' and styling will be applied to all its child components. (Type: | 'h1'\n| 'h2'\n| 'h3'\n| 'h4'\n| 'h5'\n| 'h6'\n| 'p'\n| 'a'\n| 'small'\n| 'blockquote'\n| 'pre'\n| 'hr'\n| 'ul'\n| 'ol'\n| 'dl'\n| 'li'\n| 'dt'\n| 'dd')"
+    },
+    "isEditorial": {
+      "description": "Flag to indicate the content has editorial styling. This styling increases the font size of body text and small text by one tier, increasing body text to large and small text to the previous body text size.",
+      "type": "boolean",
+      "default": false
+    },
+    "isPlainList": {
+      "description": "Modifies the list (ul, ol and dl components) to have plain styling.",
+      "type": "boolean",
+      "default": false
+    },
+    "isVisitedLink": {
+      "description": "Flag to indicate the link (or all links within the content) has visited styles applied if the browser determines the link has been visited.",
+      "type": "boolean",
+      "default": false
+    },
+    "ouiaId": {
+      "description": "Value to overwrite the randomly generated data-ouia-component-id. (Type: number | string)"
+    },
+    "ouiaSafe": {
+      "description": "Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false.",
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "NotificationDrawerList Props",
+  "description": "Props for the NotificationDrawerList component",
+  "properties": {
+    "aria-label": {
+      "description": "Adds an accessible label to the notification drawer list.",
+      "type": "string"
+    },
+    "children": {
+      "description": "Content rendered inside the notification drawer list body (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the notification drawer list body",
+      "type": "string",
+      "default": "''"
+    },
+    "isHidden": {
+      "description": "Adds styling to the notification drawer list to indicate expand/hide state",
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "additionalProperties": false
+}

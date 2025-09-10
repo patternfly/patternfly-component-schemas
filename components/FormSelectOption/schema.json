@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "FormSelectOption Props",
+  "description": "Props for the FormSelectOption component",
+  "properties": {
+    "className": {
+      "description": "additional classes added to the Select Option",
+      "type": "string",
+      "default": "''"
+    },
+    "isDisabled": {
+      "description": "flag indicating if the option is disabled",
+      "type": "boolean",
+      "default": false
+    },
+    "isPlaceholder": {
+      "description": "flag indicating if option will have placeholder styling applied when selected *",
+      "type": "boolean",
+      "default": false
+    },
+    "label": {
+      "description": "the label for the option",
+      "type": "string"
+    },
+    "value": {
+      "description": "the value for the option (Type: any)",
+      "default": "''"
+    }
+  },
+  "required": [
+    "label"
+  ],
+  "additionalProperties": false
+}

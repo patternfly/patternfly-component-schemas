@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "PageSidebarBody Props",
+  "description": "Props for the PageSidebarBody component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the page sidebar body (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the page sidebar body",
+      "type": "string"
+    },
+    "isContextSelector": {
+      "description": "Flag indicating that the page sidebar body is for a context selector/perspective switcher",
+      "type": "boolean"
+    },
+    "isFilled": {
+      "description": "Flag indicating that the page sidebar body should fill the available vertical space.",
+      "type": "boolean"
+    },
+    "usePageInsets": {
+      "description": "Flag indicating that the page sidebar body should use page insets.",
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "CodeBlockCode Props",
+  "description": "Props for the CodeBlockCode component",
+  "properties": {
+    "children": {
+      "description": "Code rendered inside the code block (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional classes passed to the code block pre wrapper",
+      "type": "string"
+    },
+    "codeClassName": {
+      "description": "Additional classes passed to the code block code",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

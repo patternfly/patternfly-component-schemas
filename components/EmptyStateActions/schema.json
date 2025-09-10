@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "EmptyStateActions Props",
+  "description": "Props for the EmptyStateActions component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the empty state actions (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the empty state actions",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

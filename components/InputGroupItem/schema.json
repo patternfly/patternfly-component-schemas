@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "InputGroupItem Props",
+  "description": "Props for the InputGroupItem component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the input group item. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the input group item.",
+      "type": "string"
+    },
+    "isBox": {
+      "description": "Enables box styling to the input group item",
+      "type": "boolean",
+      "default": false
+    },
+    "isDisabled": {
+      "description": "Flag to indicate if the input group item is disabled.",
+      "type": "boolean"
+    },
+    "isFill": {
+      "description": "Flag to indicate if the input group item should fill the available horizontal space",
+      "type": "boolean",
+      "default": false
+    },
+    "isPlain": {
+      "description": "Flag to indicate if the input group item is plain.",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "children"
+  ],
+  "additionalProperties": false
+}

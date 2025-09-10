@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "BreadcrumbHeading Props",
+  "description": "Props for the BreadcrumbHeading component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the breadcrumb title. (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional classes added to the breadcrumb item.",
+      "type": "string",
+      "default": "''"
+    },
+    "component": {
+      "description": "Sets the base component to render. Defaults to <a> (React component or element)",
+      "default": "'a'"
+    },
+    "showDivider": {
+      "description": "Internal prop set by Breadcrumb on all but the first crumb",
+      "type": "boolean"
+    },
+    "target": {
+      "description": "Target for breadcrumb link.",
+      "type": "string",
+      "default": "undefined"
+    },
+    "to": {
+      "description": "HREF for breadcrumb link.",
+      "type": "string",
+      "default": "undefined"
+    }
+  },
+  "additionalProperties": false
+}

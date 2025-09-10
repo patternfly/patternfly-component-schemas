@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "MenuToggleCheckbox Props",
+  "description": "Props for the MenuToggleCheckbox component",
+  "properties": {
+    "children": {
+      "description": "Element to be rendered inside the <span> (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the MenuToggleCheckbox",
+      "type": "string"
+    },
+    "defaultChecked": {
+      "description": "Flag to set the default checked value of the checkbox when it is uncontrolled by React state.\nTo make the checkbox controlled instead use the isChecked prop, but do not use both.",
+      "type": "boolean"
+    },
+    "id": {
+      "description": "Id of the checkbox",
+      "type": "string"
+    },
+    "isChecked": {
+      "description": "Flag to show if the checkbox is checked when it is controlled by React state.\nTo make the checkbox uncontrolled instead use the defaultChecked prop, but do not use both. (Type: boolean | null)"
+    },
+    "isDisabled": {
+      "description": "Flag to show if the checkbox is disabled",
+      "type": "boolean",
+      "default": false
+    },
+    "isValid": {
+      "description": "Flag to show if the checkbox selection is valid or invalid",
+      "type": "boolean",
+      "default": true
+    },
+    "onChange": {
+      "description": "A callback for when the checkbox selection changes (Function: (checked: boolean, event: React.FormEvent<HTMLInputElement>) => void)",
+      "default": "() => undefined as any"
+    },
+    "ouiaId": {
+      "description": "Value to overwrite the randomly generated data-ouia-component-id. (Type: number | string)"
+    },
+    "ouiaSafe": {
+      "description": "Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false.",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "additionalProperties": false
+}

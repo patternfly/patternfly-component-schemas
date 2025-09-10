@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "SimpleListState Props",
+  "description": "Props for the SimpleListState component",
+  "properties": {
+    "currentRef": {
+      "description": "Ref of the current SimpleListItem (Type: React.RefObject<HTMLButtonElement | null> | React.RefObject<HTMLAnchorElement | null>)"
+    }
+  },
+  "required": [
+    "currentRef"
+  ],
+  "additionalProperties": false
+}

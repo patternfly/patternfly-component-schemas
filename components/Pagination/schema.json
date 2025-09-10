@@ -1,0 +1,196 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Pagination Props",
+  "description": "The main pagination component.",
+  "properties": {
+    "children": {
+      "description": "What should be rendered inside the pagination. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes for the pagination container.",
+      "type": "string",
+      "default": "''"
+    },
+    "dropDirection": {
+      "description": "Direction of dropdown context menu.",
+      "enum": [
+        "up",
+        "down"
+      ]
+    },
+    "firstPage": {
+      "description": "Page to start at.",
+      "type": "number",
+      "default": 1
+    },
+    "inset": {
+      "description": "Insets at various breakpoints.",
+      "enum": [
+        "insetNone",
+        "insetSm",
+        "insetMd",
+        "insetLg",
+        "insetXl",
+        "inset2xl",
+        "insetNone",
+        "insetSm",
+        "insetMd",
+        "insetLg",
+        "insetXl",
+        "inset2xl",
+        "insetNone",
+        "insetSm",
+        "insetMd",
+        "insetLg",
+        "insetXl",
+        "inset2xl",
+        "insetNone",
+        "insetSm",
+        "insetMd",
+        "insetLg",
+        "insetXl",
+        "inset2xl",
+        "insetNone",
+        "insetSm",
+        "insetMd",
+        "insetLg",
+        "insetXl",
+        "inset2xl",
+        "2xl",
+        "insetNone",
+        "insetSm",
+        "insetMd",
+        "insetLg",
+        "insetXl",
+        "inset2xl"
+      ]
+    },
+    "isCompact": {
+      "description": "Flag indicating if pagination is compact.",
+      "type": "boolean",
+      "default": false
+    },
+    "isDisabled": {
+      "description": "Flag indicating if pagination is disabled.",
+      "type": "boolean",
+      "default": false
+    },
+    "isLastFullPageShown": {
+      "description": "Indicate whether to show last full page of results when user selects perPage value\ngreater than remaining rows.",
+      "type": "boolean",
+      "default": false
+    },
+    "isStatic": {
+      "description": "Flag indicating if pagination should not be sticky on mobile.",
+      "type": "boolean",
+      "default": false
+    },
+    "isSticky": {
+      "description": "Flag indicating if pagination should stick to its position (based on variant).",
+      "type": "boolean",
+      "default": false
+    },
+    "itemCount": {
+      "description": "Total number of items.",
+      "type": "number"
+    },
+    "itemsEnd": {
+      "description": "Last index of items on current page.",
+      "type": "number",
+      "default": null
+    },
+    "itemsStart": {
+      "description": "First index of items on current page.",
+      "type": "number",
+      "default": null
+    },
+    "menuAppendTo": {
+      "description": "The container to append the pagination options menu to.",
+      "enum": [
+        "inline"
+      ]
+    },
+    "offset": {
+      "description": "Start index of rows to display, used in place of providing page.",
+      "type": "number",
+      "default": null
+    },
+    "onFirstClick": {
+      "description": "Function called when user clicks on navigate to first page. (Function: (event: React.SyntheticEvent<HTMLButtonElement>, page: number) => void)",
+      "default": "() => undefined"
+    },
+    "onLastClick": {
+      "description": "Function called when user clicks on navigate to last page. (Function: (event: React.SyntheticEvent<HTMLButtonElement>, page: number) => void)",
+      "default": "() => undefined"
+    },
+    "onNextClick": {
+      "description": "Function called when user clicks on navigate to next page. (Function: (event: React.SyntheticEvent<HTMLButtonElement>, page: number) => void)",
+      "default": "() => undefined"
+    },
+    "onPageInput": {
+      "description": "Function called when user inputs page number. (Function: (event: React.KeyboardEvent<HTMLInputElement>, page: number) => void)",
+      "default": "() => undefined"
+    },
+    "onPerPageSelect": {
+      "description": "Function called when user selects number of items per page. (Type: (\n  event: React.MouseEvent | React.KeyboardEvent | MouseEvent,\n  newPerPage: number,\n  newPage: number,\n  startIdx?: number,\n  endIdx?: number\n) => void)",
+      "default": "() => undefined"
+    },
+    "onPreviousClick": {
+      "description": "Function called when user clicks on navigate to previous page. (Function: (event: React.SyntheticEvent<HTMLButtonElement>, page: number) => void)",
+      "default": "() => undefined"
+    },
+    "onSetPage": {
+      "description": "Function called when user sets page. (Type: (\n  event: React.MouseEvent | React.KeyboardEvent | MouseEvent,\n  newPage: number,\n  perPage?: number,\n  startIdx?: number,\n  endIdx?: number\n) => void)",
+      "default": "() => undefined"
+    },
+    "ouiaId": {
+      "description": "Value to overwrite the randomly generated data-ouia-component-id. (Type: number | string)"
+    },
+    "ouiaSafe": {
+      "description": "Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false.",
+      "type": "boolean",
+      "default": true
+    },
+    "page": {
+      "description": "Current page number.",
+      "type": "number",
+      "default": 1
+    },
+    "perPage": {
+      "description": "Number of items per page.",
+      "type": "number",
+      "default": "defaultPerPageOptions[0].value"
+    },
+    "perPageOptions": {
+      "description": "Array of the number of items per page options. (Type: PerPageOptions[])",
+      "type": "array",
+      "default": "[\n  {\n    title: '10',\n    value: 10\n  },\n  {\n    title: '20',\n    value: 20\n  },\n  {\n    title: '50',\n    value: 50\n  },\n  {\n    title: '100',\n    value: 100\n  }\n]"
+    },
+    "titles": {
+      "description": "Object with titles to display in pagination. (Type: PaginationTitles)",
+      "default": "{\n  items: '',\n  page: '',\n  pages: '',\n  itemsPerPage: 'Items per page',\n  perPageSuffix: 'per page',\n  toFirstPageAriaLabel: 'Go to first page',\n  toPreviousPageAriaLabel: 'Go to previous page',\n  toLastPageAriaLabel: 'Go to last page',\n  toNextPageAriaLabel: 'Go to next page',\n  optionsToggleAriaLabel: '',\n  currPageAriaLabel: 'Current page',\n  paginationAriaLabel: 'Pagination',\n  ofWord: 'of'\n}"
+    },
+    "toggleTemplate": {
+      "description": "This will be shown in pagination toggle span. You can use firstIndex, lastIndex,\nitemCount, itemsTitle, and/or ofWord props. (Type: ((props: PaginationToggleTemplateProps) => React.ReactElement<any>) | string)"
+    },
+    "usePageInsets": {
+      "description": "Flag indicating that pagination should use page insets.",
+      "type": "boolean"
+    },
+    "variant": {
+      "description": "Position where pagination is rendered.",
+      "enum": [
+        "top",
+        "bottom"
+      ],
+      "default": "PaginationVariant.top"
+    },
+    "widgetId": {
+      "description": "Id to identify widget on page.",
+      "type": "string",
+      "default": "'options-menu'"
+    }
+  },
+  "additionalProperties": false
+}

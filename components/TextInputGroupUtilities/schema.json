@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "TextInputGroupUtilities Props",
+  "description": "Props for the TextInputGroupUtilities component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the text input group utilities div (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes applied to the text input group utilities container",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

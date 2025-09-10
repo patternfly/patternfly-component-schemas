@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ModalBoxCloseButtonProps Props",
+  "description": "Props for the ModalBoxCloseButtonProps component",
+  "properties": {
+    "className": {
+      "description": "Additional classes added to the close button.",
+      "type": "string"
+    },
+    "onClose": {
+      "description": "A callback for when the close button is clicked. (Type: (event: KeyboardEvent | React.MouseEvent) => void)"
+    },
+    "ouiaId": {
+      "description": "Value to set the data-ouia-component-id. (Type: number | string)"
+    },
+    "Unknown": {
+      "description": "Accessible descriptor of the close button.",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

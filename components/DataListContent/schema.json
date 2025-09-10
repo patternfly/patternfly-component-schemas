@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DataListContent Props",
+  "description": "Props for the DataListContent component",
+  "properties": {
+    "aria-label": {
+      "description": "Adds accessible text to the DataList toggle",
+      "type": "string"
+    },
+    "children": {
+      "description": "Content rendered inside the DataList item (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional classes added to the DataList cell",
+      "type": "string",
+      "default": "''"
+    },
+    "hasNoPadding": {
+      "description": "Flag to remove padding from the expandable content",
+      "type": "boolean",
+      "default": false
+    },
+    "id": {
+      "description": "Identify the DataListContent item",
+      "type": "string",
+      "default": "''"
+    },
+    "isHidden": {
+      "description": "Flag to show if the expanded content of the DataList item is visible",
+      "type": "boolean",
+      "default": false
+    },
+    "rowid": {
+      "description": "Id for the row",
+      "type": "string",
+      "default": "''"
+    }
+  },
+  "required": [
+    "aria-label"
+  ],
+  "additionalProperties": false
+}

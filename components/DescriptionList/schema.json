@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DescriptionList Props",
+  "description": "Props for the DescriptionList component",
+  "properties": {
+    "autoFitMinModifier": {
+      "description": "Sets the minimum column size for the auto-fit (isAutoFit) layout at various breakpoints. (Type: {\n  default?: string;\n  sm?: string;\n  md?: string;\n  lg?: string;\n  xl?: string;\n  '2xl'?: string;\n})"
+    },
+    "children": {
+      "description": "Anything that can be rendered inside of the list (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional classes added to the list",
+      "type": "string",
+      "default": "''"
+    },
+    "columnModifier": {
+      "description": "Sets the number of columns on the description list at various breakpoints",
+      "enum": [
+        "1Col",
+        "2Col",
+        "3Col",
+        "1Col",
+        "2Col",
+        "3Col",
+        "1Col",
+        "2Col",
+        "3Col",
+        "1Col",
+        "2Col",
+        "3Col",
+        "1Col",
+        "2Col",
+        "3Col",
+        "2xl",
+        "1Col",
+        "2Col",
+        "3Col"
+      ]
+    },
+    "displaySize": {
+      "description": "Sets the display size of the descriptions in the description list.",
+      "enum": [
+        "default",
+        "lg",
+        "2xl"
+      ],
+      "default": "'default'"
+    },
+    "horizontalTermWidthModifier": {
+      "description": "Sets the horizontal description list's term column width at various breakpoints. (Type: {\n  default?: string;\n  sm?: string;\n  md?: string;\n  lg?: string;\n  xl?: string;\n  '2xl'?: string;\n})"
+    },
+    "isAutoColumnWidths": {
+      "description": "Sets the description list to format automatically.",
+      "type": "boolean"
+    },
+    "isAutoFit": {
+      "description": "Sets the description list to auto fit.",
+      "type": "boolean"
+    },
+    "isCompact": {
+      "description": "Sets the description list to compact styling.",
+      "type": "boolean"
+    },
+    "isFillColumns": {
+      "description": "Sets the the default placement of description list groups to fill from top to bottom.",
+      "type": "boolean"
+    },
+    "isFluid": {
+      "description": "Sets a horizontal description list to have fluid styling.",
+      "type": "boolean"
+    },
+    "isHorizontal": {
+      "description": "Sets the description list component term and description pair to a horizontal layout.",
+      "type": "boolean",
+      "default": false
+    },
+    "isInlineGrid": {
+      "description": "Modifies the description list display to inline-grid.",
+      "type": "boolean"
+    },
+    "orientation": {
+      "description": "Indicates how the menu will align at various breakpoints.",
+      "enum": [
+        "vertical",
+        "horizontal",
+        "vertical",
+        "horizontal",
+        "vertical",
+        "horizontal",
+        "vertical",
+        "horizontal",
+        "2xl",
+        "vertical",
+        "horizontal"
+      ]
+    },
+    "termWidth": {
+      "description": "Sets the description list's term column width.",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

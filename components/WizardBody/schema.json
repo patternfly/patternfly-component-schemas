@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "WizardBody Props",
+  "description": "Used as a wrapper for WizardStep content, where the wrapping element is customizable.",
+  "properties": {
+    "aria-label": {
+      "description": "Adds an accessible name to the wrapper element when the content overflows and renders\na scrollbar.",
+      "type": "string"
+    },
+    "aria-labelledby": {
+      "description": "Adds an accessible name to the wrapper element by passing the the id of one or more elements.\nThe aria-labelledby will only be applied when the content overflows and renders a scrollbar.",
+      "type": "string"
+    },
+    "children": {
+      "description": "Anything that can be rendered in the Wizard body (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes spread to the wizard body",
+      "type": "string"
+    },
+    "component": {
+      "description": "Component used as the wrapping content container (Type: React.ElementType)",
+      "default": "'div'"
+    },
+    "hasNoPadding": {
+      "description": "Flag to remove the default body padding",
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "children"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DrawerSection Props",
+  "description": "Props for the DrawerSection component",
+  "properties": {
+    "children": {
+      "description": "Content to be rendered in the drawer section. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the drawer section.",
+      "type": "string",
+      "default": "''"
+    },
+    "colorVariant": {
+      "description": "Color variant of the background of the drawer Section",
+      "enum": [
+        "no-background",
+        "default",
+        "secondary"
+      ],
+      "default": "DrawerColorVariant.default"
+    }
+  },
+  "additionalProperties": false
+}

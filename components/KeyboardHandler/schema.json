@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "KeyboardHandler Props",
+  "description": "Props for the KeyboardHandler component",
+  "properties": {
+    "additionalKeyHandler": {
+      "description": "Additional key handling outside of the included arrow keys, enter, and space handling (Function: (event: KeyboardEvent) => void)"
+    },
+    "containerRef": {
+      "description": "Reference of the container to apply keyboard interaction (Type: React.RefObject<any>)",
+      "default": null
+    },
+    "createNavigableElements": {
+      "description": "Callback returning an array of navigable elements to be traversable via vertical arrow keys. This array should not include non-navigable elements such as disabled elements. (Type: () => Element[])",
+      "type": "array",
+      "default": "() => null as Element[]"
+    },
+    "getFocusableElement": {
+      "description": "Callback returning the focusable element of a given element from the navigable elements array (Function: (navigableElement: Element) => Element)",
+      "default": "(navigableElement: Element) => navigableElement"
+    },
+    "isActiveElement": {
+      "description": "Callback to determine if a given element from the navigable elements array is the active element of the page (Function: (navigableElement: Element) => boolean)",
+      "default": "(navigableElement: Element) => document.activeElement === navigableElement"
+    },
+    "isEventFromContainer": {
+      "description": "Callback to determine if a given event is from the container. By default the function conducts a basic check to see if the containerRef contains the event target (Function: (event: KeyboardEvent) => boolean)"
+    },
+    "noEnterHandling": {
+      "description": "Flag indicating that the included enter key handling should be ignored",
+      "type": "boolean",
+      "default": false
+    },
+    "noHorizontalArrowHandling": {
+      "description": "Flag indicating that the included horizontal arrow key handling should be ignored",
+      "type": "boolean",
+      "default": false
+    },
+    "noSpaceHandling": {
+      "description": "Flag indicating that the included space key handling should be ignored",
+      "type": "boolean",
+      "default": false
+    },
+    "noVerticalArrowHandling": {
+      "description": "Flag indicating that the included vertical arrow key handling should be ignored",
+      "type": "boolean",
+      "default": false
+    },
+    "onlyTraverseSiblings": {
+      "description": "Flag indicating that next focusable element of a horizontal movement will be this element's sibling",
+      "type": "boolean",
+      "default": true
+    },
+    "updateTabIndex": {
+      "description": "Flag indicating that the tabIndex of the currently focused element and next focused element should be updated, in the case of using a roving tabIndex",
+      "type": "boolean",
+      "default": true
+    },
+    "validSiblingTags": {
+      "description": "Valid sibling tags that horizontal arrow handling will focus (Type: string[])",
+      "type": "array",
+      "default": "['BUTTON', 'A']"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Draggable Props",
+  "description": "Props for the Draggable component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside DragDrop (React component or element)"
+    },
+    "className": {
+      "description": "Class to add to outer div",
+      "type": "string"
+    },
+    "hasNoWrapper": {
+      "description": "Don't wrap the component in a div. Requires passing a single child.",
+      "type": "boolean",
+      "default": false
+    },
+    "style": {
+      "description": " (Type: No type info)",
+      "default": {}
+    }
+  },
+  "additionalProperties": false
+}

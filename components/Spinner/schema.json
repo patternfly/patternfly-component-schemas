@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Spinner Props",
+  "description": "Props for the Spinner component",
+  "properties": {
+    "aria-label": {
+      "description": "Accessible label to describe what is loading",
+      "type": "string"
+    },
+    "aria-labelledBy": {
+      "description": "Id of element which describes what is being loaded",
+      "type": "string"
+    },
+    "aria-valuetext": {
+      "description": "Text describing that current loading status or progress",
+      "type": "string",
+      "default": "'Loading...'"
+    },
+    "className": {
+      "description": "Additional classes added to the Spinner.",
+      "type": "string",
+      "default": "''"
+    },
+    "diameter": {
+      "description": "Diameter of spinner set as CSS variable",
+      "type": "string"
+    },
+    "isInline": {
+      "description": "Indicates the spinner is inline and the size should inherit the text font size. This will override the size prop.",
+      "type": "boolean",
+      "default": false
+    },
+    "size": {
+      "description": "Size variant of progress.",
+      "enum": [
+        "sm",
+        "md",
+        "lg",
+        "xl"
+      ],
+      "default": "'xl'"
+    }
+  },
+  "additionalProperties": false
+}

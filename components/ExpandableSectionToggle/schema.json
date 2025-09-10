@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ExpandableSectionToggle Props",
+  "description": "Acts as the toggle sub-component when the main expandable section component has the isDetached\nproperty passed in. Allows for more custom control over the expandable section's toggle.",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the expandable toggle. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the expandable toggle.",
+      "type": "string",
+      "default": "''"
+    },
+    "contentId": {
+      "description": "Id of the toggle's respective expandable section content. The value passed into this\nproperty should match the contentId property of the main expandable section component.",
+      "type": "string"
+    },
+    "direction": {
+      "description": "Direction the toggle arrow should point when the expandable section is expanded.",
+      "enum": [
+        "up",
+        "down"
+      ],
+      "default": "'down'"
+    },
+    "hasTruncatedContent": {
+      "description": "Flag to determine toggle styling when the expandable content is truncated.",
+      "type": "boolean",
+      "default": false
+    },
+    "isExpanded": {
+      "description": "Flag indicating if the expandable section is expanded.",
+      "type": "boolean",
+      "default": false
+    },
+    "onToggle": {
+      "description": "Callback function to toggle the expandable content. (Function: (isExpanded: boolean) => void)"
+    },
+    "toggleId": {
+      "description": "Id of the toggle. The value passed into this property should match the aria-labelledby\nproperty of the main expandable section component.",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

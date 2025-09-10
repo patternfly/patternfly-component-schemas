@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "TextArea Props",
+  "description": "Props for the TextArea component",
+  "properties": {
+    "aria-label": {
+      "description": "Custom flag to show that the text area requires an associated id or aria-label.",
+      "type": "string"
+    },
+    "autoResize": {
+      "description": "Flag to modify height based on contents.",
+      "type": "boolean"
+    },
+    "className": {
+      "description": "Additional classes added to the text area.",
+      "type": "string"
+    },
+    "isDisabled": {
+      "description": "Flag to show if the text area is disabled.",
+      "type": "boolean"
+    },
+    "isRequired": {
+      "description": "Flag to show if the text area is required.",
+      "type": "boolean"
+    },
+    "onChange": {
+      "description": "A callback for when the text area value changes. (Function: (event: React.ChangeEvent<HTMLTextAreaElement>, value: string) => void)"
+    },
+    "readOnlyVariant": {
+      "description": "Read only variant.",
+      "enum": [
+        "default",
+        "plain"
+      ]
+    },
+    "resizeOrientation": {
+      "description": "Sets the orientation to limit the resize to",
+      "enum": [
+        "horizontal",
+        "vertical",
+        "both",
+        "none"
+      ]
+    },
+    "validated": {
+      "description": "Value to indicate if the text area is modified to show that validation state.\nIf set to success, text area will be modified to indicate valid state.\nIf set to error, text area will be modified to indicate error state.",
+      "enum": [
+        "success",
+        "warning",
+        "error",
+        "default"
+      ]
+    },
+    "value": {
+      "description": "Value of the text area. (Type: string | number)"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ModalBoxDescription Props",
+  "description": "Props for the ModalBoxDescription component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the description. (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional classes added to the description.",
+      "type": "string",
+      "default": "''"
+    },
+    "id": {
+      "description": "Id of the description.",
+      "type": "string",
+      "default": "''"
+    }
+  },
+  "additionalProperties": false
+}

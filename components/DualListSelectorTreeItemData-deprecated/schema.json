@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DualListSelectorTreeItemData Props",
+  "description": "Props for the DualListSelectorTreeItemData component",
+  "properties": {
+    "badgeProps": {
+      "description": "Additional properties to pass to the option badge (Type: any)"
+    },
+    "checkProps": {
+      "description": "Additional properties to pass to the option checkbox (Type: any)"
+    },
+    "children": {
+      "description": "Content rendered inside the dual list selector. (Type: DualListSelectorTreeItemData[])",
+      "type": "array"
+    },
+    "className": {
+      "description": "Additional classes applied to the dual list selector.",
+      "type": "string"
+    },
+    "defaultExpanded": {
+      "description": "Flag indicating this option is expanded by default.",
+      "type": "boolean"
+    },
+    "hasBadge": {
+      "description": "Flag indicating this option has a badge",
+      "type": "boolean"
+    },
+    "id": {
+      "description": "ID of the option",
+      "type": "string"
+    },
+    "isChecked": {
+      "description": "Checked state of the option",
+      "type": "boolean"
+    },
+    "isDisabled": {
+      "description": "Flag indicating whether the component is disabled.",
+      "type": "boolean"
+    },
+    "onOptionCheck": {
+      "description": "Callback fired when an option is checked (Type: (\n    event: React.MouseEvent | React.ChangeEvent<HTMLInputElement> | React.KeyboardEvent,\n    isChecked: boolean,\n    isChosen: boolean,\n    itemData: DualListSelectorTreeItemData\n  ) => void)"
+    },
+    "parentId": {
+      "description": "Parent id of an option",
+      "type": "string"
+    },
+    "text": {
+      "description": "Text of the option",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "isChecked",
+    "text"
+  ],
+  "additionalProperties": false
+}

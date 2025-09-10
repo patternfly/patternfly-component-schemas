@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "SelectList Props",
+  "description": "Props for the SelectList component",
+  "properties": {
+    "aria-label": {
+      "description": "Adds an accessible name to the menu.",
+      "type": "string"
+    },
+    "children": {
+      "description": "Anything that can be rendered inside of menu list (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the menu list",
+      "type": "string"
+    },
+    "isAriaMultiselectable": {
+      "description": "Indicates to assistive technologies whether more than one item can be selected\nfor a non-checkbox menu. Only applies when the menu's role is \"listbox\".",
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "children"
+  ],
+  "additionalProperties": false
+}

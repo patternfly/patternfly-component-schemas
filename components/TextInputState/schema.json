@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "TextInputState Props",
+  "description": "Props for the TextInputState component",
+  "properties": {
+    "ouiaStateId": {
+      "description": "",
+      "type": "string"
+    }
+  },
+  "required": [
+    "ouiaStateId"
+  ],
+  "additionalProperties": false
+}

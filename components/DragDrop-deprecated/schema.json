@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DragDrop Props",
+  "description": "Props for the DragDrop component",
+  "properties": {
+    "children": {
+      "description": "Potentially Droppable and Draggable children (React component or element)"
+    },
+    "onDrag": {
+      "description": "Callback for drag event. Return true to allow drag, false to disallow. (Function: (source: DraggableItemPosition) => boolean)",
+      "default": "() => true"
+    },
+    "onDragMove": {
+      "description": "Callback on mouse move while dragging. (Function: (source: DraggableItemPosition, dest?: DraggableItemPosition) => void)",
+      "default": "() => {}"
+    },
+    "onDrop": {
+      "description": "Callback for drop event. Return true to allow drop, false to disallow. (Function: (source: DraggableItemPosition, dest?: DraggableItemPosition) => boolean)",
+      "default": "() => false"
+    }
+  },
+  "additionalProperties": false
+}

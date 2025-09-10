@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "PanelMainBody Props",
+  "description": "Props for the PanelMainBody component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the panel main body div (React component or element)"
+    },
+    "className": {
+      "description": "Class to add to outer div",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

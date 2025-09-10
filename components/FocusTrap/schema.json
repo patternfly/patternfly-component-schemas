@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "FocusTrap Props",
+  "description": "Props for the FocusTrap component",
+  "properties": {
+    "active": {
+      "description": "",
+      "type": "boolean",
+      "default": true
+    },
+    "focusTrapOptions": {
+      "description": " (Type: FocusTrapOptions)",
+      "default": {}
+    },
+    "paused": {
+      "description": "",
+      "type": "boolean",
+      "default": false
+    },
+    "preventScrollOnDeactivate": {
+      "description": "Prevent from scrolling to the previously focused element on deactivation",
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "additionalProperties": false
+}

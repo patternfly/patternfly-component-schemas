@@ -1,0 +1,129 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DatePicker Props",
+  "description": "The main date picker component.",
+  "properties": {
+    "appendTo": {
+      "description": "The container to append the menu to. Defaults to 'inline'.\nIf your menu is being cut off you can append it to an element higher up the DOM tree.\nSome examples:\nmenuAppendTo={() => document.body};\nmenuAppendTo={document.getElementById('target')}",
+      "enum": [
+        "inline"
+      ],
+      "default": "'inline'"
+    },
+    "aria-label": {
+      "description": "Accessible label for the date picker.",
+      "type": "string",
+      "default": "'Date picker'"
+    },
+    "buttonAriaLabel": {
+      "description": "Accessible label for the button to open the date picker.",
+      "type": "string",
+      "default": "'Toggle date picker'"
+    },
+    "cellAriaLabel": {
+      "description": "Accessible label for the date cells. (Function: (date: Date) => string)"
+    },
+    "className": {
+      "description": "Additional classes added to the date picker.",
+      "type": "string"
+    },
+    "dateFormat": {
+      "description": "How to format the date in the text input. (Function: (date: Date) => string)",
+      "default": "(date: Date) =>\n`${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date\n  .getDate()\n  .toString()\n  .padStart(2, '0')}`"
+    },
+    "dateParse": {
+      "description": "How to parse the date in the text input. (Function: (value: string) => Date)",
+      "default": "(val: string) => (val.split('-').length === 3 ? new Date(`${val}T00:00:00`) : new Date(undefined))"
+    },
+    "dayFormat": {
+      "description": "How to format days in buttons in table cells. (React component or element)"
+    },
+    "helperText": {
+      "description": "Helper text to display alongside the date picker. Expects a HelperText component. (React component or element)"
+    },
+    "inlineProps": {
+      "description": "Props used to ensure accessibility when displaying the calendar month inline. (Type: CalendarMonthInlineProps)"
+    },
+    "inputProps": {
+      "description": "Additional props for the text input. (Type: TextInputProps)",
+      "default": {}
+    },
+    "invalidFormatText": {
+      "description": "Error message to display when the text input contains a non-empty value in an invalid format.",
+      "type": "string",
+      "default": "'Invalid date'"
+    },
+    "isDisabled": {
+      "description": "Flag indicating the date picker is disabled.",
+      "type": "boolean",
+      "default": false
+    },
+    "locale": {
+      "description": "If using the default formatters which locale to use. Undefined defaults to current locale.\nSee https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_identification_and_negotiation",
+      "type": "string",
+      "default": "undefined"
+    },
+    "longWeekdayFormat": {
+      "description": "How to format days in header for screen readers. (React component or element)"
+    },
+    "monthFormat": {
+      "description": "How to format months in month select. (React component or element)"
+    },
+    "nextMonthAriaLabel": {
+      "description": "Accessible label for the next month button.",
+      "type": "string"
+    },
+    "onBlur": {
+      "description": "Callback called every time the text input loses focus. (Function: (event: any, value: string, date?: Date) => void)",
+      "default": "(): any => undefined"
+    },
+    "onChange": {
+      "description": "Callback called every time the text input value changes. (Function: (event: React.FormEvent<HTMLInputElement>, value: string, date?: Date) => void)",
+      "default": "(): any => undefined"
+    },
+    "placeholder": {
+      "description": "String to display in the empty text input as a hint for the expected date format.",
+      "type": "string",
+      "default": "'YYYY-MM-DD'"
+    },
+    "popoverProps": {
+      "description": "Props to pass to the popover that contains the calendar month component. (Type: Partial<Omit<PopoverProps, 'appendTo'>>)"
+    },
+    "prevMonthAriaLabel": {
+      "description": "Accessible label for the previous month button.",
+      "type": "string"
+    },
+    "rangeStart": {
+      "description": "Which date to start range styles from. (Type: Date)"
+    },
+    "requiredDateOptions": {
+      "description": "Options to customize the requirement of a date (Type: DatePickerRequiredObject)"
+    },
+    "style": {
+      "description": " (Type: No type info)",
+      "default": {}
+    },
+    "validators": {
+      "description": "Functions that returns an error message if a date is invalid. (Type: ((date: Date) => string)[])",
+      "type": "array",
+      "default": []
+    },
+    "value": {
+      "description": "Value of the text input.",
+      "type": "string",
+      "default": "''"
+    },
+    "weekdayFormat": {
+      "description": "How to format week days in header. (React component or element)"
+    },
+    "weekStart": {
+      "description": "Day of week that starts the week. 0 is Sunday, 6 is Saturday. (Type: 0 | 1 | 2 | 3 | 4 | 5 | 6 | Weekday)"
+    },
+    "yearInputAriaLabel": {
+      "description": "Accessible label for the year input.",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

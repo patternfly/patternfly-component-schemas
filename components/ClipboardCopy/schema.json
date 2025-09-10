@@ -1,0 +1,113 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ClipboardCopy Props",
+  "description": "Props for the ClipboardCopy component",
+  "properties": {
+    "additionalActions": {
+      "description": "Additional actions for inline clipboard copy. Should be wrapped with ClipboardCopyAction. (React component or element)",
+      "default": null
+    },
+    "children": {
+      "description": "The text which is copied. (Type: string | string[])"
+    },
+    "className": {
+      "description": "Additional classes added to the clipboard copy container.",
+      "type": "string"
+    },
+    "clickTip": {
+      "description": "Tooltip message to display when clicking the copy button",
+      "type": "string",
+      "default": "'Successfully copied to clipboard!'"
+    },
+    "entryDelay": {
+      "description": "Delay in ms before the tooltip appears.",
+      "type": "number",
+      "default": 300
+    },
+    "exitDelay": {
+      "description": "Delay in ms before the tooltip disappears.",
+      "type": "number",
+      "default": 1500
+    },
+    "hoverTip": {
+      "description": "Tooltip message to display when hover the copy button",
+      "type": "string",
+      "default": "'Copy to clipboard'"
+    },
+    "isBlock": {
+      "description": "Flag to determine if inline clipboard copy should be block styling",
+      "type": "boolean"
+    },
+    "isCode": {
+      "description": "Flag to determine if clipboard copy content includes code",
+      "type": "boolean",
+      "default": false
+    },
+    "isExpanded": {
+      "description": "Flag to determine if clipboard copy is in the expanded state initially",
+      "type": "boolean",
+      "default": false
+    },
+    "isReadOnly": {
+      "description": "Flag to show if the input is read only.",
+      "type": "boolean",
+      "default": false
+    },
+    "maxWidth": {
+      "description": "Maximum width of the tooltip (default 150px).",
+      "type": "string",
+      "default": "'150px'"
+    },
+    "onChange": {
+      "description": "A function that is triggered on changing the text. (Function: (event: React.FormEvent, text?: string) => void)",
+      "default": "(): any => undefined"
+    },
+    "onCopy": {
+      "description": "A function that is triggered on clicking the copy button. This will replace the existing clipboard copy functionality entirely. (React component or element)",
+      "default": "(_event: React.ClipboardEvent<HTMLDivElement>, text?: React.ReactNode) => {\n  try {\n    navigator.clipboard.writeText(text.toString());\n  } catch (error) {\n    // eslint-disable-next-line no-console\n    console.warn(\n      \"Clipboard API not found, this copy function will not work. This is likely because you're using an\",\n      \"unsupported browser or you're not using HTTPS. \\n\\nIf you're a developer building an application which needs\",\n      \"to support copying to the clipboard without the clipboard API, you'll have to create your own copy\",\n      'function and pass it to the ClipboardCopy component as the onCopy prop. For more information see',\n      'https://developer.mozilla.org/en-US/docs/Web/API/Navigator/clipboard'\n    );\n\n    // eslint-disable-next-line no-console\n    console.error(error);\n  }\n}"
+    },
+    "ouiaId": {
+      "description": "Value to overwrite the randomly generated data-ouia-component-id. (Type: number | string)"
+    },
+    "ouiaSafe": {
+      "description": "Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false.",
+      "type": "boolean",
+      "default": true
+    },
+    "position": {
+      "description": "Copy button tooltip position. (Type: | TooltipPosition\n| 'auto'\n| 'top'\n| 'bottom'\n| 'left'\n| 'right'\n| 'top-start'\n| 'top-end'\n| 'bottom-start'\n| 'bottom-end'\n| 'left-start'\n| 'left-end'\n| 'right-start'\n| 'right-end')",
+      "default": "TooltipPosition.top"
+    },
+    "textAriaLabel": {
+      "description": "Aria-label to use on the TextInput.",
+      "type": "string",
+      "default": "'Copyable input'"
+    },
+    "toggleAriaLabel": {
+      "description": "Aria-label to use on the ClipboardCopyToggle.",
+      "type": "string",
+      "default": "'Show content'"
+    },
+    "truncation": {
+      "description": "Enables and customizes truncation for an inline-compact ClipboardCopy.",
+      "enum": [
+        "content"
+      ],
+      "default": false
+    },
+    "variant": {
+      "description": "Adds Clipboard Copy variant styles.",
+      "enum": [
+        "inline",
+        "expansion",
+        "inline-compact"
+      ],
+      "default": "'inline'"
+    }
+  },
+  "required": [
+    "children"
+  ],
+  "additionalProperties": false
+}

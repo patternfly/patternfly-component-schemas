@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "MenuBreadcrumb Props",
+  "description": "Props for the MenuBreadcrumb component",
+  "properties": {
+    "children": {
+      "description": "Items within breadcrumb menu container (React component or element)"
+    }
+  },
+  "additionalProperties": false
+}

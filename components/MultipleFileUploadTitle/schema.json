@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "MultipleFileUploadTitle Props",
+  "description": "Props for the MultipleFileUploadTitle component",
+  "properties": {
+    "className": {
+      "description": "Class to add to outer div",
+      "type": "string"
+    },
+    "icon": {
+      "description": "Content rendered inside the title icon div (React component or element)"
+    },
+    "text": {
+      "description": "Content rendered inside the title text div (React component or element)",
+      "default": "''"
+    },
+    "textSeparator": {
+      "description": "Content rendered inside the title text separator div (React component or element)",
+      "default": "''"
+    }
+  },
+  "additionalProperties": false
+}

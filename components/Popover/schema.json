@@ -1,0 +1,206 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Popover Props",
+  "description": "The main popover component. The following properties can also be passed into another component\nthat has a property specifically for passing in popover properties.",
+  "properties": {
+    "alertSeverityScreenReaderText": {
+      "description": "Text announced by screen reader when alert severity variant is set to indicate\nseverity level.",
+      "type": "string"
+    },
+    "alertSeverityVariant": {
+      "description": "Severity variants for an alert popover. This modifies the color of the header to\nmatch the severity.",
+      "enum": [
+        "custom",
+        "info",
+        "warning",
+        "success",
+        "danger"
+      ]
+    },
+    "animationDuration": {
+      "description": "The duration of the CSS fade transition animation.",
+      "type": "number",
+      "default": 300
+    },
+    "appendTo": {
+      "description": "The element to append the popover to. Defaults to \"inline\".",
+      "enum": [
+        "inline"
+      ],
+      "default": "() => document.body"
+    },
+    "aria-label": {
+      "description": "Accessible label for the popover, required when header is not present.",
+      "type": "string",
+      "default": "''"
+    },
+    "bodyContent": {
+      "description": "Body content of the popover. If you want to close the popover after an action within the\nbody content, you can use the isVisible prop for manual control, or you can provide a\nfunction which will receive a callback as an argument to hide the popover, i.e.\nbodyContent={hide => <Button onClick={() => hide()}>Close</Button>} (React component or element)"
+    },
+    "children": {
+      "description": "The trigger reference element to which the popover is relatively placed to. If you cannot wrap\nthe element with the Popover, you can use the triggerRef prop instead.\nUsage: <Popover><Button>Reference</Button></Popover> (Type: ReactElement<any>)"
+    },
+    "className": {
+      "description": "Additional classes added to the popover.",
+      "type": "string",
+      "default": "''"
+    },
+    "closeBtnAriaLabel": {
+      "description": "Accessible label for the close button.",
+      "type": "string",
+      "default": "'Close'"
+    },
+    "distance": {
+      "description": "Distance of the popover to its target. Defaults to 25.",
+      "type": "number",
+      "default": 25
+    },
+    "elementToFocus": {
+      "description": "The element to focus when the popover becomes visible. By default the first\nfocusable element will receive focus. (Type: HTMLElement | SVGElement | string)"
+    },
+    "enableFlip": {
+      "description": "If true, tries to keep the popover in view by flipping it if necessary.\nIf the position is set to 'auto', this prop is ignored.",
+      "type": "boolean",
+      "default": true
+    },
+    "flipBehavior": {
+      "description": "The desired position to flip the popover to if the initial position is not possible.\nBy setting this prop to 'flip' it attempts to flip the popover to the opposite side if\nthere is no space.\nYou can also pass an array of positions that determines the flip order. It should contain\nthe initial position followed by alternative positions if that position is unavailable.\nExample: Initial position is 'top'. Button with popover is in the top right corner.\n'flipBehavior' is set to ['top', 'right', 'left']. Since there is no space to the top, it\nchecks if right is available. There's also no space to the right, so it finally shows the\npopover on the left.",
+      "enum": [
+        "flip",
+        "top",
+        "bottom",
+        "left",
+        "right",
+        "top-start",
+        "top-end",
+        "bottom-start",
+        "bottom-end",
+        "left-start",
+        "left-end",
+        "right-start",
+        "right-end"
+      ],
+      "default": "[\n  'top',\n  'bottom',\n  'left',\n  'right',\n  'top-start',\n  'top-end',\n  'bottom-start',\n  'bottom-end',\n  'left-start',\n  'left-end',\n  'right-start',\n  'right-end'\n]"
+    },
+    "footerContent": {
+      "description": "Footer content of the popover. If you want to close the popover after an action within the\nfooter content, you can use the isVisible prop for manual control, or you can provide a\nfunction which will receive a callback as an argument to hide the popover, i.e.\nfooterContent={hide => <Button onClick={() => hide()}>Close</Button>} (React component or element)",
+      "default": null
+    },
+    "hasAutoWidth": {
+      "description": "Removes fixed-width and allows width to be defined by contents.",
+      "type": "boolean",
+      "default": false
+    },
+    "hasNoPadding": {
+      "description": "Allows content to touch edges of popover container.",
+      "type": "boolean",
+      "default": false
+    },
+    "headerComponent": {
+      "description": "Sets the heading level to use for the popover header. Defaults to h6.",
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ],
+      "default": "'h6'"
+    },
+    "headerContent": {
+      "description": "Simple header content to be placed within a title. If you want to close the popover after\nan action within the header content, you can use the isVisible prop for manual control,\nor you can provide a function which will receive a callback as an argument to hide the\npopover, i.e. headerContent={hide => <Button onClick={() => hide()}>Close</Button>} (React component or element)",
+      "default": null
+    },
+    "headerIcon": {
+      "description": "Icon to be displayed in the popover header. * (React component or element)",
+      "default": null
+    },
+    "hideOnOutsideClick": {
+      "description": "Hides the popover when a click occurs outside (only works if isVisible is not controlled\nby the user).",
+      "type": "boolean",
+      "default": true
+    },
+    "id": {
+      "description": "Id used as part of the various popover elements (popover-${id}-header/body/footer).",
+      "type": "string"
+    },
+    "isVisible": {
+      "description": "True to show the popover programmatically. Used in conjunction with the shouldClose prop.\nBy default, the popover child element handles click events automatically. If you want to\ncontrol this programmatically, the popover will not auto-close if the close button is\nclicked, the escape key is used, or if a click occurs outside the popover. Instead, the\nconsumer is responsible for closing the popover themselves by adding a callback listener\nfor the shouldClose prop.",
+      "type": "boolean",
+      "default": null
+    },
+    "maxWidth": {
+      "description": "Maximum width of the popover (default 18.75rem).",
+      "type": "string",
+      "default": "popoverMaxWidth && popoverMaxWidth.value"
+    },
+    "minWidth": {
+      "description": "Minimum width of the popover (default 6.25rem).",
+      "type": "string",
+      "default": "popoverMinWidth && popoverMinWidth.value"
+    },
+    "onHidden": {
+      "description": "Lifecycle function invoked when the popover has fully transitioned out. (Function: () => void)",
+      "default": "(): void => null"
+    },
+    "onHide": {
+      "description": "Lifecycle function invoked when the popover begins to transition out. (Type: (event: MouseEvent | KeyboardEvent) => void)",
+      "default": "(): void => null"
+    },
+    "onMount": {
+      "description": "Lifecycle function invoked when the popover has been mounted to the DOM. (Function: () => void)",
+      "default": "(): void => null"
+    },
+    "onShow": {
+      "description": "Lifecycle function invoked when the popover begins to transition in. (Type: (event: MouseEvent | KeyboardEvent) => void)",
+      "default": "(): void => null"
+    },
+    "onShown": {
+      "description": "Lifecycle function invoked when the popover has fully transitioned in. (Function: () => void)",
+      "default": "(): void => null"
+    },
+    "position": {
+      "description": "Popover position. Note: With the enableFlip property set to true, it will change the\nposition if there is not enough space for the starting position. The behavior of where it\nflips to can be controlled through the flipBehavior property. (Type: | PopoverPosition\n| 'auto'\n| 'top'\n| 'bottom'\n| 'left'\n| 'right'\n| 'top-start'\n| 'top-end'\n| 'bottom-start'\n| 'bottom-end'\n| 'left-start'\n| 'left-end'\n| 'right-start'\n| 'right-end')",
+      "default": "'top'"
+    },
+    "shouldClose": {
+      "description": "Callback function that is only invoked when isVisible is also controlled. Called when the\npopover close button is clicked, the enter key was used on it, or the escape key is used. (Type: (event: MouseEvent | KeyboardEvent, hideFunction?: () => void) => void)",
+      "default": "(): void => null"
+    },
+    "shouldOpen": {
+      "description": "Callback function that is only invoked when isVisible is also controlled. Called when the\nenter key is used on the focused trigger. (Type: (event: MouseEvent | KeyboardEvent, showFunction?: () => void) => void)",
+      "default": "(): void => null"
+    },
+    "showClose": {
+      "description": "Flag indicating whether the close button should be shown.",
+      "type": "boolean",
+      "default": true
+    },
+    "triggerAction": {
+      "description": "Sets an interaction to open popover, defaults to \"click\"",
+      "enum": [
+        "click",
+        "hover"
+      ],
+      "default": "'click'"
+    },
+    "triggerRef": {
+      "description": "The trigger reference element to which the popover is relatively placed to. If you can wrap the\nelement with the popover, you can use the children prop instead, or both props together.\nWhen passed along with the trigger prop, the div element that wraps the trigger will be removed.\nUsage: <Popover triggerRef={() => document.getElementById('reference-element')} /> (Type: HTMLElement | (() => HTMLElement) | React.RefObject<any>)"
+    },
+    "withFocusTrap": {
+      "description": "Whether to trap focus in the popover.",
+      "type": "boolean"
+    },
+    "zIndex": {
+      "description": "The z-index of the popover.",
+      "type": "number",
+      "default": 9999
+    }
+  },
+  "required": [
+    "bodyContent"
+  ],
+  "additionalProperties": false
+}

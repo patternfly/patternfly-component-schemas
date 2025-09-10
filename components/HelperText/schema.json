@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "HelperText Props",
+  "description": "Props for the HelperText component",
+  "properties": {
+    "aria-label": {
+      "description": "Adds an accessible label to the helper text when component is a \"ul\".",
+      "type": "string"
+    },
+    "children": {
+      "description": "Content rendered inside the helper text container. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes applied to the helper text container.",
+      "type": "string"
+    },
+    "component": {
+      "description": "Component type of the helper text container",
+      "enum": [
+        "div",
+        "ul"
+      ],
+      "default": "'div'"
+    },
+    "id": {
+      "description": "ID for the helper text container. The value of this prop can be passed into a form component's\naria-describedby prop when you intend for all helper text items to be announced to\nassistive technologies.",
+      "type": "string"
+    },
+    "isLiveRegion": {
+      "description": "Flag for indicating whether the helper text container is a live region. Use this prop when you\nexpect or intend for any helper text items within the container to be dynamically updated.",
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "additionalProperties": false
+}

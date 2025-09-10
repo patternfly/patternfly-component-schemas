@@ -1,0 +1,133 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "FileUpload Props",
+  "description": "Props for the FileUpload component",
+  "properties": {
+    "allowEditingUploadedText": {
+      "description": "Flag to allow editing of a text file's contents after it is selected from disk.",
+      "type": "boolean"
+    },
+    "aria-label": {
+      "description": "Aria-label for the text area.",
+      "type": "string"
+    },
+    "browseButtonAriaDescribedby": {
+      "description": "ID or ID's of elements that describe the browse button. Typically this should refer\nto elements such as helper text when there are file restrictions.",
+      "type": "string"
+    },
+    "browseButtonText": {
+      "description": "Text for the browse button.",
+      "type": "string"
+    },
+    "children": {
+      "description": "Additional children to render after (or instead of) the file preview. (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional classes added to the file upload container element.",
+      "type": "string"
+    },
+    "clearButtonText": {
+      "description": "Text for the clear button.",
+      "type": "string"
+    },
+    "dropzoneProps": {
+      "description": "Optional extra props to customize react-dropzone. (Type: Partial<DropzoneOptions>)",
+      "default": {}
+    },
+    "filename": {
+      "description": "Value to be shown in the read-only filename field.",
+      "type": "string",
+      "default": "''"
+    },
+    "filenameAriaLabel": {
+      "description": "Aria-label for the read-only filename field.",
+      "type": "string"
+    },
+    "filenamePlaceholder": {
+      "description": "Placeholder string to display in the empty filename field.",
+      "type": "string"
+    },
+    "hideDefaultPreview": {
+      "description": "Flag to hide the built-in preview of the file (where available). If true, you can use\nthe children property to render an alternate preview.",
+      "type": "boolean"
+    },
+    "id": {
+      "description": "Unique id for the text area. Also used to generate ids for accessible labels.",
+      "type": "string"
+    },
+    "isDisabled": {
+      "description": "Flag to show if the field is disabled.",
+      "type": "boolean"
+    },
+    "isLoading": {
+      "description": "Flag to show if a file is being loaded.",
+      "type": "boolean"
+    },
+    "isReadOnly": {
+      "description": "Flag to show if the field is read only.",
+      "type": "boolean"
+    },
+    "isRequired": {
+      "description": "Flag to show if the field is required.",
+      "type": "boolean"
+    },
+    "onClearClick": {
+      "description": "Clear button was clicked. (Type: React.MouseEventHandler<HTMLButtonElement>)"
+    },
+    "onClick": {
+      "description": "Callback for clicking on the file upload field text area. By default, prevents a click\nin the text area from opening file dialog. (Function: (event: React.MouseEvent) => void)",
+      "default": "(event) => event.preventDefault()"
+    },
+    "onDataChange": {
+      "description": "On data changed - if type='text' or type='dataURL' and file was loaded it will call this method (Function: (event: DropEvent, data: string) => void)"
+    },
+    "onFileInputChange": {
+      "description": "Change event emitted from the hidden \\<input type=\"file\" \\> field associated with the component (Function: (event: DropEvent, file: File) => void)",
+      "default": null
+    },
+    "onReadFailed": {
+      "description": "A callback for when the FileReader API fails. (Function: (event: DropEvent, error: DOMException, fileHandle: File) => void)",
+      "default": "() => {}"
+    },
+    "onReadFinished": {
+      "description": "A callback for when a selected file finishes loading. (Function: (event: DropEvent, fileHandle: File) => void)",
+      "default": "() => {}"
+    },
+    "onReadStarted": {
+      "description": "A callback for when a selected file starts loading. (Function: (event: DropEvent, fileHandle: File) => void)",
+      "default": "() => {}"
+    },
+    "onTextChange": {
+      "description": "Text area text changed. (Function: (event: React.ChangeEvent<HTMLTextAreaElement>, text: string) => void)"
+    },
+    "spinnerAriaValueText": {
+      "description": "Aria-valuetext for the loading spinner.",
+      "type": "string"
+    },
+    "type": {
+      "description": "What type of file. Determines whether 'onDataChange` is called and what is\nexpected by the value property (a string for 'text' and 'dataURL', or a File object otherwise.",
+      "enum": [
+        "text",
+        "dataURL"
+      ]
+    },
+    "validated": {
+      "description": "Value to indicate if the field is modified to show that validation state.\nIf set to success, field will be modified to indicate valid state.\nIf set to error, field will be modified to indicate error state.",
+      "enum": [
+        "success",
+        "error",
+        "default"
+      ]
+    },
+    "value": {
+      "description": "Value of the file's contents (string if text file, File object otherwise). (Type: string | File)",
+      "default": "type === fileReaderType.text || type === fileReaderType.dataURL ? '' : null"
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "additionalProperties": false
+}

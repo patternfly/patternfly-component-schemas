@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "PopoverHeaderIcon Props",
+  "description": "Props for the PopoverHeaderIcon component",
+  "properties": {
+    "children": {
+      "description": "Content of the header icon (React component or element)"
+    },
+    "className": {
+      "description": "Class to be applied to the header icon",
+      "type": "string"
+    }
+  },
+  "required": [
+    "children"
+  ],
+  "additionalProperties": false
+}

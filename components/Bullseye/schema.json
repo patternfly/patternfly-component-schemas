@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Bullseye Props",
+  "description": "Props for the Bullseye component",
+  "properties": {
+    "children": {
+      "description": "content rendered inside the Bullseye layout (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "additional classes added to the Bullseye layout",
+      "type": "string",
+      "default": "''"
+    },
+    "component": {
+      "description": "Sets the base component to render. defaults to div (Type: JSX.IntrinsicElements)",
+      "default": "'div'"
+    }
+  },
+  "additionalProperties": false
+}

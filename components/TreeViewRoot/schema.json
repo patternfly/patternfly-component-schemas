@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "TreeViewRoot Props",
+  "description": "Props for the TreeViewRoot component",
+  "properties": {
+    "children": {
+      "description": "Child nodes of the tree view (React component or element)"
+    },
+    "className": {
+      "description": "Class to add to add if not passed a parentItem",
+      "type": "string"
+    },
+    "hasCheckboxes": {
+      "description": "Flag indicating if the tree view has checkboxes.",
+      "type": "boolean"
+    },
+    "hasGuides": {
+      "description": "Flag indicating if tree view has guide lines.",
+      "type": "boolean"
+    },
+    "hasSelectableNodes": {
+      "description": "Flag indicating that tree nodes should be independently selectable, even when having children",
+      "type": "boolean"
+    },
+    "variant": {
+      "description": "Variant presentation styles for the tree view.",
+      "enum": [
+        "default",
+        "compact",
+        "compactNoBackground"
+      ]
+    }
+  },
+  "required": [
+    "children"
+  ],
+  "additionalProperties": false
+}

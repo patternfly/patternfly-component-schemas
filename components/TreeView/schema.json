@@ -1,0 +1,116 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "TreeView Props",
+  "description": "The main tree view component.",
+  "properties": {
+    "activeItems": {
+      "description": "Active items of tree view. (Type: TreeViewDataItem[])",
+      "type": "array"
+    },
+    "allExpanded": {
+      "description": "Sets the expanded state on all tree nodes, overriding default behavior and current\ninternal state.",
+      "type": "boolean"
+    },
+    "aria-label": {
+      "description": "A text string that sets the accessible name of the tree view list. Either this or the aria-labelledby property must\nbe passed in.",
+      "type": "string"
+    },
+    "aria-labelledby": {
+      "description": "A space separated list of element id's that sets the accessible name of the tree view list. Either\nthis or the aria-label property must be passed in.",
+      "type": "string"
+    },
+    "className": {
+      "description": "Class to add if not passed a parentItem property.",
+      "type": "string"
+    },
+    "compareItems": {
+      "description": "Comparison function for determining active items. (Function: (item: TreeViewDataItem, itemToCheck: TreeViewDataItem) => boolean)",
+      "default": "(item, itemToCheck) => item.id === itemToCheck.id"
+    },
+    "data": {
+      "description": "Data of the tree view. (Type: TreeViewDataItem[])",
+      "type": "array"
+    },
+    "defaultAllExpanded": {
+      "description": "Sets the default expanded behavior.",
+      "type": "boolean",
+      "default": false
+    },
+    "expandedIcon": {
+      "description": "Icon for all expanded node items. (React component or element)"
+    },
+    "hasBadges": {
+      "description": "Flag indicating if all nodes in the tree view should have badges.",
+      "type": "boolean",
+      "default": false
+    },
+    "hasCheckboxes": {
+      "description": "Flag indicating if all nodes in the tree view should have checkboxes.",
+      "type": "boolean",
+      "default": false
+    },
+    "hasGuides": {
+      "description": "Flag indicating if the tree view has guide lines.",
+      "type": "boolean",
+      "default": false
+    },
+    "hasSelectableNodes": {
+      "description": "Flag indicating that tree nodes should be independently selectable, even when having\nchildren.",
+      "type": "boolean",
+      "default": false
+    },
+    "icon": {
+      "description": "Icon for all leaf or unexpanded node items. (React component or element)"
+    },
+    "id": {
+      "description": "ID of the tree view.",
+      "type": "string"
+    },
+    "isMultiSelectable": {
+      "description": "Flag indicating whether multiple nodes can be selected in the tree view. This will also set the\naria-multiselectable attribute on the tree view list which is required to be true when multiple selection is intended.\nCan only be applied to the root tree view list.",
+      "type": "boolean",
+      "default": false
+    },
+    "isNested": {
+      "description": "Flag indicating if the tree view is nested.",
+      "type": "boolean",
+      "default": false
+    },
+    "onCheck": {
+      "description": "Callback for item checkbox selection. (Function: (event: React.ChangeEvent<HTMLInputElement>, item: TreeViewDataItem, parentItem: TreeViewDataItem) => void)"
+    },
+    "onCollapse": {
+      "description": "Callback for collapsing a node with children. (Function: (event: React.MouseEvent, item: TreeViewDataItem, parentItem: TreeViewDataItem) => void)"
+    },
+    "onExpand": {
+      "description": "Callback for expanding a node with children. (Function: (event: React.MouseEvent, item: TreeViewDataItem, parentItem: TreeViewDataItem) => void)"
+    },
+    "onSelect": {
+      "description": "Callback for item selection. (Function: (event: React.MouseEvent, item: TreeViewDataItem, parentItem: TreeViewDataItem) => void)"
+    },
+    "parentItem": {
+      "description": "Internal. Parent item of a tree view list item. (Type: TreeViewDataItem)"
+    },
+    "toolbar": {
+      "description": "Toolbar to display above the tree view. (React component or element)"
+    },
+    "useMemo": {
+      "description": "Flag indicating the tree view should utilize memoization to help render large data sets.\nSetting this property requires that the activeItems property is passed an array containing\nevery node in the selected item's path.",
+      "type": "boolean"
+    },
+    "variant": {
+      "description": "Variant presentation styles for the tree view.",
+      "enum": [
+        "default",
+        "compact",
+        "compactNoBackground"
+      ],
+      "default": "'default'"
+    }
+  },
+  "required": [
+    "data"
+  ],
+  "additionalProperties": false
+}

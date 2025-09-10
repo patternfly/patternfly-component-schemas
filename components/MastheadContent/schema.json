@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "MastheadContent Props",
+  "description": "Props for the MastheadContent component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside of the masthead content block. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the masthead content.",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

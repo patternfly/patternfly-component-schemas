@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "FormFieldGroupToggle Props",
+  "description": "Props for the FormFieldGroupToggle component",
+  "properties": {
+    "aria-label": {
+      "description": "Aria label of the toggle button",
+      "type": "string"
+    },
+    "aria-labelledby": {
+      "description": "Sets the aria-labelledby attribute on the toggle button element",
+      "type": "string"
+    },
+    "className": {
+      "description": "Additional classes added to the section",
+      "type": "string"
+    },
+    "isExpanded": {
+      "description": "Flag indicating if the toggle is expanded",
+      "type": "boolean"
+    },
+    "onToggle": {
+      "description": "Callback for onClick (Function: () => void)"
+    },
+    "toggleId": {
+      "description": "The id applied to the toggle button",
+      "type": "string"
+    }
+  },
+  "required": [
+    "isExpanded",
+    "onToggle"
+  ],
+  "additionalProperties": false
+}

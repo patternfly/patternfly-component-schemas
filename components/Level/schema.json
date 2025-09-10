@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Level Props",
+  "description": "Props for the Level component",
+  "properties": {
+    "children": {
+      "description": "content rendered inside the Level layout (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "additional classes added to the Level layout",
+      "type": "string",
+      "default": "''"
+    },
+    "hasGutter": {
+      "description": "Adds space between children.",
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}

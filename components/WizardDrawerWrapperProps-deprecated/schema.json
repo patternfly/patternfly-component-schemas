@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "WizardDrawerWrapperProps Props",
+  "description": "Props for the WizardDrawerWrapperProps component",
+  "properties": {
+    "children": {
+      "description": "The wizard content (Type: React.ReactElement<any>)"
+    },
+    "hasDrawer": {
+      "description": "Flag indicating the wizard has a drawer for at least one of the wizard steps",
+      "type": "boolean"
+    },
+    "wrapper": {
+      "description": "The drawer component which wraps the wizard content (Function: (children: React.ReactElement<any>) => JSX.Element)"
+    }
+  },
+  "required": [
+    "children",
+    "hasDrawer",
+    "wrapper"
+  ],
+  "additionalProperties": false
+}

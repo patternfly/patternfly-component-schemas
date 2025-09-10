@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "OverflowMenuDropdownItem Props",
+  "description": "Props for the OverflowMenuDropdownItem component",
+  "properties": {
+    "isShared": {
+      "description": "Indicates when a dropdown item shows and hides the corresponding list item",
+      "type": "boolean",
+      "default": false
+    },
+    "itemId": {
+      "description": "Identifies the component in the dropdown onSelect callback (Type: string | number)"
+    }
+  },
+  "additionalProperties": false
+}

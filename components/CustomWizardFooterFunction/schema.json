@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "CustomWizardFooterFunction Props",
+  "description": "Callback for the Wizard's 'footer' property. Returns element which replaces the Wizard's default footer.",
+  "properties": {},
+  "additionalProperties": false
+}

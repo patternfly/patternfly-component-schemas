@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "WizardStep Props",
+  "description": "The primary child component for Wizard. Step props are used for the list of steps managed in context.",
+  "properties": {
+    "body": {
+      "description": "Props for WizardBody that wraps content by default. (Type: Omit<Omit<WizardBodyProps, 'children'>, 'children'>)"
+    },
+    "children": {
+      "description": "Optional for when the step is used as a parent to sub-steps (React component or element)"
+    },
+    "footer": {
+      "description": "Replaces the step's footer. The step's footer takes precedence over the wizard's footer. (Type: React.ReactElement<any> | Partial<WizardFooterProps>)"
+    },
+    "id": {
+      "description": "Unique identifier (Type: string | number)"
+    },
+    "isDisabled": {
+      "description": "Flag to disable the step's navigation item",
+      "type": "boolean"
+    },
+    "isExpandable": {
+      "description": "Flag to determine whether parent steps can expand or not. Defaults to false.",
+      "type": "boolean"
+    },
+    "isHidden": {
+      "description": "Flag to determine whether the step is hidden",
+      "type": "boolean"
+    },
+    "name": {
+      "description": "Name of the step's navigation item (React component or element)"
+    },
+    "navItem": {
+      "description": "Replaces the step's navigation item or its properties. (Type: Partial<WizardNavItemProps> | CustomWizardNavItemFunction | React.ReactElement<any>)"
+    },
+    "status": {
+      "description": "Used to determine icon next to the step's navigation item",
+      "enum": [
+        "default",
+        "error",
+        "success"
+      ]
+    },
+    "steps": {
+      "description": "Optional list of sub-steps (Type: React.ReactElement<WizardStepProps>[])",
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "name"
+  ],
+  "additionalProperties": false
+}

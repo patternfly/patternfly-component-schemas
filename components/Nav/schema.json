@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Nav Props",
+  "description": "Props for the Nav component",
+  "properties": {
+    "aria-label": {
+      "description": "Accessible label for the nav when there are multiple navs on the page",
+      "type": "string"
+    },
+    "children": {
+      "description": "Anything that can be rendered inside of the nav (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the container",
+      "type": "string"
+    },
+    "onSelect": {
+      "description": "Callback for updating when item selection changes (Type: (\n  event: React.FormEvent<HTMLInputElement>,\n  selectedItem: {\n    groupId: number | string;\n    itemId: number | string;\n    to: string;\n  }\n) => void)",
+      "default": "() => undefined"
+    },
+    "onToggle": {
+      "description": "Callback for when a list is expanded or collapsed (Type: (\n  event: React.MouseEvent<HTMLButtonElement>,\n  toggledItem: {\n    groupId: number | string;\n    isExpanded: boolean;\n  }\n) => void)",
+      "default": "() => undefined"
+    },
+    "ouiaId": {
+      "description": "Value to overwrite the randomly generated data-ouia-component-id. (Type: number | string)"
+    },
+    "ouiaSafe": {
+      "description": "Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false.",
+      "type": "boolean",
+      "default": true
+    },
+    "variant": {
+      "description": "For horizontal navs",
+      "enum": [
+        "default",
+        "horizontal",
+        "horizontal-subnav"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

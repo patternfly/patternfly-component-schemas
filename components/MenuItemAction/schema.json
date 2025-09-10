@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "MenuItemAction Props",
+  "description": "Props for the MenuItemAction component",
+  "properties": {
+    "actionId": {
+      "description": "Identifies the action item in the onActionClick on the Menu (Type: any)"
+    },
+    "aria-label": {
+      "description": "Accessibility label",
+      "type": "string"
+    },
+    "className": {
+      "description": "Additional classes added to the action button",
+      "type": "string"
+    },
+    "icon": {
+      "description": "The action icon to use (React component or element)"
+    },
+    "isDisabled": {
+      "description": "Disables action, can also be specified on the MenuItem instead",
+      "type": "boolean"
+    },
+    "isFavorited": {
+      "description": "Flag indicating if the item is favorited",
+      "type": "boolean"
+    },
+    "onClick": {
+      "description": "Callback on action click, can also specify onActionClick on the Menu instead (Function: (event?: any) => void)"
+    }
+  },
+  "required": [
+    "aria-label"
+  ],
+  "additionalProperties": false
+}

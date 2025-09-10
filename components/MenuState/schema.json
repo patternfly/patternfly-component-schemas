@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "MenuState Props",
+  "description": "Props for the MenuState component",
+  "properties": {
+    "currentDrilldownMenuId": {
+      "description": "",
+      "type": "string"
+    },
+    "disableHover": {
+      "description": "",
+      "type": "boolean"
+    },
+    "flyoutRef": {
+      "description": " (Type: React.Ref<HTMLLIElement> | null)"
+    },
+    "ouiaStateId": {
+      "description": "",
+      "type": "string"
+    },
+    "transitionMoveTarget": {
+      "description": " (Type: HTMLElement)"
+    }
+  },
+  "required": [
+    "currentDrilldownMenuId",
+    "disableHover",
+    "flyoutRef",
+    "ouiaStateId",
+    "transitionMoveTarget"
+  ],
+  "additionalProperties": false
+}

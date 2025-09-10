@@ -1,0 +1,134 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Tooltip Props",
+  "description": "Props for the Tooltip component",
+  "properties": {
+    "animationDuration": {
+      "description": "CSS fade transition animation duration",
+      "type": "number",
+      "default": 300
+    },
+    "appendTo": {
+      "description": "The element to append the tooltip to, defaults to body (Type: HTMLElement | ((ref?: HTMLElement) => HTMLElement))",
+      "default": "() => document.body"
+    },
+    "aria": {
+      "description": "aria-labelledby or aria-describedby for tooltip.\nThe trigger will be cloned to add the aria attribute, and the corresponding id in the form of 'pf-tooltip-#' is added to the content container.\nIf you don't want that or prefer to add the aria attribute yourself on the trigger, set aria to 'none'.",
+      "enum": [
+        "describedby",
+        "labelledby",
+        "none"
+      ],
+      "default": "'describedby'"
+    },
+    "aria-live": {
+      "description": "Determines whether the tooltip is an aria-live region. If the triggerRef prop is passed in the\ndefault behavior is 'polite' in order to ensure the tooltip contents is announced to\nassistive technologies. Otherwise the default behavior is 'off'.",
+      "enum": [
+        "off",
+        "polite"
+      ],
+      "default": "triggerRef ? 'polite' : 'off'"
+    },
+    "children": {
+      "description": "The trigger reference element to which the Tooltip is relatively placed to.\nIf you cannot wrap the element with the Tooltip, you can use the triggerRef prop instead.\nUsage: <Tooltip><Button>Reference</Button></Tooltip> (Type: ReactElement<any>)"
+    },
+    "className": {
+      "description": "Tooltip additional class",
+      "type": "string",
+      "default": "''"
+    },
+    "content": {
+      "description": "Tooltip content (React component or element)"
+    },
+    "distance": {
+      "description": "Distance of the tooltip to its target, defaults to 15",
+      "type": "number",
+      "default": 15
+    },
+    "enableFlip": {
+      "description": "If true, tries to keep the tooltip in view by flipping it if necessary",
+      "type": "boolean",
+      "default": true
+    },
+    "entryDelay": {
+      "description": "Delay in ms before the tooltip appears",
+      "type": "number",
+      "default": 300
+    },
+    "exitDelay": {
+      "description": "Delay in ms before the tooltip disappears, Avoid passing in a value of \"0\", as users should\nbe given ample time to move their mouse from the trigger to the tooltip content without the content\nbeing hidden.",
+      "type": "number",
+      "default": 300
+    },
+    "flipBehavior": {
+      "description": "The desired position to flip the tooltip to if the initial position is not possible.\nBy setting this prop to 'flip' it attempts to flip the tooltip to the opposite side if there is no space.\nYou can also pass an array of positions that determines the flip order. It should contain the initial position\nfollowed by alternative positions if that position is unavailable.\nExample: Initial position is 'top'. Button with tooltip is in the top right corner. 'flipBehavior' is set to\n['top', 'right', 'left']. Since there is no space to the top, it checks if right is available. There's also no\nspace to the right, so it finally shows the tooltip on the left.",
+      "enum": [
+        "flip",
+        "top",
+        "bottom",
+        "left",
+        "right",
+        "top-start",
+        "top-end",
+        "bottom-start",
+        "bottom-end",
+        "left-start",
+        "left-end",
+        "right-start",
+        "right-end"
+      ],
+      "default": "['top', 'right', 'bottom', 'left', 'top', 'right', 'bottom']"
+    },
+    "id": {
+      "description": "id of the tooltip",
+      "type": "string"
+    },
+    "isContentLeftAligned": {
+      "description": "Flag to indicate that the text content is left aligned",
+      "type": "boolean",
+      "default": false
+    },
+    "isVisible": {
+      "description": "value for visibility when trigger is 'manual'",
+      "type": "boolean",
+      "default": false
+    },
+    "maxWidth": {
+      "description": "Maximum width of the tooltip (default 18.75rem)",
+      "type": "string",
+      "default": "18.75rem"
+    },
+    "minWidth": {
+      "description": "Minimum width of the tooltip. If set to \"trigger\", the minimum width will be set to the reference element width.",
+      "enum": [
+        "trigger"
+      ]
+    },
+    "onTooltipHidden": {
+      "description": "Callback when tooltip's hide transition has finished executing (Function: () => void)",
+      "default": "() => {}"
+    },
+    "position": {
+      "description": "Tooltip position. Note: With 'enableFlip' set to true,\nit will change the position if there is not enough space for the starting position.\nThe behavior of where it flips to can be controlled through the flipBehavior prop.\nThe 'auto' position chooses the side with the most space.\nThe 'auto' position requires the 'enableFlip' prop to be true. (Type: | TooltipPosition\n| 'auto'\n| 'top'\n| 'bottom'\n| 'left'\n| 'right'\n| 'top-start'\n| 'top-end'\n| 'bottom-start'\n| 'bottom-end'\n| 'left-start'\n| 'left-end'\n| 'right-start'\n| 'right-end')",
+      "default": "'top'"
+    },
+    "trigger": {
+      "description": "Tooltip trigger: click, mouseenter, focus, manual\nSet to manual to trigger tooltip programmatically (through the isVisible prop)",
+      "type": "string",
+      "default": "'mouseenter focus'"
+    },
+    "triggerRef": {
+      "description": "The trigger reference element to which the Tooltip is relatively placed to.\nIf you can wrap the element with the Tooltip, you can use the children prop instead, or both props together.\nWhen passed along with the trigger prop, the div element that wraps the trigger will be removed.\nUsage: <Tooltip triggerRef={() => document.getElementById('reference-element')} /> (Type: HTMLElement | (() => HTMLElement) | React.RefObject<any>)"
+    },
+    "zIndex": {
+      "description": "z-index of the tooltip",
+      "type": "number",
+      "default": 9999
+    }
+  },
+  "required": [
+    "content"
+  ],
+  "additionalProperties": false
+}

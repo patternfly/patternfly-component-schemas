@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "TimePickerState Props",
+  "description": "Props for the TimePickerState component",
+  "properties": {
+    "focusedIndex": {
+      "description": "",
+      "type": "number"
+    },
+    "isInvalid": {
+      "description": "",
+      "type": "boolean"
+    },
+    "isTimeOptionsOpen": {
+      "description": "",
+      "type": "boolean"
+    },
+    "maxTimeState": {
+      "description": "",
+      "type": "string"
+    },
+    "minTimeState": {
+      "description": "",
+      "type": "string"
+    },
+    "scrollIndex": {
+      "description": "",
+      "type": "number"
+    },
+    "timeRegex": {
+      "description": " (Type: RegExp)"
+    },
+    "timeState": {
+      "description": "",
+      "type": "string"
+    }
+  },
+  "required": [
+    "focusedIndex",
+    "isInvalid",
+    "isTimeOptionsOpen",
+    "maxTimeState",
+    "minTimeState",
+    "scrollIndex",
+    "timeRegex",
+    "timeState"
+  ],
+  "additionalProperties": false
+}

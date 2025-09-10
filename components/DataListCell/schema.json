@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DataListCell Props",
+  "description": "Props for the DataListCell component",
+  "properties": {
+    "alignRight": {
+      "description": "Aligns the cell content to the right of its parent.",
+      "type": "boolean",
+      "default": false
+    },
+    "children": {
+      "description": "Content rendered inside the DataList cell (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional classes added to the DataList cell",
+      "type": "string",
+      "default": "''"
+    },
+    "isFilled": {
+      "description": "Enables the body Content to fill the height of the card",
+      "type": "boolean",
+      "default": true
+    },
+    "isIcon": {
+      "description": "Set to true if the cell content is an Icon",
+      "type": "boolean",
+      "default": false
+    },
+    "width": {
+      "description": "Width (from 1-5) to the DataList cell (Type: 1 | 2 | 3 | 4 | 5)",
+      "default": 1
+    },
+    "wrapModifier": {
+      "description": "Determines which wrapping modifier to apply to the DataListCell",
+      "enum": [
+        "nowrap",
+        "truncate",
+        "breakWord"
+      ],
+      "default": null
+    }
+  },
+  "additionalProperties": false
+}

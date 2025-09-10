@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "MultipleFileUploadTitleIcon Props",
+  "description": "Props for the MultipleFileUploadTitleIcon component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside multiple file upload title icon (React component or element)"
+    },
+    "className": {
+      "description": "Class to add to outer div",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

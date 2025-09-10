@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "PageBreadcrumb Props",
+  "description": "Props for the PageBreadcrumb component",
+  "properties": {
+    "aria-label": {
+      "description": "Adds an accessible name to the breadcrumb section. Required when the hasOverflowScroll prop is set to true.",
+      "type": "string"
+    },
+    "children": {
+      "description": "Content rendered inside of the PageBreadcrumb (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes to apply to the PageBreadcrumb",
+      "type": "string",
+      "default": "''"
+    },
+    "hasBodyWrapper": {
+      "description": "Flag indicating whether children passed to the component should be wrapped by a PageBody.\nSet this to false in order to pass multiple, custom PageBody's as children.",
+      "type": "boolean",
+      "default": true
+    },
+    "hasOverflowScroll": {
+      "description": "Flag indicating if the PageBreadcrumb has a scrolling overflow",
+      "type": "boolean",
+      "default": false
+    },
+    "hasShadowBottom": {
+      "description": "Flag indicating if PageBreadcrumb should have a shadow at the bottom",
+      "type": "boolean",
+      "default": false
+    },
+    "hasShadowTop": {
+      "description": "Flag indicating if PageBreadcrumb should have a shadow at the top",
+      "type": "boolean",
+      "default": false
+    },
+    "isWidthLimited": {
+      "description": "Limits the width of the breadcrumb",
+      "type": "boolean"
+    },
+    "stickyOnBreakpoint": {
+      "description": "Modifier indicating if the PageBreadcrumb is sticky to the top or bottom at various breakpoints",
+      "enum": [
+        "top",
+        "bottom",
+        "top",
+        "bottom",
+        "top",
+        "bottom",
+        "top",
+        "bottom",
+        "top",
+        "bottom",
+        "2xl",
+        "top",
+        "bottom"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

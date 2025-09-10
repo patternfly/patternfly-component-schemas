@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "AboutModalBoxContent Props",
+  "description": "Props for the AboutModalBoxContent component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the about modal box content (React component or element)"
+    },
+    "hasNoContentContainer": {
+      "description": "Prevents the about modal from rendering content inside a container; allows for more flexible layouts",
+      "type": "boolean",
+      "default": false
+    },
+    "trademark": {
+      "description": "The trademark info for the product",
+      "type": "string"
+    }
+  },
+  "required": [
+    "children",
+    "trademark"
+  ],
+  "additionalProperties": false
+}

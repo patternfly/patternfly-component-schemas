@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "PaginationNavigationState Props",
+  "description": "Props for the PaginationNavigationState component",
+  "properties": {
+    "userInputPage": {
+      "description": " (Type: number | string)"
+    }
+  },
+  "additionalProperties": false
+}

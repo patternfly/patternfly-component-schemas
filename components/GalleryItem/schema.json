@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "GalleryItem Props",
+  "description": "Props for the GalleryItem component",
+  "properties": {
+    "children": {
+      "description": "content rendered inside the Gallery Item (React component or element)",
+      "default": null
+    },
+    "component": {
+      "description": "Sets the base component to render. defaults to div (Type: React.ElementType<any> | React.ComponentType<any>)",
+      "default": "'div'"
+    }
+  },
+  "additionalProperties": false
+}

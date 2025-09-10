@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "NavExpandable Props",
+  "description": "Props for the NavExpandable component",
+  "properties": {
+    "buttonProps": {
+      "description": "Additional props added to the NavExpandable <button> (Type: any)"
+    },
+    "children": {
+      "description": "Anything that can be rendered inside of the expandable list (React component or element)",
+      "default": "''"
+    },
+    "className": {
+      "description": "Additional classes added to the container",
+      "type": "string",
+      "default": "''"
+    },
+    "groupId": {
+      "description": "Group identifier, will be returned with the onToggle and onSelect callback passed to the Nav component (Type: string | number)",
+      "default": null
+    },
+    "id": {
+      "description": "Identifier to use for the section aria label",
+      "type": "string",
+      "default": "''"
+    },
+    "isActive": {
+      "description": "If true makes the expandable list title active",
+      "type": "boolean",
+      "default": false
+    },
+    "isExpanded": {
+      "description": "Boolean to pragmatically expand or collapse section",
+      "type": "boolean",
+      "default": false
+    },
+    "onExpand": {
+      "description": "allow consumer to optionally override this callback and manage expand state externally. if passed will not call Nav's onToggle. (Function: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, val: boolean) => void)"
+    },
+    "ouiaId": {
+      "description": "Value to overwrite the randomly generated data-ouia-component-id. (Type: number | string)"
+    },
+    "ouiaSafe": {
+      "description": "",
+      "type": "boolean"
+    },
+    "srText": {
+      "description": "If defined, screen readers will read this text instead of the list title",
+      "type": "string",
+      "default": "''"
+    },
+    "title": {
+      "description": "Title content shown for the expandable list (React component or element)"
+    }
+  },
+  "required": [
+    "title"
+  ],
+  "additionalProperties": false
+}

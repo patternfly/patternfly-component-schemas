@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "WizardBody Props",
+  "description": "Props for the WizardBody component",
+  "properties": {
+    "activeStep": {
+      "description": "The currently active WizardStep (Type: WizardStep)"
+    },
+    "aria-label": {
+      "description": "Adds an accessible name to the wizard body when the body content overflows and renders\na scrollbar.",
+      "type": "string"
+    },
+    "aria-labelledby": {
+      "description": "Adds an accessible name to the wizard body by passing the the id of one or more elements.\nThe aria-labelledby will only be applied when the body content overflows and renders a scrollbar.",
+      "type": "string"
+    },
+    "children": {
+      "description": "Anything that can be rendered in the Wizard body (Type: any)"
+    },
+    "hasDrawer": {
+      "description": "",
+      "type": "boolean"
+    },
+    "hasNoBodyPadding": {
+      "description": "Set to true to remove the default body padding",
+      "type": "boolean",
+      "default": false
+    },
+    "isDrawerExpanded": {
+      "description": "Flag indicating the wizard drawer is expanded",
+      "type": "boolean"
+    },
+    "mainComponent": {
+      "description": "Component used as the primary content container (Type: React.ElementType)",
+      "default": "'div'"
+    },
+    "onExpandDrawer": {
+      "description": "Callback function for when the drawer is toggled (Function: () => void)"
+    }
+  },
+  "required": [
+    "activeStep",
+    "aria-labelledby",
+    "children"
+  ],
+  "additionalProperties": false
+}

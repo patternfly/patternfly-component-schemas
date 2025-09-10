@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "InternalFormFieldGroup Props",
+  "description": "Props for the InternalFormFieldGroup component",
+  "properties": {
+    "children": {
+      "description": "Anything that can be rendered as form field group content. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the form field group.",
+      "type": "string"
+    },
+    "header": {
+      "description": "Form field group header (Type: any)"
+    },
+    "isExpandable": {
+      "description": "Flag indicating if the field group is expandable",
+      "type": "boolean"
+    },
+    "isExpanded": {
+      "description": "Flag indicate if the form field group is expanded. Modifies the card to be expandable.",
+      "type": "boolean"
+    },
+    "onToggle": {
+      "description": "Function callback called when user clicks toggle button (Function: () => void)"
+    },
+    "toggleAriaLabel": {
+      "description": "Aria-label to use on the form field group toggle button",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "CardHeaderActionsObject Props",
+  "description": "Props for the CardHeaderActionsObject component",
+  "properties": {
+    "actions": {
+      "description": "Actions of the card header (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the actions wrapper",
+      "type": "string"
+    },
+    "hasNoOffset": {
+      "description": "Flag indicating that the actions have no offset",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "actions"
+  ],
+  "additionalProperties": false
+}

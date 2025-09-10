@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "TabAction Props",
+  "description": "Props for the TabAction component",
+  "properties": {
+    "aria-label": {
+      "description": "Accessible label for the tab action",
+      "type": "string"
+    },
+    "children": {
+      "description": "Content rendered in the tab action (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the tab action span",
+      "type": "string"
+    },
+    "isDisabled": {
+      "description": "Flag indicating if the tab action is disabled",
+      "type": "boolean"
+    },
+    "onClick": {
+      "description": "Click callback for tab action button (Function: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void)"
+    },
+    "ouiaId": {
+      "description": " (Type: number | string)"
+    },
+    "ouiaSafe": {
+      "description": "",
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}

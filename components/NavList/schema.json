@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "NavList Props",
+  "description": "Props for the NavList component",
+  "properties": {
+    "backScrollAriaLabel": {
+      "description": "Aria-label for the back scroll button",
+      "type": "string",
+      "default": "'Scroll back'"
+    },
+    "children": {
+      "description": "Children nodes (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the list",
+      "type": "string"
+    },
+    "forwardScrollAriaLabel": {
+      "description": "Aria-label for the forward scroll button",
+      "type": "string",
+      "default": "'Scroll foward'"
+    }
+  },
+  "additionalProperties": false
+}

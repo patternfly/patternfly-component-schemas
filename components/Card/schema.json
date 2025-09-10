@@ -1,0 +1,91 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Card Props",
+  "description": "Props for the Card component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the Card (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the Card",
+      "type": "string"
+    },
+    "component": {
+      "description": "Sets the base component to render. defaults to div (Type: React.JSX.IntrinsicElements)",
+      "default": "'div'"
+    },
+    "id": {
+      "description": "ID of the Card. Also passed back in the CardHeader onExpand callback.",
+      "type": "string",
+      "default": "''"
+    },
+    "isClickable": {
+      "description": "Flag indicating that the card is clickable and contains some action that triggers on click.",
+      "type": "boolean",
+      "default": false
+    },
+    "isClicked": {
+      "description": "Flag indicating whether a card that is either only clickable or that is both clickable and selectable\nis currently clicked and has clicked styling.",
+      "type": "boolean",
+      "default": false
+    },
+    "isCompact": {
+      "description": "Modifies the card to include compact styling. Should not be used with isLarge.",
+      "type": "boolean",
+      "default": false
+    },
+    "isDisabled": {
+      "description": "Flag indicating that a clickable or selectable card is disabled.",
+      "type": "boolean",
+      "default": false
+    },
+    "isExpanded": {
+      "description": "Flag indicating if a card is expanded. Modifies the card to be expandable.",
+      "type": "boolean",
+      "default": false
+    },
+    "isFullHeight": {
+      "description": "Cause component to consume the available height of its container",
+      "type": "boolean",
+      "default": false
+    },
+    "isLarge": {
+      "description": "Modifies the card to be large. Should not be used with isCompact.",
+      "type": "boolean",
+      "default": false
+    },
+    "isPlain": {
+      "description": "Modifies the card to include plain styling; this removes border and background",
+      "type": "boolean",
+      "default": false
+    },
+    "isSelectable": {
+      "description": "Flag indicating that the card is selectable.",
+      "type": "boolean",
+      "default": false
+    },
+    "isSelected": {
+      "description": "Flag indicating whether a card that is either selectable only or both clickable and selectable is\ncurrently selected and has selected styling.",
+      "type": "boolean",
+      "default": false
+    },
+    "ouiaId": {
+      "description": "Value to overwrite the randomly generated data-ouia-component-id. (Type: number | string)"
+    },
+    "ouiaSafe": {
+      "description": "Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false.",
+      "type": "boolean",
+      "default": true
+    },
+    "variant": {
+      "description": "Card background color variant",
+      "enum": [
+        "default",
+        "secondary"
+      ],
+      "default": "'default'"
+    }
+  },
+  "additionalProperties": false
+}

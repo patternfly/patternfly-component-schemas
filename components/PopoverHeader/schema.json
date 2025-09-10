@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "PopoverHeader Props",
+  "description": "Props for the PopoverHeader component",
+  "properties": {
+    "alertSeverityScreenReaderText": {
+      "description": "Text announced by screen reader when alert severity variant is set to indicate severity level",
+      "type": "string"
+    },
+    "alertSeverityVariant": {
+      "description": "Severity variants for an alert popover. This modifies the color of the header to match the severity.",
+      "enum": [
+        "custom",
+        "info",
+        "warning",
+        "success",
+        "danger"
+      ]
+    },
+    "children": {
+      "description": "Content of the popover header. (React component or element)"
+    },
+    "className": {
+      "description": "Class to be applied to the header.",
+      "type": "string"
+    },
+    "icon": {
+      "description": "Indicates the header contains an icon. (React component or element)"
+    },
+    "id": {
+      "description": "Id of the header",
+      "type": "string"
+    },
+    "titleHeadingLevel": {
+      "description": "Heading level of the header title",
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ],
+      "default": "'h6'"
+    }
+  },
+  "required": [
+    "children"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "TreeViewList Props",
+  "description": "Props for the TreeViewList component",
+  "properties": {
+    "aria-label": {
+      "description": "A text string that sets the accessible name of the tree view list. Either this or the aria-labelledby property must\nbe passed in.",
+      "type": "string"
+    },
+    "aria-labelledby": {
+      "description": "A space separated list of element id's that sets the accessible name of the tree view list. Either\nthis or the aria-label property must be passed in.",
+      "type": "string"
+    },
+    "children": {
+      "description": "Child nodes of the current tree view. (React component or element)"
+    },
+    "isMultiSelectable": {
+      "description": "Flag indicating whether multiple nodes can be selected in the tree view. This will also set the\naria-multiselectable attribute on the tree view list which is required to be true when multiple selection is intended.\nCan only be applied to the root tree view list.",
+      "type": "boolean",
+      "default": false
+    },
+    "isNested": {
+      "description": "Flag indicating if the tree view is nested under another tree view.",
+      "type": "boolean",
+      "default": false
+    },
+    "toolbar": {
+      "description": "Toolbar to display above the tree view. (React component or element)"
+    }
+  },
+  "required": [
+    "children"
+  ],
+  "additionalProperties": false
+}

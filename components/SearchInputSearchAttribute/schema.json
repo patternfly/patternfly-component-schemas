@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "SearchInputSearchAttribute Props",
+  "description": "Properties for adding search attributes to an advanced search input. These properties must\nbe passed in as an object within an array to the search input component's attribute property.",
+  "properties": {
+    "attr": {
+      "description": "The search attribute's value to be provided in the search input's query string.\nIt should have no spaces and be unique for every attribute.",
+      "type": "string"
+    },
+    "display": {
+      "description": "The search attribute's display name. It is used to label the field in the advanced\nsearch menu. (React component or element)"
+    }
+  },
+  "required": [
+    "attr",
+    "display"
+  ],
+  "additionalProperties": false
+}

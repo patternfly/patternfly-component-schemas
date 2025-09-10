@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "FilterInfo Props",
+  "description": "Props for the FilterInfo component",
+  "properties": {
+    "[key: string]": {
+      "description": "",
+      "type": "number"
+    }
+  },
+  "required": [
+    "[key: string]"
+  ],
+  "additionalProperties": false
+}

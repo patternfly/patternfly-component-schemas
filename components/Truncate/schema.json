@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Truncate Props",
+  "description": "Props for the Truncate component",
+  "properties": {
+    "className": {
+      "description": "Class to add to outer span",
+      "type": "string"
+    },
+    "content": {
+      "description": "Text to truncate",
+      "type": "string"
+    },
+    "position": {
+      "description": "Where the text will be truncated",
+      "enum": [
+        "start",
+        "middle",
+        "end"
+      ],
+      "default": "'end'"
+    },
+    "tooltipPosition": {
+      "description": "Tooltip position (Type: | TooltipPosition\n| 'auto'\n| 'top'\n| 'bottom'\n| 'left'\n| 'right'\n| 'top-start'\n| 'top-end'\n| 'bottom-start'\n| 'bottom-end'\n| 'left-start'\n| 'left-end'\n| 'right-start'\n| 'right-end')",
+      "default": "'top'"
+    },
+    "trailingNumChars": {
+      "description": "The number of characters displayed in the second half of the truncation",
+      "type": "number",
+      "default": 7
+    }
+  },
+  "required": [
+    "content"
+  ],
+  "additionalProperties": false
+}

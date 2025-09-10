@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "WizardToggleProps Props",
+  "description": "Props for the WizardToggleProps component",
+  "properties": {
+    "activeStep": {
+      "description": "The currently active WizardStep (Type: WizardStep)"
+    },
+    "children": {
+      "description": "The WizardFooter (React component or element)"
+    },
+    "hasDrawer": {
+      "description": "Flag indicating the wizard has a drawer for at least one of the wizard steps",
+      "type": "boolean"
+    },
+    "hasNoBodyPadding": {
+      "description": "Set to true to remove body padding",
+      "type": "boolean"
+    },
+    "isDrawerExpanded": {
+      "description": "Flag indicating the wizard drawer is expanded",
+      "type": "boolean"
+    },
+    "isInPage": {
+      "description": "If the wizard is in-page",
+      "type": "boolean"
+    },
+    "isNavOpen": {
+      "description": "If the nav is open",
+      "type": "boolean"
+    },
+    "mainAriaLabel": {
+      "description": "Adds an accessible name to the wizard body when the body content overflows and renders\na scrollbar.",
+      "type": "string"
+    },
+    "mainAriaLabelledBy": {
+      "description": "Adds an accessible name to the wizard body by passing the the id of one or more elements.\nThe aria-labelledby will only be applied when the body content overflows and renders a scrollbar.",
+      "type": "string"
+    },
+    "nav": {
+      "description": "Function that returns the WizardNav component (Function: (isWizardNavOpen: boolean) => React.ReactElement<any>)"
+    },
+    "onExpandDrawer": {
+      "description": "Callback function for when the drawer is toggled (Function: () => void)"
+    },
+    "onNavToggle": {
+      "description": "Callback function for when the nav is toggled (Function: (isOpen: boolean) => void)"
+    },
+    "steps": {
+      "description": "The wizard steps (Type: WizardStep[])",
+      "type": "array"
+    },
+    "Unknown": {
+      "description": "The button's aria-label",
+      "type": "string"
+    }
+  },
+  "required": [
+    "activeStep",
+    "hasNoBodyPadding",
+    "isNavOpen",
+    "nav",
+    "onNavToggle",
+    "steps"
+  ],
+  "additionalProperties": false
+}

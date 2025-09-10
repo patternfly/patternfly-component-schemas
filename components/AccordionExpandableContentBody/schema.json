@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "AccordionExpandableContentBody Props",
+  "description": "Props for the AccordionExpandableContentBody component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the accordion content body (React component or element)",
+      "default": null
+    }
+  },
+  "additionalProperties": false
+}

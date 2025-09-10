@@ -1,0 +1,125 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "MenuItem Props",
+  "description": "Props for the MenuItem component",
+  "properties": {
+    "actions": {
+      "description": "Render item with one or more actions (React component or element)"
+    },
+    "aria-label": {
+      "description": "Adds an accessible name to the menu item.",
+      "type": "string"
+    },
+    "children": {
+      "description": "Content rendered inside the menu list item. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the menu list item",
+      "type": "string"
+    },
+    "component": {
+      "description": "Component used to render the menu item (Type: React.ElementType<any> | React.ComponentType<any>)"
+    },
+    "description": {
+      "description": "Description of the menu item (React component or element)"
+    },
+    "direction": {
+      "description": "Sub menu direction",
+      "enum": [
+        "down",
+        "up"
+      ]
+    },
+    "download": {
+      "description": "Navigation link download. Only set when the to property is present.",
+      "type": "string"
+    },
+    "drilldownMenu": {
+      "description": "Drilldown menu of the item. Should be a Menu or DrilldownMenu type. (React component or element)"
+    },
+    "flyoutMenu": {
+      "description": "Flyout menu. Should not be used if the to prop is defined. (Type: React.ReactElement<any>)"
+    },
+    "hasCheckbox": {
+      "description": "Flag indicating the item has a checkbox",
+      "type": "boolean"
+    },
+    "icon": {
+      "description": "Render item with icon (React component or element)"
+    },
+    "id": {
+      "description": "Sets the id attribute on the menu item component.",
+      "type": "string"
+    },
+    "isActive": {
+      "description": "Flag indicating whether the item is active",
+      "type": "boolean"
+    },
+    "isAriaDisabled": {
+      "description": "Render item as aria-disabled option",
+      "type": "boolean"
+    },
+    "isDanger": {
+      "description": "Flag indicating the item is in danger state",
+      "type": "boolean"
+    },
+    "isDisabled": {
+      "description": "Render item as disabled option",
+      "type": "boolean"
+    },
+    "isExternalLink": {
+      "description": "Render an external link icon on focus or hover, and set the link's\n\"target\" attribute to a value of \"_blank\".",
+      "type": "boolean"
+    },
+    "isFavorited": {
+      "description": "Flag indicating if the item is favorited",
+      "type": "boolean"
+    },
+    "isFocused": {
+      "description": "Flag indicating the item is focused",
+      "type": "boolean"
+    },
+    "isLoadButton": {
+      "description": "Flag indicating if the item causes a load",
+      "type": "boolean"
+    },
+    "isLoading": {
+      "description": "Flag indicating a loading state",
+      "type": "boolean"
+    },
+    "isOnPath": {
+      "description": "True if item is on current selection path",
+      "type": "boolean"
+    },
+    "isSelected": {
+      "description": "Flag indicating if the option is selected",
+      "type": "boolean"
+    },
+    "itemId": {
+      "description": "Identifies the component in the Menu onSelect or onActionClick callback (Type: any)"
+    },
+    "onClick": {
+      "description": "Callback for item click (Function: (event?: any) => void)"
+    },
+    "onShowFlyout": {
+      "description": "Callback function when mouse leaves trigger (Function: (event?: any) => void)"
+    },
+    "rel": {
+      "description": "Navigation link relationship. Only set when the to property is present.",
+      "type": "string"
+    },
+    "target": {
+      "description": "Navigation link target. Only set when the to property is present. If isExternalLink is also passed in, this property will be set to \"_blank\".",
+      "type": "string"
+    },
+    "to": {
+      "description": "Target navigation link. Should not be used if the flyout prop is defined.",
+      "type": "string"
+    },
+    "tooltipProps": {
+      "description": "Props for adding a tooltip to a menu item (Type: TooltipProps)"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "StackItem Props",
+  "description": "Props for the StackItem component",
+  "properties": {
+    "children": {
+      "description": "Additional classes added to the stack layout item. (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Content rendered inside the stack layout item.",
+      "type": "string",
+      "default": "''"
+    },
+    "component": {
+      "description": "Sets the base component to render. Defaults to div. (React component or element)",
+      "default": "'div'"
+    },
+    "isFilled": {
+      "description": "Flag indicating if this stack layout item should fill the available vertical space.",
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "additionalProperties": false
+}

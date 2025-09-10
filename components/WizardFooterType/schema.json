@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "WizardFooterType Props",
+  "description": "Props for the WizardFooterType component",
+  "properties": {},
+  "additionalProperties": false
+}

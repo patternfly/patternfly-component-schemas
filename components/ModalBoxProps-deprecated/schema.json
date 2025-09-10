@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ModalBoxProps Props",
+  "description": "Props for the ModalBoxProps component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the modal box. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the modal box.",
+      "type": "string"
+    },
+    "position": {
+      "description": "Position of the modal. By default a modal will be positioned vertically and horizontally centered.",
+      "enum": [
+        "default",
+        "top"
+      ]
+    },
+    "positionOffset": {
+      "description": "Offset from alternate position. Can be any valid CSS length/percentage.",
+      "type": "string"
+    },
+    "Unknown": {
+      "description": "Id to use for the modal box label.",
+      "type": "string"
+    },
+    "variant": {
+      "description": "Variant of the modal.",
+      "enum": [
+        "small",
+        "medium",
+        "large",
+        "default"
+      ]
+    }
+  },
+  "required": [
+    "children"
+  ],
+  "additionalProperties": false
+}

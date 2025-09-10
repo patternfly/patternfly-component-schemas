@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ModalBox Props",
+  "description": "Props for the ModalBox component",
+  "properties": {
+    "aria-describedby": {
+      "description": "Id to use for the modal box description. This should match the ModalHeader labelId or descriptorId",
+      "type": "string"
+    },
+    "aria-label": {
+      "description": "Adds an accessible name to the modal when there is no title in the ModalHeader.",
+      "type": "string"
+    },
+    "aria-labelledby": {
+      "description": "Id to use for the modal box label.",
+      "type": "string"
+    },
+    "children": {
+      "description": "Content rendered inside the modal box. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the modal box.",
+      "type": "string"
+    },
+    "position": {
+      "description": "Position of the modal. By default a modal will be positioned vertically and horizontally centered.",
+      "enum": [
+        "default",
+        "top"
+      ]
+    },
+    "positionOffset": {
+      "description": "Offset from alternate position. Can be any valid CSS length/percentage.",
+      "type": "string"
+    },
+    "variant": {
+      "description": "Variant of the modal.",
+      "enum": [
+        "small",
+        "medium",
+        "large",
+        "default"
+      ],
+      "default": "'default'"
+    }
+  },
+  "required": [
+    "children"
+  ],
+  "additionalProperties": false
+}

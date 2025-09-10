@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ToggleGroupItem Props",
+  "description": "Props for the ToggleGroupItem component",
+  "properties": {
+    "aria-label": {
+      "description": "required when icon is used with no supporting text",
+      "type": "string"
+    },
+    "buttonId": {
+      "description": "Optional id for the button within the toggle group item",
+      "type": "string"
+    },
+    "className": {
+      "description": "Additional classes added to the toggle group item",
+      "type": "string"
+    },
+    "icon": {
+      "description": "Icon rendered inside the toggle group item (React component or element)"
+    },
+    "iconPosition": {
+      "description": "Sets position of the icon when text is also passed in",
+      "enum": [
+        "start",
+        "end"
+      ],
+      "default": "'start'"
+    },
+    "isDisabled": {
+      "description": "Flag indicating if the toggle group item is disabled",
+      "type": "boolean",
+      "default": false
+    },
+    "isSelected": {
+      "description": "Flag indicating if the toggle group item is selected",
+      "type": "boolean",
+      "default": false
+    },
+    "onChange": {
+      "description": "A callback for when the toggle group item selection changes. (Type: (event: React.MouseEvent<any> | React.KeyboardEvent | MouseEvent, selected: boolean) => void)",
+      "default": "() => {}"
+    },
+    "text": {
+      "description": "Text rendered inside the toggle group item (React component or element)"
+    }
+  },
+  "additionalProperties": false
+}

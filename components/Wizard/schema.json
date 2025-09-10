@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Wizard Props",
+  "description": "Wrapper for all steps and hosts state, including navigation helpers, within context.\nThe WizardContext provided by default gives any child of wizard access to those resources.",
+  "properties": {
+    "children": {
+      "description": "Step components (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes spread to the wizard",
+      "type": "string"
+    },
+    "footer": {
+      "description": "Wizard footer (Type: Partial<WizardFooterProps> | CustomWizardFooterFunction | React.ReactElement<any>)"
+    },
+    "header": {
+      "description": "Wizard header (React component or element)"
+    },
+    "height": {
+      "description": "Custom height of the wizard (Type: number | string)"
+    },
+    "isProgressive": {
+      "description": "Progressively shows steps, where all steps following the active step are hidden. Defaults to false.",
+      "type": "boolean",
+      "default": false
+    },
+    "isVisitRequired": {
+      "description": "Disables steps that haven't been visited. Defaults to false.",
+      "type": "boolean",
+      "default": false
+    },
+    "nav": {
+      "description": "Wizard navigation (Type: Partial<WizardNavProps> | CustomWizardNavFunction | React.ReactElement<any>)"
+    },
+    "navAriaLabel": {
+      "description": "Aria-label for the Nav",
+      "type": "string"
+    },
+    "onClose": {
+      "description": "Callback function to close the wizard (Function: (event: React.MouseEvent<HTMLButtonElement>) => void)"
+    },
+    "onSave": {
+      "description": "Callback function to save at the end of the wizard, if not specified uses onClose (Type: (event: React.MouseEvent<HTMLButtonElement>) => void | Promise<void>)"
+    },
+    "onStepChange": {
+      "description": "Callback function when navigating between steps (Type: (\n  event: React.MouseEvent<HTMLButtonElement>,\n  currentStep: WizardStepType,\n  prevStep: WizardStepType,\n  scope: WizardStepChangeScope\n) => void | Promise<void>)"
+    },
+    "shouldFocusContent": {
+      "description": "Flag indicating whether the wizard content should be focused after the onNext or onBack callbacks\nare called.",
+      "type": "boolean",
+      "default": true
+    },
+    "startIndex": {
+      "description": "The initial index the wizard is to start on (1 or higher). Defaults to 1.",
+      "type": "number",
+      "default": 1
+    },
+    "width": {
+      "description": "Custom width of the wizard (Type: number | string)"
+    }
+  },
+  "required": [
+    "children"
+  ],
+  "additionalProperties": false
+}

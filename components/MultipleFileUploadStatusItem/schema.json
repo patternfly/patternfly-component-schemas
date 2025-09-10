@@ -1,0 +1,85 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "MultipleFileUploadStatusItem Props",
+  "description": "Automatically reads an uploaded file to render a visual representation of it, including\nits name, size, and read status. This sub-component also allows custom reading of files\nvia various callbacks which will override the automatic reading behavior.",
+  "properties": {
+    "buttonAriaLabel": {
+      "description": "Adds accessibility text to the status item deletion button",
+      "type": "string",
+      "default": "'Remove from list'"
+    },
+    "className": {
+      "description": "Class to add to outer div",
+      "type": "string"
+    },
+    "customFileHandler": {
+      "description": "A callback to process file reading in a custom way (Function: (file: File) => void)"
+    },
+    "file": {
+      "description": "The file object being represented by the status item (Type: File)"
+    },
+    "fileIcon": {
+      "description": "A custom icon to show in place of the generic file icon (React component or element)"
+    },
+    "fileName": {
+      "description": "A custom name to display for the file rather than using built in functionality to auto-fill it",
+      "type": "string"
+    },
+    "fileSize": {
+      "description": "A custom file size to display for the file rather than using built in functionality to auto-fill it",
+      "type": "number"
+    },
+    "onClearClick": {
+      "description": "Clear button was clicked (Type: React.MouseEventHandler<HTMLButtonElement>)",
+      "default": "() => {}"
+    },
+    "onReadFail": {
+      "description": "A callback for when the FileReader API fails (Function: (error: DOMException, onReadFail: File) => void)",
+      "default": "() => {}"
+    },
+    "onReadFinished": {
+      "description": "A callback for when a selected file finishes loading (Function: (fileHandle: File) => void)",
+      "default": "() => {}"
+    },
+    "onReadStarted": {
+      "description": "A callback for when a selected file starts loading (Function: (fileHandle: File) => void)",
+      "default": "() => {}"
+    },
+    "onReadSuccess": {
+      "description": "A callback for when the FileReader successfully reads the file (Function: (data: string, file: File) => void)",
+      "default": "() => {}"
+    },
+    "progressAriaLabel": {
+      "description": "Adds accessible text to the progress bar. Required when title not used and there is not any label associated with the progress bar",
+      "type": "string"
+    },
+    "progressAriaLabelledBy": {
+      "description": "Associates the progress bar with it's label for accessibility purposes. Required when title not used",
+      "type": "string"
+    },
+    "progressAriaLiveMessage": {
+      "description": "Modifies the text announced by assistive technologies when the progress bar updates. (Type: string | ((loadPercentage: number) => string))"
+    },
+    "progressHelperText": {
+      "description": "Additional content related to the status item. (React component or element)"
+    },
+    "progressId": {
+      "description": "Unique identifier for progress. Generated if not specified.",
+      "type": "string"
+    },
+    "progressValue": {
+      "description": "A custom value to display for the progress component rather than using built in functionality to auto-fill it",
+      "type": "number"
+    },
+    "progressVariant": {
+      "description": "A custom variant to apply to the progress component rather than using built in functionality to auto-fill it",
+      "enum": [
+        "danger",
+        "success",
+        "warning"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

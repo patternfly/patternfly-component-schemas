@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Stack Props",
+  "description": "Props for the Stack component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the stack layout. (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional classes added to the stack layout.",
+      "type": "string",
+      "default": "''"
+    },
+    "component": {
+      "description": "Sets the base component to render. Defaults to div. (React component or element)",
+      "default": "'div'"
+    },
+    "hasGutter": {
+      "description": "Adds space between children.",
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "additionalProperties": false
+}

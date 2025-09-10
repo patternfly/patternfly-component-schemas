@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "FormFieldGroupExpandable Props",
+  "description": "Props for the FormFieldGroupExpandable component",
+  "properties": {
+    "children": {
+      "description": "Anything that can be rendered as form field group content. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the form field group.",
+      "type": "string"
+    },
+    "header": {
+      "description": "Form field group header (React component or element)"
+    },
+    "isExpanded": {
+      "description": "Flag indicating if the form field group is initially expanded",
+      "type": "boolean",
+      "default": false
+    },
+    "toggleAriaLabel": {
+      "description": "Aria-label to use on the form field group toggle button",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

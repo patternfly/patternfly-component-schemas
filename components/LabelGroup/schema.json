@@ -1,0 +1,90 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "LabelGroup Props",
+  "description": "Props for the LabelGroup component",
+  "properties": {
+    "addLabelControl": {
+      "description": "Control for adding new labels (React component or element)"
+    },
+    "aria-label": {
+      "description": "Aria label for label group that does not have a category name",
+      "type": "string",
+      "default": "'Label group category'"
+    },
+    "categoryName": {
+      "description": "Category name text for the label group category.  If this prop is supplied the label group with have a label and category styling applied",
+      "type": "string",
+      "default": "''"
+    },
+    "children": {
+      "description": "Content rendered inside the label group. Should be <Label> elements. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the label item",
+      "type": "string"
+    },
+    "closeBtnAriaLabel": {
+      "description": "Aria label for close button",
+      "type": "string",
+      "default": "'Close label group'"
+    },
+    "collapsedText": {
+      "description": "Customizable template string. Use variable \"${remaining}\" for the overflow label count.",
+      "type": "string",
+      "default": "'${remaining} more'"
+    },
+    "defaultIsOpen": {
+      "description": "Flag for having the label group default to expanded",
+      "type": "boolean",
+      "default": false
+    },
+    "editableTextAreaProps": {
+      "description": "Additional props passed to the editable textarea. (Type: any)"
+    },
+    "expandedText": {
+      "description": "Customizable \"Show Less\" text string",
+      "type": "string",
+      "default": "'Show Less'"
+    },
+    "hasEditableTextArea": {
+      "description": "Flag indicating the editable label group should be appended with a textarea.",
+      "type": "boolean",
+      "default": false
+    },
+    "isClosable": {
+      "description": "Flag if label group can be closed",
+      "type": "boolean",
+      "default": false
+    },
+    "isCompact": {
+      "description": "Flag indicating the labels in the group are compact",
+      "type": "boolean",
+      "default": false
+    },
+    "isEditable": {
+      "description": "Flag indicating contained labels are editable. Allows spacing for a text input after the labels.",
+      "type": "boolean",
+      "default": false
+    },
+    "isVertical": {
+      "description": "Flag to implement a vertical layout",
+      "type": "boolean",
+      "default": false
+    },
+    "numLabels": {
+      "description": "Set number of labels to show before overflow",
+      "type": "number",
+      "default": 3
+    },
+    "onClick": {
+      "description": "Function that is called when clicking on the label group close button (Function: (event: React.MouseEvent) => void)",
+      "default": "(_e: React.MouseEvent) => undefined as any"
+    },
+    "tooltipPosition": {
+      "description": "Position of the tooltip which is displayed if the category name text is longer (Type: | TooltipPosition\n| 'auto'\n| 'top'\n| 'bottom'\n| 'left'\n| 'right'\n| 'top-start'\n| 'top-end'\n| 'bottom-start'\n| 'bottom-end'\n| 'left-start'\n| 'left-end'\n| 'right-start'\n| 'right-end')",
+      "default": "'top'"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "TabContentBody Props",
+  "description": "Props for the TabContentBody component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the tab content body. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the tab content body.",
+      "type": "string"
+    },
+    "hasPadding": {
+      "description": "Indicates if there should be padding around the tab content body",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "children"
+  ],
+  "additionalProperties": false
+}

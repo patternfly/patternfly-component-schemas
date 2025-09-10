@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "SimpleListItem Props",
+  "description": "Props for the SimpleListItem component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the SimpleList item (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional classes added to the SimpleList <li>",
+      "type": "string",
+      "default": "''"
+    },
+    "component": {
+      "description": "Component type of the SimpleList item",
+      "enum": [
+        "button",
+        "a"
+      ],
+      "default": "'button'"
+    },
+    "componentClassName": {
+      "description": "Additional classes added to the SimpleList <a> or <button>",
+      "type": "string",
+      "default": "''"
+    },
+    "componentProps": {
+      "description": "Additional props added to the SimpleList <a> or <button> (Type: any)"
+    },
+    "href": {
+      "description": "Default hyperlink location",
+      "type": "string",
+      "default": "''"
+    },
+    "isActive": {
+      "description": "Indicates if the link is current/highlighted",
+      "type": "boolean",
+      "default": false
+    },
+    "itemId": {
+      "description": "id for the item. (Type: number | string)"
+    },
+    "onClick": {
+      "description": "OnClick callback for the SimpleList item (Type: (event: React.MouseEvent | React.ChangeEvent) => void)",
+      "default": "() => {}"
+    },
+    "type": {
+      "description": "Type of button SimpleList item",
+      "enum": [
+        "button",
+        "submit",
+        "reset"
+      ],
+      "default": "'button'"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "MenuSearch Props",
+  "description": "Props for the MenuSearch component",
+  "properties": {
+    "children": {
+      "description": "Items within search (React component or element)"
+    }
+  },
+  "additionalProperties": false
+}

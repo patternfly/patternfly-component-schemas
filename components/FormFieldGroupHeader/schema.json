@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "FormFieldGroupHeader Props",
+  "description": "Props for the FormFieldGroupHeader component",
+  "properties": {
+    "actions": {
+      "description": "Field group header actions (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the section",
+      "type": "string"
+    },
+    "titleDescription": {
+      "description": "Field group header title description (React component or element)"
+    },
+    "titleText": {
+      "description": "Field group header title text (Type: FormFieldGroupHeaderTitleTextObject)"
+    }
+  },
+  "additionalProperties": false
+}

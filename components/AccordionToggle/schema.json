@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "AccordionToggle Props",
+  "description": "Props for the AccordionToggle component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the Accordion toggle (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional classes added to the Accordion Toggle",
+      "type": "string",
+      "default": "''"
+    },
+    "component": {
+      "description": "Container to override the default for toggle (Type: React.ElementType)"
+    },
+    "id": {
+      "description": "Identify the Accordion toggle number",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "additionalProperties": false
+}

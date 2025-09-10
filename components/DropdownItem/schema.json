@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DropdownItem Props",
+  "description": "See the MenuItem section of the Menu documentation for additional props that may be passed.",
+  "properties": {
+    "children": {
+      "description": "Anything which can be rendered in a dropdown item (React component or element)"
+    },
+    "className": {
+      "description": "Classes applied to root element of dropdown item",
+      "type": "string"
+    },
+    "description": {
+      "description": "Description of the dropdown item (React component or element)"
+    },
+    "isAriaDisabled": {
+      "description": "Render item as aria-disabled option",
+      "type": "boolean"
+    },
+    "isDisabled": {
+      "description": "Render item as disabled option",
+      "type": "boolean"
+    },
+    "onClick": {
+      "description": "Callback for item click (Function: (event?: any) => void)"
+    },
+    "ouiaId": {
+      "description": "Value to overwrite the randomly generated data-ouia-component-id. (Type: number | string)"
+    },
+    "ouiaSafe": {
+      "description": "Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false.",
+      "type": "boolean"
+    },
+    "tooltipProps": {
+      "description": "Props for adding a tooltip to a menu item (Type: TooltipProps)"
+    },
+    "value": {
+      "description": "Identifies the component in the dropdown onSelect callback (Type: any)"
+    }
+  },
+  "additionalProperties": false
+}

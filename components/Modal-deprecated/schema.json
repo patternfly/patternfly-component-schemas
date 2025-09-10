@@ -1,0 +1,153 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Modal Props",
+  "description": "Props for the Modal component",
+  "properties": {
+    "actions": {
+      "description": "Action buttons to add to the standard modal footer. Ignored if the footer property\nis passed in. (Type: any)",
+      "default": []
+    },
+    "appendTo": {
+      "description": "The parent container to append the modal to. Defaults to \"document.body\". (Type: HTMLElement | (() => HTMLElement))",
+      "default": "() => document.body"
+    },
+    "aria-describedby": {
+      "description": "Id to use for the modal box descriptor.",
+      "type": "string",
+      "default": "''"
+    },
+    "aria-label": {
+      "description": "Accessible descriptor of the modal.",
+      "type": "string",
+      "default": "''"
+    },
+    "aria-labelledby": {
+      "description": "Id to use for the modal box label.",
+      "type": "string",
+      "default": "''"
+    },
+    "bodyAriaLabel": {
+      "description": "Accessible label applied to the modal box body. This should be used to communicate\nimportant information about the modal box body div element if needed, such as that it\nis scrollable.",
+      "type": "string"
+    },
+    "bodyAriaRole": {
+      "description": "Accessible role applied to the modal box body. This will default to \"region\" if the\nbodyAriaLabel property is passed in. Set to a more appropriate role as applicable\nbased on the modal content and context.",
+      "type": "string"
+    },
+    "children": {
+      "description": "Content rendered inside the modal. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the modal.",
+      "type": "string",
+      "default": "''"
+    },
+    "description": {
+      "description": "Description of the modal. (React component or element)"
+    },
+    "disableFocusTrap": {
+      "description": "Flag to disable focus trap.",
+      "type": "boolean"
+    },
+    "elementToFocus": {
+      "description": "The element to focus when the modal opens. By default the first\nfocusable element will receive focus. (Type: HTMLElement | SVGElement | string)"
+    },
+    "footer": {
+      "description": "Custom footer. (React component or element)"
+    },
+    "hasNoBodyWrapper": {
+      "description": "Flag indicating if modal content should be placed in a modal box body wrapper.",
+      "type": "boolean",
+      "default": false
+    },
+    "header": {
+      "description": "Complex header (more than just text), supersedes the title property for header content. (React component or element)"
+    },
+    "help": {
+      "description": "Optional help section for the modal header. (React component or element)"
+    },
+    "id": {
+      "description": "An id to use for the modal box container.",
+      "type": "string",
+      "default": "undefined"
+    },
+    "isOpen": {
+      "description": "Flag to show the modal.",
+      "type": "boolean",
+      "default": false
+    },
+    "maxWidth": {
+      "description": "Maximum width of the modal. (Type: number | string)"
+    },
+    "onClose": {
+      "description": "A callback for when the close button is clicked. (Type: (event: KeyboardEvent | React.MouseEvent) => void)",
+      "default": "() => undefined as any"
+    },
+    "onEscapePress": {
+      "description": "Modal handles pressing of the escape key and closes the modal. If you want to handle\nthis yourself you can use this callback function. (Function: (event: KeyboardEvent) => void)"
+    },
+    "ouiaId": {
+      "description": "Value to overwrite the randomly generated data-ouia-component-id. (Type: number | string)"
+    },
+    "ouiaSafe": {
+      "description": "Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false.",
+      "type": "boolean",
+      "default": true
+    },
+    "position": {
+      "description": "Position of the modal. By default a modal will be positioned vertically and horizontally centered.",
+      "enum": [
+        "default",
+        "top"
+      ],
+      "default": "'default'"
+    },
+    "positionOffset": {
+      "description": "Offset from alternate position. Can be any valid CSS length/percentage.",
+      "type": "string"
+    },
+    "showClose": {
+      "description": "Flag to show the close button in the header area of the modal.",
+      "type": "boolean",
+      "default": true
+    },
+    "title": {
+      "description": "Text content of the modal header. (React component or element)",
+      "default": "''"
+    },
+    "titleIconVariant": {
+      "description": "Optional alert icon (or other) to show before the title of the modal header. When the\npredefined alert types are used the default styling will be automatically applied.",
+      "enum": [
+        "success",
+        "danger",
+        "warning",
+        "info",
+        "custom"
+      ],
+      "default": null
+    },
+    "titleLabel": {
+      "description": "Optional title label text for screen readers.",
+      "type": "string",
+      "default": "''"
+    },
+    "variant": {
+      "description": "Variant of the modal.",
+      "enum": [
+        "small",
+        "medium",
+        "large",
+        "default"
+      ],
+      "default": "'default'"
+    },
+    "width": {
+      "description": "Default width of the modal. (Type: number | string)"
+    }
+  },
+  "required": [
+    "children"
+  ],
+  "additionalProperties": false
+}

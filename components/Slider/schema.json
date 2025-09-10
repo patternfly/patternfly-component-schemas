@@ -1,0 +1,117 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Slider Props",
+  "description": "The main slider component.",
+  "properties": {
+    "areCustomStepsContinuous": {
+      "description": "Flag indicating if the slider is discrete for custom steps. This will cause the slider\nto snap to the closest value.",
+      "type": "boolean",
+      "default": false
+    },
+    "aria-describedby": {
+      "description": "One or more id's to use for the slider thumb's accessible description.",
+      "type": "string"
+    },
+    "aria-labelledby": {
+      "description": "One or more id's to use for the slider thumb's accessible label.",
+      "type": "string"
+    },
+    "className": {
+      "description": "Additional classes added to the slider.",
+      "type": "string"
+    },
+    "customSteps": {
+      "description": "Array of custom slider step objects (value and label of each step) for the slider. (Type: SliderStepObject[])",
+      "type": "array"
+    },
+    "endActions": {
+      "description": "Actions placed at the end of the slider. (React component or element)"
+    },
+    "hasTooltipOverThumb": {
+      "description": "",
+      "type": "boolean",
+      "default": false
+    },
+    "inputAriaLabel": {
+      "description": "Accessible label for the input field.",
+      "type": "string",
+      "default": "'Slider value input'"
+    },
+    "inputLabel": {
+      "description": "Text label that is place after the input field. (Type: string | number)"
+    },
+    "inputPosition": {
+      "description": "Position of the input. Note \"right\" is deprecated. Use \"end\" instead",
+      "enum": [
+        "aboveThumb",
+        "right",
+        "end"
+      ],
+      "default": "'end'"
+    },
+    "inputValue": {
+      "description": "Value displayed in the input field.",
+      "type": "number",
+      "default": 0
+    },
+    "isDisabled": {
+      "description": "Adds disabled styling, and disables the slider and the input component if present.",
+      "type": "boolean",
+      "default": false
+    },
+    "isInputVisible": {
+      "description": "Flag to show value input field.",
+      "type": "boolean",
+      "default": false
+    },
+    "leftActions": {
+      "description": "Use startActions instead. Actions placed at the start of the slider. (React component or element)"
+    },
+    "max": {
+      "description": "The maximum permitted value.",
+      "type": "number",
+      "default": 100
+    },
+    "min": {
+      "description": "The minimum permitted value.",
+      "type": "number",
+      "default": 0
+    },
+    "onChange": {
+      "description": "Value change callback. This is called when the slider value changes. (Function: (\n  event: SliderOnChangeEvent,\n  value: number,\n  inputValue?: number,\n  setLocalInputValue?: React.Dispatch<React.SetStateAction<number>>\n) => void)"
+    },
+    "rightActions": {
+      "description": "Use endActions instead. Actions placed to the right of the slider. (React component or element)"
+    },
+    "showBoundaries": {
+      "description": "Flag to indicate if boundaries should be shown for slider that does not have custom steps.",
+      "type": "boolean",
+      "default": true
+    },
+    "showTicks": {
+      "description": "Flag to indicate if ticks should be shown for slider that does not have custom steps.",
+      "type": "boolean",
+      "default": false
+    },
+    "startActions": {
+      "description": "Actions placed at the start of the slider. (React component or element)"
+    },
+    "step": {
+      "description": "The step interval.",
+      "type": "number",
+      "default": 1
+    },
+    "thumbAriaLabel": {
+      "description": "",
+      "type": "string",
+      "default": "'Value'"
+    },
+    "value": {
+      "description": "Current value of the slider.",
+      "type": "number",
+      "default": 0
+    }
+  },
+  "additionalProperties": false
+}

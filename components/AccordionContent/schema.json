@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "AccordionContent Props",
+  "description": "Props for the AccordionContent component",
+  "properties": {
+    "aria-label": {
+      "description": "Adds accessible text to the Accordion content",
+      "type": "string",
+      "default": "''"
+    },
+    "aria-labelledby": {
+      "description": "Id of the controlling accordion toggle to label the content.",
+      "type": "string"
+    },
+    "children": {
+      "description": "Content rendered inside the Accordion (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional classes added to the Accordion content",
+      "type": "string",
+      "default": "''"
+    },
+    "component": {
+      "description": "Component to use as content container (Type: React.ElementType)"
+    },
+    "contentBodyProps": {
+      "description": "Props passed to the AccordionExpandableContentBody * (Type: AccordionExpandableContentBodyProps)"
+    },
+    "id": {
+      "description": "Identify the AccordionContent item",
+      "type": "string",
+      "default": "''"
+    },
+    "isCustomContent": {
+      "description": "Flag indicating content is custom. Expanded content Body wrapper will be removed from children.  This allows multiple bodies to be rendered as content. (React component or element)",
+      "default": false
+    },
+    "isFixed": {
+      "description": "Flag to indicate Accordion content is fixed",
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "additionalProperties": false
+}

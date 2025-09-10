@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ModalBoxHeaderProps Props",
+  "description": "Props for the ModalBoxHeaderProps component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the modal box header. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the modal box header.",
+      "type": "string"
+    },
+    "help": {
+      "description": "Optional help section for the modal box header. (React component or element)"
+    }
+  },
+  "additionalProperties": false
+}

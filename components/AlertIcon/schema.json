@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "AlertIcon Props",
+  "description": "Props for the AlertIcon component",
+  "properties": {
+    "className": {
+      "description": "Additional class names added to the alert icon.",
+      "type": "string",
+      "default": "''"
+    },
+    "customIcon": {
+      "description": "A custom icon. If not set the icon is set according to the variant. (React component or element)"
+    },
+    "variant": {
+      "description": "Variant of the alert icon.",
+      "enum": [
+        "success",
+        "danger",
+        "warning",
+        "info",
+        "custom"
+      ]
+    }
+  },
+  "required": [
+    "variant"
+  ],
+  "additionalProperties": false
+}

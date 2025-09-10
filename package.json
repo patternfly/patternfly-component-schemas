@@ -1,0 +1,34 @@
+{
+  "name": "@patternfly/component-metadata",
+  "version": "1.0.0",
+  "description": "JSON Schema metadata for PatternFly React components",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/generate-schemas.js component-metadata.json",
+    "dev": "node scripts/generate-schemas.js --watch",
+    "clean": "rm -rf components/*/",
+    "rebuild": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "patternfly",
+    "react",
+    "components",
+    "json-schema",
+    "metadata"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "chokidar": "^3.5.3"
+  },
+  "files": [
+    "components/",
+    "index.js",
+    "README.md"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./components/*": "./components/*/index.js"
+  }
+}

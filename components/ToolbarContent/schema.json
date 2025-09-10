@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "ToolbarContent Props",
+  "description": "Props for the ToolbarContent component",
+  "properties": {
+    "alignItems": {
+      "description": "Vertical alignment of children",
+      "enum": [
+        "start",
+        "center",
+        "baseline",
+        "default"
+      ]
+    },
+    "children": {
+      "description": "Content to be rendered as children of the content row (React component or element)"
+    },
+    "className": {
+      "description": "Classes applied to root element of the data toolbar content row",
+      "type": "string"
+    },
+    "clearAllFilters": {
+      "description": "Optional callback for clearing all filters in the toolbar (Function: () => void)"
+    },
+    "clearFiltersButtonText": {
+      "description": "Text to display in the clear all filters button",
+      "type": "string"
+    },
+    "isExpanded": {
+      "description": "Flag indicating if a data toolbar toggle group's expandable content is expanded",
+      "type": "boolean",
+      "default": false
+    },
+    "rowWrap": {
+      "description": "Value to set for content wrapping at various breakpoints",
+      "enum": [
+        "wrap",
+        "nowrap",
+        "wrap",
+        "nowrap",
+        "wrap",
+        "nowrap",
+        "wrap",
+        "nowrap",
+        "wrap",
+        "nowrap",
+        "2xl",
+        "wrap",
+        "nowrap"
+      ]
+    },
+    "showClearFiltersButton": {
+      "description": "Flag indicating that the clear all filters button should be visible",
+      "type": "boolean",
+      "default": false
+    },
+    "toolbarId": {
+      "description": "Id of the parent Toolbar component",
+      "type": "string"
+    },
+    "visibility": {
+      "description": "Visibility at various breakpoints.",
+      "enum": [
+        "hidden",
+        "visible",
+        "hidden",
+        "visible",
+        "hidden",
+        "visible",
+        "hidden",
+        "visible",
+        "2xl",
+        "hidden",
+        "visible"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

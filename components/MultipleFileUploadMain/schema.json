@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "MultipleFileUploadMain Props",
+  "description": "Creates the visual upload interface, including the area to drag and drop files,\nan optional upload button, and descriptive instructions.",
+  "properties": {
+    "browseButtonText": {
+      "description": "Visible text label for the upload button",
+      "type": "string",
+      "default": "'Upload'"
+    },
+    "className": {
+      "description": "Class to add to outer div",
+      "type": "string"
+    },
+    "infoText": {
+      "description": "Content rendered inside the info div (React component or element)"
+    },
+    "isUploadButtonHidden": {
+      "description": "Flag to prevent the upload button from being rendered",
+      "type": "boolean"
+    },
+    "titleIcon": {
+      "description": "Content rendered inside the title icon div (React component or element)"
+    },
+    "titleText": {
+      "description": "Content rendered inside the title text div (React component or element)"
+    },
+    "titleTextSeparator": {
+      "description": "Content rendered inside the title text separator div (React component or element)"
+    }
+  },
+  "additionalProperties": false
+}

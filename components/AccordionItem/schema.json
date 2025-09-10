@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "AccordionItem Props",
+  "description": "Props for the AccordionItem component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the accordion item. (React component or element)",
+      "default": null
+    },
+    "className": {
+      "description": "Additional classes added to the accordion item.",
+      "type": "string"
+    },
+    "isExpanded": {
+      "description": "Flag to indicate whether the accordion item is expanded.",
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "additionalProperties": false
+}

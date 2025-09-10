@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "WizardFooterInternalProps Props",
+  "description": "Props for the WizardFooterInternalProps component",
+  "properties": {
+    "activeStep": {
+      "description": " (Type: WizardStep)"
+    },
+    "backButtonText": {
+      "description": " (React component or element)"
+    },
+    "cancelButtonText": {
+      "description": " (React component or element)"
+    },
+    "firstStep": {
+      "description": "",
+      "type": "boolean"
+    },
+    "isValid": {
+      "description": "",
+      "type": "boolean"
+    },
+    "nextButtonText": {
+      "description": " (React component or element)"
+    },
+    "onBack": {
+      "description": " (Type: any)"
+    },
+    "onClose": {
+      "description": " (Type: any)"
+    },
+    "onNext": {
+      "description": " (Type: any)"
+    }
+  },
+  "required": [
+    "activeStep",
+    "backButtonText",
+    "cancelButtonText",
+    "firstStep",
+    "isValid",
+    "nextButtonText",
+    "onBack",
+    "onClose",
+    "onNext"
+  ],
+  "additionalProperties": false
+}

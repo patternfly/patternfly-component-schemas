@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "DrawerActions Props",
+  "description": "Props for the DrawerActions component",
+  "properties": {
+    "children": {
+      "description": "Actions to be rendered in the panel head. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the drawer actions button.",
+      "type": "string",
+      "default": "''"
+    }
+  },
+  "additionalProperties": false
+}
