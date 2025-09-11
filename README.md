@@ -120,4 +120,4 @@ MIT
 
 ---
 
-Generated schemas follow [JSON Schema Draft 7](https://json-schema.org/specification-links.html#draft-7) specification.
+Generated schemas follow [JSON Schema Draft 2020-12](https://json-schema.org/draft/2020-12) specification.
