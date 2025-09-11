@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "TreeViewDataItem Props",
   "description": "Properties that make up a tree view data item. These properties should be passed in as an\nobject to one of the various tree view component properties which accept TreeViewDataItem as\na type.",

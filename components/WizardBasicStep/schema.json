@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "WizardBasicStep Props",
   "description": "Type used to define 'basic' steps, or in other words, steps that are neither parents or children of parents.",

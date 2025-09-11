@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "MultipleFileUploadStatus Props",
   "description": "Acts as an expandable container for all uploaded file statuses.\nAn optional text and/or icon can also be passed into this sub-component.\nThis sub-component can be conditionally rendered when at least 1 file has been\nattempted to be uploaded.",

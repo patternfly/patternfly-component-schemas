@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "PerPageOptions Props",
   "description": "Properties to customize the content and behavior of the pagination dropdown options. These\nproperties should be passed into the pagination component's perPageOptions property.",

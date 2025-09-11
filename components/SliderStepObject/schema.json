@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "SliderStepObject Props",
   "description": "Properties for creating custom steps in a slider. These properties should be passed in as\nan object within an array to the slider component's customSteps property.",

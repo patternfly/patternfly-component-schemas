@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "WizardStep Props",
   "description": "The primary child component for Wizard. Step props are used for the list of steps managed in context.",

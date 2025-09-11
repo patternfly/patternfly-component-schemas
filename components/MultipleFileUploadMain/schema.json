@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "MultipleFileUploadMain Props",
   "description": "Creates the visual upload interface, including the area to drag and drop files,\nan optional upload button, and descriptive instructions.",

@@ -67,7 +67,7 @@ function convertMetadataToJsonSchema(metadata) {
   });
 
   return {
-    $schema: 'http://json-schema.org/draft-07/schema#',
+    $schema: 'https://json-schema.org/draft/2020-12/schema',
     type: 'object',
     title: `${metadata.name} Props`,
     description: metadata.description || `Props for the ${metadata.name} component`,

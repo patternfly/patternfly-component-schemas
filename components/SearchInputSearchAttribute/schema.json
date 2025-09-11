@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "SearchInputSearchAttribute Props",
   "description": "Properties for adding search attributes to an advanced search input. These properties must\nbe passed in as an object within an array to the search input component's attribute property.",

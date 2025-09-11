@@ -1,6 +1,6 @@
 {
-  "name": "patternfly-component-schemas",
-  "version": "1.0.0",
+  "name": "@jenny-s51/patternfly-component-schemas",
+  "version": "1.0.1",
   "description": "JSON Schema metadata for PatternFly React components",
   "main": "index.js",
   "type": "module",

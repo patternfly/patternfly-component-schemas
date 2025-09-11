@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "Wizard Props",
   "description": "Wrapper for all steps and hosts state, including navigation helpers, within context.\nThe WizardContext provided by default gives any child of wizard access to those resources.",

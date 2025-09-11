@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "MenuContainer Props",
   "description": "Container that links a menu and menu toggle together, to handle basic keyboard input and control the opening and closing of a menu.",

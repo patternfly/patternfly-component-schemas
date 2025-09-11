@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "WizardNavInternal Props",
   "description": "Hosts default wizard navigation logic by utilizing the wizard's context and WizardNav/WizardNavItem.\nThis component is not exposed to consumers.",

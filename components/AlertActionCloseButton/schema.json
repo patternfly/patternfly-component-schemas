@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "AlertActionCloseButton Props",
   "description": "Renders a close button for a dismissable alert when this sub-component is passed into\nthe alert's actionClose property.",

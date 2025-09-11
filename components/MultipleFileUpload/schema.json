@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "MultipleFileUpload Props",
   "description": "Acts as a container for all other MultipleFileUpload sub-components. This sub-component\nalso provides the functionality for file uploads, and access to the uploaded files via\na callback.",

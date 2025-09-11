@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "ExpandableSectionToggle Props",
   "description": "Acts as the toggle sub-component when the main expandable section component has the isDetached\nproperty passed in. Allows for more custom control over the expandable section's toggle.",

@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "Popover Props",
   "description": "The main popover component. The following properties can also be passed into another component\nthat has a property specifically for passing in popover properties.",

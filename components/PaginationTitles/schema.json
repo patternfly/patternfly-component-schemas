@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "PaginationTitles Props",
   "description": "Properties to customize various pagination titles. The following properties should be\npassed into the pagination component's title property.",

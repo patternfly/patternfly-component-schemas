@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "DatePickerRef Props",
   "description": "Allows finer control over the calendar's open state when a React ref is passed into the\ndate picker component. Accessed via ref.current[property], e.g. ref.current.toggleCalendar().",

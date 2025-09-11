@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "FileUploadHelperText Props",
   "description": "A container for helper text content. This sub-component should be passed as a child to\nthe main file upload or file upload field component.",

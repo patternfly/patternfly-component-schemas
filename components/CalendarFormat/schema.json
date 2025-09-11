@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "CalendarFormat Props",
   "description": "Additional properties that extend from and can be passed to the main component. These\nproperties allow customizing the calendar formatting and aria-labels.",

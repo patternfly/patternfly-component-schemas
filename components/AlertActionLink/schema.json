@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "AlertActionLink Props",
   "description": "Renders buttons styled as links beneath the alert title and description when this sub-component\nis passed into the alert's actionLinks property.",

@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "WizardToggle Props",
   "description": "Used to toggle between step content, including the body and footer. This is also where the navigation and its expandability is controlled.",

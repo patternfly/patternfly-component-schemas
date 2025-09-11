@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "DualListSelectorPaneProps Props",
   "description": "Acts as the container for a list of options that are either available or chosen,\ndepending on the pane type (available or chosen). A search input and other actions,\nsuch as sorting, can also be passed into this sub-component.",
