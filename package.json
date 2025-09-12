@@ -1,6 +1,6 @@
 {
-  "name": "@jenny-s51/patternfly-component-schemas",
-  "version": "1.0.1",
+  "name": "@patternfly/patternfly-component-schemas",
+  "version": "1.1.0",
   "description": "JSON Schema metadata for PatternFly React components",
   "main": "index.js",
   "type": "module",
@@ -8,7 +8,8 @@
     "build": "node scripts/generate-schemas.js component-metadata.json",
     "dev": "node scripts/generate-schemas.js --watch",
     "clean": "rm -rf components/*/",
-    "rebuild": "npm run clean && npm run build"
+    "rebuild": "npm run clean && npm run build",
+    "semantic-release": "semantic-release"
   },
   "keywords": [
     "patternfly",
@@ -20,7 +21,12 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "chokidar": "^3.5.3"
+    "chokidar": "^3.5.3",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "semantic-release": "^22.0.12",
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3"
   },
   "files": [
     "components/",
@@ -30,5 +36,26 @@
   "exports": {
     ".": "./index.js",
     "./components/*": "./components/*/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/patternfly/patternfly-component-schemas.git"
+  },
+  "release": {
+    "branches": ["main"],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      [
+        "@semantic-release/git",
+        {
+          "assets": ["CHANGELOG.md", "package.json"],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ],
+      "@semantic-release/github"
+    ]
   }
 }
