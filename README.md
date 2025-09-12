@@ -79,14 +79,28 @@ npm run rebuild
 The package is generated from `component-metadata.json` which contains the raw PatternFly component metadata for the latest release. This file is included in the git repository for development but excluded from the NPM package.
 
 ### Updating Component Metadata
-**Current Process - (Manual)**
+
+**🤖 Automated Sync (Recommended)**
+- **Daily checks** for new PatternFly releases at 9 AM UTC
+- **Smart download**: Tries multiple sources for pre-built props.json
+- **Fallback build**: Builds from PatternFly source if pre-built unavailable
+- **Auto-sync** when new PatternFly version is released
+- **Manual trigger** available in GitHub Actions tab
+- **Automatic release** after successful sync
+
+**Sync Sources (in priority order):**
+1. 📦 PatternFly doc-core release assets
+2. 📦 PatternFly main repo release assets  
+3. 🌐 CDN/public URLs (if available)
+4. 🔨 **Official PatternFly doc-core CLI** ([cli/cli.ts#L65](https://github.com/patternfly/patternfly-doc-core/blob/a7e8e82d753b93feac1b90a35df673ef2c6e0971/cli/cli.ts#L65))
+
+**📋 Manual Process (Fallback)**
 1. Clone https://github.com/patternfly/patternfly-doc-core
 2. Run `npm run build:props` in the doc-core directory
-3. Copy `dist/props.json` content to `component-metadata.json` of this repo. 
+3. Copy `dist/props.json` content to `component-metadata.json` of this repo
 4. Run `npm run build` to regenerate schemas
-5. Test and publish
-
-**Future**: This will be automated to sync with PatternFly releases.
+5. Commit with: `feat(components): sync with PatternFly vX.X.X`
+6. Push to `main` → automatic release triggers
 
 ## 📊 Package Contents
 
@@ -111,13 +125,84 @@ This package is specifically designed for:
 
 MIT
 
+## 🚀 Automated Releases
+
+This package uses **semantic-release** for automated versioning and publishing based on conventional commits.
+
+### Commit Message Format
+
+Follow [Conventional Commits](https://conventionalcommits.org/) specification:
+
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+**Types:**
+- `feat`: New features (minor version bump)
+- `fix`: Bug fixes (patch version bump) 
+- `docs`: Documentation changes (patch version bump)
+- `chore`: Maintenance tasks (no version bump)
+- `ci`: CI/CD changes (no version bump)
+- `refactor`: Code refactoring (patch version bump)
+
+**Scopes:**
+- `components`: Component schema changes
+- `schemas`: Schema generation changes
+- `build`: Build system changes
+- `ci`: CI/CD configuration
+- `docs`: Documentation updates
+- `deps`: Dependency updates
+
+**Examples:**
+```bash
+feat(components): add new Button variant schema
+fix(schemas): correct required props validation
+docs(readme): update installation instructions
+chore(deps): update semantic-release to v22
+```
+
+### Release Process
+
+1. **Automatic**: Push commits to `main` branch
+2. **CI/CD**: GitHub Actions runs tests and build
+3. **Release**: Semantic-release analyzes commits and publishes
+4. **Changelog**: Automatically generated and committed
+
+### Manual Release (if needed)
+
+```bash
+npm run semantic-release
+```
+
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Update `component-metadata.json` with your changes
-3. Run `npm run build` to regenerate schemas
-4. Submit a pull request
+2. Create a feature branch
+3. Update `component-metadata.json` with your changes
+4. Run `npm run build` to regenerate schemas
+5. Commit using conventional commit format
+6. Submit a pull request
+
+### Development Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Build schemas
+npm run build
+
+# Watch for changes
+npm run dev
+
+# Clean and rebuild
+npm run rebuild
+```
 
 ---
 
-Generated schemas follow [JSON Schema Draft 7](https://json-schema.org/specification-links.html#draft-7) specification.
+Generated schemas follow [JSON Schema Draft 2020-12](https://json-schema.org/draft/2020-12) specification.
