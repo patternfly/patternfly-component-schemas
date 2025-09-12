@@ -1,11 +1,11 @@
-# patternfly-component-schemas
+# @patternfly/patternfly-component-schemas
 
 JSON Schema metadata for PatternFly React components, providing structured validation and documentation for component props.
 
 ## 📦 Installation
 
 ```bash
-npm install patternfly-component-schemas
+npm install @patternfly/patternfly-component-schemas
 ```
 
 ## 🏗️ Structure
@@ -13,7 +13,7 @@ npm install patternfly-component-schemas
 This package uses a split structure for optimal performance and modularity:
 
 ```
-patternfly-component-schemas/
+@patternfly/patternfly-component-schemas/
 ├── components/
 │   ├── AboutModal/
 │   │   ├── schema.json     # JSON Schema for AboutModal props
