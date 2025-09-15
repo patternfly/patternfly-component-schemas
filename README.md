@@ -80,27 +80,18 @@ The package is generated from `component-metadata.json` which contains the raw P
 
 ### Updating Component Metadata
 
-**🤖 Automated Sync (Recommended)**
-- **Daily checks** for new PatternFly releases at 9 AM UTC
-- **Smart download**: Tries multiple sources for pre-built props.json
-- **Fallback build**: Builds from PatternFly source if pre-built unavailable
-- **Auto-sync** when new PatternFly version is released
-- **Manual trigger** available in GitHub Actions tab
-- **Automatic release** after successful sync
-
-**Sync Sources (in priority order):**
-1. 📦 PatternFly doc-core release assets
-2. 📦 PatternFly main repo release assets  
-3. 🌐 CDN/public URLs (if available)
-4. 🔨 **Official PatternFly doc-core CLI** ([cli/cli.ts#L65](https://github.com/patternfly/patternfly-doc-core/blob/a7e8e82d753b93feac1b90a35df673ef2c6e0971/cli/cli.ts#L65))
-
-**📋 Manual Process (Fallback)**
+**📋 Manual Process (Current)**
 1. Clone https://github.com/patternfly/patternfly-doc-core
 2. Run `npm run build:props` in the doc-core directory
 3. Copy `dist/props.json` content to `component-metadata.json` of this repo
 4. Run `npm run build` to regenerate schemas
 5. Commit with: `feat(components): sync with PatternFly vX.X.X`
-6. Push to `main` → automatic release triggers
+6. Push to `main` → **automatic release triggers** 🚀
+
+**🔮 Future Automation**
+- Dependency management via Renovate/Dependabot
+- Automated PRs for PatternFly quarterly releases
+- Human-in-the-loop review for component updates
 
 ## 📊 Package Contents
 
