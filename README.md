@@ -1,11 +1,11 @@
-# patternfly-component-schemas
+# @patternfly/patternfly-component-schemas
 
 JSON Schema metadata for PatternFly React components, providing structured validation and documentation for component props.
 
 ## 📦 Installation
 
 ```bash
-npm install patternfly-component-schemas
+npm install @patternfly/patternfly-component-schemas
 ```
 
 ## 🏗️ Structure
@@ -13,7 +13,7 @@ npm install patternfly-component-schemas
 This package uses a split structure for optimal performance and modularity:
 
 ```
-patternfly-component-schemas/
+@patternfly/patternfly-component-schemas/
 ├── components/
 │   ├── AboutModal/
 │   │   ├── schema.json     # JSON Schema for AboutModal props
@@ -79,14 +79,19 @@ npm run rebuild
 The package is generated from `component-metadata.json` which contains the raw PatternFly component metadata for the latest release. This file is included in the git repository for development but excluded from the NPM package.
 
 ### Updating Component Metadata
-**Current Process - (Manual)**
+
+**📋 Manual Process (Current)**
 1. Clone https://github.com/patternfly/patternfly-doc-core
 2. Run `npm run build:props` in the doc-core directory
-3. Copy `dist/props.json` content to `component-metadata.json` of this repo. 
+3. Copy `dist/props.json` content to `component-metadata.json` of this repo
 4. Run `npm run build` to regenerate schemas
-5. Test and publish
+5. Commit with: `feat(components): sync with PatternFly vX.X.X`
+6. Push to `main` → **automatic release triggers** 🚀
 
-**Future**: This will be automated to sync with PatternFly releases.
+**🔮 Future Automation**
+- Dependency management via Renovate/Dependabot
+- Automated PRs for PatternFly quarterly releases
+- Human-in-the-loop review for component updates
 
 ## 📊 Package Contents
 
@@ -111,12 +116,57 @@ This package is specifically designed for:
 
 MIT
 
+## 🚀 Automated Releases
+
+This package uses **semantic-release** for automated versioning and publishing based on conventional commits.
+
+### Commit Message Format
+
+Follow [Conventional Commits](https://conventionalcommits.org/) specification:
+
+```
+<type>[optional scope]: <description>
+```
+
+**Examples:**
+```bash
+feat: add new component schemas
+fix: correct required props validation  
+docs: update installation instructions
+chore: update dependencies
+```
+
+### Release Process
+
+1. **Push commits** to `main` branch using conventional format
+2. **GitHub Actions** runs CI and tests
+3. **Semantic-release** analyzes commits and publishes to NPM
+4. **GitHub releases** created automatically
+
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Update `component-metadata.json` with your changes
-3. Run `npm run build` to regenerate schemas
-4. Submit a pull request
+2. Create a feature branch
+3. Update `component-metadata.json` with your changes
+4. Run `npm run build` to regenerate schemas
+5. Commit using conventional commit format
+6. Submit a pull request
+
+### Development Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Build schemas
+npm run build
+
+# Watch for changes
+npm run dev
+
+# Clean and rebuild
+npm run rebuild
+```
 
 ---
 
