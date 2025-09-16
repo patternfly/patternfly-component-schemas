@@ -126,48 +126,22 @@ Follow [Conventional Commits](https://conventionalcommits.org/) specification:
 
 ```
 <type>[optional scope]: <description>
-
-[optional body]
-
-[optional footer(s)]
 ```
-
-**Types:**
-- `feat`: New features (minor version bump)
-- `fix`: Bug fixes (patch version bump) 
-- `docs`: Documentation changes (patch version bump)
-- `chore`: Maintenance tasks (no version bump)
-- `ci`: CI/CD changes (no version bump)
-- `refactor`: Code refactoring (patch version bump)
-
-**Scopes:**
-- `components`: Component schema changes
-- `schemas`: Schema generation changes
-- `build`: Build system changes
-- `ci`: CI/CD configuration
-- `docs`: Documentation updates
-- `deps`: Dependency updates
 
 **Examples:**
 ```bash
-feat(components): add new Button variant schema
-fix(schemas): correct required props validation
-docs(readme): update installation instructions
-chore(deps): update semantic-release to v22
+feat: add new component schemas
+fix: correct required props validation  
+docs: update installation instructions
+chore: update dependencies
 ```
 
 ### Release Process
 
-1. **Automatic**: Push commits to `main` branch
-2. **CI/CD**: GitHub Actions runs tests and build
-3. **Release**: Semantic-release analyzes commits and publishes
-4. **Changelog**: Automatically generated and committed
-
-### Manual Release (if needed)
-
-```bash
-npm run semantic-release
-```
+1. **Push commits** to `main` branch using conventional format
+2. **GitHub Actions** runs CI and tests
+3. **Semantic-release** analyzes commits and publishes to NPM
+4. **GitHub releases** created automatically
 
 ## 🤝 Contributing
 
