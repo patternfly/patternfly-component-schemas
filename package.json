@@ -5,9 +5,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "node scripts/generate-schemas.js component-metadata.json",
+    "build": "npm run build:components && npm run build:json",
+    "build:components": "node scripts/generate-schemas.js component-metadata.json",
+    "build:json": "node scripts/generate-json-schemas.js component-metadata.json",
     "dev": "node scripts/generate-schemas.js --watch",
-    "clean": "rm -rf components/*/",
+    "clean": "rm -rf components/*/ schemas/ index.json.js",
     "rebuild": "npm run clean && npm run build",
     "semantic-release": "semantic-release"
   },
@@ -26,12 +28,16 @@
   },
   "files": [
     "components/",
+    "schemas/",
     "index.js",
+    "index.json.js",
     "README.md"
   ],
   "exports": {
     ".": "./index.js",
-    "./components/*": "./components/*/index.js"
+    "./components/*": "./components/*/index.js",
+    "./json": "./index.json.js",
+    "./schemas": "./schemas/index.json"
   },
   "repository": {
     "type": "git",

@@ -43,9 +43,10 @@ This package is specifically designed for AI-assisted development tools and Mode
 - **Assist with component selection** based on requirements
 
 ### MCP Server Integration
+#### Individual Component Imports (Tree-Shakeable)
 ```javascript
 // MCP servers can load and query component schemas
-import { componentNames, getComponentSchema } from 'patternfly-component-schemas';
+import { componentNames, getComponentSchema } from '@patternfly/patternfly-component-schemas';
 
 // Discover available components
 const components = componentNames; // 462 PatternFly components
@@ -53,6 +54,19 @@ const components = componentNames; // 462 PatternFly components
 // Get detailed component information
 const buttonSchema = await getComponentSchema('Button');
 // Returns: { schema, componentName, propsCount, requiredProps }
+```
+
+#### JSON-Optimized Integration
+```javascript
+// JSON-optimized interface with lazy loading
+import { componentNames, getComponentSchema } from '@patternfly/patternfly-component-schemas/json';
+
+// Discover available components
+const components = componentNames; // 462 PatternFly components
+
+// Get detailed component information
+const buttonSchema = await getComponentSchema('Button');
+// Returns JSON Schema with properties, required props, etc.
 ```
 
 ### AI Assistant Examples
