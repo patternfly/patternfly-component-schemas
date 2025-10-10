@@ -1,0 +1,28 @@
+// Auto-generated Zod schema for WizardNavItemProps-deprecated
+// Generated on: 2025-10-10T18:12:17.797Z
+import { z } from 'zod'
+
+export const WizardNavItemPropsSchema = z.object({
+  /** Can nest a WizardNav component for substeps */
+  children: z.any().optional(),
+  /** The content to display in the nav item */
+  content: z.any().optional(),
+  /** An optional url to use for when using an anchor component */
+  href: z.string().optional(),
+  /** The id for the nav item */
+  id: z.any().optional(),
+  /** Whether the nav item is the currently active item */
+  isCurrent: z.boolean().optional(),
+  /** Whether the nav item is disabled */
+  isDisabled: z.boolean().optional(),
+  /** Flag indicating that this NavItem has child steps and is expandable */
+  isExpandable: z.boolean().optional(),
+  /** Component used to render WizardNavItem */
+  navItemComponent: z.enum(['button', 'a']).optional(),
+  /** Callback for when the nav item is clicked */
+  onNavItemClick: z.function().optional(),
+  /** The step passed into the onNavItemClick callback */
+  step: z.number()
+})
+
+export type WizardNavItemPropsProps = z.infer<typeof WizardNavItemPropsSchema>

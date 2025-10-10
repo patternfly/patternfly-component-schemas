@@ -1,0 +1,14 @@
+// Auto-generated Zod schema for MastheadLogo
+// Generated on: 2025-10-10T18:12:17.779Z
+import { z } from 'zod'
+
+export const MastheadLogoSchema = z.object({
+  /** Content rendered inside of the masthead logo. */
+  children: z.any().optional(),
+  /** Additional classes added to the masthead logo. */
+  className: z.string().optional(),
+  /** Component type of the masthead logo. */
+  component: z.any().optional()
+})
+
+export type MastheadLogoProps = z.infer<typeof MastheadLogoSchema>

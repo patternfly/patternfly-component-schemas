@@ -1,0 +1,38 @@
+// Auto-generated Zod schema for WizardToggle-deprecated
+// Generated on: 2025-10-10T18:12:17.797Z
+import { z } from 'zod'
+
+export const WizardToggleSchema = z.object({
+  /** The currently active WizardStep */
+  activeStep: z.any(),
+  /** The button's aria-label */
+  'aria-label': z.string().optional().default('Wizard Toggle'),
+  /** The WizardFooter */
+  children: z.any().optional(),
+  /** Flag indicating the wizard has a drawer for at least one of the wizard steps */
+  hasDrawer: z.boolean().optional(),
+  /** Set to true to remove body padding */
+  hasNoBodyPadding: z.boolean().optional().default(false),
+  /** Flag indicating the wizard drawer is expanded */
+  isDrawerExpanded: z.boolean().optional(),
+  /** If the wizard is in-page */
+  isInPage: z.boolean().optional().default(true),
+  /** If the nav is open */
+  isNavOpen: z.boolean(),
+  /** Adds an accessible name to the wizard body when the body content overflows and renders
+a scrollbar. */
+  mainAriaLabel: z.string().optional().default('null'),
+  /** Adds an accessible name to the wizard body by passing the the id of one or more elements.
+The aria-labelledby will only be applied when the body content overflows and renders a scrollbar. */
+  mainAriaLabelledBy: z.string().optional().default('null'),
+  /** Function that returns the WizardNav component */
+  nav: z.any(),
+  /** Callback function for when the drawer is toggled */
+  onExpandDrawer: z.function().optional(),
+  /** Callback function for when the nav is toggled */
+  onNavToggle: z.function(),
+  /** The wizard steps */
+  steps: z.array(z.any())
+})
+
+export type WizardToggleProps = z.infer<typeof WizardToggleSchema>

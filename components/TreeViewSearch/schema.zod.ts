@@ -1,0 +1,18 @@
+// Auto-generated Zod schema for TreeViewSearch
+// Generated on: 2025-10-10T18:12:17.764Z
+import { z } from 'zod'
+
+export const TreeViewSearchSchema = z.object({
+  /** Accessible label for the search input. */
+  'aria-label': z.string().optional(),
+  /** Classes applied to the wrapper for the search input. */
+  className: z.string().optional(),
+  /** Id for the search input. */
+  id: z.string().optional(),
+  /** Name for the search input. */
+  name: z.string().optional(),
+  /** Callback for search input. */
+  onSearch: z.any().optional()
+})
+
+export type TreeViewSearchProps = z.infer<typeof TreeViewSearchSchema>
