@@ -1,0 +1,14 @@
+// Auto-generated Zod schema for ModalBoxHeader-deprecated
+// Generated on: 2025-10-10T18:12:17.795Z
+import { z } from 'zod'
+
+export const ModalBoxHeaderSchema = z.object({
+  /** Content rendered inside the modal box header. */
+  children: z.any().optional().default('null'),
+  /** Additional classes added to the modal box header. */
+  className: z.string().optional().default(''),
+  /** Optional help section for the modal box header. */
+  help: z.any().optional().default('null')
+})
+
+export type ModalBoxHeaderProps = z.infer<typeof ModalBoxHeaderSchema>

@@ -1,0 +1,16 @@
+// Auto-generated Zod schema for MenuContent
+// Generated on: 2025-10-10T18:12:17.779Z
+import { z } from 'zod'
+
+export const MenuContentSchema = z.object({
+  /** Items within group */
+  children: z.any().optional(),
+  /** Callback to return the height of the menu content */
+  getHeight: z.function().optional(),
+  /** Maximum height of menu content */
+  maxMenuHeight: z.string().optional(),
+  /** Height of the menu content */
+  menuHeight: z.string().optional()
+})
+
+export type MenuContentProps = z.infer<typeof MenuContentSchema>

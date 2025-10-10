@@ -1,0 +1,46 @@
+// Auto-generated Zod schema for MultipleFileUploadStatusItem
+// Generated on: 2025-10-10T18:12:17.776Z
+import { z } from 'zod'
+
+export const MultipleFileUploadStatusItemSchema = z.object({
+  /** Adds accessibility text to the status item deletion button */
+  buttonAriaLabel: z.string().optional().default('Remove from list'),
+  /** Class to add to outer div */
+  className: z.string().optional(),
+  /** A callback to process file reading in a custom way */
+  customFileHandler: z.function().optional(),
+  /** The file object being represented by the status item */
+  file: z.any().optional(),
+  /** A custom icon to show in place of the generic file icon */
+  fileIcon: z.any().optional(),
+  /** A custom name to display for the file rather than using built in functionality to auto-fill it */
+  fileName: z.string().optional(),
+  /** A custom file size to display for the file rather than using built in functionality to auto-fill it */
+  fileSize: z.number().optional(),
+  /** Clear button was clicked */
+  onClearClick: z.any().optional().default('() => {}'),
+  /** A callback for when the FileReader API fails */
+  onReadFail: z.function().optional().default('() => {}'),
+  /** A callback for when a selected file finishes loading */
+  onReadFinished: z.function().optional().default('() => {}'),
+  /** A callback for when a selected file starts loading */
+  onReadStarted: z.function().optional().default('() => {}'),
+  /** A callback for when the FileReader successfully reads the file */
+  onReadSuccess: z.function().optional().default('() => {}'),
+  /** Adds accessible text to the progress bar. Required when title not used and there is not any label associated with the progress bar */
+  progressAriaLabel: z.string().optional(),
+  /** Associates the progress bar with it's label for accessibility purposes. Required when title not used */
+  progressAriaLabelledBy: z.string().optional(),
+  /** Modifies the text announced by assistive technologies when the progress bar updates. */
+  progressAriaLiveMessage: z.function().optional(),
+  /** Additional content related to the status item. */
+  progressHelperText: z.any().optional(),
+  /** Unique identifier for progress. Generated if not specified. */
+  progressId: z.string().optional(),
+  /** A custom value to display for the progress component rather than using built in functionality to auto-fill it */
+  progressValue: z.number().optional(),
+  /** A custom variant to apply to the progress component rather than using built in functionality to auto-fill it */
+  progressVariant: z.enum(['danger', 'success', 'warning']).optional()
+})
+
+export type MultipleFileUploadStatusItemProps = z.infer<typeof MultipleFileUploadStatusItemSchema>

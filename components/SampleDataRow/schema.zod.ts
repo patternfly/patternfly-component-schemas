@@ -1,0 +1,14 @@
+// Auto-generated Zod schema for SampleDataRow
+// Generated on: 2025-10-10T18:12:17.759Z
+import { z } from 'zod'
+
+export const SampleDataRowSchema = z.object({
+  applications: z.number(),
+  lastModified: z.string(),
+  name: z.string(),
+  threads: z.number(),
+  url: z.string(),
+  workspaces: z.number()
+})
+
+export type SampleDataRowProps = z.infer<typeof SampleDataRowSchema>
