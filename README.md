@@ -105,12 +105,12 @@ This package provides two interfaces optimized for different use cases:
 
 **Use Tree-Shakeable if you**:
 - Need minimal application bundle size
-- Are building client-side applications
+- Know which components you'll use at build time
 - Want per-component imports
 
 **Use JSON-Optimized if you**:
 - Need all component metadata quickly
-- Are building server-side tools
+- Are building tools that need runtime discovery
 - Want fast discovery and bulk operations
 
 ## 🔧 Development
