@@ -43,9 +43,10 @@ This package is specifically designed for AI-assisted development tools and Mode
 - **Assist with component selection** based on requirements
 
 ### MCP Server Integration
+#### Individual Component Imports (Tree-Shakeable)
 ```javascript
 // MCP servers can load and query component schemas
-import { componentNames, getComponentSchema } from 'patternfly-component-schemas';
+import { componentNames, getComponentSchema } from '@patternfly/patternfly-component-schemas';
 
 // Discover available components
 const components = componentNames; // 462 PatternFly components
@@ -55,11 +56,62 @@ const buttonSchema = await getComponentSchema('Button');
 // Returns: { schema, componentName, propsCount, requiredProps }
 ```
 
+#### JSON-Optimized Integration
+```javascript
+// JSON-optimized interface with lazy loading:
+// - Single import of lightweight metadata for fast discovery of all components
+// - Bulk schema access lazy loaded on first query
+// - Fast subsequent queries after initial load
+
+import { componentNames, getComponentSchema } from '@patternfly/patternfly-component-schemas/json';
+
+// Discover all available components (no full schemas loaded yet)
+const components = componentNames; // 462 PatternFly components
+
+// Get detailed component information (lazy loads full schemas on first call)
+const buttonSchema = await getComponentSchema('Button');
+// Returns JSON Schema with properties, required props, etc.
+```
+
 ### AI Assistant Examples
 - **"What props does the Button component accept?"** → AI reads Button schema
 - **"Generate a PatternFly Alert component"** → AI uses Alert schema for validation
 - **"Show me all navigation components"** → AI filters components by name/description
 - **"Create a form with proper PatternFly components"** → AI selects appropriate form components
+
+## 📦 Package Architecture
+
+### Two Interfaces for Different Needs
+
+This package provides two interfaces optimized for different use cases:
+
+#### 🌳 Individual Component Imports (Tree-Shakeable)
+**Import**: `@patternfly/patternfly-component-schemas`
+
+**Characteristics**:
+- Optimized for selective access
+- Each component loads individually
+- Tree-shakeable (only import what you need)
+
+#### 🚀 JSON-Optimized Interface
+**Import**: `@patternfly/patternfly-component-schemas/json`
+
+**Characteristics**:
+- Optimized for bulk access patterns
+- Lightweight metadata for fast discovery
+- Lazy-loaded (full schemas on demand)
+
+### Quick Decision Guide
+
+**Use Tree-Shakeable if you**:
+- Need minimal application bundle size
+- Know which components you'll use at build time
+- Want per-component imports
+
+**Use JSON-Optimized if you**:
+- Need all component metadata quickly
+- Are building tools that need runtime discovery
+- Want fast discovery and bulk operations
 
 ## 🔧 Development
 
