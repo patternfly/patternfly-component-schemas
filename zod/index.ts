@@ -1,5 +1,5 @@
 // Auto-generated Zod schemas index for PatternFly components
-// Generated on: 2025-10-16T18:45:33.896Z
+// Generated on: 2025-10-16T18:56:01.665Z
 import { z } from 'zod'
 
 export * from '../components/KeyboardHandler/schema.zod.js'

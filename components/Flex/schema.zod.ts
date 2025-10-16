@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Flex
-// Generated on: 2025-10-16T18:45:33.827Z
+// Generated on: 2025-10-16T18:56:01.610Z
 import { z } from 'zod'
 
 export const FlexSchema = z.object({
@@ -81,7 +81,7 @@ export const FlexSchema = z.object({
   '2xl'?: 'wrap', 'wrapReverse', 'nowrap';
 ']).optional(),
   /** Whether to set width: 100% at various breakpoints */
-  fullWidth: z.record(z.unknown()).optional(),
+  fullWidth: z.unknown().optional(),
   /** Gap between items at various breakpoints. This will override spacers for the main axis. */
   gap: z.enum(['gapNone', 'gapXs', 'gapSm', 'gapMd', 'gapLg', 'gapXl', 'gap2xl', 'gap3xl', 'gap4xl';
   sm?: 'gap', 'gapNone', 'gapXs', 'gapSm', 'gapMd', 'gapLg', 'gapXl', 'gap2xl', 'gap3xl', 'gap4xl';
@@ -91,7 +91,7 @@ export const FlexSchema = z.object({
   '2xl'?: 'gap', 'gapNone', 'gapXs', 'gapSm', 'gapMd', 'gapLg', 'gapXl', 'gap2xl', 'gap3xl', 'gap4xl';
 ']).optional(),
   /** Whether to add flex: grow at various breakpoints */
-  grow: z.record(z.unknown()).optional(),
+  grow: z.unknown().optional(),
   /** Value to add for justify-content property at various breakpoints */
   justifyContent: z.enum(['justifyContentFlexStart', 'justifyContentFlexEnd', 'justifyContentCenter', 'justifyContentSpaceBetween', 'justifyContentSpaceAround', 'justifyContentSpaceEvenly';
   sm?', 'justifyContentFlexStart', 'justifyContentFlexEnd', 'justifyContentCenter', 'justifyContentSpaceBetween', 'justifyContentSpaceAround', 'justifyContentSpaceEvenly';
@@ -101,7 +101,7 @@ export const FlexSchema = z.object({
   '2xl'?', 'justifyContentFlexStart', 'justifyContentFlexEnd', 'justifyContentCenter', 'justifyContentSpaceBetween', 'justifyContentSpaceAround', 'justifyContentSpaceEvenly';
 ']).optional(),
   /** Modifies the flex layout element order property */
-  order: z.record(z.unknown()).optional(),
+  order: z.unknown().optional(),
   /** Gap between rows at various breakpoints. This will override spacers for the main axis. */
   rowGap: z.enum(['rowGap', 'rowGapNone', 'rowGapXs', 'rowGapSm', 'rowGapMd', 'rowGapLg', 'rowGapXl', 'rowGap2xl', 'rowGap3xl', 'rowGap4xl';
   sm?', 'rowGap', 'rowGapNone', 'rowGapXs', 'rowGapSm', 'rowGapMd', 'rowGapLg', 'rowGapXl', 'rowGap2xl', 'rowGap3xl', 'rowGap4xl';
@@ -111,7 +111,7 @@ export const FlexSchema = z.object({
   '2xl'?', 'rowGap', 'rowGapNone', 'rowGapXs', 'rowGapSm', 'rowGapMd', 'rowGapLg', 'rowGapXl', 'rowGap2xl', 'rowGap3xl', 'rowGap4xl';
 ']).optional(),
   /** Whether to add flex: shrink at various breakpoints */
-  shrink: z.record(z.unknown()).optional(),
+  shrink: z.unknown().optional(),
   /** Space items at various breakpoints */
   spaceItems: z.enum(['spaceItemsNone', 'spaceItemsXs', 'spaceItemsSm', 'spaceItemsMd', 'spaceItemsLg', 'spaceItemsXl', 'spaceItems2xl', 'spaceItems3xl', 'spaceItems4xl';
   sm?', 'spaceItemsNone', 'spaceItemsXs', 'spaceItemsSm', 'spaceItemsMd', 'spaceItemsLg', 'spaceItemsXl', 'spaceItems2xl', 'spaceItems3xl', 'spaceItems4xl';

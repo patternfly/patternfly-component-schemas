@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ToggleGroup
-// Generated on: 2025-10-16T18:45:33.833Z
+// Generated on: 2025-10-16T18:56:01.616Z
 import { z } from 'zod'
 
 export const ToggleGroupSchema = z.object({

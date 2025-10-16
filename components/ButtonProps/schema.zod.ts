@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ButtonProps
-// Generated on: 2025-10-16T18:45:33.881Z
+// Generated on: 2025-10-16T18:56:01.653Z
 import { z } from 'zod'
 
 export const ButtonPropsSchema = z.object({

@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for PopperProps
-// Generated on: 2025-10-16T18:45:33.828Z
+// Generated on: 2025-10-16T18:56:01.612Z
 import { z } from 'zod'
 
 export const PopperPropsSchema = z.object({
@@ -74,7 +74,7 @@ Passing this prop will remove the wrapper div element from the popper. */
   left: styles.modifiers.left,
   right: styles.modifiers.right
 } */
-  positionModifiers: z.record(z.unknown()).optional(),
+  positionModifiers: z.unknown().optional(),
   /** Flag to prevent the popper from overflowing its container and becoming partially obscured. */
   preventOverflow: z.boolean().optional(),
   /** Trigger reference element to which the popper is relatively placed to. */

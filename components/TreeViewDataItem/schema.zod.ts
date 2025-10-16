@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for TreeViewDataItem
-// Generated on: 2025-10-16T18:45:33.832Z
+// Generated on: 2025-10-16T18:56:01.615Z
 import { z } from 'zod'
 
 export const TreeViewDataItemSchema = z.object({

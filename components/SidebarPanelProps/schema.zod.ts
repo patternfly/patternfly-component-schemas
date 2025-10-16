@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for SidebarPanelProps
-// Generated on: 2025-10-16T18:45:33.844Z
+// Generated on: 2025-10-16T18:56:01.624Z
 import { z } from 'zod'
 
 export const SidebarPanelPropsSchema = z.object({

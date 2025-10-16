@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for NavItem
-// Generated on: 2025-10-16T18:45:33.854Z
+// Generated on: 2025-10-16T18:56:01.633Z
 import { z } from 'zod'
 
 export const NavItemSchema = z.object({

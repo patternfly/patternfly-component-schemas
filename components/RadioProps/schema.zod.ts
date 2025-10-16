@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for RadioProps
-// Generated on: 2025-10-16T18:45:33.846Z
+// Generated on: 2025-10-16T18:56:01.626Z
 import { z } from 'zod'
 
 export const RadioPropsSchema = z.object({

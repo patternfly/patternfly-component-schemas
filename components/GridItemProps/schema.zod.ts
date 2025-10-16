@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for GridItemProps
-// Generated on: 2025-10-16T18:45:33.827Z
+// Generated on: 2025-10-16T18:56:01.611Z
 import { z } from 'zod'
 
 export const GridItemPropsSchema = z.object({
@@ -24,7 +24,7 @@ export const GridItemPropsSchema = z.object({
   /** the number of columns a grid item is offset */
   offset: z.unknown().optional(),
   /** Modifies the flex layout element order property */
-  order: z.record(z.unknown()).optional(),
+  order: z.unknown().optional(),
   /** the number of rows the grid item spans. Value should be a number 1-12 */
   rowSpan: z.unknown().optional(),
   /** the number of columns the grid item spans on small device. Value should be a number 1-12 */

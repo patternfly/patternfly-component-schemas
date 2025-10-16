@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ModalBox
-// Generated on: 2025-10-16T18:45:33.863Z
+// Generated on: 2025-10-16T18:56:01.639Z
 import { z } from 'zod'
 
 export const ModalBoxSchema = z.object({

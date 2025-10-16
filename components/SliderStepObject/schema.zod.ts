@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for SliderStepObject
-// Generated on: 2025-10-16T18:45:33.841Z
+// Generated on: 2025-10-16T18:56:01.623Z
 import { z } from 'zod'
 
 export const SliderStepObjectSchema = z.object({

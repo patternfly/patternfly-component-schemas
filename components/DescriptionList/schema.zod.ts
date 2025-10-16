@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for DescriptionList
-// Generated on: 2025-10-16T18:45:33.878Z
+// Generated on: 2025-10-16T18:56:01.651Z
 import { z } from 'zod'
 
 export const DescriptionListSchema = z.object({
   /** Sets the minimum column size for the auto-fit (isAutoFit) layout at various breakpoints. */
-  autoFitMinModifier: z.record(z.unknown()).optional(),
+  autoFitMinModifier: z.unknown().optional(),
   /** Anything that can be rendered inside of the list */
   children: z.custom<React.ReactNode>().optional().default('null'),
   /** Additional classes added to the list */
@@ -20,7 +20,7 @@ export const DescriptionListSchema = z.object({
   /** Sets the display size of the descriptions in the description list. */
   displaySize: z.enum(['default', 'lg', '2xl']).optional().default('default'),
   /** Sets the horizontal description list's term column width at various breakpoints. */
-  horizontalTermWidthModifier: z.record(z.unknown()).optional(),
+  horizontalTermWidthModifier: z.unknown().optional(),
   /** Sets the description list to format automatically. */
   isAutoColumnWidths: z.boolean().optional(),
   /** Sets the description list to auto fit. */

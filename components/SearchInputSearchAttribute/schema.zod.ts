@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for SearchInputSearchAttribute
-// Generated on: 2025-10-16T18:45:33.844Z
+// Generated on: 2025-10-16T18:56:01.625Z
 import { z } from 'zod'
 
 export const SearchInputSearchAttributeSchema = z.object({

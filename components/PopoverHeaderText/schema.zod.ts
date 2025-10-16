@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for PopoverHeaderText
-// Generated on: 2025-10-16T18:45:33.848Z
+// Generated on: 2025-10-16T18:56:01.627Z
 import { z } from 'zod'
 
 export const PopoverHeaderTextSchema = z.object({

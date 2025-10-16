@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for DualListSelectorState-deprecated
-// Generated on: 2025-10-16T18:45:33.892Z
+// Generated on: 2025-10-16T18:56:01.664Z
 import { z } from 'zod'
 
 export const DualListSelectorStateSchema = z.object({

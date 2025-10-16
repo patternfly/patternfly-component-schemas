@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Popover
-// Generated on: 2025-10-16T18:45:33.848Z
+// Generated on: 2025-10-16T18:56:01.628Z
 import { z } from 'zod'
 
 export const PopoverSchema = z.object({
@@ -23,7 +23,7 @@ bodyContent={hide => <Button onClick={() => hide()}>Close</Button>} */
   /** The trigger reference element to which the popover is relatively placed to. If you cannot wrap
 the element with the Popover, you can use the triggerRef prop instead.
 Usage: <Popover><Button>Reference</Button></Popover> */
-  children: z.custom<React.ReactElement>().optional(),
+  children: z.unknown().optional(),
   /** Additional classes added to the popover. */
   className: z.string().optional().default(''),
   /** Accessible label for the close button. */

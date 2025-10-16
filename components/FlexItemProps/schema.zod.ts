@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for FlexItemProps
-// Generated on: 2025-10-16T18:45:33.826Z
+// Generated on: 2025-10-16T18:56:01.610Z
 import { z } from 'zod'
 
 export const FlexItemPropsSchema = z.object({
@@ -34,13 +34,13 @@ export const FlexItemPropsSchema = z.object({
     '2xl'?: 'flexDefault', 'flexNone', 'flex_1', 'flex_2', 'flex_3', 'flex_4';
   ']).optional(),
   /** Whether to set width: 100% at various breakpoints */
-  fullWidth: z.record(z.unknown()).optional(),
+  fullWidth: z.unknown().optional(),
   /** Whether to add flex: grow at various breakpoints */
-  grow: z.record(z.unknown()).optional(),
+  grow: z.unknown().optional(),
   /** Modifies the flex layout element order property */
-  order: z.record(z.unknown()).optional(),
+  order: z.unknown().optional(),
   /** Whether to add flex: shrink at various breakpoints */
-  shrink: z.record(z.unknown()).optional(),
+  shrink: z.unknown().optional(),
   /** Spacers at various breakpoints */
   spacer: z.enum(['spacerNone', 'spacerXs', 'spacerSm', 'spacerMd', 'spacerLg', 'spacerXl', 'spacer2xl', 'spacer3xl', 'spacer4xl';
     sm?', 'spacerNone', 'spacerXs', 'spacerSm', 'spacerMd', 'spacerLg', 'spacerXl', 'spacer2xl', 'spacer3xl', 'spacer4xl';

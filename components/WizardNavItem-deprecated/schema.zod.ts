@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for WizardNavItem-deprecated
-// Generated on: 2025-10-16T18:45:33.889Z
+// Generated on: 2025-10-16T18:56:01.661Z
 import { z } from 'zod'
 
 export const WizardNavItemSchema = z.object({

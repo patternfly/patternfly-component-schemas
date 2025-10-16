@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Toolbar
-// Generated on: 2025-10-16T18:45:33.835Z
+// Generated on: 2025-10-16T18:56:01.619Z
 import { z } from 'zod'
 
 export const ToolbarSchema = z.object({

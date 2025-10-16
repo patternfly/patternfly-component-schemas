@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for NumberInput
-// Generated on: 2025-10-16T18:45:33.855Z
+// Generated on: 2025-10-16T18:56:01.633Z
 import { z } from 'zod'
 
 export const NumberInputSchema = z.object({

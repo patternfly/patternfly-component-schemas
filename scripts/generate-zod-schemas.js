@@ -16,19 +16,20 @@ function getPropsSignature(componentData) {
     .join('|');
 }
 
-// Cache regex for performance
-const ARRAY_GENERIC_REGEX = /Array<(.+)>/;
+// Cache regexes for performance
+const ARRAY_TYPE_REGEX = /^(.+)\[\]$|^Array<(.+)>$/;
+const REACT_NODE_REGEX = /React\.?ReactNode/;
+const REACT_ELEMENT_REGEX = /React\.?ReactElement/;
+const EVENT_TYPE_REGEX = /Event/;
+const FUNCTION_TYPE_REGEX = /=>|function|Function/;
+const OBJECT_TYPE_REGEX = /\{.+\}/;
 
 // Helper to extract inner type from array notation
 function getArrayInnerType(type) {
-  // Handle string[] format
-  if (type.endsWith('[]')) {
-    return type.slice(0, -2);
-  }
-  // Handle Array<string> format
-  const match = type.match(ARRAY_GENERIC_REGEX);
+  const match = type.match(ARRAY_TYPE_REGEX);
   if (match) {
-    return match[1];
+    // match[1] is for "type[]" format, match[2] is for "Array<type>" format
+    return match[1] || match[2];
   }
   return null;
 }
@@ -48,16 +49,16 @@ function typeStringToZod(type) {
       return 'z.date()';
     default:
       // Use more specific types for complex React/DOM types
-      if (trimmed.includes('ReactNode') || trimmed.includes('React.ReactNode')) {
+      if (REACT_NODE_REGEX.test(trimmed)) {
         return 'z.custom<React.ReactNode>()';
       }
-      if (trimmed.includes('ReactElement') || trimmed.includes('React.ReactElement')) {
+      if (REACT_ELEMENT_REGEX.test(trimmed)) {
         return 'z.custom<React.ReactElement>()';
       }
-      if (trimmed.includes('Event')) {
+      if (EVENT_TYPE_REGEX.test(trimmed)) {
         return 'z.custom<Event>()';
       }
-      if (trimmed.includes('{') && trimmed.includes('}')) {
+      if (OBJECT_TYPE_REGEX.test(trimmed)) {
         return 'z.record(z.unknown())';
       }
       // Fallback to unknown instead of any
@@ -103,7 +104,7 @@ function typeToZod(prop) {
       // Complex types - use pattern matching with early returns
       default:
         // Array types
-        if (type.includes('[]') || type.includes('Array<')) {
+        if (ARRAY_TYPE_REGEX.test(type)) {
           const innerType = getArrayInnerType(type);
           zodType = innerType 
             ? `z.array(${typeStringToZod(innerType)})` 
@@ -112,29 +113,29 @@ function typeToZod(prop) {
         }
         
         // React types
-        if (type.includes('ReactNode') || type.includes('React.ReactNode')) {
+        if (REACT_NODE_REGEX.test(type)) {
           zodType = 'z.custom<React.ReactNode>()';
           break;
         }
-        if (type.includes('ReactElement') || type.includes('React.ReactElement')) {
+        if (REACT_ELEMENT_REGEX.test(type)) {
           zodType = 'z.custom<React.ReactElement>()';
           break;
         }
         
         // Event types
-        if (type.includes('MouseEvent') || type.includes('KeyboardEvent') || type.includes('Event')) {
+        if (EVENT_TYPE_REGEX.test(type)) {
           zodType = 'z.custom<Event>()';
           break;
         }
         
         // Function types
-        if (type.includes('=>') || type.includes('function') || type.includes('Function')) {
+        if (FUNCTION_TYPE_REGEX.test(type)) {
           zodType = 'z.function()';
           break;
         }
         
         // Object types
-        if (type.includes('{') && type.includes('}')) {
+        if (OBJECT_TYPE_REGEX.test(type)) {
           zodType = 'z.record(z.unknown())';
           break;
         }

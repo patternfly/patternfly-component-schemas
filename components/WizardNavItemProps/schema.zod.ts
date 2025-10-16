@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for WizardNavItemProps
-// Generated on: 2025-10-16T18:45:33.829Z
+// Generated on: 2025-10-16T18:56:01.613Z
 import { z } from 'zod'
 
 export const WizardNavItemPropsSchema = z.object({

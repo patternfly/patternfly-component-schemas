@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for WizardStep-deprecated
-// Generated on: 2025-10-16T18:45:33.891Z
+// Generated on: 2025-10-16T18:56:01.663Z
 import { z } from 'zod'
 
 export const WizardStepSchema = z.object({

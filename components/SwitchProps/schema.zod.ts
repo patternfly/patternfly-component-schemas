@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for SwitchProps
-// Generated on: 2025-10-16T18:45:33.839Z
+// Generated on: 2025-10-16T18:56:01.623Z
 import { z } from 'zod'
 
 export const SwitchPropsSchema = z.object({

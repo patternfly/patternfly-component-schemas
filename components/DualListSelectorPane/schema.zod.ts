@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for DualListSelectorPane
-// Generated on: 2025-10-16T18:45:33.872Z
+// Generated on: 2025-10-16T18:56:01.645Z
 import { z } from 'zod'
 
 export const DualListSelectorPaneSchema = z.object({

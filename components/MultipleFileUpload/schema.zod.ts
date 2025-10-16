@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for MultipleFileUpload
-// Generated on: 2025-10-16T18:45:33.857Z
+// Generated on: 2025-10-16T18:56:01.635Z
 import { z } from 'zod'
 
 export const MultipleFileUploadSchema = z.object({
@@ -12,7 +12,7 @@ export const MultipleFileUploadSchema = z.object({
   /** Flag setting the component to horizontal styling mode */
   isHorizontal: z.boolean().optional(),
   /** When files are dropped or uploaded this callback will be called with all accepted files */
-  onFileDrop: z.array(z.unknown()).optional().default('() => {}')
+  onFileDrop: z.custom<Event>().optional().default('() => {}')
 })
 
 export type MultipleFileUploadProps = z.infer<typeof MultipleFileUploadSchema>

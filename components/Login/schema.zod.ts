@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Login
-// Generated on: 2025-10-16T18:45:33.864Z
+// Generated on: 2025-10-16T18:56:01.640Z
 import { z } from 'zod'
 
 export const LoginSchema = z.object({

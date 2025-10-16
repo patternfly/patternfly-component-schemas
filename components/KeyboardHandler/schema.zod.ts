@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for KeyboardHandler
-// Generated on: 2025-10-16T18:45:33.825Z
+// Generated on: 2025-10-16T18:56:01.608Z
 import { z } from 'zod'
 
 export const KeyboardHandlerSchema = z.object({

@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for TextInputProps
-// Generated on: 2025-10-16T18:45:33.837Z
+// Generated on: 2025-10-16T18:56:01.621Z
 import { z } from 'zod'
 
 export const TextInputPropsSchema = z.object({

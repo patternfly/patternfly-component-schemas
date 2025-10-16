@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for FormFieldGroupToggleProps
-// Generated on: 2025-10-16T18:45:33.869Z
+// Generated on: 2025-10-16T18:56:01.643Z
 import { z } from 'zod'
 
 export const FormFieldGroupTogglePropsSchema = z.object({

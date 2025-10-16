@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ModalProps-deprecated
-// Generated on: 2025-10-16T18:45:33.889Z
+// Generated on: 2025-10-16T18:56:01.660Z
 import { z } from 'zod'
 
 export const ModalPropsSchema = z.object({

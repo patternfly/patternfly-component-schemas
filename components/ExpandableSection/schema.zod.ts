@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ExpandableSection
-// Generated on: 2025-10-16T18:45:33.868Z
+// Generated on: 2025-10-16T18:56:01.642Z
 import { z } from 'zod'
 
 export const ExpandableSectionSchema = z.object({

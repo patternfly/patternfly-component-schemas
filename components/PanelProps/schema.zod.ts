@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for PanelProps
-// Generated on: 2025-10-16T18:45:33.853Z
+// Generated on: 2025-10-16T18:56:01.632Z
 import { z } from 'zod'
 
 export const PanelPropsSchema = z.object({

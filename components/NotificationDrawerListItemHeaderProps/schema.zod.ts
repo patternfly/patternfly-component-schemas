@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for NotificationDrawerListItemHeaderProps
-// Generated on: 2025-10-16T18:45:33.857Z
+// Generated on: 2025-10-16T18:56:01.635Z
 import { z } from 'zod'
 
 export const NotificationDrawerListItemHeaderPropsSchema = z.object({

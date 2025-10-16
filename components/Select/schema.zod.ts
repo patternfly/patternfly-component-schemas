@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Select
-// Generated on: 2025-10-16T18:45:33.846Z
+// Generated on: 2025-10-16T18:56:01.625Z
 import { z } from 'zod'
 
 export const SelectSchema = z.object({

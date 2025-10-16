@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ActionList
-// Generated on: 2025-10-16T18:45:33.888Z
+// Generated on: 2025-10-16T18:56:01.659Z
 import { z } from 'zod'
 
 export const ActionListSchema = z.object({

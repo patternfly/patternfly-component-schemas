@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Tooltip
-// Generated on: 2025-10-16T18:45:33.833Z
+// Generated on: 2025-10-16T18:56:01.616Z
 import { z } from 'zod'
 
 export const TooltipSchema = z.object({
@@ -18,7 +18,7 @@ assistive technologies. Otherwise the default behavior is 'off'. */
   /** The trigger reference element to which the Tooltip is relatively placed to.
 If you cannot wrap the element with the Tooltip, you can use the triggerRef prop instead.
 Usage: <Tooltip><Button>Reference</Button></Tooltip> */
-  children: z.custom<React.ReactElement>().optional(),
+  children: z.unknown().optional(),
   /** Tooltip additional class */
   className: z.string().optional().default(''),
   /** Tooltip content */

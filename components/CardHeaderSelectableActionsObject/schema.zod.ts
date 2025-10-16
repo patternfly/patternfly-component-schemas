@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for CardHeaderSelectableActionsObject
-// Generated on: 2025-10-16T18:45:33.882Z
+// Generated on: 2025-10-16T18:56:01.654Z
 import { z } from 'zod'
 
 export const CardHeaderSelectableActionsObjectSchema = z.object({

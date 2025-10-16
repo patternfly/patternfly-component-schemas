@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for AlertActionCloseButton
-// Generated on: 2025-10-16T18:45:33.886Z
+// Generated on: 2025-10-16T18:56:01.657Z
 import { z } from 'zod'
 
 export const AlertActionCloseButtonSchema = z.object({

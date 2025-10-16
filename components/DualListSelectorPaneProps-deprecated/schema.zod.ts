@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for DualListSelectorPaneProps-deprecated
-// Generated on: 2025-10-16T18:45:33.891Z
+// Generated on: 2025-10-16T18:56:01.663Z
 import { z } from 'zod'
 
 export const DualListSelectorPanePropsSchema = z.object({
@@ -19,7 +19,7 @@ export const DualListSelectorPanePropsSchema = z.object({
   isSearchable: z.boolean().optional(),
   /** Minimum height of the list of options rendered in the pane. * */
   listMinHeight: z.string().optional(),
-  onFilterUpdate: z.array(z.unknown()).optional(),
+  onFilterUpdate: z.custom<React.ReactNode>().optional(),
   onOptionCheck: z.any().optional(),
   onOptionSelect: z.any().optional(),
   /** Callback for search input. To be used when isSearchable is true. */

@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for DualListSelector-deprecated
-// Generated on: 2025-10-16T18:45:33.892Z
+// Generated on: 2025-10-16T18:56:01.663Z
 import { z } from 'zod'
 
 export const DualListSelectorSchema = z.object({
   /** Optional callback for the dynamically built add all button */
-  addAll: z.array(z.unknown()).optional(),
+  addAll: z.custom<React.ReactNode>().optional(),
   /** Accessible label for the dynamically built add all button */
   addAllAriaLabel: z.string().optional().default('Add all'),
   /** Tooltip content for the dynamically built add all button */
@@ -12,7 +12,7 @@ export const DualListSelectorSchema = z.object({
   /** Additional tooltip properties for the dynamically built add all tooltip */
   addAllTooltipProps: z.unknown().optional(),
   /** Optional callback for the dynamically built add selected button */
-  addSelected: z.array(z.unknown()).optional(),
+  addSelected: z.custom<React.ReactNode>().optional(),
   /** Accessible label for the dynamically built add selected button */
   addSelectedAriaLabel: z.string().optional().default('Add selected'),
   /** Tooltip content for the dynamically built add selected button */
@@ -60,13 +60,13 @@ export const DualListSelectorSchema = z.object({
   /** A callback for when the search input value for the dynamically built chosen options changes. */
   onChosenOptionsSearchInputChanged: z.custom<Event>().optional(),
   /** Callback fired every time dynamically built options are chosen or removed */
-  onListChange: z.array(z.unknown()).optional(),
+  onListChange: z.custom<React.ReactNode>().optional(),
   /** Optional callback fired when a dynamically built option is checked */
   onOptionCheck: z.any().optional(),
   /** Optional callback fired when a dynamically built option is selected */
   onOptionSelect: z.any().optional(),
   /** Optional callback for the dynamically built remove all button */
-  removeAll: z.array(z.unknown()).optional(),
+  removeAll: z.custom<React.ReactNode>().optional(),
   /** Accessible label for the dynamically built remove all button */
   removeAllAriaLabel: z.string().optional().default('Remove all'),
   /** Tooltip content for the dynamically built remove all button */
@@ -74,7 +74,7 @@ export const DualListSelectorSchema = z.object({
   /** Additional tooltip properties for the dynamically built remove all tooltip */
   removeAllTooltipProps: z.unknown().optional(),
   /** Optional callback for the dynamically built remove selected button */
-  removeSelected: z.array(z.unknown()).optional(),
+  removeSelected: z.custom<React.ReactNode>().optional(),
   /** Accessible label for the dynamically built remove selected button */
   removeSelectedAriaLabel: z.string().optional().default('Remove selected'),
   /** Tooltip content for the dynamically built remove selected button */

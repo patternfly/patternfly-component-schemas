@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for NotificationDrawerGroupProps
-// Generated on: 2025-10-16T18:45:33.858Z
+// Generated on: 2025-10-16T18:56:01.636Z
 import { z } from 'zod'
 
 export const NotificationDrawerGroupPropsSchema = z.object({
