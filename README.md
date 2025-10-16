@@ -58,13 +58,17 @@ const buttonSchema = await getComponentSchema('Button');
 
 #### JSON-Optimized Integration
 ```javascript
-// JSON-optimized interface with lazy loading
+// JSON-optimized interface with lazy loading:
+// - Single import of lightweight metadata for fast discovery of all components
+// - Bulk schema access lazy loaded on first query
+// - Fast subsequent queries after initial load
+
 import { componentNames, getComponentSchema } from '@patternfly/patternfly-component-schemas/json';
 
-// Discover available components
+// Discover all available components (no full schemas loaded yet)
 const components = componentNames; // 462 PatternFly components
 
-// Get detailed component information
+// Get detailed component information (lazy loads full schemas on first call)
 const buttonSchema = await getComponentSchema('Button');
 // Returns JSON Schema with properties, required props, etc.
 ```
