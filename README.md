@@ -79,6 +79,40 @@ const buttonSchema = await getComponentSchema('Button');
 - **"Show me all navigation components"** → AI filters components by name/description
 - **"Create a form with proper PatternFly components"** → AI selects appropriate form components
 
+## 📦 Package Architecture
+
+### Two Interfaces for Different Needs
+
+This package provides two interfaces optimized for different use cases:
+
+#### 🌳 Individual Component Imports (Tree-Shakeable)
+**Import**: `@patternfly/patternfly-component-schemas`
+
+**Characteristics**:
+- Optimized for selective access
+- Each component loads individually
+- Tree-shakeable (only import what you need)
+
+#### 🚀 JSON-Optimized Interface
+**Import**: `@patternfly/patternfly-component-schemas/json`
+
+**Characteristics**:
+- Optimized for bulk access patterns
+- Lightweight metadata for fast discovery
+- Lazy-loaded (full schemas on demand)
+
+### Quick Decision Guide
+
+**Use Tree-Shakeable if you**:
+- Need minimal application bundle size
+- Are building client-side applications
+- Want per-component imports
+
+**Use JSON-Optimized if you**:
+- Need all component metadata quickly
+- Are building server-side tools
+- Want fast discovery and bulk operations
+
 ## 🔧 Development
 
 ### Building from Source
