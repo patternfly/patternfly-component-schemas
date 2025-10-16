@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Truncate
-// Generated on: 2025-10-16T18:56:01.614Z
+// Generated on: 2025-10-16T19:02:51.720Z
 import { z } from 'zod'
 
 export const TruncateSchema = z.object({

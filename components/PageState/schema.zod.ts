@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for PageState
-// Generated on: 2025-10-16T18:56:01.632Z
+// Generated on: 2025-10-16T19:02:51.736Z
 import { z } from 'zod'
 
 export const PageStateSchema = z.object({

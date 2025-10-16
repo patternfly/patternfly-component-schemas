@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for AboutModalBoxCloseButtonProps
-// Generated on: 2025-10-16T18:56:01.659Z
+// Generated on: 2025-10-16T19:02:51.757Z
 import { z } from 'zod'
 
 export const AboutModalBoxCloseButtonPropsSchema = z.object({

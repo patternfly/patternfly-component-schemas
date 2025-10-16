@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for WizardBasicStep
-// Generated on: 2025-10-16T18:56:01.612Z
+// Generated on: 2025-10-16T19:02:51.718Z
 import { z } from 'zod'
 
 export const WizardBasicStepSchema = z.object({

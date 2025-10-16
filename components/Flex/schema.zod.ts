@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Flex
-// Generated on: 2025-10-16T18:56:01.610Z
+// Generated on: 2025-10-16T19:02:51.716Z
 import { z } from 'zod'
 
 export const FlexSchema = z.object({

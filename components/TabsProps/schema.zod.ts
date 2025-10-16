@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for TabsProps
-// Generated on: 2025-10-16T18:56:01.622Z
+// Generated on: 2025-10-16T19:02:51.726Z
 import { z } from 'zod'
 
 export const TabsPropsSchema = z.object({

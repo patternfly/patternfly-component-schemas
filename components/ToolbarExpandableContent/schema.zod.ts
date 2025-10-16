@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ToolbarExpandableContent
-// Generated on: 2025-10-16T18:56:01.618Z
+// Generated on: 2025-10-16T19:02:51.723Z
 import { z } from 'zod'
 
 export const ToolbarExpandableContentSchema = z.object({

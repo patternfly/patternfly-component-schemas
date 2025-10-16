@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for TextInputExpandedObj
-// Generated on: 2025-10-16T18:56:01.621Z
+// Generated on: 2025-10-16T19:02:51.726Z
 import { z } from 'zod'
 
 export const TextInputExpandedObjSchema = z.object({

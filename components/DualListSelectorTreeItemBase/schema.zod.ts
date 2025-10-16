@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for DualListSelectorTreeItemBase
-// Generated on: 2025-10-16T18:56:01.645Z
+// Generated on: 2025-10-16T19:02:51.747Z
 import { z } from 'zod'
 
 export const DualListSelectorTreeItemBaseSchema = z.object({

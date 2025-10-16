@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for MenuToggleCheckbox
-// Generated on: 2025-10-16T18:56:01.636Z
+// Generated on: 2025-10-16T19:02:51.739Z
 import { z } from 'zod'
 
 export const MenuToggleCheckboxSchema = z.object({

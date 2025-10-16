@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Gallery
-// Generated on: 2025-10-16T18:56:01.611Z
+// Generated on: 2025-10-16T19:02:51.717Z
 import { z } from 'zod'
 
 export const GallerySchema = z.object({

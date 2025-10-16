@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for TooltipContent
-// Generated on: 2025-10-16T18:56:01.616Z
+// Generated on: 2025-10-16T19:02:51.721Z
 import { z } from 'zod'
 
 export const TooltipContentSchema = z.object({

@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for TimePickerProps
-// Generated on: 2025-10-16T18:56:01.620Z
+// Generated on: 2025-10-16T19:02:51.724Z
 import { z } from 'zod'
 
 export const TimePickerPropsSchema = z.object({

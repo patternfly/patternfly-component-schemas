@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for MastheadProps
-// Generated on: 2025-10-16T18:56:01.638Z
+// Generated on: 2025-10-16T19:02:51.741Z
 import { z } from 'zod'
 
 export const MastheadPropsSchema = z.object({

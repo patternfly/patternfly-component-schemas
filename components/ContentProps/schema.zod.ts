@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ContentProps
-// Generated on: 2025-10-16T18:56:01.653Z
+// Generated on: 2025-10-16T19:02:51.753Z
 import { z } from 'zod'
 
 export const ContentPropsSchema = z.object({

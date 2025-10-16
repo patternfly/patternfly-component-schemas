@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for BullseyeProps
-// Generated on: 2025-10-16T18:56:01.612Z
+// Generated on: 2025-10-16T19:02:51.717Z
 import { z } from 'zod'
 
 export const BullseyePropsSchema = z.object({

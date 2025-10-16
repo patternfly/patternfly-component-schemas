@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for FormControlIcon
-// Generated on: 2025-10-16T18:56:01.641Z
+// Generated on: 2025-10-16T19:02:51.745Z
 import { z } from 'zod'
 
 export const FormControlIconSchema = z.object({

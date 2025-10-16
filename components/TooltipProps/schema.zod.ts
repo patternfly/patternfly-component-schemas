@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for TooltipProps
-// Generated on: 2025-10-16T18:56:01.616Z
+// Generated on: 2025-10-16T19:02:51.722Z
 import { z } from 'zod'
 
 export const TooltipPropsSchema = z.object({
@@ -14,7 +14,7 @@ If you don't want that or prefer to add the aria attribute yourself on the trigg
   /** The trigger reference element to which the Tooltip is relatively placed to.
 If you cannot wrap the element with the Tooltip, you can use the triggerRef prop instead.
 Usage: <Tooltip><Button>Reference</Button></Tooltip> */
-  children: z.unknown().optional(),
+  children: z.custom<React.ReactElement>().optional(),
   /** Tooltip additional class */
   className: z.string().optional(),
   /** Tooltip content */

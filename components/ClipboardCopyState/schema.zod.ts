@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ClipboardCopyState
-// Generated on: 2025-10-16T18:56:01.652Z
+// Generated on: 2025-10-16T19:02:51.752Z
 import { z } from 'zod'
 
 export const ClipboardCopyStateSchema = z.object({

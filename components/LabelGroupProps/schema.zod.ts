@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for LabelGroupProps
-// Generated on: 2025-10-16T18:56:01.640Z
+// Generated on: 2025-10-16T19:02:51.743Z
 import { z } from 'zod'
 
 export const LabelGroupPropsSchema = z.object({

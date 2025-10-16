@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for PageToggleButtonProps
-// Generated on: 2025-10-16T18:56:01.631Z
+// Generated on: 2025-10-16T19:02:51.734Z
 import { z } from 'zod'
 
 export const PageToggleButtonPropsSchema = z.object({

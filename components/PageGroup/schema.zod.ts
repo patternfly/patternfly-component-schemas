@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for PageGroup
-// Generated on: 2025-10-16T18:56:01.631Z
+// Generated on: 2025-10-16T19:02:51.735Z
 import { z } from 'zod'
 
 export const PageGroupSchema = z.object({

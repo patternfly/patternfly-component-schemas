@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for BrandProps
-// Generated on: 2025-10-16T18:56:01.655Z
+// Generated on: 2025-10-16T19:02:51.754Z
 import { z } from 'zod'
 
 export const BrandPropsSchema = z.object({

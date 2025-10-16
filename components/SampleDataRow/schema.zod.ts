@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for SampleDataRow
-// Generated on: 2025-10-16T18:56:01.609Z
+// Generated on: 2025-10-16T19:02:51.715Z
 import { z } from 'zod'
 
 export const SampleDataRowSchema = z.object({

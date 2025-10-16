@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for MultipleFileUploadTitle
-// Generated on: 2025-10-16T18:56:01.634Z
+// Generated on: 2025-10-16T19:02:51.737Z
 import { z } from 'zod'
 
 export const MultipleFileUploadTitleSchema = z.object({

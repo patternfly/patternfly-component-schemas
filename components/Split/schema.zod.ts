@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Split
-// Generated on: 2025-10-16T18:56:01.610Z
+// Generated on: 2025-10-16T19:02:51.715Z
 import { z } from 'zod'
 
 export const SplitSchema = z.object({

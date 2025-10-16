@@ -18,8 +18,8 @@ function getPropsSignature(componentData) {
 
 // Cache regexes for performance
 const ARRAY_TYPE_REGEX = /^(.+)\[\]$|^Array<(.+)>$/;
-const REACT_NODE_REGEX = /React\.?ReactNode/;
-const REACT_ELEMENT_REGEX = /React\.?ReactElement/;
+const REACT_NODE_REGEX = /(React\.)?ReactNode/;
+const REACT_ELEMENT_REGEX = /(React\.)?ReactElement/;
 const EVENT_TYPE_REGEX = /Event/;
 const FUNCTION_TYPE_REGEX = /=>|function|Function/;
 const OBJECT_TYPE_REGEX = /\{.+\}/;

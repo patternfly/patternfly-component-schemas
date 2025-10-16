@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for PaginationTitles
-// Generated on: 2025-10-16T18:56:01.630Z
+// Generated on: 2025-10-16T19:02:51.734Z
 import { z } from 'zod'
 
 export const PaginationTitlesSchema = z.object({

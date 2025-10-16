@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for WizardToggle-deprecated
-// Generated on: 2025-10-16T18:56:01.660Z
+// Generated on: 2025-10-16T19:02:51.759Z
 import { z } from 'zod'
 
 export const WizardToggleSchema = z.object({

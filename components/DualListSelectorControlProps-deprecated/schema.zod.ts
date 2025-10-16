@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for DualListSelectorControlProps-deprecated
-// Generated on: 2025-10-16T18:56:01.663Z
+// Generated on: 2025-10-16T19:02:51.761Z
 import { z } from 'zod'
 
 export const DualListSelectorControlPropsSchema = z.object({

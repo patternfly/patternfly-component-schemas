@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for WizardContextProps
-// Generated on: 2025-10-16T18:56:01.614Z
+// Generated on: 2025-10-16T19:02:51.719Z
 import { z } from 'zod'
 
 export const WizardContextPropsSchema = z.object({

@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for AccordionContentProps
-// Generated on: 2025-10-16T18:56:01.658Z
+// Generated on: 2025-10-16T19:02:51.757Z
 import { z } from 'zod'
 
 export const AccordionContentPropsSchema = z.object({

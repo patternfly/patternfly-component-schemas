@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Avatar
-// Generated on: 2025-10-16T18:56:01.656Z
+// Generated on: 2025-10-16T19:02:51.755Z
 import { z } from 'zod'
 
 export const AvatarSchema = z.object({

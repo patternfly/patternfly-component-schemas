@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ProgressContainer
-// Generated on: 2025-10-16T18:56:01.627Z
+// Generated on: 2025-10-16T19:02:51.731Z
 import { z } from 'zod'
 
 export const ProgressContainerSchema = z.object({

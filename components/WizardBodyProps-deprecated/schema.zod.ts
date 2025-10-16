@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for WizardBodyProps-deprecated
-// Generated on: 2025-10-16T18:56:01.662Z
+// Generated on: 2025-10-16T19:02:51.760Z
 import { z } from 'zod'
 
 export const WizardBodyPropsSchema = z.object({

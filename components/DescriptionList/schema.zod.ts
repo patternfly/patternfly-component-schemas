@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for DescriptionList
-// Generated on: 2025-10-16T18:56:01.651Z
+// Generated on: 2025-10-16T19:02:51.752Z
 import { z } from 'zod'
 
 export const DescriptionListSchema = z.object({

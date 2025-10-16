@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for TextInputGroupProps
-// Generated on: 2025-10-16T18:56:01.620Z
+// Generated on: 2025-10-16T19:02:51.725Z
 import { z } from 'zod'
 
 export const TextInputGroupPropsSchema = z.object({

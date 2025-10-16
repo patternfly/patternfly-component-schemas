@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ModalBoxHeader-deprecated
-// Generated on: 2025-10-16T18:56:01.660Z
+// Generated on: 2025-10-16T19:02:51.758Z
 import { z } from 'zod'
 
 export const ModalBoxHeaderSchema = z.object({

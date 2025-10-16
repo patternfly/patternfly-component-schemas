@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for LoginMainHeader
-// Generated on: 2025-10-16T18:56:01.639Z
+// Generated on: 2025-10-16T19:02:51.742Z
 import { z } from 'zod'
 
 export const LoginMainHeaderSchema = z.object({

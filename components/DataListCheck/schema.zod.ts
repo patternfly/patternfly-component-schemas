@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for DataListCheck
-// Generated on: 2025-10-16T18:56:01.649Z
+// Generated on: 2025-10-16T19:02:51.751Z
 import { z } from 'zod'
 
 export const DataListCheckSchema = z.object({

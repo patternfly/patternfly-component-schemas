@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for OverflowTab
-// Generated on: 2025-10-16T18:56:01.623Z
+// Generated on: 2025-10-16T19:02:51.728Z
 import { z } from 'zod'
 
 export const OverflowTabSchema = z.object({
