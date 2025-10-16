@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for DualListSelectorListWrapperProps
-// Generated on: 2025-10-16T19:02:51.747Z
+// Generated on: 2025-10-16T19:25:27.771Z
 import { z } from 'zod'
 
 export const DualListSelectorListWrapperPropsSchema = z.object({

@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for WizardDrawerWrapperProps-deprecated
-// Generated on: 2025-10-16T19:02:51.760Z
+// Generated on: 2025-10-16T19:25:27.784Z
 import { z } from 'zod'
 
 export const WizardDrawerWrapperPropsSchema = z.object({

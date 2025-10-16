@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for FormFieldGroupExpandable
-// Generated on: 2025-10-16T19:02:51.746Z
+// Generated on: 2025-10-16T19:25:27.770Z
 import { z } from 'zod'
 
 export const FormFieldGroupExpandableSchema = z.object({

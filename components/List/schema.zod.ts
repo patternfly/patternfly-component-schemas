@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for List
-// Generated on: 2025-10-16T19:02:51.743Z
+// Generated on: 2025-10-16T19:25:27.767Z
 import { z } from 'zod'
 
 export const ListSchema = z.object({

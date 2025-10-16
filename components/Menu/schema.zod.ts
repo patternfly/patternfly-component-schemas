@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Menu
-// Generated on: 2025-10-16T19:02:51.740Z
+// Generated on: 2025-10-16T19:25:27.764Z
 import { z } from 'zod'
 
 export const MenuSchema = z.object({
@@ -32,13 +32,13 @@ export const MenuSchema = z.object({
   /** Indicates if the menu should be srollable */
   isScrollable: z.boolean().optional(),
   /** Callback called when an MenuItems's action button is clicked. You can also specify it within a MenuItemAction. */
-  onActionClick: z.function().optional(),
+  onActionClick: z.custom<(event?: any, itemId?: any, actionId?: any) => void>().optional(),
   /** Callback for drilling into a submenu */
   onDrillIn: z.any().optional(),
   /** Callback for drilling out of a submenu */
   onDrillOut: z.any().optional(),
   /** Callback for collecting menu heights */
-  onGetMenuHeight: z.function().optional(),
+  onGetMenuHeight: z.custom<(menuId: string, height: number) => void>().optional(),
   /** Callback for updating when item selection changes. You can also specify onClick on the MenuItem. */
   onSelect: z.any().optional(),
   /** Value to overwrite the randomly generated data-ouia-component-id. */

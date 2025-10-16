@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Tabs
-// Generated on: 2025-10-16T19:02:51.726Z
+// Generated on: 2025-10-16T19:25:27.750Z
 import { z } from 'zod'
 
 export const TabsSchema = z.object({
@@ -22,13 +22,7 @@ export const TabsSchema = z.object({
   /** Flag indicating the default expanded state for uncontrolled expand/collapse of */
   defaultIsExpanded: z.boolean().optional(),
   /** Enable expandable vertical tabs at various breakpoints. (isVertical should be set to true for this to work) */
-  expandable: z.enum(['nonExpandable';
-  sm?: 'expandable', 'nonExpandable';
-  md?: 'expandable', 'nonExpandable';
-  lg?: 'expandable', 'nonExpandable';
-  xl?: 'expandable', 'nonExpandable';
-  '2xl'?: 'expandable', 'nonExpandable';
-']).optional(),
+  expandable: z.record(z.unknown()).optional(),
   /** Aria-label for the forward scroll button */
   forwardScrollAriaLabel: z.string().optional().default('Scroll forward'),
   /** Disables border bottom tab styling on tabs. Defaults to false. To remove the bottom border, set this prop to true. */
@@ -36,13 +30,7 @@ export const TabsSchema = z.object({
   /** Uniquely identifies the tabs */
   id: z.string().optional(),
   /** Insets at various breakpoints. */
-  inset: z.enum(['insetSm', 'insetMd', 'insetLg', 'insetXl', 'inset2xl';
-  sm?: 'insetNone', 'insetSm', 'insetMd', 'insetLg', 'insetXl', 'inset2xl';
-  md?: 'insetNone', 'insetSm', 'insetMd', 'insetLg', 'insetXl', 'inset2xl';
-  lg?: 'insetNone', 'insetSm', 'insetMd', 'insetLg', 'insetXl', 'inset2xl';
-  xl?: 'insetNone', 'insetSm', 'insetMd', 'insetLg', 'insetXl', 'inset2xl';
-  '2xl'?: 'insetNone', 'insetSm', 'insetMd', 'insetLg', 'insetXl', 'inset2xl';
-']).optional(),
+  inset: z.record(z.unknown()).optional(),
   /** Enables box styling to the tab component */
   isBox: z.boolean().optional().default(false),
   /** Flag to indicate if the vertical tabs are expanded */

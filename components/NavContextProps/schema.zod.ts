@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for NavContextProps
-// Generated on: 2025-10-16T19:02:51.737Z
+// Generated on: 2025-10-16T19:25:27.760Z
 import { z } from 'zod'
 
 export const NavContextPropsSchema = z.object({
@@ -8,8 +8,8 @@ export const NavContextPropsSchema = z.object({
   navRef: z.any().optional(),
   onSelect: z.any().optional(),
   onToggle: z.any().optional(),
-  setFlyoutRef: z.function().optional(),
-  updateIsScrollable: z.function().optional()
+  setFlyoutRef: z.custom<(ref: React.Ref<HTMLLIElement>) => void>().optional(),
+  updateIsScrollable: z.custom<(isScrollable: boolean) => void>().optional()
 })
 
 export type NavContextPropsProps = z.infer<typeof NavContextPropsSchema>

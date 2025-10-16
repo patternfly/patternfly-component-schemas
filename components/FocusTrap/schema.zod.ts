@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for FocusTrap
-// Generated on: 2025-10-16T19:02:51.717Z
+// Generated on: 2025-10-16T19:25:27.743Z
 import { z } from 'zod'
 
 export const FocusTrapSchema = z.object({

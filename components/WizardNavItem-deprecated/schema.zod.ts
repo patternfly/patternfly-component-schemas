@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for WizardNavItem-deprecated
-// Generated on: 2025-10-16T19:02:51.759Z
+// Generated on: 2025-10-16T19:25:27.783Z
 import { z } from 'zod'
 
 export const WizardNavItemSchema = z.object({
@@ -20,7 +20,7 @@ export const WizardNavItemSchema = z.object({
   /** Component used to render WizardNavItem */
   navItemComponent: z.enum(['button', 'a']).optional().default('button'),
   /** Callback for when the nav item is clicked */
-  onNavItemClick: z.function().optional().default('() => undefined'),
+  onNavItemClick: z.custom<(step: number) => any>().optional().default('() => undefined'),
   ouiaId: z.any().optional(),
   ouiaSafe: z.boolean().optional().default(true),
   /** The step passed into the onNavItemClick callback */

@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for TimestampTooltip
-// Generated on: 2025-10-16T19:02:51.724Z
+// Generated on: 2025-10-16T19:25:27.748Z
 import { z } from 'zod'
 
 export const TimestampTooltipSchema = z.object({

@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for InternalFormFieldGroup
-// Generated on: 2025-10-16T19:02:51.746Z
+// Generated on: 2025-10-16T19:25:27.769Z
 import { z } from 'zod'
 
 export const InternalFormFieldGroupSchema = z.object({
@@ -14,7 +14,7 @@ export const InternalFormFieldGroupSchema = z.object({
   /** Flag indicate if the form field group is expanded. Modifies the card to be expandable. */
   isExpanded: z.boolean().optional(),
   /** Function callback called when user clicks toggle button */
-  onToggle: z.function().optional(),
+  onToggle: z.custom<() => void>().optional(),
   /** Aria-label to use on the form field group toggle button */
   toggleAriaLabel: z.string().optional()
 })

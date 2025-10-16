@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for TimePickerProps
-// Generated on: 2025-10-16T19:02:51.724Z
+// Generated on: 2025-10-16T19:25:27.749Z
 import { z } from 'zod'
 
 export const TimePickerPropsSchema = z.object({
@@ -39,7 +39,7 @@ menuAppendTo={document.getElementById('target')} */
   /** String to display in the empty time picker field as a hint for the expected time format */
   placeholder: z.string().optional(),
   /** Handler invoked each time the open state of time picker updates */
-  setIsOpen: z.function().optional(),
+  setIsOpen: z.custom<(isOpen?: boolean) => void>().optional(),
   /** Size of step between time options in minutes. */
   stepMinutes: z.number().optional(),
   /** A time string. The format could be  an ISO 8601 formatted date string or in 'HH{delimiter}MM' format */
@@ -47,7 +47,7 @@ menuAppendTo={document.getElementById('target')} */
   /** Accessible label for the time picker */
   'Unknown': z.string().optional(),
   /** Optional validator can be provided to override the internal time validator. */
-  validateTime: z.function().optional(),
+  validateTime: z.custom<(time: string) => boolean>().optional(),
   /** Width of the time picker. */
   width: z.string().optional(),
   /** z-index of the time picker */

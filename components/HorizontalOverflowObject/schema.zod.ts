@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for HorizontalOverflowObject
-// Generated on: 2025-10-16T19:02:51.726Z
+// Generated on: 2025-10-16T19:25:27.750Z
 import { z } from 'zod'
 
 export const HorizontalOverflowObjectSchema = z.object({

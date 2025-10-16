@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for PageSection
-// Generated on: 2025-10-16T19:02:51.735Z
+// Generated on: 2025-10-16T19:25:27.758Z
 import { z } from 'zod'
 
 export const PageSectionSchema = z.object({
@@ -28,21 +28,9 @@ Set this to false in order to pass multiple, custom PageBody's as children. */
   /** Limits the width of the section */
   isWidthLimited: z.boolean().optional().default(false),
   /** Padding at various breakpoints. */
-  padding: z.enum(['noPadding';
-  sm?: 'padding', 'noPadding';
-  md?: 'padding', 'noPadding';
-  lg?: 'padding', 'noPadding';
-  xl?: 'padding', 'noPadding';
-  '2xl'?: 'padding', 'noPadding';
-']).optional(),
+  padding: z.record(z.unknown()).optional(),
   /** Modifier indicating if the PageBreadcrumb is sticky to the top or bottom at various breakpoints */
-  stickyOnBreakpoint: z.enum(['bottom';
-  sm?: 'top', 'bottom';
-  md?: 'top', 'bottom';
-  lg?: 'top', 'bottom';
-  xl?: 'top', 'bottom';
-  '2xl'?: 'top', 'bottom';
-']).optional(),
+  stickyOnBreakpoint: z.record(z.unknown()).optional(),
   /** Section type variant */
   type: z.enum(['default', 'subnav', 'breadcrumb', 'tabs', 'wizard']).optional().default('default'),
   /** Section background color variant. This will only apply when the type prop has the "default" value. */

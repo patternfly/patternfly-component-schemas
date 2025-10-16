@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for NotificationDrawerListItem
-// Generated on: 2025-10-16T19:02:51.738Z
+// Generated on: 2025-10-16T19:25:27.761Z
 import { z } from 'zod'
 
 export const NotificationDrawerListItemSchema = z.object({
@@ -12,7 +12,7 @@ export const NotificationDrawerListItemSchema = z.object({
   /** Adds styling to the list item to indicate it has been read */
   isRead: z.boolean().optional().default(false),
   /** Callback for when a list item is clicked */
-  onClick: z.function().optional().default('(event: React.MouseEvent) => undefined as any'),
+  onClick: z.custom<(event: any) => void>().optional().default('(event: React.MouseEvent) => undefined as any'),
   /** Visually hidden text that conveys the current read state of the notification list item */
   readStateScreenReaderText: z.string().optional(),
   /** Tab index for the list item */

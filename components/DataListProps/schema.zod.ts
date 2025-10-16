@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for DataListProps
-// Generated on: 2025-10-16T19:02:51.751Z
+// Generated on: 2025-10-16T19:25:27.776Z
 import { z } from 'zod'
 
 export const DataListPropsSchema = z.object({

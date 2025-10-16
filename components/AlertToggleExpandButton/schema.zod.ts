@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for AlertToggleExpandButton
-// Generated on: 2025-10-16T19:02:51.755Z
+// Generated on: 2025-10-16T19:25:27.780Z
 import { z } from 'zod'
 
 export const AlertToggleExpandButtonSchema = z.object({
@@ -38,7 +38,7 @@ export const AlertToggleExpandButtonSchema = z.object({
   /** Adds progress styling to button */
   isLoading: z.boolean().optional(),
   /** A callback for when the toggle button is clicked. */
-  onToggleExpand: z.function().optional(),
+  onToggleExpand: z.custom<() => void>().optional(),
   /** Value to overwrite the randomly generated data-ouia-component-id. */
   ouiaId: z.any().optional(),
   /** Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false. */

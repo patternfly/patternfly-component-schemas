@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Hint
-// Generated on: 2025-10-16T19:02:51.744Z
+// Generated on: 2025-10-16T19:25:27.767Z
 import { z } from 'zod'
 
 export const HintSchema = z.object({

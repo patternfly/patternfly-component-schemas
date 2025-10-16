@@ -1,12 +1,12 @@
 // Auto-generated Zod schema for DrawerCloseButtonProps
-// Generated on: 2025-10-16T19:02:51.749Z
+// Generated on: 2025-10-16T19:25:27.773Z
 import { z } from 'zod'
 
 export const DrawerCloseButtonPropsSchema = z.object({
   /** Additional classes added to the drawer close button outer <div>. */
   className: z.string().optional(),
   /** A callback for when the close button is clicked */
-  onClose: z.function().optional(),
+  onClose: z.custom<() => void>().optional(),
   /** Accessible label for the drawer close button */
   'Unknown': z.string().optional()
 })

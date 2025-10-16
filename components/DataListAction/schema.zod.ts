@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for DataListAction
-// Generated on: 2025-10-16T19:02:51.751Z
+// Generated on: 2025-10-16T19:25:27.776Z
 import { z } from 'zod'
 
 export const DataListActionSchema = z.object({
@@ -14,13 +14,7 @@ export const DataListActionSchema = z.object({
   /** Identify the DataList toggle number */
   id: z.string(),
   /** What breakpoints to hide/show the data list action */
-  visibility: z.enum(['visible';
-  sm?: 'hidden', 'visible';
-  md?: 'hidden', 'visible';
-  lg?: 'hidden', 'visible';
-  xl?: 'hidden', 'visible';
-  '2xl'?: 'hidden', 'visible';
-']).optional()
+  visibility: z.record(z.unknown()).optional()
 })
 
 export type DataListActionProps = z.infer<typeof DataListActionSchema>

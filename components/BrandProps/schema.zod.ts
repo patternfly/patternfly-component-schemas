@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for BrandProps
-// Generated on: 2025-10-16T19:02:51.754Z
+// Generated on: 2025-10-16T19:25:27.779Z
 import { z } from 'zod'
 
 export const BrandPropsSchema = z.object({
@@ -10,11 +10,11 @@ export const BrandPropsSchema = z.object({
   /** Additional classes added to the either type of Brand. */
   className: z.string().optional(),
   /** Heights at various breakpoints for a <picture> Brand. */
-  heights: z.unknown().optional(),
+  heights: z.record(z.unknown()).optional(),
   /** Attribute that specifies the URL of a <img> Brand. For a <picture> Brand this specifies the fallback <img> URL. */
   src: z.string().optional(),
   /** Widths at various breakpoints for a <picture> Brand. */
-  widths: z.unknown().optional()
+  widths: z.record(z.unknown()).optional()
 })
 
 export type BrandPropsProps = z.infer<typeof BrandPropsSchema>

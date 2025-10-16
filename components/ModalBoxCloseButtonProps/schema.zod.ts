@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ModalBoxCloseButtonProps
-// Generated on: 2025-10-16T19:02:51.741Z
+// Generated on: 2025-10-16T19:25:27.765Z
 import { z } from 'zod'
 
 export const ModalBoxCloseButtonPropsSchema = z.object({

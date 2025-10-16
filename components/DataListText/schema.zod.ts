@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for DataListText
-// Generated on: 2025-10-16T19:02:51.750Z
+// Generated on: 2025-10-16T19:25:27.774Z
 import { z } from 'zod'
 
 export const DataListTextSchema = z.object({
@@ -10,7 +10,7 @@ export const DataListTextSchema = z.object({
   /** Determines which element to render as a data list text. Usually div or span */
   component: z.custom<React.ReactNode>().optional().default('span'),
   /** callback used to create the tooltip if text is truncated */
-  onMouseEnter: z.function().optional().default('() => {}'),
+  onMouseEnter: z.custom<(event: any) => void>().optional().default('() => {}'),
   /** text to display on the tooltip */
   tooltip: z.string().optional().default(''),
   /** Determines which wrapping modifier to apply to the data list text */

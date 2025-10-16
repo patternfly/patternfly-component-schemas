@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for PageSidebarBody
-// Generated on: 2025-10-16T19:02:51.735Z
+// Generated on: 2025-10-16T19:25:27.758Z
 import { z } from 'zod'
 
 export const PageSidebarBodySchema = z.object({

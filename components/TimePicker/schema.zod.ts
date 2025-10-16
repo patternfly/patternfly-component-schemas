@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for TimePicker
-// Generated on: 2025-10-16T19:02:51.724Z
+// Generated on: 2025-10-16T19:25:27.749Z
 import { z } from 'zod'
 
 export const TimePickerSchema = z.object({
@@ -41,13 +41,13 @@ menuAppendTo={document.getElementById('target')} */
   /** String to display in the empty time picker field as a hint for the expected time format */
   placeholder: z.string().optional().default('hh:mm'),
   /** Handler invoked each time the open state of time picker updates */
-  setIsOpen: z.function().optional().default('() => {}'),
+  setIsOpen: z.custom<(isOpen?: boolean) => void>().optional().default('() => {}'),
   /** Size of step between time options in minutes. */
   stepMinutes: z.number().optional().default(30),
   /** A time string. The format could be  an ISO 8601 formatted date string or in 'HH{delimiter}MM' format */
   time: z.any().optional().default(''),
   /** Optional validator can be provided to override the internal time validator. */
-  validateTime: z.function().optional(),
+  validateTime: z.custom<(time: string) => boolean>().optional(),
   /** Width of the time picker. */
   width: z.string().optional().default('150px'),
   /** z-index of the time picker */

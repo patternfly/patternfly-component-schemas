@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ExpandableSectionToggle
-// Generated on: 2025-10-16T19:02:51.745Z
+// Generated on: 2025-10-16T19:25:27.769Z
 import { z } from 'zod'
 
 export const ExpandableSectionToggleSchema = z.object({
@@ -17,7 +17,7 @@ property should match the contentId property of the main expandable section comp
   /** Flag indicating if the expandable section is expanded. */
   isExpanded: z.boolean().optional().default(false),
   /** Callback function to toggle the expandable content. */
-  onToggle: z.function().optional(),
+  onToggle: z.custom<(isExpanded: boolean) => void>().optional(),
   /** Id of the toggle. The value passed into this property should match the aria-labelledby
 property of the main expandable section component. */
   toggleId: z.string().optional()

@@ -1,12 +1,12 @@
 // Auto-generated Zod schema for ToolbarLabelGroupContent
-// Generated on: 2025-10-16T19:02:51.722Z
+// Generated on: 2025-10-16T19:25:27.747Z
 import { z } from 'zod'
 
 export const ToolbarLabelGroupContentSchema = z.object({
   /** Classes applied to root element of the data toolbar content row */
   className: z.string().optional(),
   /** optional callback for clearing all filters in the toolbar */
-  clearAllFilters: z.function().optional(),
+  clearAllFilters: z.custom<() => void>().optional(),
   /** Text to display in the clear all filters button */
   clearFiltersButtonText: z.string().optional().default('Clear all filters'),
   /** The breakpoint at which the listed filters in label groups are collapsed down to a summary */
@@ -20,7 +20,7 @@ export const ToolbarLabelGroupContentSchema = z.object({
   /** Total number of filters currently being applied across all ToolbarFilter components */
   numberOfFilters: z.number(),
   /** Text to display in the total number of applied filters ToolbarFilter */
-  numberOfFiltersText: z.function().optional().default('(numberOfFilters: number) => `${numberOfFilters} filters applied`'),
+  numberOfFiltersText: z.custom<(numberOfFilters: number) => string>().optional().default('(numberOfFilters: number) => `${numberOfFilters} filters applied`'),
   /** Flag indicating that the clear all filters button should be visible */
   showClearFiltersButton: z.boolean()
 })

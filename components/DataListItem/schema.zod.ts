@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for DataListItem
-// Generated on: 2025-10-16T19:02:51.750Z
+// Generated on: 2025-10-16T19:25:27.774Z
 import { z } from 'zod'
 
 export const DataListItemSchema = z.object({

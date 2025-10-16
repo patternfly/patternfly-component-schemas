@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for TextInputProps
-// Generated on: 2025-10-16T19:02:51.726Z
+// Generated on: 2025-10-16T19:25:27.749Z
 import { z } from 'zod'
 
 export const TextInputPropsSchema = z.object({
@@ -19,11 +19,11 @@ export const TextInputPropsSchema = z.object({
   /** Trim text at start */
   isStartTruncated: z.boolean().optional(),
   /** Callback function when text input is blurred (focus leaves) */
-  onBlur: z.function().optional(),
+  onBlur: z.custom<(event?: any) => void>().optional(),
   /** A callback for when the text input value changes. */
   onChange: z.custom<Event>().optional(),
   /** Callback function when text input is focused */
-  onFocus: z.function().optional(),
+  onFocus: z.custom<(event?: any) => void>().optional(),
   /** Value to overwrite the randomly generated data-ouia-component-id. */
   ouiaId: z.any().optional(),
   /** Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false. */

@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for MenuItemProps
-// Generated on: 2025-10-16T19:02:51.740Z
+// Generated on: 2025-10-16T19:25:27.763Z
 import { z } from 'zod'
 
 export const MenuItemPropsSchema = z.object({
@@ -54,9 +54,9 @@ export const MenuItemPropsSchema = z.object({
   /** Identifies the component in the Menu onSelect or onActionClick callback */
   itemId: z.unknown().optional(),
   /** Callback for item click */
-  onClick: z.function().optional(),
+  onClick: z.custom<(event?: any) => void>().optional(),
   /** Callback function when mouse leaves trigger */
-  onShowFlyout: z.function().optional(),
+  onShowFlyout: z.custom<(event?: any) => void>().optional(),
   /** Navigation link relationship. Only set when the to property is present. */
   rel: z.string().optional(),
   /** Navigation link target. Only set when the to property is present. If isExternalLink is also passed in, this property will be set to "_blank". */

@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for WizardToggleProps-deprecated
-// Generated on: 2025-10-16T19:02:51.759Z
+// Generated on: 2025-10-16T19:25:27.783Z
 import { z } from 'zod'
 
 export const WizardTogglePropsSchema = z.object({
@@ -26,9 +26,9 @@ The aria-labelledby will only be applied when the body content overflows and ren
   /** Function that returns the WizardNav component */
   nav: z.custom<React.ReactElement>(),
   /** Callback function for when the drawer is toggled */
-  onExpandDrawer: z.function().optional(),
+  onExpandDrawer: z.custom<() => void>().optional(),
   /** Callback function for when the nav is toggled */
-  onNavToggle: z.function(),
+  onNavToggle: z.custom<(isOpen: boolean) => void>(),
   /** The wizard steps */
   steps: z.array(z.unknown()),
   /** The button's aria-label */

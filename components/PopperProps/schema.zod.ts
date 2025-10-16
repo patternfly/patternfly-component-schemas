@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for PopperProps
-// Generated on: 2025-10-16T19:02:51.717Z
+// Generated on: 2025-10-16T19:25:27.742Z
 import { z } from 'zod'
 
 export const PopperPropsSchema = z.object({
@@ -35,11 +35,11 @@ export const PopperPropsSchema = z.object({
   /** Callback function when trigger is focused */
   onFocus: z.custom<Event>().optional(),
   /** Callback when popper's hide transition has finished executing */
-  onHidden: z.function().optional(),
+  onHidden: z.custom<() => void>().optional(),
   /** Lifecycle function invoked when the popper begins to transition out. */
-  onHide: z.function().optional(),
+  onHide: z.custom<() => void>().optional(),
   /** Lifecycle function invoked when the popper has been mounted to the DOM. */
-  onMount: z.function().optional(),
+  onMount: z.custom<() => void>().optional(),
   /** Callback function when mouse enters trigger */
   onMouseEnter: z.custom<Event>().optional(),
   /** Callback function when mouse leaves trigger */
@@ -51,9 +51,9 @@ export const PopperPropsSchema = z.object({
   /** Callback function when mouse leaves popper content */
   onPopperMouseLeave: z.custom<Event>().optional(),
   /** Lifecycle function invoked when the popper begins to transition in. */
-  onShow: z.function().optional(),
+  onShow: z.custom<() => void>().optional(),
   /** Lifecycle function invoked when the popper has fully transitioned in. */
-  onShown: z.function().optional(),
+  onShown: z.custom<() => void>().optional(),
   /** Callback function when trigger is clicked */
   onTriggerClick: z.custom<Event>().optional(),
   /** Callback function when Enter key is used on trigger */
@@ -74,7 +74,7 @@ Passing this prop will remove the wrapper div element from the popper. */
   left: styles.modifiers.left,
   right: styles.modifiers.right
 } */
-  positionModifiers: z.unknown().optional(),
+  positionModifiers: z.record(z.unknown()).optional(),
   /** Flag to prevent the popper from overflowing its container and becoming partially obscured. */
   preventOverflow: z.boolean().optional(),
   /** Trigger reference element to which the popper is relatively placed to. */

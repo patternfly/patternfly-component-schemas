@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for WizardNavItemProps-deprecated
-// Generated on: 2025-10-16T19:02:51.759Z
+// Generated on: 2025-10-16T19:25:27.783Z
 import { z } from 'zod'
 
 export const WizardNavItemPropsSchema = z.object({
@@ -20,7 +20,7 @@ export const WizardNavItemPropsSchema = z.object({
   /** Component used to render WizardNavItem */
   navItemComponent: z.enum(['button', 'a']).optional(),
   /** Callback for when the nav item is clicked */
-  onNavItemClick: z.function().optional(),
+  onNavItemClick: z.custom<(step: number) => any>().optional(),
   /** The step passed into the onNavItemClick callback */
   step: z.number()
 })

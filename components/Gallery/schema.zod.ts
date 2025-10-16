@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Gallery
-// Generated on: 2025-10-16T19:02:51.717Z
+// Generated on: 2025-10-16T19:25:27.742Z
 import { z } from 'zod'
 
 export const GallerySchema = z.object({
@@ -12,9 +12,9 @@ export const GallerySchema = z.object({
   /** Adds space between children. */
   hasGutter: z.boolean().optional().default(false),
   /** Maximum widths at various breakpoints. */
-  maxWidths: z.unknown().optional(),
+  maxWidths: z.record(z.unknown()).optional(),
   /** Minimum widths at various breakpoints. */
-  minWidths: z.unknown().optional()
+  minWidths: z.record(z.unknown()).optional()
 })
 
 export type GalleryProps = z.infer<typeof GallerySchema>

@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for TooltipProps
-// Generated on: 2025-10-16T19:02:51.722Z
+// Generated on: 2025-10-16T19:25:27.747Z
 import { z } from 'zod'
 
 export const TooltipPropsSchema = z.object({
@@ -49,7 +49,7 @@ space to the right, so it finally shows the tooltip on the left. */
   /** Minimum width of the tooltip. If set to "trigger", the minimum width will be set to the reference element width. */
   minWidth: z.enum(['trigger']).optional(),
   /** Callback when tooltip's hide transition has finished executing */
-  onTooltipHidden: z.function().optional(),
+  onTooltipHidden: z.custom<() => void>().optional(),
   /** Tooltip position. Note: With 'enableFlip' set to true,
 it will change the position if there is not enough space for the starting position.
 The behavior of where it flips to can be controlled through the flipBehavior prop.

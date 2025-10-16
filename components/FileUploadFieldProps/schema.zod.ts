@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for FileUploadFieldProps
-// Generated on: 2025-10-16T19:02:51.745Z
+// Generated on: 2025-10-16T19:25:27.768Z
 import { z } from 'zod'
 
 export const FileUploadFieldPropsSchema = z.object({
@@ -50,7 +50,7 @@ the children property to render an alternate preview. */
   /** A callback for when the clear button is clicked. */
   onClearButtonClick: z.custom<Event>().optional(),
   /** Callback for when focus is lost on the text area field. */
-  onTextAreaBlur: z.function().optional(),
+  onTextAreaBlur: z.custom<(event?: any) => void>().optional(),
   /** A callback for when the text area is clicked. Can also be set via the onClick property
 of the file upload component. */
   onTextAreaClick: z.custom<Event>().optional(),

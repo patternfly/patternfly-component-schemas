@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for NumberInput
-// Generated on: 2025-10-16T19:02:51.737Z
+// Generated on: 2025-10-16T19:25:27.760Z
 import { z } from 'zod'
 
 export const NumberInputSchema = z.object({
@@ -22,7 +22,7 @@ export const NumberInputSchema = z.object({
   /** Additional properties added to the minus button */
   minusBtnProps: z.unknown().optional(),
   /** Callback function when text input is blurred (focus leaves) */
-  onBlur: z.function().optional(),
+  onBlur: z.custom<(event?: any) => void>().optional(),
   /** Callback for the text input changing */
   onChange: z.custom<Event>().optional(),
   /** Callback for the minus button */

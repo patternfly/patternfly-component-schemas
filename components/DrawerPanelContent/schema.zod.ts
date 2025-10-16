@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for DrawerPanelContent
-// Generated on: 2025-10-16T19:02:51.749Z
+// Generated on: 2025-10-16T19:25:27.773Z
 import { z } from 'zod'
 
 export const DrawerPanelContentSchema = z.object({
@@ -30,11 +30,7 @@ export const DrawerPanelContentSchema = z.object({
   /** Aria label for the resizable drawer splitter. */
   resizeAriaLabel: z.string().optional().default('Resize'),
   /** Width for drawer panel at various breakpoints. Overridden by resizable drawer minSize and defaultSize. */
-  widths: z.enum(['width_33', 'width_50', 'width_66', 'width_75', 'width_100';
-  lg?: 'width_25', 'width_33', 'width_50', 'width_66', 'width_75', 'width_100';
-  xl?: 'width_25', 'width_33', 'width_50', 'width_66', 'width_75', 'width_100';
-  '2xl'?: 'width_25', 'width_33', 'width_50', 'width_66', 'width_75', 'width_100';
-']).optional()
+  widths: z.record(z.unknown()).optional()
 })
 
 export type DrawerPanelContentProps = z.infer<typeof DrawerPanelContentSchema>

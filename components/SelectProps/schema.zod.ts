@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for SelectProps
-// Generated on: 2025-10-16T19:02:51.731Z
+// Generated on: 2025-10-16T19:25:27.754Z
 import { z } from 'zod'
 
 export const SelectPropsSchema = z.object({
@@ -22,7 +22,7 @@ export const SelectPropsSchema = z.object({
   menuHeight: z.string().optional(),
   /** Callback to allow the select component to change the open state of the menu.
 Triggered by clicking outside of the menu, or by pressing any keys specified in onOpenChangeKeys. */
-  onOpenChange: z.function().optional(),
+  onOpenChange: z.custom<(isOpen: boolean) => void>().optional(),
   /** Keys that trigger onOpenChange, defaults to tab and escape. It is highly recommended to include Escape in the array, while Tab may be omitted if the menu contains non-menu items that are focusable. */
   onOpenChangeKeys: z.array(z.string()).optional(),
   /** Function callback when user selects an option. */

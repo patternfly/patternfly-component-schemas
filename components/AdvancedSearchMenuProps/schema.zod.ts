@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for AdvancedSearchMenuProps
-// Generated on: 2025-10-16T19:02:51.730Z
+// Generated on: 2025-10-16T19:25:27.753Z
 import { z } from 'zod'
 
 export const AdvancedSearchMenuPropsSchema = z.object({
@@ -12,7 +12,7 @@ Required whenever attributes are passed as props. */
   className: z.string().optional(),
   formAdditionalItems: z.custom<React.ReactNode>().optional(),
   /** Function which builds an attribute-value map by parsing the value in the search input. */
-  getAttrValueMap: z.function().optional(),
+  getAttrValueMap: z.custom<() => { [key: string]: string }>().optional(),
   /** Attribute label for strings unassociated with one of the provided listed attributes. */
   hasWordsAttrLabel: z.custom<React.ReactNode>().optional(),
   /** Flag for toggling the open/close state of the advanced search menu. */

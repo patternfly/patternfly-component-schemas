@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for NotificationDrawerListItemBody
-// Generated on: 2025-10-16T19:02:51.738Z
+// Generated on: 2025-10-16T19:25:27.761Z
 import { z } from 'zod'
 
 export const NotificationDrawerListItemBodySchema = z.object({

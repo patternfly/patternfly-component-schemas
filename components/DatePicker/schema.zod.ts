@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for DatePicker
-// Generated on: 2025-10-16T19:02:51.749Z
+// Generated on: 2025-10-16T19:25:27.774Z
 import { z } from 'zod'
 
 export const DatePickerSchema = z.object({
@@ -14,17 +14,17 @@ menuAppendTo={document.getElementById('target')} */
   /** Accessible label for the button to open the date picker. */
   buttonAriaLabel: z.string().optional().default('Toggle date picker'),
   /** Accessible label for the date cells. */
-  cellAriaLabel: z.function().optional(),
+  cellAriaLabel: z.custom<(date: Date) => string>().optional(),
   /** Additional classes added to the date picker. */
   className: z.string().optional(),
   /** How to format the date in the text input. */
-  dateFormat: z.function().optional().default('(date: Date) =>
+  dateFormat: z.custom<(date: Date) => string>().optional().default('(date: Date) =>
 `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date
   .getDate()
   .toString()
   .padStart(2, '0')}`'),
   /** How to parse the date in the text input. */
-  dateParse: z.function().optional().default('(val: string) => (val.split('-').length === 3 ? new Date(`${val}T00:00:00`) : new Date(undefined))'),
+  dateParse: z.custom<(value: string) => Date>().optional().default('(val: string) => (val.split('-').length === 3 ? new Date(`${val}T00:00:00`) : new Date(undefined))'),
   /** How to format days in buttons in table cells. */
   dayFormat: z.custom<React.ReactNode>().optional(),
   /** Helper text to display alongside the date picker. Expects a HelperText component. */
@@ -47,7 +47,7 @@ See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Obj
   /** Accessible label for the next month button. */
   nextMonthAriaLabel: z.string().optional(),
   /** Callback called every time the text input loses focus. */
-  onBlur: z.function().optional().default('(): any => undefined'),
+  onBlur: z.custom<(event: any, value: string, date?: Date) => void>().optional().default('(): any => undefined'),
   /** Callback called every time the text input value changes. */
   onChange: z.custom<Event>().optional().default('(): any => undefined'),
   /** String to display in the empty text input as a hint for the expected date format. */

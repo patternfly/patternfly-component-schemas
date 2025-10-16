@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for FileUploadProps
-// Generated on: 2025-10-16T19:02:51.745Z
+// Generated on: 2025-10-16T19:25:27.769Z
 import { z } from 'zod'
 
 export const FileUploadPropsSchema = z.object({

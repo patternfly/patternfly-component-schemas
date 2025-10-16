@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for PageToggleButtonProps
-// Generated on: 2025-10-16T19:02:51.734Z
+// Generated on: 2025-10-16T19:25:27.758Z
 import { z } from 'zod'
 
 export const PageToggleButtonPropsSchema = z.object({
@@ -10,7 +10,7 @@ export const PageToggleButtonPropsSchema = z.object({
   /** True if the sidebar is shown */
   isSidebarOpen: z.boolean().optional(),
   /** Callback function to handle the sidebar toggle button, managed by the Page component if the Page isManagedSidebar prop is set to true */
-  onSidebarToggle: z.function().optional()
+  onSidebarToggle: z.custom<() => void>().optional()
 })
 
 export type PageToggleButtonPropsProps = z.infer<typeof PageToggleButtonPropsSchema>

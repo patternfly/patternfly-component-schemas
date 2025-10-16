@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for SimpleListProps
-// Generated on: 2025-10-16T19:02:51.729Z
+// Generated on: 2025-10-16T19:25:27.752Z
 import { z } from 'zod'
 
 export const SimpleListPropsSchema = z.object({

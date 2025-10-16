@@ -1,9 +1,9 @@
 // Auto-generated Zod schema for ToolbarContentContextProps
-// Generated on: 2025-10-16T19:02:51.722Z
+// Generated on: 2025-10-16T19:25:27.747Z
 import { z } from 'zod'
 
 export const ToolbarContentContextPropsSchema = z.object({
-  clearAllFilters: z.function().optional(),
+  clearAllFilters: z.custom<() => void>().optional(),
   clearFiltersButtonText: z.string().optional(),
   expandableContentId: z.string(),
   expandableContentRef: z.any(),

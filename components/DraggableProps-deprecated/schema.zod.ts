@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for DraggableProps-deprecated
-// Generated on: 2025-10-16T19:02:51.761Z
+// Generated on: 2025-10-16T19:25:27.786Z
 import { z } from 'zod'
 
 export const DraggablePropsSchema = z.object({

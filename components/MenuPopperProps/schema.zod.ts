@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for MenuPopperProps
-// Generated on: 2025-10-16T19:02:51.740Z
+// Generated on: 2025-10-16T19:25:27.764Z
 import { z } from 'zod'
 
 export const MenuPopperPropsSchema = z.object({

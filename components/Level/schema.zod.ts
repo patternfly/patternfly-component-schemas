@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Level
-// Generated on: 2025-10-16T19:02:51.715Z
+// Generated on: 2025-10-16T19:25:27.741Z
 import { z } from 'zod'
 
 export const LevelSchema = z.object({

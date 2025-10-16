@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Content
-// Generated on: 2025-10-16T19:02:51.753Z
+// Generated on: 2025-10-16T19:25:27.777Z
 import { z } from 'zod'
 
 export const ContentSchema = z.object({

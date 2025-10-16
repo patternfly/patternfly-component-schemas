@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ModalBoxTitle-deprecated
-// Generated on: 2025-10-16T19:02:51.758Z
+// Generated on: 2025-10-16T19:25:27.783Z
 import { z } from 'zod'
 
 export const ModalBoxTitleSchema = z.object({

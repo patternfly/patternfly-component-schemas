@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for CalendarProps
-// Generated on: 2025-10-16T19:02:51.753Z
+// Generated on: 2025-10-16T19:25:27.778Z
 import { z } from 'zod'
 
 export const CalendarPropsSchema = z.object({
@@ -13,7 +13,7 @@ export const CalendarPropsSchema = z.object({
   onChange: z.custom<Event>().optional(),
   /** Callback when month or year is changed. */
   onMonthChange: z.any().optional(),
-  onSelectToggle: z.function().optional(),
+  onSelectToggle: z.custom<(open: boolean) => void>().optional(),
   /** Functions that returns if a date is valid and selectable. */
   validators: z.array(z.unknown()).optional()
 })

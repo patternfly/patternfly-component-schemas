@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for WizardBody-deprecated
-// Generated on: 2025-10-16T19:02:51.760Z
+// Generated on: 2025-10-16T19:25:27.784Z
 import { z } from 'zod'
 
 export const WizardBodySchema = z.object({
@@ -21,7 +21,7 @@ The aria-labelledby will only be applied when the body content overflows and ren
   /** Component used as the primary content container */
   mainComponent: z.unknown().optional().default('div'),
   /** Callback function for when the drawer is toggled */
-  onExpandDrawer: z.function().optional()
+  onExpandDrawer: z.custom<() => void>().optional()
 })
 
 export type WizardBodyProps = z.infer<typeof WizardBodySchema>

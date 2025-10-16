@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for PaginationNavigationProps
-// Generated on: 2025-10-16T19:02:51.733Z
+// Generated on: 2025-10-16T19:25:27.757Z
 import { z } from 'zod'
 
 export const PaginationNavigationPropsSchema = z.object({

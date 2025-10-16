@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for PageSectionProps
-// Generated on: 2025-10-16T19:02:51.735Z
+// Generated on: 2025-10-16T19:25:27.758Z
 import { z } from 'zod'
 
 export const PageSectionPropsSchema = z.object({
@@ -23,21 +23,9 @@ export const PageSectionPropsSchema = z.object({
   /** Limits the width of the section */
   isWidthLimited: z.boolean().optional(),
   /** Padding at various breakpoints. */
-  padding: z.enum(['noPadding';
-    sm?: 'padding', 'noPadding';
-    md?: 'padding', 'noPadding';
-    lg?: 'padding', 'noPadding';
-    xl?: 'padding', 'noPadding';
-    '2xl'?: 'padding', 'noPadding';
-  ']).optional(),
+  padding: z.record(z.unknown()).optional(),
   /** Modifier indicating if the PageBreadcrumb is sticky to the top or bottom at various breakpoints */
-  stickyOnBreakpoint: z.enum(['bottom';
-    sm?: 'top', 'bottom';
-    md?: 'top', 'bottom';
-    lg?: 'top', 'bottom';
-    xl?: 'top', 'bottom';
-    '2xl'?: 'top', 'bottom';
-  ']).optional(),
+  stickyOnBreakpoint: z.record(z.unknown()).optional(),
   /** Section type variant */
   type: z.enum(['default', 'subnav', 'breadcrumb', 'tabs', 'wizard']).optional(),
   /** Adds an accessible name to the page section. Required when the hasOverflowScroll prop is set to true.

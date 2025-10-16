@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Spinner
-// Generated on: 2025-10-16T19:02:51.728Z
+// Generated on: 2025-10-16T19:25:27.751Z
 import { z } from 'zod'
 
 export const SpinnerSchema = z.object({

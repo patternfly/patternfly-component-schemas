@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for WizardBodyProps-deprecated
-// Generated on: 2025-10-16T19:02:51.760Z
+// Generated on: 2025-10-16T19:25:27.784Z
 import { z } from 'zod'
 
 export const WizardBodyPropsSchema = z.object({
@@ -15,7 +15,7 @@ export const WizardBodyPropsSchema = z.object({
   /** Component used as the primary content container */
   mainComponent: z.unknown().optional(),
   /** Callback function for when the drawer is toggled */
-  onExpandDrawer: z.function().optional(),
+  onExpandDrawer: z.custom<() => void>().optional(),
   /** Adds an accessible name to the wizard body by passing the the id of one or more elements.
 The aria-labelledby will only be applied when the body content overflows and renders a scrollbar. */
   'Unknown': z.string()

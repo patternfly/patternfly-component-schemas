@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ToolbarLabelGroup
-// Generated on: 2025-10-16T19:02:51.723Z
+// Generated on: 2025-10-16T19:25:27.747Z
 import { z } from 'zod'
 
 export const ToolbarLabelGroupSchema = z.object({

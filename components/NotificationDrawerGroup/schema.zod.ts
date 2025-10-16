@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for NotificationDrawerGroup
-// Generated on: 2025-10-16T19:02:51.738Z
+// Generated on: 2025-10-16T19:25:27.762Z
 import { z } from 'zod'
 
 export const NotificationDrawerGroupSchema = z.object({
@@ -16,7 +16,7 @@ export const NotificationDrawerGroupSchema = z.object({
   /** Adds styling to the group to indicate whether it has been read */
   isRead: z.boolean().optional().default(false),
   /** Callback for when group button is clicked to expand */
-  onExpand: z.function().optional().default('(event: any, expanded: boolean) => undefined as any'),
+  onExpand: z.custom<(event: any, value: boolean) => void>().optional().default('(event: any, expanded: boolean) => undefined as any'),
   /** Notification drawer group title */
   title: z.custom<React.ReactNode>(),
   /** Position of the tooltip which is displayed if text is truncated */

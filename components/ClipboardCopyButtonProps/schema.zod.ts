@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ClipboardCopyButtonProps
-// Generated on: 2025-10-16T19:02:51.752Z
+// Generated on: 2025-10-16T19:25:27.777Z
 import { z } from 'zod'
 
 export const ClipboardCopyButtonPropsSchema = z.object({
@@ -20,7 +20,7 @@ export const ClipboardCopyButtonPropsSchema = z.object({
   /** Callback for the copy when the button is clicked */
   onClick: z.custom<Event>(),
   /** Callback when tooltip's hide transition has finished executing */
-  onTooltipHidden: z.function().optional(),
+  onTooltipHidden: z.custom<() => void>().optional(),
   /** Position of the copy button tooltip */
   position: z.enum(['auto', 'top', 'bottom', 'left', 'right', 'top-start', 'top-end', 'bottom-start', 'bottom-end', 'left-start', 'left-end', 'right-start', 'right-end']).optional(),
   /** ID of the content that is being copied */

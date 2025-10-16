@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for MenuItemAction
-// Generated on: 2025-10-16T19:02:51.739Z
+// Generated on: 2025-10-16T19:25:27.763Z
 import { z } from 'zod'
 
 export const MenuItemActionSchema = z.object({
@@ -16,7 +16,7 @@ export const MenuItemActionSchema = z.object({
   /** Flag indicating if the item is favorited */
   isFavorited: z.boolean().optional(),
   /** Callback on action click, can also specify onActionClick on the Menu instead */
-  onClick: z.function().optional()
+  onClick: z.custom<(event?: any) => void>().optional()
 })
 
 export type MenuItemActionProps = z.infer<typeof MenuItemActionSchema>

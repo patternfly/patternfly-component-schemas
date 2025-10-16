@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for AccordionItem
-// Generated on: 2025-10-16T19:02:51.757Z
+// Generated on: 2025-10-16T19:25:27.781Z
 import { z } from 'zod'
 
 export const AccordionItemSchema = z.object({

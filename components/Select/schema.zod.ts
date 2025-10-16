@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Select
-// Generated on: 2025-10-16T19:02:51.730Z
+// Generated on: 2025-10-16T19:25:27.754Z
 import { z } from 'zod'
 
 export const SelectSchema = z.object({
@@ -40,16 +40,16 @@ export const SelectSchema = z.object({
   /** Height of the select menu */
   menuHeight: z.string().optional(),
   /** Callback called when an MenuItems's action button is clicked. You can also specify it within a MenuItemAction. */
-  onActionClick: z.function().optional(),
+  onActionClick: z.custom<(event?: any, itemId?: any, actionId?: any) => void>().optional(),
   /** Callback for drilling into a submenu */
   onDrillIn: z.any().optional(),
   /** Callback for drilling out of a submenu */
   onDrillOut: z.any().optional(),
   /** Callback for collecting menu heights */
-  onGetMenuHeight: z.function().optional(),
+  onGetMenuHeight: z.custom<(menuId: string, height: number) => void>().optional(),
   /** Callback to allow the select component to change the open state of the menu.
 Triggered by clicking outside of the menu, or by pressing any keys specified in onOpenChangeKeys. */
-  onOpenChange: z.function().optional(),
+  onOpenChange: z.custom<(isOpen: boolean) => void>().optional(),
   /** Keys that trigger onOpenChange, defaults to tab and escape. It is highly recommended to include Escape in the array, while Tab may be omitted if the menu contains non-menu items that are focusable. */
   onOpenChangeKeys: z.array(z.string()).optional(),
   /** Callback for updating when item selection changes. You can also specify onClick on the MenuItem. */

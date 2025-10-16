@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for SimpleListGroup
-// Generated on: 2025-10-16T19:02:51.728Z
+// Generated on: 2025-10-16T19:25:27.752Z
 import { z } from 'zod'
 
 export const SimpleListGroupSchema = z.object({

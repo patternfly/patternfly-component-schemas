@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for NotificationBadge
-// Generated on: 2025-10-16T19:02:51.737Z
+// Generated on: 2025-10-16T19:25:27.760Z
 import { z } from 'zod'
 
 export const NotificationBadgeSchema = z.object({

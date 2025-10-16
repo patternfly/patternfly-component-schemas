@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Nav
-// Generated on: 2025-10-16T19:02:51.737Z
+// Generated on: 2025-10-16T19:25:27.760Z
 import { z } from 'zod'
 
 export const NavSchema = z.object({
@@ -10,9 +10,9 @@ export const NavSchema = z.object({
   /** Additional classes added to the container */
   className: z.string().optional(),
   /** Callback for updating when item selection changes */
-  onSelect: z.any().optional().default('() => undefined'),
+  onSelect: z.custom<Event>().optional().default('() => undefined'),
   /** Callback for when a list is expanded or collapsed */
-  onToggle: z.any().optional().default('() => undefined'),
+  onToggle: z.custom<Event>().optional().default('() => undefined'),
   /** Value to overwrite the randomly generated data-ouia-component-id. */
   ouiaId: z.any().optional(),
   /** Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false. */

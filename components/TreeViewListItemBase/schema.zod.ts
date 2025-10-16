@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for TreeViewListItemBase
-// Generated on: 2025-10-16T19:02:51.721Z
+// Generated on: 2025-10-16T19:25:27.745Z
 import { z } from 'zod'
 
 export const TreeViewListItemBaseSchema = z.object({
@@ -16,7 +16,7 @@ export const TreeViewListItemBaseSchema = z.object({
   /** Child nodes of a tree view item. */
   children: z.custom<React.ReactNode>().optional().default('null'),
   /** Callback for item comparison function. */
-  compareItems: z.function().optional(),
+  compareItems: z.custom<(item: TreeViewDataItem, itemToCheck: TreeViewDataItem) => boolean>().optional(),
   /** Optional prop for a custom badge. */
   customBadgeContent: z.custom<React.ReactNode>().optional(),
   /** Flag indicating if node is expanded by default. */

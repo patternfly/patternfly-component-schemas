@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for TreeViewProps
-// Generated on: 2025-10-16T19:02:51.721Z
+// Generated on: 2025-10-16T19:25:27.746Z
 import { z } from 'zod'
 
 export const TreeViewPropsSchema = z.object({
@@ -11,7 +11,7 @@ internal state. */
   /** Class to add if not passed a parentItem property. */
   className: z.string().optional(),
   /** Comparison function for determining active items. */
-  compareItems: z.function().optional(),
+  compareItems: z.custom<(item: TreeViewDataItem, itemToCheck: TreeViewDataItem) => boolean>().optional(),
   /** Data of the tree view. */
   data: z.array(z.unknown()),
   /** Sets the default expanded behavior. */

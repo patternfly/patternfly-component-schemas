@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Pagination
-// Generated on: 2025-10-16T19:02:51.733Z
+// Generated on: 2025-10-16T19:25:27.757Z
 import { z } from 'zod'
 
 export const PaginationSchema = z.object({
@@ -12,13 +12,7 @@ export const PaginationSchema = z.object({
   /** Page to start at. */
   firstPage: z.number().optional().default(1),
   /** Insets at various breakpoints. */
-  inset: z.enum(['insetSm', 'insetMd', 'insetLg', 'insetXl', 'inset2xl';
-  sm?: 'insetNone', 'insetSm', 'insetMd', 'insetLg', 'insetXl', 'inset2xl';
-  md?: 'insetNone', 'insetSm', 'insetMd', 'insetLg', 'insetXl', 'inset2xl';
-  lg?: 'insetNone', 'insetSm', 'insetMd', 'insetLg', 'insetXl', 'inset2xl';
-  xl?: 'insetNone', 'insetSm', 'insetMd', 'insetLg', 'insetXl', 'inset2xl';
-  '2xl'?: 'insetNone', 'insetSm', 'insetMd', 'insetLg', 'insetXl', 'inset2xl';
-']).optional(),
+  inset: z.record(z.unknown()).optional(),
   /** Flag indicating if pagination is compact. */
   isCompact: z.boolean().optional().default(false),
   /** Flag indicating if pagination is disabled. */

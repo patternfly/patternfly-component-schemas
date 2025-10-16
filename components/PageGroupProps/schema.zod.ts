@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for PageGroupProps
-// Generated on: 2025-10-16T19:02:51.735Z
+// Generated on: 2025-10-16T19:25:27.758Z
 import { z } from 'zod'
 
 export const PageGroupPropsSchema = z.object({
@@ -16,13 +16,7 @@ export const PageGroupPropsSchema = z.object({
   /** Enables the page group to fill the available vertical space if true, or disable filling if false. */
   isFilled: z.boolean().optional(),
   /** Modifier indicating if the PageBreadcrumb is sticky to the top or bottom at various breakpoints */
-  stickyOnBreakpoint: z.enum(['bottom';
-    sm?: 'top', 'bottom';
-    md?: 'top', 'bottom';
-    lg?: 'top', 'bottom';
-    xl?: 'top', 'bottom';
-    '2xl'?: 'top', 'bottom';
-  ']).optional(),
+  stickyOnBreakpoint: z.record(z.unknown()).optional(),
   /** Adds an accessible name to the page group when the hasOverflowScroll prop is set to true. */
   'Unknown': z.string().optional()
 })

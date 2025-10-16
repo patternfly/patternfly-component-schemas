@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for MenuToggle
-// Generated on: 2025-10-16T19:02:51.739Z
+// Generated on: 2025-10-16T19:25:27.762Z
 import { z } from 'zod'
 
 export const MenuToggleSchema = z.object({

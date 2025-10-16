@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for TooltipArrow
-// Generated on: 2025-10-16T19:02:51.721Z
+// Generated on: 2025-10-16T19:25:27.746Z
 import { z } from 'zod'
 
 export const TooltipArrowSchema = z.object({

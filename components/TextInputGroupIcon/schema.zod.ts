@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for TextInputGroupIcon
-// Generated on: 2025-10-16T19:02:51.725Z
+// Generated on: 2025-10-16T19:25:27.749Z
 import { z } from 'zod'
 
 export const TextInputGroupIconSchema = z.object({

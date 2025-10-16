@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for KeyboardHandler
-// Generated on: 2025-10-16T19:02:51.714Z
+// Generated on: 2025-10-16T19:25:27.739Z
 import { z } from 'zod'
 
 export const KeyboardHandlerSchema = z.object({
@@ -10,9 +10,9 @@ export const KeyboardHandlerSchema = z.object({
   /** Callback returning an array of navigable elements to be traversable via vertical arrow keys. This array should not include non-navigable elements such as disabled elements. */
   createNavigableElements: z.array(z.unknown()).optional().default('() => null as Element[]'),
   /** Callback returning the focusable element of a given element from the navigable elements array */
-  getFocusableElement: z.function().optional().default('(navigableElement: Element) => navigableElement'),
+  getFocusableElement: z.custom<(navigableElement: Element) => Element>().optional().default('(navigableElement: Element) => navigableElement'),
   /** Callback to determine if a given element from the navigable elements array is the active element of the page */
-  isActiveElement: z.function().optional().default('(navigableElement: Element) => document.activeElement === navigableElement'),
+  isActiveElement: z.custom<(navigableElement: Element) => boolean>().optional().default('(navigableElement: Element) => document.activeElement === navigableElement'),
   /** Callback to determine if a given event is from the container. By default the function conducts a basic check to see if the containerRef contains the event target */
   isEventFromContainer: z.custom<Event>().optional(),
   /** Flag indicating that the included enter key handling should be ignored */

@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for PageToggleButton
-// Generated on: 2025-10-16T19:02:51.734Z
+// Generated on: 2025-10-16T19:25:27.758Z
 import { z } from 'zod'
 
 export const PageToggleButtonSchema = z.object({
@@ -40,7 +40,7 @@ export const PageToggleButtonSchema = z.object({
   /** True if the sidebar is shown */
   isSidebarOpen: z.boolean().optional().default(true),
   /** Callback function to handle the sidebar toggle button, managed by the Page component if the Page isManagedSidebar prop is set to true */
-  onSidebarToggle: z.function().optional().default('() => undefined as any'),
+  onSidebarToggle: z.custom<() => void>().optional().default('() => undefined as any'),
   /** Value to overwrite the randomly generated data-ouia-component-id. */
   ouiaId: z.any().optional(),
   /** Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false. */

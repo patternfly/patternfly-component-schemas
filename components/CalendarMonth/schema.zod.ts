@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for CalendarMonth
-// Generated on: 2025-10-16T19:02:51.753Z
+// Generated on: 2025-10-16T19:25:27.778Z
 import { z } from 'zod'
 
 export const CalendarMonthSchema = z.object({
   /** Accessible label for the date cells. */
-  cellAriaLabel: z.function().optional(),
+  cellAriaLabel: z.custom<(date: Date) => string>().optional(),
   /** Additional classes to add to the outer div of the calendar month. */
   className: z.string().optional(),
   /** Month/year to base other dates around. */

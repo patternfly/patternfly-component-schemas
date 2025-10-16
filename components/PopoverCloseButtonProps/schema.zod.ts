@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for PopoverCloseButtonProps
-// Generated on: 2025-10-16T19:02:51.732Z
+// Generated on: 2025-10-16T19:25:27.756Z
 import { z } from 'zod'
 
 export const PopoverCloseButtonPropsSchema = z.object({
   /** PopoverCloseButton onClose function */
-  onClose: z.function().optional(),
+  onClose: z.custom<(event: any) => void>().optional(),
   /** Aria label for the Close button */
   'Unknown': z.string()
 })

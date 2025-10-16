@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for PageContextProps
-// Generated on: 2025-10-16T19:02:51.735Z
+// Generated on: 2025-10-16T19:25:27.758Z
 import { z } from 'zod'
 
 export const PageContextPropsSchema = z.object({
@@ -8,7 +8,7 @@ export const PageContextPropsSchema = z.object({
   height: z.number(),
   isManagedSidebar: z.boolean(),
   isSidebarOpen: z.boolean(),
-  onSidebarToggle: z.function(),
+  onSidebarToggle: z.custom<() => void>(),
   width: z.number()
 })
 

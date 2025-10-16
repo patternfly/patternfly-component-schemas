@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for CalendarFormat
-// Generated on: 2025-10-16T19:02:51.753Z
+// Generated on: 2025-10-16T19:25:27.778Z
 import { z } from 'zod'
 
 export const CalendarFormatSchema = z.object({
   /** Accessible label for the date cells. */
-  cellAriaLabel: z.function().optional(),
+  cellAriaLabel: z.custom<(date: Date) => string>().optional(),
   /** How to format days in buttons in table cells. */
   dayFormat: z.custom<React.ReactNode>().optional(),
   /** Props used to ensure accessibility when displaying the calendar month inline. */

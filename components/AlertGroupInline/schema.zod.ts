@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for AlertGroupInline
-// Generated on: 2025-10-16T19:02:51.755Z
+// Generated on: 2025-10-16T19:25:27.780Z
 import { z } from 'zod'
 
 export const AlertGroupInlineSchema = z.object({
@@ -19,7 +19,7 @@ to remain false for testing purposes only. */
   /** Toast notifications are positioned at the top right corner of the viewport */
   isToast: z.boolean().optional(),
   /** Function to call if user clicks on overflow message */
-  onOverflowClick: z.function().optional(),
+  onOverflowClick: z.custom<() => void>().optional(),
   /** Custom text to show for the overflow message */
   overflowMessage: z.string().optional()
 })

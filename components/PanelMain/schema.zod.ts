@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for PanelMain
-// Generated on: 2025-10-16T19:02:51.736Z
+// Generated on: 2025-10-16T19:25:27.759Z
 import { z } from 'zod'
 
 export const PanelMainSchema = z.object({

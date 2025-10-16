@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for AlertGroupProps
-// Generated on: 2025-10-16T19:02:51.756Z
+// Generated on: 2025-10-16T19:25:27.780Z
 import { z } from 'zod'
 
 export const AlertGroupPropsSchema = z.object({
@@ -15,7 +15,7 @@ export const AlertGroupPropsSchema = z.object({
   /** Toast notifications are positioned at the top right corner of the viewport */
   isToast: z.boolean().optional(),
   /** Function to call if user clicks on overflow message */
-  onOverflowClick: z.function().optional(),
+  onOverflowClick: z.custom<() => void>().optional(),
   /** Custom text to show for the overflow message */
   overflowMessage: z.string().optional(),
   /** Adds an accessible label to the alert group. */

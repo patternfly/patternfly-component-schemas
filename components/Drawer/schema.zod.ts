@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Drawer
-// Generated on: 2025-10-16T19:02:51.749Z
+// Generated on: 2025-10-16T19:25:27.773Z
 import { z } from 'zod'
 
 export const DrawerSchema = z.object({

@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for MenuContainer
-// Generated on: 2025-10-16T19:02:51.740Z
+// Generated on: 2025-10-16T19:25:27.764Z
 import { z } from 'zod'
 
 export const MenuContainerSchema = z.object({
@@ -13,7 +13,7 @@ export const MenuContainerSchema = z.object({
   menuRef: z.unknown(),
   /** Callback to change the open state of the menu.
 Triggered by clicking outside of the menu, or by pressing any keys specified in onOpenChangeKeys. */
-  onOpenChange: z.function().optional(),
+  onOpenChange: z.custom<(isOpen: boolean) => void>().optional(),
   /** Keys that trigger onOpenChange, defaults to tab and escape. It is highly recommended to include Escape in the array, while Tab may be omitted if the menu contains non-menu items that are focusable. */
   onOpenChangeKeys: z.array(z.string()).optional().default('['Escape', 'Tab']'),
   /** Callback to override the toggle keydown behavior. By default, when the toggle has focus and the menu is open, pressing the up/down arrow keys will focus a valid non-disabled menu item - the first item for the down arrow key and last item for the up arrow key. */

@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for PopoverContextProps
-// Generated on: 2025-10-16T19:02:51.732Z
+// Generated on: 2025-10-16T19:25:27.756Z
 import { z } from 'zod'
 
 export const PopoverContextPropsSchema = z.object({

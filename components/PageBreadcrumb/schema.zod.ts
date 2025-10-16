@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for PageBreadcrumb
-// Generated on: 2025-10-16T19:02:51.735Z
+// Generated on: 2025-10-16T19:25:27.758Z
 import { z } from 'zod'
 
 export const PageBreadcrumbSchema = z.object({
@@ -21,13 +21,7 @@ Set this to false in order to pass multiple, custom PageBody's as children. */
   /** Limits the width of the breadcrumb */
   isWidthLimited: z.boolean().optional(),
   /** Modifier indicating if the PageBreadcrumb is sticky to the top or bottom at various breakpoints */
-  stickyOnBreakpoint: z.enum(['bottom';
-  sm?: 'top', 'bottom';
-  md?: 'top', 'bottom';
-  lg?: 'top', 'bottom';
-  xl?: 'top', 'bottom';
-  '2xl'?: 'top', 'bottom';
-']).optional()
+  stickyOnBreakpoint: z.record(z.unknown()).optional()
 })
 
 export type PageBreadcrumbProps = z.infer<typeof PageBreadcrumbSchema>

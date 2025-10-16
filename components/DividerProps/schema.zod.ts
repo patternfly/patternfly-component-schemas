@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for DividerProps
-// Generated on: 2025-10-16T19:02:51.749Z
+// Generated on: 2025-10-16T19:25:27.774Z
 import { z } from 'zod'
 
 export const DividerPropsSchema = z.object({
@@ -8,21 +8,9 @@ export const DividerPropsSchema = z.object({
   /** The component type to use */
   component: z.enum(['hr', 'li', 'div']).optional(),
   /** Insets at various breakpoints. */
-  inset: z.enum(['insetXs', 'insetSm', 'insetMd', 'insetLg', 'insetXl', 'inset2xl', 'inset3xl';
-    sm?: 'insetNone', 'insetXs', 'insetSm', 'insetMd', 'insetLg', 'insetXl', 'inset2xl', 'inset3xl';
-    md?: 'insetNone', 'insetXs', 'insetSm', 'insetMd', 'insetLg', 'insetXl', 'inset2xl', 'inset3xl';
-    lg?: 'insetNone', 'insetXs', 'insetSm', 'insetMd', 'insetLg', 'insetXl', 'inset2xl', 'inset3xl';
-    xl?: 'insetNone', 'insetXs', 'insetSm', 'insetMd', 'insetLg', 'insetXl', 'inset2xl', 'inset3xl';
-    '2xl'?: 'insetNone', 'insetXs', 'insetSm', 'insetMd', 'insetLg', 'insetXl', 'inset2xl', 'inset3xl';
-  ']).optional(),
+  inset: z.record(z.unknown()).optional(),
   /** Indicates how the divider will display at various breakpoints. Vertical divider must be in a flex layout. */
-  orientation: z.enum(['horizontal';
-    sm?: 'vertical', 'horizontal';
-    md?: 'vertical', 'horizontal';
-    lg?: 'vertical', 'horizontal';
-    xl?: 'vertical', 'horizontal';
-    '2xl'?: 'vertical', 'horizontal';
-  ']).optional()
+  orientation: z.record(z.unknown()).optional()
 })
 
 export type DividerPropsProps = z.infer<typeof DividerPropsSchema>

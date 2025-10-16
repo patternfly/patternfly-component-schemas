@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for PageBreadcrumbProps
-// Generated on: 2025-10-16T19:02:51.735Z
+// Generated on: 2025-10-16T19:25:27.758Z
 import { z } from 'zod'
 
 export const PageBreadcrumbPropsSchema = z.object({
@@ -17,13 +17,7 @@ export const PageBreadcrumbPropsSchema = z.object({
   /** Limits the width of the breadcrumb */
   isWidthLimited: z.boolean().optional(),
   /** Modifier indicating if the PageBreadcrumb is sticky to the top or bottom at various breakpoints */
-  stickyOnBreakpoint: z.enum(['bottom';
-    sm?: 'top', 'bottom';
-    md?: 'top', 'bottom';
-    lg?: 'top', 'bottom';
-    xl?: 'top', 'bottom';
-    '2xl'?: 'top', 'bottom';
-  ']).optional(),
+  stickyOnBreakpoint: z.record(z.unknown()).optional(),
   /** Adds an accessible name to the breadcrumb section. Required when the hasOverflowScroll prop is set to true. */
   'Unknown': z.string().optional()
 })

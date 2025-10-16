@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for NavItemProps
-// Generated on: 2025-10-16T19:02:51.736Z
+// Generated on: 2025-10-16T19:25:27.759Z
 import { z } from 'zod'
 
 export const NavItemPropsSchema = z.object({
@@ -22,7 +22,7 @@ export const NavItemPropsSchema = z.object({
   /** Callback for item click */
   onClick: z.unknown().optional(),
   /** Callback when flyout is opened or closed */
-  onShowFlyout: z.function().optional(),
+  onShowFlyout: z.custom<() => void>().optional(),
   /** Value to overwrite the randomly generated data-ouia-component-id. */
   ouiaId: z.any().optional(),
   /** Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false. */

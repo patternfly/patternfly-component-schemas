@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for WizardProps-deprecated
-// Generated on: 2025-10-16T19:02:51.760Z
+// Generated on: 2025-10-16T19:25:27.784Z
 import { z } from 'zod'
 
 export const WizardPropsSchema = z.object({
@@ -48,19 +48,19 @@ The aria-labelledby will only be applied when the body content overflows and ren
   /** (Unused if footer is controlled) The Next button text */
   nextButtonText: z.custom<React.ReactNode>().optional(),
   /** (Unused if footer is controlled) Callback function after Back button is clicked */
-  onBack: z.function().optional(),
+  onBack: z.custom<WizardStepFunctionType>().optional(),
   /** Callback function to close the wizard */
-  onClose: z.function().optional(),
+  onClose: z.custom<() => void>().optional(),
   /** Callback function to signal the current step in the wizard */
-  onCurrentStepChanged: z.function().optional(),
+  onCurrentStepChanged: z.custom<(step: WizardStep) => void>().optional(),
   /** Callback function for when the drawer is toggled. Can be used to set browser focus in the drawer. */
-  onExpandDrawer: z.function().optional(),
+  onExpandDrawer: z.custom<() => void>().optional(),
   /** Callback function when a step in the nav is clicked */
-  onGoToStep: z.function().optional(),
+  onGoToStep: z.custom<WizardStepFunctionType>().optional(),
   /** (Unused if footer is controlled) Callback function after Next button is clicked */
-  onNext: z.function().optional(),
+  onNext: z.custom<WizardStepFunctionType>().optional(),
   /** (Unused if footer is controlled) Callback function to save at the end of the wizard, if not specified uses onClose */
-  onSave: z.function().optional(),
+  onSave: z.custom<() => void>().optional(),
   /** The current step the wizard is on (1 or higher) */
   startAtStep: z.number().optional(),
   /** The wizard steps configuration object */

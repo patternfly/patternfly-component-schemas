@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Masthead
-// Generated on: 2025-10-16T19:02:51.741Z
+// Generated on: 2025-10-16T19:25:27.764Z
 import { z } from 'zod'
 
 export const MastheadSchema = z.object({
@@ -8,23 +8,11 @@ export const MastheadSchema = z.object({
   /** Additional classes added to the masthead */
   className: z.string().optional(),
   /** Display type at various breakpoints */
-  display: z.enum(['stack';
-  sm?: 'inline', 'stack';
-  md?: 'inline', 'stack';
-  lg?: 'inline', 'stack';
-  xl?: 'inline', 'stack';
-  '2xl'?: 'inline', 'stack';
-']).optional().default('{
+  display: z.record(z.unknown()).optional().default('{
   md: 'inline'
 }'),
   /** Insets at various breakpoints */
-  inset: z.enum(['insetXs', 'insetSm', 'insetMd', 'insetLg', 'insetXl', 'inset2xl', 'inset3xl';
-  sm?: 'insetNone', 'insetXs', 'insetSm', 'insetMd', 'insetLg', 'insetXl', 'inset2xl', 'inset3xl';
-  md?: 'insetNone', 'insetXs', 'insetSm', 'insetMd', 'insetLg', 'insetXl', 'inset2xl', 'inset3xl';
-  lg?: 'insetNone', 'insetXs', 'insetSm', 'insetMd', 'insetLg', 'insetXl', 'inset2xl', 'inset3xl';
-  xl?: 'insetNone', 'insetXs', 'insetSm', 'insetMd', 'insetLg', 'insetXl', 'inset2xl', 'inset3xl';
-  '2xl'?: 'insetNone', 'insetXs', 'insetSm', 'insetMd', 'insetLg', 'insetXl', 'inset2xl', 'inset3xl';
-']).optional()
+  inset: z.record(z.unknown()).optional()
 })
 
 export type MastheadProps = z.infer<typeof MastheadSchema>

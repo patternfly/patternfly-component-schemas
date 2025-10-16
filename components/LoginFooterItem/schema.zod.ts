@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for LoginFooterItem
-// Generated on: 2025-10-16T19:02:51.742Z
+// Generated on: 2025-10-16T19:25:27.766Z
 import { z } from 'zod'
 
 export const LoginFooterItemSchema = z.object({

@@ -1,18 +1,18 @@
 // Auto-generated Zod schema for ToolbarContextProps
-// Generated on: 2025-10-16T19:02:51.722Z
+// Generated on: 2025-10-16T19:25:27.747Z
 import { z } from 'zod'
 
 export const ToolbarContextPropsSchema = z.object({
-  clearAllFilters: z.function().optional(),
+  clearAllFilters: z.custom<() => void>().optional(),
   clearFiltersButtonText: z.string().optional(),
   customLabelGroupContent: z.custom<React.ReactNode>().optional(),
   isExpanded: z.boolean(),
   labelGroupContentRef: z.any(),
   numberOfFilters: z.number(),
   showClearFiltersButton: z.boolean().optional(),
-  toggleIsExpanded: z.function(),
+  toggleIsExpanded: z.custom<() => void>(),
   toolbarId: z.string().optional(),
-  updateNumberFilters: z.function()
+  updateNumberFilters: z.custom<(categoryName: string, numberOfFilters: number) => void>()
 })
 
 export type ToolbarContextPropsProps = z.infer<typeof ToolbarContextPropsSchema>

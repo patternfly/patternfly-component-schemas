@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for SidebarPanelProps
-// Generated on: 2025-10-16T19:02:51.729Z
+// Generated on: 2025-10-16T19:25:27.753Z
 import { z } from 'zod'
 
 export const SidebarPanelPropsSchema = z.object({
@@ -13,13 +13,7 @@ export const SidebarPanelPropsSchema = z.object({
   /** Indicates whether the panel is positioned statically or sticky to the top. Default is sticky on small screens when the orientation is stack, and static on medium and above screens when the orientation is split. */
   variant: z.enum(['default', 'sticky', 'static']).optional(),
   /** Sets the panel width at various breakpoints. Default is 250px when the orientation is split. */
-  width: z.enum(['width_25', 'width_33', 'width_50', 'width_66', 'width_75', 'width_100';
-    sm?: 'default', 'width_25', 'width_33', 'width_50', 'width_66', 'width_75', 'width_100';
-    md?: 'default', 'width_25', 'width_33', 'width_50', 'width_66', 'width_75', 'width_100';
-    lg?: 'default', 'width_25', 'width_33', 'width_50', 'width_66', 'width_75', 'width_100';
-    xl?: 'default', 'width_25', 'width_33', 'width_50', 'width_66', 'width_75', 'width_100';
-    '2xl'?: 'default', 'width_25', 'width_33', 'width_50', 'width_66', 'width_75', 'width_100';
-  ']).optional()
+  width: z.record(z.unknown()).optional()
 })
 
 export type SidebarPanelPropsProps = z.infer<typeof SidebarPanelPropsSchema>

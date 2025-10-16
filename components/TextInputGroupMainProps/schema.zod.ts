@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for TextInputGroupMainProps
-// Generated on: 2025-10-16T19:02:51.725Z
+// Generated on: 2025-10-16T19:25:27.749Z
 import { z } from 'zod'
 
 export const TextInputGroupMainPropsSchema = z.object({
@@ -22,11 +22,11 @@ role has a value of "combobox". */
   /** Name for the input */
   name: z.string().optional(),
   /** Callback for when focus is lost on the input field */
-  onBlur: z.function().optional(),
+  onBlur: z.custom<(event?: any) => void>().optional(),
   /** Callback for when there is a change in the input field */
   onChange: z.custom<Event>().optional(),
   /** Callback for when the input field is focused */
-  onFocus: z.function().optional(),
+  onFocus: z.custom<(event?: any) => void>().optional(),
   /** Placeholder value for the input */
   placeholder: z.string().optional(),
   /** Determines the accessible role of the input. */

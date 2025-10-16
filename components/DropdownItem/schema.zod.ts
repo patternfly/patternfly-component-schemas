@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for DropdownItem
-// Generated on: 2025-10-16T19:02:51.748Z
+// Generated on: 2025-10-16T19:25:27.772Z
 import { z } from 'zod'
 
 export const DropdownItemSchema = z.object({
@@ -14,7 +14,7 @@ export const DropdownItemSchema = z.object({
   /** Render item as disabled option */
   isDisabled: z.boolean().optional(),
   /** Callback for item click */
-  onClick: z.function().optional(),
+  onClick: z.custom<(event?: any) => void>().optional(),
   /** Value to overwrite the randomly generated data-ouia-component-id. */
   ouiaId: z.any().optional(),
   /** Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false. */

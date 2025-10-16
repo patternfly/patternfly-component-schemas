@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for MenuGroupProps
-// Generated on: 2025-10-16T19:02:51.740Z
+// Generated on: 2025-10-16T19:25:27.763Z
 import { z } from 'zod'
 
 export const MenuGroupPropsSchema = z.object({

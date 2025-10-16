@@ -1,12 +1,12 @@
 // Auto-generated Zod schema for WizardContextProps
-// Generated on: 2025-10-16T19:02:51.719Z
+// Generated on: 2025-10-16T19:25:27.744Z
 import { z } from 'zod'
 
 export const WizardContextPropsSchema = z.object({
   /** Current step */
   activeStep: z.unknown(),
   /** Close the wizard */
-  close: z.function(),
+  close: z.custom<() => void>(),
   /** Footer element */
   footer: z.custom<React.ReactElement>(),
   /** Get step by ID */
@@ -18,15 +18,15 @@ export const WizardContextPropsSchema = z.object({
   /** Navigate to step by ID */
   goToStepById: z.any(),
   /** Navigate to step by index */
-  goToStepByIndex: z.function(),
+  goToStepByIndex: z.custom<(index: number) => void>(),
   /** Navigate to step by name */
-  goToStepByName: z.function(),
+  goToStepByName: z.custom<(name: string) => void>(),
   /** Ref for main wizard content element. */
   mainWrapperRef: z.any(),
   /** Update the footer with any react element */
   setFooter: z.any(),
   /** Set step by ID */
-  setStep: z.function(),
+  setStep: z.custom<(step: Pick<WizardStepType, \'id\'> & Partial<WizardStepType>) => void>(),
   /** Flag indicating whether the wizard content should be focused after the onNext or onBack callbacks
 are called. */
   shouldFocusContent: z.boolean(),

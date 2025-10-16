@@ -1,12 +1,12 @@
 // Auto-generated Zod schema for MenuContentProps
-// Generated on: 2025-10-16T19:02:51.740Z
+// Generated on: 2025-10-16T19:25:27.764Z
 import { z } from 'zod'
 
 export const MenuContentPropsSchema = z.object({
   /** Items within group */
   children: z.custom<React.ReactNode>().optional(),
   /** Callback to return the height of the menu content */
-  getHeight: z.function().optional(),
+  getHeight: z.custom<(height: string) => void>().optional(),
   innerRef: z.unknown().optional(),
   /** Maximum height of menu content */
   maxMenuHeight: z.string().optional(),

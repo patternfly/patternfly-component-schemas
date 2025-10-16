@@ -22,7 +22,7 @@ const REACT_NODE_REGEX = /(React\.)?ReactNode/;
 const REACT_ELEMENT_REGEX = /(React\.)?ReactElement/;
 const EVENT_TYPE_REGEX = /Event/;
 const FUNCTION_TYPE_REGEX = /=>|function|Function/;
-const OBJECT_TYPE_REGEX = /\{.+\}/;
+const OBJECT_TYPE_REGEX = /\{[\s\S]*\}/;  // Match { } including newlines
 
 // Helper to extract inner type from array notation
 function getArrayInnerType(type) {
@@ -71,13 +71,16 @@ function typeToZod(prop) {
   const { type, enumValues, defaultValue } = prop;
   let zodType = 'z.any()';
 
-  // Handle enum/union types first
-  if (enumValues && enumValues.length > 0) {
+  // Skip enum extraction for object types (patternfly-doc-core incorrectly extracts enums from objects)
+  const isObjectType = OBJECT_TYPE_REGEX.test(type);
+
+  // Handle enum/union types first (but not for object types)
+  if (enumValues && enumValues.length > 0 && !isObjectType) {
     const enumString = enumValues.map(val => `'${val}'`).join(', ');
     zodType = `z.enum([${enumString}])`;
   }
   // Handle union types with numbers (like 0 | 1 | 2 | 3)
-  else if (type.includes('|')) {
+  else if (type.includes('|') && !isObjectType) {
     const values = type.split('|').map(v => v.trim());
     const allNumbers = values.every(v => /^\d+$/.test(v));
     if (allNumbers) {
@@ -128,13 +131,15 @@ function typeToZod(prop) {
           break;
         }
         
-        // Function types
+        // Function types - preserve signature for better type inference
         if (FUNCTION_TYPE_REGEX.test(type)) {
-          zodType = 'z.function()';
+          // Escape special characters for TypeScript type parameter
+          const escapedType = type.replace(/'/g, "\\'");
+          zodType = `z.custom<${escapedType}>()`;
           break;
         }
         
-        // Object types
+        // Object types - use record for dynamic object shapes
         if (OBJECT_TYPE_REGEX.test(type)) {
           zodType = 'z.record(z.unknown())';
           break;

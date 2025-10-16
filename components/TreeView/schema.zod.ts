@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for TreeView
-// Generated on: 2025-10-16T19:02:51.721Z
+// Generated on: 2025-10-16T19:25:27.746Z
 import { z } from 'zod'
 
 export const TreeViewSchema = z.object({
@@ -17,7 +17,7 @@ this or the aria-label property must be passed in. */
   /** Class to add if not passed a parentItem property. */
   className: z.string().optional(),
   /** Comparison function for determining active items. */
-  compareItems: z.function().optional().default('(item, itemToCheck) => item.id === itemToCheck.id'),
+  compareItems: z.custom<(item: TreeViewDataItem, itemToCheck: TreeViewDataItem) => boolean>().optional().default('(item, itemToCheck) => item.id === itemToCheck.id'),
   /** Data of the tree view. */
   data: z.array(z.unknown()),
   /** Sets the default expanded behavior. */

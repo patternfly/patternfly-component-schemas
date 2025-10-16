@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for PopoverProps
-// Generated on: 2025-10-16T19:02:51.733Z
+// Generated on: 2025-10-16T19:25:27.756Z
 import { z } from 'zod'
 
 export const PopoverPropsSchema = z.object({
@@ -80,15 +80,15 @@ for the shouldClose prop. */
   /** Minimum width of the popover (default 6.25rem). */
   minWidth: z.string().optional(),
   /** Lifecycle function invoked when the popover has fully transitioned out. */
-  onHidden: z.function().optional(),
+  onHidden: z.custom<() => void>().optional(),
   /** Lifecycle function invoked when the popover begins to transition out. */
   onHide: z.any().optional(),
   /** Lifecycle function invoked when the popover has been mounted to the DOM. */
-  onMount: z.function().optional(),
+  onMount: z.custom<() => void>().optional(),
   /** Lifecycle function invoked when the popover begins to transition in. */
   onShow: z.any().optional(),
   /** Lifecycle function invoked when the popover has fully transitioned in. */
-  onShown: z.function().optional(),
+  onShown: z.custom<() => void>().optional(),
   /** Popover position. Note: With the enableFlip property set to true, it will change the
 position if there is not enough space for the starting position. The behavior of where it
 flips to can be controlled through the flipBehavior property. */

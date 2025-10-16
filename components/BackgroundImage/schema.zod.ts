@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for BackgroundImage
-// Generated on: 2025-10-16T19:02:51.755Z
+// Generated on: 2025-10-16T19:25:27.780Z
 import { z } from 'zod'
 
 export const BackgroundImageSchema = z.object({

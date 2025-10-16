@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for FormFieldGroupToggleProps
-// Generated on: 2025-10-16T19:02:51.746Z
+// Generated on: 2025-10-16T19:25:27.770Z
 import { z } from 'zod'
 
 export const FormFieldGroupTogglePropsSchema = z.object({
@@ -8,7 +8,7 @@ export const FormFieldGroupTogglePropsSchema = z.object({
   /** Flag indicating if the toggle is expanded */
   isExpanded: z.boolean(),
   /** Callback for onClick */
-  onToggle: z.function(),
+  onToggle: z.custom<() => void>(),
   /** The id applied to the toggle button */
   toggleId: z.string().optional(),
   /** Sets the aria-labelledby attribute on the toggle button element */

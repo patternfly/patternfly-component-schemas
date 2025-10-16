@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ToolbarProps
-// Generated on: 2025-10-16T19:02:51.724Z
+// Generated on: 2025-10-16T19:25:27.748Z
 import { z } from 'zod'
 
 export const ToolbarPropsSchema = z.object({
@@ -8,7 +8,7 @@ export const ToolbarPropsSchema = z.object({
   /** Classes applied to root element of the data toolbar */
   className: z.string().optional(),
   /** Optional callback for clearing all filters in the toolbar */
-  clearAllFilters: z.function().optional(),
+  clearAllFilters: z.custom<() => void>().optional(),
   /** Text to display in the clear all filters button */
   clearFiltersButtonText: z.string().optional(),
   /** The breakpoint at which the listed filters in label groups are collapsed down to a summary */
@@ -22,13 +22,7 @@ export const ToolbarPropsSchema = z.object({
   /** Id of the data toolbar */
   id: z.string().optional(),
   /** Insets at various breakpoints. */
-  inset: z.enum(['insetSm', 'insetMd', 'insetLg', 'insetXl', 'inset2xl';
-    sm?: 'insetNone', 'insetSm', 'insetMd', 'insetLg', 'insetXl', 'inset2xl';
-    md?: 'insetNone', 'insetSm', 'insetMd', 'insetLg', 'insetXl', 'inset2xl';
-    lg?: 'insetNone', 'insetSm', 'insetMd', 'insetLg', 'insetXl', 'inset2xl';
-    xl?: 'insetNone', 'insetSm', 'insetMd', 'insetLg', 'insetXl', 'inset2xl';
-    '2xl'?: 'insetNone', 'insetSm', 'insetMd', 'insetLg', 'insetXl', 'inset2xl';
-  ']).optional(),
+  inset: z.record(z.unknown()).optional(),
   /** Flag indicating if a data toolbar toggle group's expandable content is expanded */
   isExpanded: z.boolean().optional(),
   /** Flag indicating the toolbar height should expand to the full height of the container */
@@ -38,13 +32,13 @@ export const ToolbarPropsSchema = z.object({
   /** Flag indicating the toolbar should stick to the top of its container */
   isSticky: z.boolean().optional(),
   /** Text to display in the total number of applied filters ToolbarFilter */
-  numberOfFiltersText: z.function().optional(),
+  numberOfFiltersText: z.custom<(numberOfFilters: number) => string>().optional(),
   /** Value to overwrite the randomly generated data-ouia-component-id. */
   ouiaId: z.any().optional(),
   /** Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false. */
   ouiaSafe: z.boolean().optional(),
   /** A callback for setting the isExpanded flag */
-  toggleIsExpanded: z.function().optional()
+  toggleIsExpanded: z.custom<() => void>().optional()
 })
 
 export type ToolbarPropsProps = z.infer<typeof ToolbarPropsSchema>

@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for CardActions
-// Generated on: 2025-10-16T19:02:51.754Z
+// Generated on: 2025-10-16T19:25:27.779Z
 import { z } from 'zod'
 
 export const CardActionsSchema = z.object({

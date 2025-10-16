@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ChipProps-deprecated
-// Generated on: 2025-10-16T19:02:51.762Z
+// Generated on: 2025-10-16T19:25:27.786Z
 import { z } from 'zod'
 
 export const ChipPropsSchema = z.object({

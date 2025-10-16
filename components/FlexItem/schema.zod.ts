@@ -1,24 +1,12 @@
 // Auto-generated Zod schema for FlexItem
-// Generated on: 2025-10-16T19:02:51.715Z
+// Generated on: 2025-10-16T19:25:27.741Z
 import { z } from 'zod'
 
 export const FlexItemSchema = z.object({
   /** Value to use for margin: auto at various breakpoints */
-  align: z.enum(['alignRight';
-  sm?: 'alignLeft', 'alignRight';
-  md?: 'alignLeft', 'alignRight';
-  lg?: 'alignLeft', 'alignRight';
-  xl?: 'alignLeft', 'alignRight';
-  '2xl'?: 'alignLeft', 'alignRight';
-']).optional(),
+  align: z.record(z.unknown()).optional(),
   /** Value to add for align-self property at various breakpoints */
-  alignSelf: z.enum(['alignSelfFlexEnd', 'alignSelfCenter', 'alignSelfStretch', 'alignSelfBaseline';
-  sm?: 'alignSelfFlexStart', 'alignSelfFlexEnd', 'alignSelfCenter', 'alignSelfStretch', 'alignSelfBaseline';
-  md?: 'alignSelfFlexStart', 'alignSelfFlexEnd', 'alignSelfCenter', 'alignSelfStretch', 'alignSelfBaseline';
-  lg?: 'alignSelfFlexStart', 'alignSelfFlexEnd', 'alignSelfCenter', 'alignSelfStretch', 'alignSelfBaseline';
-  xl?: 'alignSelfFlexStart', 'alignSelfFlexEnd', 'alignSelfCenter', 'alignSelfStretch', 'alignSelfBaseline';
-  '2xl'?: 'alignSelfFlexStart', 'alignSelfFlexEnd', 'alignSelfCenter', 'alignSelfStretch', 'alignSelfBaseline';
-']).optional(),
+  alignSelf: z.record(z.unknown()).optional(),
   /** content rendered inside the Flex layout */
   children: z.custom<React.ReactNode>().optional().default('null'),
   /** additional classes added to the Flex layout */
@@ -26,29 +14,17 @@ export const FlexItemSchema = z.object({
   /** Sets the base component to render. defaults to div */
   component: z.any().optional().default('div'),
   /** Value to add for flex property at various breakpoints */
-  flex: z.enum(['flexNone', 'flex_1', 'flex_2', 'flex_3', 'flex_4';
-  sm?: 'flexDefault', 'flexNone', 'flex_1', 'flex_2', 'flex_3', 'flex_4';
-  md?: 'flexDefault', 'flexNone', 'flex_1', 'flex_2', 'flex_3', 'flex_4';
-  lg?: 'flexDefault', 'flexNone', 'flex_1', 'flex_2', 'flex_3', 'flex_4';
-  xl?: 'flexDefault', 'flexNone', 'flex_1', 'flex_2', 'flex_3', 'flex_4';
-  '2xl'?: 'flexDefault', 'flexNone', 'flex_1', 'flex_2', 'flex_3', 'flex_4';
-']).optional(),
+  flex: z.record(z.unknown()).optional(),
   /** Whether to set width: 100% at various breakpoints */
-  fullWidth: z.unknown().optional(),
+  fullWidth: z.record(z.unknown()).optional(),
   /** Whether to add flex: grow at various breakpoints */
-  grow: z.unknown().optional(),
+  grow: z.record(z.unknown()).optional(),
   /** Modifies the flex layout element order property */
-  order: z.unknown().optional(),
+  order: z.record(z.unknown()).optional(),
   /** Whether to add flex: shrink at various breakpoints */
-  shrink: z.unknown().optional(),
+  shrink: z.record(z.unknown()).optional(),
   /** Spacers at various breakpoints */
-  spacer: z.enum(['spacerNone', 'spacerXs', 'spacerSm', 'spacerMd', 'spacerLg', 'spacerXl', 'spacer2xl', 'spacer3xl', 'spacer4xl';
-  sm?', 'spacerNone', 'spacerXs', 'spacerSm', 'spacerMd', 'spacerLg', 'spacerXl', 'spacer2xl', 'spacer3xl', 'spacer4xl';
-  md?', 'spacerNone', 'spacerXs', 'spacerSm', 'spacerMd', 'spacerLg', 'spacerXl', 'spacer2xl', 'spacer3xl', 'spacer4xl';
-  lg?', 'spacerNone', 'spacerXs', 'spacerSm', 'spacerMd', 'spacerLg', 'spacerXl', 'spacer2xl', 'spacer3xl', 'spacer4xl';
-  xl?', 'spacerNone', 'spacerXs', 'spacerSm', 'spacerMd', 'spacerLg', 'spacerXl', 'spacer2xl', 'spacer3xl', 'spacer4xl';
-  '2xl'?', 'spacerNone', 'spacerXs', 'spacerSm', 'spacerMd', 'spacerLg', 'spacerXl', 'spacer2xl', 'spacer3xl', 'spacer4xl';
-']).optional()
+  spacer: z.record(z.unknown()).optional()
 })
 
 export type FlexItemProps = z.infer<typeof FlexItemSchema>

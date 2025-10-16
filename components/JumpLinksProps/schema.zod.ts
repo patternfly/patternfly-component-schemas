@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for JumpLinksProps
-// Generated on: 2025-10-16T19:02:51.744Z
+// Generated on: 2025-10-16T19:25:27.768Z
 import { z } from 'zod'
 
 export const JumpLinksPropsSchema = z.object({
@@ -12,13 +12,7 @@ export const JumpLinksPropsSchema = z.object({
   /** Class for nav */
   className: z.string().optional(),
   /** When to collapse/expand at different breakpoints */
-  expandable: z.enum(['nonExpandable';
-    sm?: 'expandable', 'nonExpandable';
-    md?: 'expandable', 'nonExpandable';
-    lg?: 'expandable', 'nonExpandable';
-    xl?: 'expandable', 'nonExpandable';
-    '2xl'?: 'expandable', 'nonExpandable';
-  ']).optional(),
+  expandable: z.record(z.unknown()).optional(),
   /** Whether to center children. */
   isCentered: z.boolean().optional(),
   /** On mobile whether or not the JumpLinks starts out expanded */

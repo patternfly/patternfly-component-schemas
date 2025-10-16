@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for DatePickerProps
-// Generated on: 2025-10-16T19:02:51.750Z
+// Generated on: 2025-10-16T19:25:27.774Z
 import { z } from 'zod'
 
 export const DatePickerPropsSchema = z.object({
@@ -14,9 +14,9 @@ menuAppendTo={document.getElementById('target')} */
   /** Additional classes added to the date picker. */
   className: z.string().optional(),
   /** How to format the date in the text input. */
-  dateFormat: z.function().optional(),
+  dateFormat: z.custom<(date: Date) => string>().optional(),
   /** How to parse the date in the text input. */
-  dateParse: z.function().optional(),
+  dateParse: z.custom<(value: string) => Date>().optional(),
   /** Helper text to display alongside the date picker. Expects a HelperText component. */
   helperText: z.custom<React.ReactNode>().optional(),
   /** Additional props for the text input. */
@@ -26,7 +26,7 @@ menuAppendTo={document.getElementById('target')} */
   /** Flag indicating the date picker is disabled. */
   isDisabled: z.boolean().optional(),
   /** Callback called every time the text input loses focus. */
-  onBlur: z.function().optional(),
+  onBlur: z.custom<(event: any, value: string, date?: Date) => void>().optional(),
   /** Callback called every time the text input value changes. */
   onChange: z.custom<Event>().optional(),
   /** String to display in the empty text input as a hint for the expected date format. */

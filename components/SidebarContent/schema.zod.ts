@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for SidebarContent
-// Generated on: 2025-10-16T19:02:51.729Z
+// Generated on: 2025-10-16T19:25:27.753Z
 import { z } from 'zod'
 
 export const SidebarContentSchema = z.object({

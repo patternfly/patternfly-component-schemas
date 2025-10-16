@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for CardTitleProps
-// Generated on: 2025-10-16T19:02:51.753Z
+// Generated on: 2025-10-16T19:25:27.778Z
 import { z } from 'zod'
 
 export const CardTitlePropsSchema = z.object({

@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for WizardHeader-deprecated
-// Generated on: 2025-10-16T19:02:51.759Z
+// Generated on: 2025-10-16T19:25:27.784Z
 import { z } from 'zod'
 
 export const WizardHeaderSchema = z.object({
@@ -14,7 +14,7 @@ export const WizardHeaderSchema = z.object({
   /** Flag indicating whether the close button should be in the header */
   hideClose: z.boolean().optional(),
   /** Callback function called when the X (Close) button is clicked */
-  onClose: z.function().optional().default('() => undefined'),
+  onClose: z.custom<() => void>().optional().default('() => undefined'),
   /** Title of the wizard */
   title: z.string(),
   /** id for the title */
