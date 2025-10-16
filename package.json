@@ -1,13 +1,15 @@
 {
   "name": "@patternfly/patternfly-component-schemas",
   "version": "1.0.0",
-  "description": "JSON Schema metadata for PatternFly React components",
+  "description": "JSON Schema and Zod schema metadata for PatternFly React components",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "node scripts/generate-schemas.js component-metadata.json",
+    "build": "npm run build:json && npm run build:zod",
+    "build:json": "node scripts/generate-schemas.js component-metadata.json",
+    "build:zod": "node scripts/generate-zod-schemas.js component-metadata.json",
     "dev": "node scripts/generate-schemas.js --watch",
-    "clean": "rm -rf components/*/",
+    "clean": "rm -rf components/*/ zod/",
     "rebuild": "npm run clean && npm run build",
     "semantic-release": "semantic-release"
   },
@@ -16,6 +18,9 @@
     "react",
     "components",
     "json-schema",
+    "zod",
+    "validation",
+    "typescript",
     "metadata"
   ],
   "author": "",
@@ -24,13 +29,23 @@
     "chokidar": "^3.5.3",
     "semantic-release": "^22.0.12"
   },
+  "peerDependencies": {
+    "zod": "^4.1.12"
+  },
+  "peerDependenciesMeta": {
+    "zod": {
+      "optional": true
+    }
+  },
   "files": [
     "components/",
+    "zod/",
     "index.js",
     "README.md"
   ],
   "exports": {
     ".": "./index.js",
+    "./zod": "./zod/index.ts",
     "./components/*": "./components/*/index.js"
   },
   "repository": {
@@ -41,6 +56,8 @@
     "access": "public"
   },
   "release": {
-    "branches": ["main"]
+    "branches": [
+      "main"
+    ]
   }
 }

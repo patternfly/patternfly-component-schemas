@@ -1,0 +1,13 @@
+// Auto-generated Zod schema for FocusTrap
+// Generated on: 2025-10-16T19:25:27.743Z
+import { z } from 'zod'
+
+export const FocusTrapSchema = z.object({
+  active: z.boolean().optional().default(true),
+  focusTrapOptions: z.unknown().optional().default('{}'),
+  paused: z.boolean().optional().default(false),
+  /** Prevent from scrolling to the previously focused element on deactivation */
+  preventScrollOnDeactivate: z.boolean().optional().default(false)
+})
+
+export type FocusTrapProps = z.infer<typeof FocusTrapSchema>

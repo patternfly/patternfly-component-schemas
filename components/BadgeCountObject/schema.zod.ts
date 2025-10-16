@@ -1,0 +1,14 @@
+// Auto-generated Zod schema for BadgeCountObject
+// Generated on: 2025-10-16T19:25:27.778Z
+import { z } from 'zod'
+
+export const BadgeCountObjectSchema = z.object({
+  /** Additional classes added to the badge count */
+  className: z.string().optional(),
+  /** Adds count number right of button */
+  count: z.number().optional(),
+  /** Adds styling to the badge to indicate it has been read */
+  isRead: z.boolean().optional()
+})
+
+export type BadgeCountObjectProps = z.infer<typeof BadgeCountObjectSchema>
