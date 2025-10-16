@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for Toolbar
-// Generated on: 2025-10-10T18:12:17.766Z
+// Generated on: 2025-10-16T18:45:33.835Z
 import { z } from 'zod'
 
 export const ToolbarSchema = z.object({
   /** Content to be rendered as rows in the data toolbar */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Classes applied to root element of the data toolbar */
   className: z.string().optional(),
   /** Optional callback for clearing all filters in the toolbar */
@@ -16,7 +16,7 @@ export const ToolbarSchema = z.object({
   /** Background color variant of the toolbar */
   colorVariant: z.enum(['default', 'no-background', 'primary', 'secondary']).optional(),
   /** Custom content appended to the filter generated label group. To maintain spacing and styling, each node should be wrapped in a ToolbarItem or ToolbarGroup. This property will remove the default "Clear all filters" button. */
-  customLabelGroupContent: z.any().optional(),
+  customLabelGroupContent: z.custom<React.ReactNode>().optional(),
   /** Flag indicating the toolbar padding is removed */
   hasNoPadding: z.boolean().optional(),
   /** Id of the data toolbar */

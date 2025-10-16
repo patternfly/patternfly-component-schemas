@@ -1,14 +1,14 @@
 // Auto-generated Zod schema for AlertGroupInline
-// Generated on: 2025-10-10T18:12:17.793Z
+// Generated on: 2025-10-16T18:45:33.886Z
 import { z } from 'zod'
 
 export const AlertGroupInlineSchema = z.object({
   /** Determine where the alert is appended to */
-  appendTo: z.function().optional(),
+  appendTo: z.any().optional(),
   /** Adds an accessible label to the alert group. */
   'aria-label': z.string().optional(),
   /** Alerts to be rendered in the AlertGroup */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the AlertGroup */
   className: z.string().optional(),
   /** Flag to indicate whether Alerts are animated upon rendering and being dismissed. This is intended

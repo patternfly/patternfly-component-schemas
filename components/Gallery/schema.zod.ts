@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for Gallery
-// Generated on: 2025-10-10T18:12:17.761Z
+// Generated on: 2025-10-16T18:45:33.827Z
 import { z } from 'zod'
 
 export const GallerySchema = z.object({
   /** content rendered inside the Gallery layout */
-  children: z.any().optional().default('null'),
+  children: z.custom<React.ReactNode>().optional().default('null'),
   /** additional classes added to the Gallery layout */
   className: z.string().optional().default(''),
   /** Sets the base component to render. defaults to div */
@@ -12,9 +12,9 @@ export const GallerySchema = z.object({
   /** Adds space between children. */
   hasGutter: z.boolean().optional().default(false),
   /** Maximum widths at various breakpoints. */
-  maxWidths: z.object({}).optional(),
+  maxWidths: z.record(z.unknown()).optional(),
   /** Minimum widths at various breakpoints. */
-  minWidths: z.object({}).optional()
+  minWidths: z.record(z.unknown()).optional()
 })
 
 export type GalleryProps = z.infer<typeof GallerySchema>

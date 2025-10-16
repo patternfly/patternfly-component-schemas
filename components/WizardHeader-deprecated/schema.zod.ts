@@ -1,12 +1,12 @@
 // Auto-generated Zod schema for WizardHeader-deprecated
-// Generated on: 2025-10-10T18:12:17.797Z
+// Generated on: 2025-10-16T18:45:33.890Z
 import { z } from 'zod'
 
 export const WizardHeaderSchema = z.object({
   /** Aria-label applied to the X (Close) button */
   closeButtonAriaLabel: z.string().optional(),
   /** Description of the wizard */
-  description: z.any().optional(),
+  description: z.custom<React.ReactNode>().optional(),
   /** Component type of the description */
   descriptionComponent: z.enum(['div', 'p']).optional().default('div'),
   /** id for the description */

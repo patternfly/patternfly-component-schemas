@@ -1,11 +1,11 @@
 // Auto-generated Zod schema for SidebarContent
-// Generated on: 2025-10-10T18:12:17.770Z
+// Generated on: 2025-10-16T18:45:33.844Z
 import { z } from 'zod'
 
 export const SidebarContentSchema = z.object({
   /** Variant of the sidebar content background. */
   backgroundVariant: z.enum(['default', 'secondary']).optional().default('default'),
-  children: z.any(),
+  children: z.custom<React.ReactNode>(),
   /** Removes the background color. */
   hasNoBackground: z.boolean().optional(),
   /** Adds padding to the content. */

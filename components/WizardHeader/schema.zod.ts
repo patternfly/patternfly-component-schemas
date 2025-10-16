@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for WizardHeader
-// Generated on: 2025-10-10T18:12:17.763Z
+// Generated on: 2025-10-16T18:45:33.830Z
 import { z } from 'zod'
 
 export const WizardHeaderSchema = z.object({
@@ -8,7 +8,7 @@ export const WizardHeaderSchema = z.object({
   /** Aria-label applied to the X (Close) button */
   closeButtonAriaLabel: z.string().optional(),
   /** Description of the wizard */
-  description: z.any().optional(),
+  description: z.custom<React.ReactNode>().optional(),
   /** Component type of the description */
   descriptionComponent: z.enum(['div', 'p']).optional().default('div'),
   /** id for the description */
@@ -16,7 +16,7 @@ export const WizardHeaderSchema = z.object({
   /** Flag indicating whether the close button should be in the header */
   isCloseHidden: z.boolean().optional(),
   /** Callback function called when the X (Close) button is clicked */
-  onClose: z.any().optional().default('() => undefined'),
+  onClose: z.custom<Event>().optional().default('() => undefined'),
   /** Title of the wizard */
   title: z.string(),
   /** id for the title */

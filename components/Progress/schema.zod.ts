@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Progress
-// Generated on: 2025-10-10T18:12:17.771Z
+// Generated on: 2025-10-16T18:45:33.847Z
 import { z } from 'zod'
 
 export const ProgressSchema = z.object({
@@ -11,13 +11,13 @@ export const ProgressSchema = z.object({
   className: z.string().optional().default(''),
   /** Content which can be used to convey additional information about the progress component.
 We recommend the helper text component as it was designed for this purpose. */
-  helperText: z.any().optional(),
+  helperText: z.custom<React.ReactNode>().optional(),
   /** DOM id for progress component. */
   id: z.string().optional().default(''),
   /** Indicate whether to truncate the string title */
   isTitleTruncated: z.boolean().optional().default(false),
   /** Text description of current progress value to display instead of percentage. */
-  label: z.any().optional().default('null'),
+  label: z.custom<React.ReactNode>().optional().default('null'),
   /** Maximum value of progress. */
   max: z.number().optional().default(100),
   /** Where the measure percent will be located. */
@@ -27,7 +27,7 @@ We recommend the helper text component as it was designed for this purpose. */
   /** Size variant of progress. */
   size: z.enum(['sm', 'md', 'lg']).optional().default('null'),
   /** Title above progress. The isTitleTruncated property will only affect string titles. Node title truncation must be handled manually. */
-  title: z.any().optional().default(''),
+  title: z.custom<React.ReactNode>().optional().default(''),
   /** Position of the tooltip which is displayed if title is truncated */
   tooltipPosition: z.enum(['auto', 'top', 'bottom', 'left', 'right']).optional().default('top'),
   /** Actual value of progress. */

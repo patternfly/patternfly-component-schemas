@@ -1,20 +1,20 @@
 // Auto-generated Zod schema for Checkbox
-// Generated on: 2025-10-10T18:12:17.790Z
+// Generated on: 2025-10-16T18:45:33.879Z
 import { z } from 'zod'
 
 export const CheckboxSchema = z.object({
   /** Aria-label of the checkbox. */
   'aria-label': z.string().optional(),
   /** Body text of the checkbox */
-  body: z.any().optional(),
+  body: z.custom<React.ReactNode>().optional(),
   checked: z.boolean().optional(),
   /** Additional classes added to the checkbox wrapper. This wrapper will be div element by default. It will be a label element if
 isLabelWrapped is true, or it can be overridden by any element specified in the component prop. */
   className: z.string().optional().default(''),
   /** Sets the checkbox wrapper component to render. Defaults to "div". If set to "label", behaves the same as if isLabelWrapped prop was specified. */
-  component: z.any().optional(),
+  component: z.unknown().optional(),
   /** Description text of the checkbox. */
-  description: z.any().optional(),
+  description: z.custom<React.ReactNode>().optional(),
   /** Id of the checkbox. */
   id: z.string(),
   /** Additional classes added to the checkbox input. */
@@ -30,11 +30,11 @@ isLabelWrapped is true, or it can be overridden by any element specified in the 
   /** Flag to show if the checkbox selection is valid or invalid. */
   isValid: z.boolean().optional().default(true),
   /** Label text of the checkbox. */
-  label: z.any().optional(),
+  label: z.custom<React.ReactNode>().optional(),
   /** Sets the position of the label. Defaults to 'end' (after the checkbox input). */
   labelPosition: z.enum(['start', 'end']).optional(),
   /** A callback for when the checkbox selection changes. */
-  onChange: z.any().optional().default('() => {}'),
+  onChange: z.custom<Event>().optional().default('() => {}'),
   /** Value to overwrite the randomly generated data-ouia-component-id. */
   ouiaId: z.any().optional(),
   /** Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false. */

@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for SimpleListItem
-// Generated on: 2025-10-10T18:12:17.770Z
+// Generated on: 2025-10-16T18:45:33.843Z
 import { z } from 'zod'
 
 export const SimpleListItemSchema = z.object({
   /** Content rendered inside the SimpleList item */
-  children: z.any().optional().default('null'),
+  children: z.custom<React.ReactNode>().optional().default('null'),
   /** Additional classes added to the SimpleList <li> */
   className: z.string().optional().default(''),
   /** Component type of the SimpleList item */
@@ -12,7 +12,7 @@ export const SimpleListItemSchema = z.object({
   /** Additional classes added to the SimpleList <a> or <button> */
   componentClassName: z.string().optional().default(''),
   /** Additional props added to the SimpleList <a> or <button> */
-  componentProps: z.any().optional(),
+  componentProps: z.unknown().optional(),
   /** Default hyperlink location */
   href: z.string().optional().default(''),
   /** Indicates if the link is current/highlighted */

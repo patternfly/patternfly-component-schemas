@@ -1,18 +1,18 @@
 // Auto-generated Zod schema for AlertActionCloseButton
-// Generated on: 2025-10-10T18:12:17.793Z
+// Generated on: 2025-10-16T18:45:33.886Z
 import { z } from 'zod'
 
 export const AlertActionCloseButtonSchema = z.object({
   /** Adds accessible text to the button. */
   'aria-label': z.string().optional().default(''),
   /** Content rendered inside the button */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the button */
   className: z.string().optional(),
   /** Sets the base component to render. defaults to button */
   component: z.any().optional(),
   /** Adds count number to button */
-  countOptions: z.any().optional(),
+  countOptions: z.unknown().optional(),
   /** Applies no padding on a plain button variant. Use when plain button is placed inline with text */
   hasNoPadding: z.boolean().optional(),
   /** Icon for the button. */
@@ -20,7 +20,7 @@ export const AlertActionCloseButtonSchema = z.object({
   /** Sets position of the icon. Note: "left" and "right" are deprecated. Use "start" and "end" instead */
   iconPosition: z.enum(['start', 'end', 'left', 'right']).optional(),
   /** Events to prevent when the button is in an aria-disabled state */
-  inoperableEvents: z.array(z.any()).optional(),
+  inoperableEvents: z.array(z.string()).optional(),
   /** Adds disabled styling and communicates that the button is disabled using the aria-disabled html attribute */
   isAriaDisabled: z.boolean().optional(),
   /** Adds block styling to button */

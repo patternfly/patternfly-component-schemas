@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for NavExpandableState
-// Generated on: 2025-10-10T18:12:17.775Z
+// Generated on: 2025-10-16T18:45:33.854Z
 import { z } from 'zod'
 
 export const NavExpandableStateSchema = z.object({

@@ -1,12 +1,12 @@
 // Auto-generated Zod schema for MultipleFileUploadStatus
-// Generated on: 2025-10-10T18:12:17.776Z
+// Generated on: 2025-10-16T18:45:33.856Z
 import { z } from 'zod'
 
 export const MultipleFileUploadStatusSchema = z.object({
   /** Adds an accessible label to the list of status items. */
   'aria-label': z.string().optional(),
   /** Content rendered inside multi file upload status list */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Class to add to outer div */
   className: z.string().optional(),
   /** Icon to show in the status toggle */

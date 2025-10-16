@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for PageSidebar
-// Generated on: 2025-10-10T18:12:17.774Z
+// Generated on: 2025-10-16T18:45:33.851Z
 import { z } from 'zod'
 
 export const PageSidebarSchema = z.object({
   /** Content rendered inside the page sidebar (e.g. <PageSidebarBody /> */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the page sidebar */
   className: z.string().optional().default(''),
   /** Sidebar id */

@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for DataListDragButton
-// Generated on: 2025-10-10T18:12:17.788Z
+// Generated on: 2025-10-16T18:45:33.876Z
 import { z } from 'zod'
 
 export const DataListDragButtonSchema = z.object({

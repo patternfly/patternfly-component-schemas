@@ -1,16 +1,16 @@
 // Auto-generated Zod schema for Wizard
-// Generated on: 2025-10-10T18:12:17.764Z
+// Generated on: 2025-10-16T18:45:33.831Z
 import { z } from 'zod'
 
 export const WizardSchema = z.object({
   /** Step components */
-  children: z.any(),
+  children: z.custom<React.ReactNode>(),
   /** Additional classes spread to the wizard */
   className: z.string().optional(),
   /** Wizard footer */
   footer: z.any().optional(),
   /** Wizard header */
-  header: z.any().optional(),
+  header: z.custom<React.ReactNode>().optional(),
   /** Custom height of the wizard */
   height: z.any().optional(),
   /** Progressively shows steps, where all steps following the active step are hidden. Defaults to false. */
@@ -22,7 +22,7 @@ export const WizardSchema = z.object({
   /** Aria-label for the Nav */
   navAriaLabel: z.string().optional(),
   /** Callback function to close the wizard */
-  onClose: z.any().optional(),
+  onClose: z.custom<Event>().optional(),
   /** Callback function to save at the end of the wizard, if not specified uses onClose */
   onSave: z.any().optional(),
   /** Callback function when navigating between steps */

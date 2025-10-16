@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ToolbarExpandableContent
-// Generated on: 2025-10-10T18:12:17.766Z
+// Generated on: 2025-10-16T18:45:33.835Z
 import { z } from 'zod'
 
 export const ToolbarExpandableContentSchema = z.object({
@@ -14,7 +14,7 @@ export const ToolbarExpandableContentSchema = z.object({
   /** Flag indicating the expandable content is expanded */
   isExpanded: z.boolean().optional().default(false),
   /** Label container reference for passing to data toolbar children */
-  labelContainerRef: z.any().optional(),
+  labelContainerRef: z.unknown().optional(),
   /** Flag indicating that the clear all filters button should be visible */
   showClearFiltersButton: z.boolean()
 })

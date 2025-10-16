@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for InputGroupItem
-// Generated on: 2025-10-10T18:12:17.782Z
+// Generated on: 2025-10-16T18:45:33.865Z
 import { z } from 'zod'
 
 export const InputGroupItemSchema = z.object({
   /** Content rendered inside the input group item. */
-  children: z.any(),
+  children: z.custom<React.ReactNode>(),
   /** Additional classes added to the input group item. */
   className: z.string().optional(),
   /** Enables box styling to the input group item */

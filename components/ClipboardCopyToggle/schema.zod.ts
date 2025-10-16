@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ClipboardCopyToggle
-// Generated on: 2025-10-10T18:12:17.789Z
+// Generated on: 2025-10-16T18:45:33.878Z
 import { z } from 'zod'
 
 export const ClipboardCopyToggleSchema = z.object({
@@ -7,7 +7,7 @@ export const ClipboardCopyToggleSchema = z.object({
   contentId: z.string(),
   id: z.string(),
   isExpanded: z.boolean().optional().default(false),
-  onClick: z.any(),
+  onClick: z.custom<Event>(),
   textId: z.string()
 })
 

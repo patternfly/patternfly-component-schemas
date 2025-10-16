@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for BadgeCountObject
-// Generated on: 2025-10-10T18:12:17.790Z
+// Generated on: 2025-10-16T18:45:33.881Z
 import { z } from 'zod'
 
 export const BadgeCountObjectSchema = z.object({

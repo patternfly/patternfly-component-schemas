@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ModalBody
-// Generated on: 2025-10-10T18:12:17.780Z
+// Generated on: 2025-10-16T18:45:33.863Z
 import { z } from 'zod'
 
 export const ModalBodySchema = z.object({
@@ -7,7 +7,7 @@ export const ModalBodySchema = z.object({
 important information about the modal body div element if needed, such as when it is scrollable. */
   'aria-label': z.string().optional(),
   /** Content rendered inside the modal body. */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the modal body. */
   className: z.string().optional(),
   /** Accessible role applied to the modal body. This will default to "region" if the

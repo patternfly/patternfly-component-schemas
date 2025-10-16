@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Switch
-// Generated on: 2025-10-10T18:12:17.769Z
+// Generated on: 2025-10-16T18:45:33.839Z
 import { z } from 'zod'
 
 export const SwitchSchema = z.object({
@@ -24,9 +24,9 @@ To make the switch uncontrolled instead use the defaultChecked prop, but do not 
   /** Flag to reverse the layout of toggle and label (label at start, toggle at end). */
   isReversed: z.boolean().optional().default(false),
   /** Text value for the visible label */
-  label: z.any().optional(),
+  label: z.custom<React.ReactNode>().optional(),
   /** A callback for when the switch selection changes. (event, isChecked) => {} */
-  onChange: z.any().optional().default('() => undefined as any'),
+  onChange: z.custom<Event>().optional().default('() => undefined as any'),
   /** Value to overwrite the randomly generated data-ouia-component-id. */
   ouiaId: z.any().optional(),
   /** Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false. */

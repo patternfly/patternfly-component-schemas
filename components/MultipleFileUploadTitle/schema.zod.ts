@@ -1,16 +1,16 @@
 // Auto-generated Zod schema for MultipleFileUploadTitle
-// Generated on: 2025-10-10T18:12:17.776Z
+// Generated on: 2025-10-16T18:45:33.856Z
 import { z } from 'zod'
 
 export const MultipleFileUploadTitleSchema = z.object({
   /** Class to add to outer div */
   className: z.string().optional(),
   /** Content rendered inside the title icon div */
-  icon: z.any().optional(),
+  icon: z.custom<React.ReactNode>().optional(),
   /** Content rendered inside the title text div */
-  text: z.any().optional().default(''),
+  text: z.custom<React.ReactNode>().optional().default(''),
   /** Content rendered inside the title text separator div */
-  textSeparator: z.any().optional().default('')
+  textSeparator: z.custom<React.ReactNode>().optional().default('')
 })
 
 export type MultipleFileUploadTitleProps = z.infer<typeof MultipleFileUploadTitleSchema>

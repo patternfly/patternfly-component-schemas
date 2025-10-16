@@ -30,7 +30,7 @@
     "semantic-release": "^22.0.12"
   },
   "peerDependencies": {
-    "zod": "^4.0.0"
+    "zod": "^4.1.12"
   },
   "peerDependenciesMeta": {
     "zod": {
@@ -56,6 +56,8 @@
     "access": "public"
   },
   "release": {
-    "branches": ["main"]
+    "branches": [
+      "main"
+    ]
   }
 }

@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ToolbarFilterState
-// Generated on: 2025-10-10T18:12:17.766Z
+// Generated on: 2025-10-16T18:45:33.835Z
 import { z } from 'zod'
 
 export const ToolbarFilterStateSchema = z.object({

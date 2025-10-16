@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for PaginationOptionsMenu
-// Generated on: 2025-10-10T18:12:17.772Z
+// Generated on: 2025-10-16T18:45:33.849Z
 import { z } from 'zod'
 
 export const PaginationOptionsMenuSchema = z.object({
@@ -43,7 +43,7 @@ value that is greater than remaining rows. */
   /** The number of items to be displayed per page. */
   perPage: z.number().optional().default(0),
   /** Array of titles and values which will be the options on the options menu dropdown. */
-  perPageOptions: z.array(z.any()).optional().default('[]'),
+  perPageOptions: z.array(z.unknown()).optional().default('[]'),
   /** The suffix to be displayed after each option on the options menu dropdown. */
   perPageSuffix: z.string().optional().default('per page'),
   /** Flag indicating if scroll on focus of the first menu item should occur. */

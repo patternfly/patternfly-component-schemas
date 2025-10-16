@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for TreeViewList
-// Generated on: 2025-10-10T18:12:17.764Z
+// Generated on: 2025-10-16T18:45:33.832Z
 import { z } from 'zod'
 
 export const TreeViewListSchema = z.object({
@@ -10,7 +10,7 @@ be passed in. */
 this or the aria-label property must be passed in. */
   'aria-labelledby': z.string().optional(),
   /** Child nodes of the current tree view. */
-  children: z.any(),
+  children: z.custom<React.ReactNode>(),
   /** Flag indicating whether multiple nodes can be selected in the tree view. This will also set the
 aria-multiselectable attribute on the tree view list which is required to be true when multiple selection is intended.
 Can only be applied to the root tree view list. */
@@ -18,7 +18,7 @@ Can only be applied to the root tree view list. */
   /** Flag indicating if the tree view is nested under another tree view. */
   isNested: z.boolean().optional().default(false),
   /** Toolbar to display above the tree view. */
-  toolbar: z.any().optional()
+  toolbar: z.custom<React.ReactNode>().optional()
 })
 
 export type TreeViewListProps = z.infer<typeof TreeViewListSchema>

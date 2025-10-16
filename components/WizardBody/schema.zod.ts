@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for WizardBody
-// Generated on: 2025-10-10T18:12:17.763Z
+// Generated on: 2025-10-16T18:45:33.831Z
 import { z } from 'zod'
 
 export const WizardBodySchema = z.object({
@@ -10,11 +10,11 @@ a scrollbar. */
 The aria-labelledby will only be applied when the content overflows and renders a scrollbar. */
   'aria-labelledby': z.string().optional(),
   /** Anything that can be rendered in the Wizard body */
-  children: z.any(),
+  children: z.custom<React.ReactNode>(),
   /** Additional classes spread to the wizard body */
   className: z.string().optional(),
   /** Component used as the wrapping content container */
-  component: z.any().optional().default('div'),
+  component: z.unknown().optional().default('div'),
   /** Flag to remove the default body padding */
   hasNoPadding: z.boolean().optional().default(false)
 })

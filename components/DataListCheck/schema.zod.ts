@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for DataListCheck
-// Generated on: 2025-10-10T18:12:17.788Z
+// Generated on: 2025-10-16T18:45:33.877Z
 import { z } from 'zod'
 
 export const DataListCheckSchema = z.object({
@@ -25,7 +25,7 @@ To make the DataList checkbox uncontrolled, instead use the defaultChecked prop,
   /** Flag to show if the DataList checkbox selection is valid or invalid */
   isValid: z.boolean().optional().default(true),
   /** A callback for when the DataList checkbox selection changes */
-  onChange: z.any().optional(),
+  onChange: z.custom<Event>().optional(),
   /** Flag to indicate if other controls are used in the DataListItem */
   otherControls: z.boolean().optional().default(false)
 })

@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for AboutModal
-// Generated on: 2025-10-10T18:12:17.794Z
+// Generated on: 2025-10-16T18:45:33.888Z
 import { z } from 'zod'
 
 export const AboutModalSchema = z.object({
   /** The parent container to append the modal to. Defaults to document.body */
-  appendTo: z.function().optional(),
+  appendTo: z.any().optional(),
   /** Aria label for the about modal.  This should be used when no productName prop is provided */
   'aria-label': z.string().optional(),
   /** The URL or file path of the image for the background */
@@ -14,7 +14,7 @@ export const AboutModalSchema = z.object({
   /** The URL of the image for the brand */
   brandImageSrc: z.string(),
   /** Content rendered inside the about modal */
-  children: z.any(),
+  children: z.custom<React.ReactNode>(),
   /** Additional classes added to the about modal */
   className: z.string().optional(),
   /** Set aria label to the close button */

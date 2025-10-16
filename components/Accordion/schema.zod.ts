@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Accordion
-// Generated on: 2025-10-10T18:12:17.794Z
+// Generated on: 2025-10-16T18:45:33.887Z
 import { z } from 'zod'
 
 export const AccordionSchema = z.object({
@@ -8,7 +8,7 @@ export const AccordionSchema = z.object({
   /** Flag to indicate whether use definition list or div */
   asDefinitionList: z.boolean().optional().default(true),
   /** Content rendered inside the Accordion */
-  children: z.any().optional().default('null'),
+  children: z.custom<React.ReactNode>().optional().default('null'),
   /** Additional classes added to the Accordion */
   className: z.string().optional().default(''),
   /** Display size variant. */

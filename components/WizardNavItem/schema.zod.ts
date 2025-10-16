@@ -1,16 +1,16 @@
 // Auto-generated Zod schema for WizardNavItem
-// Generated on: 2025-10-10T18:12:17.763Z
+// Generated on: 2025-10-16T18:45:33.829Z
 import { z } from 'zod'
 
 export const WizardNavItemSchema = z.object({
   /** Can nest a WizardNav component for substeps */
-  children: z.any().optional().default('null'),
+  children: z.custom<React.ReactNode>().optional().default('null'),
   /** Additional classes spread to the wizard nav item */
   className: z.string().optional(),
   /** Component used to render WizardNavItem */
   component: z.enum(['button', 'a']).optional().default('button'),
   /** The content to display in the navigation item */
-  content: z.any().optional().default(''),
+  content: z.custom<React.ReactNode>().optional().default(''),
   /** An optional url to use for when using an anchor component */
   href: z.string().optional(),
   /** The id for the navigation item */
@@ -32,7 +32,7 @@ export const WizardNavItemSchema = z.object({
   /** The step index passed into the onNavItemClick callback */
   stepIndex: z.number(),
   /** Where to display the linked URL when using an anchor component */
-  target: z.any().optional()
+  target: z.unknown().optional()
 })
 
 export type WizardNavItemProps = z.infer<typeof WizardNavItemSchema>

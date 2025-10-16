@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for MenuContainer
-// Generated on: 2025-10-10T18:12:17.779Z
+// Generated on: 2025-10-16T18:45:33.861Z
 import { z } from 'zod'
 
 export const MenuContainerSchema = z.object({
@@ -10,24 +10,24 @@ export const MenuContainerSchema = z.object({
   /** Menu to be rendered */
   menu: z.any(),
   /** Reference to the menu */
-  menuRef: z.any(),
+  menuRef: z.unknown(),
   /** Callback to change the open state of the menu.
 Triggered by clicking outside of the menu, or by pressing any keys specified in onOpenChangeKeys. */
   onOpenChange: z.function().optional(),
   /** Keys that trigger onOpenChange, defaults to tab and escape. It is highly recommended to include Escape in the array, while Tab may be omitted if the menu contains non-menu items that are focusable. */
-  onOpenChangeKeys: z.array(z.any()).optional().default('['Escape', 'Tab']'),
+  onOpenChangeKeys: z.array(z.string()).optional().default('['Escape', 'Tab']'),
   /** Callback to override the toggle keydown behavior. By default, when the toggle has focus and the menu is open, pressing the up/down arrow keys will focus a valid non-disabled menu item - the first item for the down arrow key and last item for the up arrow key. */
-  onToggleKeydown: z.any().optional(),
+  onToggleKeydown: z.custom<Event>().optional(),
   /** Additional properties to pass to the Popper */
-  popperProps: z.any().optional(),
+  popperProps: z.unknown().optional(),
   /** Flag indicating the first menu item should be focused after opening the dropdown. */
   shouldFocusFirstItemOnOpen: z.boolean().optional().default(false),
   /** Flag indicating if scroll on focus of the first menu item should occur. */
   shouldPreventScrollOnItemFocus: z.boolean().optional().default(true),
   /** Toggle to be rendered */
-  toggle: z.any(),
+  toggle: z.custom<React.ReactNode>(),
   /** Reference to the toggle */
-  toggleRef: z.any(),
+  toggleRef: z.unknown(),
   /** z-index of the dropdown menu */
   zIndex: z.number().optional().default(9999)
 })

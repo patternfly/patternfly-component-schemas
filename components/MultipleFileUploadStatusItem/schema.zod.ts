@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for MultipleFileUploadStatusItem
-// Generated on: 2025-10-10T18:12:17.776Z
+// Generated on: 2025-10-16T18:45:33.856Z
 import { z } from 'zod'
 
 export const MultipleFileUploadStatusItemSchema = z.object({
@@ -10,15 +10,15 @@ export const MultipleFileUploadStatusItemSchema = z.object({
   /** A callback to process file reading in a custom way */
   customFileHandler: z.function().optional(),
   /** The file object being represented by the status item */
-  file: z.any().optional(),
+  file: z.unknown().optional(),
   /** A custom icon to show in place of the generic file icon */
-  fileIcon: z.any().optional(),
+  fileIcon: z.custom<React.ReactNode>().optional(),
   /** A custom name to display for the file rather than using built in functionality to auto-fill it */
   fileName: z.string().optional(),
   /** A custom file size to display for the file rather than using built in functionality to auto-fill it */
   fileSize: z.number().optional(),
   /** Clear button was clicked */
-  onClearClick: z.any().optional().default('() => {}'),
+  onClearClick: z.custom<Event>().optional().default('() => {}'),
   /** A callback for when the FileReader API fails */
   onReadFail: z.function().optional().default('() => {}'),
   /** A callback for when a selected file finishes loading */
@@ -32,9 +32,9 @@ export const MultipleFileUploadStatusItemSchema = z.object({
   /** Associates the progress bar with it's label for accessibility purposes. Required when title not used */
   progressAriaLabelledBy: z.string().optional(),
   /** Modifies the text announced by assistive technologies when the progress bar updates. */
-  progressAriaLiveMessage: z.function().optional(),
+  progressAriaLiveMessage: z.any().optional(),
   /** Additional content related to the status item. */
-  progressHelperText: z.any().optional(),
+  progressHelperText: z.custom<React.ReactNode>().optional(),
   /** Unique identifier for progress. Generated if not specified. */
   progressId: z.string().optional(),
   /** A custom value to display for the progress component rather than using built in functionality to auto-fill it */

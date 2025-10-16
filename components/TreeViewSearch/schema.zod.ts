@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for TreeViewSearch
-// Generated on: 2025-10-10T18:12:17.764Z
+// Generated on: 2025-10-16T18:45:33.831Z
 import { z } from 'zod'
 
 export const TreeViewSearchSchema = z.object({
@@ -12,7 +12,7 @@ export const TreeViewSearchSchema = z.object({
   /** Name for the search input. */
   name: z.string().optional(),
   /** Callback for search input. */
-  onSearch: z.any().optional()
+  onSearch: z.custom<Event>().optional()
 })
 
 export type TreeViewSearchProps = z.infer<typeof TreeViewSearchSchema>

@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for PopoverDialog
-// Generated on: 2025-10-10T18:12:17.771Z
+// Generated on: 2025-10-16T18:45:33.848Z
 import { z } from 'zod'
 
 export const PopoverDialogSchema = z.object({
   /** PopoverDialog body */
-  children: z.any().optional().default('null'),
+  children: z.custom<React.ReactNode>().optional().default('null'),
   /** PopoverDialog additional class */
   className: z.string().optional().default('null'),
   /** PopoverDialog position */

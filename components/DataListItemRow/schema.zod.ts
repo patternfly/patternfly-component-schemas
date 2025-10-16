@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for DataListItemRow
-// Generated on: 2025-10-10T18:12:17.788Z
+// Generated on: 2025-10-16T18:45:33.876Z
 import { z } from 'zod'
 
 export const DataListItemRowSchema = z.object({
   /** Content rendered inside the DataListItemRow */
-  children: z.any(),
+  children: z.custom<React.ReactNode>(),
   /** Additional classes added to the DataListItemRow */
   className: z.string().optional().default(''),
   /** Id for the row item */

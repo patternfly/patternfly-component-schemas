@@ -1,17 +1,17 @@
 // Auto-generated Zod schema for MenuToggle
-// Generated on: 2025-10-10T18:12:17.778Z
+// Generated on: 2025-10-16T18:45:33.859Z
 import { z } from 'zod'
 
 export const MenuToggleSchema = z.object({
   /** Optional badge rendered inside the toggle, after the children content */
   badge: z.any().optional(),
   /** Content rendered inside the toggle */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the toggle */
   className: z.string().optional(),
   /** Optional icon or image rendered inside the toggle, before the children content. It is
 recommended to wrap most basic icons in our icon component. */
-  icon: z.any().optional(),
+  icon: z.custom<React.ReactNode>().optional(),
   /** Flag indicating the toggle is disabled */
   isDisabled: z.boolean().optional(),
   /** Flag indicating the toggle has expanded styling */
@@ -29,11 +29,11 @@ recommended to wrap most basic icons in our icon component. */
   /** Adds styling which affects the size of the menu toggle */
   size: z.enum(['default', 'sm']).optional(),
   /** Elements to display before the toggle button. When included, renders the menu toggle as a split button. */
-  splitButtonItems: z.array(z.any()).optional(),
+  splitButtonItems: z.array(z.custom<React.ReactNode>()).optional(),
   /** Status styles of the menu toggle */
   status: z.enum(['success', 'warning', 'danger']).optional(),
   /** Overrides the status icon */
-  statusIcon: z.any().optional(),
+  statusIcon: z.custom<React.ReactNode>().optional(),
   /** Variant styles of the menu toggle */
   variant: z.enum(['default', 'plain', 'primary', 'plainText', 'secondary', 'typeahead']).optional()
 })

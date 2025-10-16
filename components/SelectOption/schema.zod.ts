@@ -1,18 +1,18 @@
 // Auto-generated Zod schema for SelectOption
-// Generated on: 2025-10-10T18:12:17.770Z
+// Generated on: 2025-10-16T18:45:33.845Z
 import { z } from 'zod'
 
 export const SelectOptionSchema = z.object({
   /** Anything which can be rendered in a select option */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Classes applied to root element of select option */
   className: z.string().optional(),
   /** Description of the option */
-  description: z.any().optional(),
+  description: z.custom<React.ReactNode>().optional(),
   /** Indicates the option has a checkbox */
   hasCheckbox: z.boolean().optional(),
   /** Render option with icon */
-  icon: z.any().optional(),
+  icon: z.custom<React.ReactNode>().optional(),
   /** Indicates the option is disabled */
   isDisabled: z.boolean().optional(),
   /** Render an external link icon on focus or hover, and set the link's
@@ -23,7 +23,7 @@ export const SelectOptionSchema = z.object({
   /** Indicates the option is selected */
   isSelected: z.boolean().optional(),
   /** Identifies the component in the Select onSelect callback */
-  value: z.any().optional()
+  value: z.unknown().optional()
 })
 
 export type SelectOptionProps = z.infer<typeof SelectOptionSchema>

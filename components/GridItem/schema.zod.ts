@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for GridItem
-// Generated on: 2025-10-10T18:12:17.761Z
+// Generated on: 2025-10-16T18:45:33.827Z
 import { z } from 'zod'
 
 export const GridItemSchema = z.object({
   /** content rendered inside the Grid Layout Item */
-  children: z.any().optional().default('null'),
+  children: z.custom<React.ReactNode>().optional().default('null'),
   /** additional classes added to the Grid Layout Item */
   className: z.string().optional().default(''),
   /** Sets the base component to render. defaults to div */
@@ -24,7 +24,7 @@ export const GridItemSchema = z.object({
   /** the number of columns a grid item is offset */
   offset: z.union([z.literal(1), z.literal(2), z.literal(3), z.literal(4), z.literal(5), z.literal(6), z.literal(7), z.literal(8), z.literal(9), z.literal(10), z.literal(11), z.literal(12)]).optional().default('null'),
   /** Modifies the flex layout element order property */
-  order: z.object({}).optional(),
+  order: z.record(z.unknown()).optional(),
   /** the number of rows the grid item spans. Value should be a number 1-12 */
   rowSpan: z.union([z.literal(1), z.literal(2), z.literal(3), z.literal(4), z.literal(5), z.literal(6), z.literal(7), z.literal(8), z.literal(9), z.literal(10), z.literal(11), z.literal(12)]).optional().default('null'),
   /** the number of columns the grid item spans on small device. Value should be a number 1-12 */

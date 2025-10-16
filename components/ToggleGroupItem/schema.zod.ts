@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ToggleGroupItem
-// Generated on: 2025-10-10T18:12:17.764Z
+// Generated on: 2025-10-16T18:45:33.832Z
 import { z } from 'zod'
 
 export const ToggleGroupItemSchema = z.object({
@@ -10,7 +10,7 @@ export const ToggleGroupItemSchema = z.object({
   /** Additional classes added to the toggle group item */
   className: z.string().optional(),
   /** Icon rendered inside the toggle group item */
-  icon: z.any().optional(),
+  icon: z.custom<React.ReactNode>().optional(),
   /** Sets position of the icon when text is also passed in */
   iconPosition: z.enum(['start', 'end']).optional().default('start'),
   /** Flag indicating if the toggle group item is disabled */
@@ -20,7 +20,7 @@ export const ToggleGroupItemSchema = z.object({
   /** A callback for when the toggle group item selection changes. */
   onChange: z.any().optional().default('() => {}'),
   /** Text rendered inside the toggle group item */
-  text: z.any().optional()
+  text: z.custom<React.ReactNode>().optional()
 })
 
 export type ToggleGroupItemProps = z.infer<typeof ToggleGroupItemSchema>

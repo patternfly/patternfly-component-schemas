@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for DrawerPanelFocusTrapObject
-// Generated on: 2025-10-10T18:12:17.786Z
+// Generated on: 2025-10-16T18:45:33.874Z
 import { z } from 'zod'
 
 export const DrawerPanelFocusTrapObjectSchema = z.object({

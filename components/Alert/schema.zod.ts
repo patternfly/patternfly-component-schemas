@@ -1,21 +1,21 @@
 // Auto-generated Zod schema for Alert
-// Generated on: 2025-10-10T18:12:17.793Z
+// Generated on: 2025-10-16T18:45:33.886Z
 import { z } from 'zod'
 
 export const AlertSchema = z.object({
   /** Close button; use the alert action close button component. */
-  actionClose: z.any().optional(),
+  actionClose: z.custom<React.ReactNode>().optional(),
   /** Action links; use a single alert action link component or multiple wrapped in an array
 or React fragment. */
-  actionLinks: z.any().optional(),
+  actionLinks: z.custom<React.ReactNode>().optional(),
   /** Content rendered inside the alert. */
-  children: z.any().optional().default(''),
+  children: z.custom<React.ReactNode>().optional().default(''),
   /** Additional classes to add to the alert. */
   className: z.string().optional().default(''),
   /** Sets the element to use as the alert title. Default is h4. */
-  component: z.any().optional().default('h4'),
+  component: z.unknown().optional().default('h4'),
   /** Set a custom icon to the alert. If not set the icon is set according to the variant. */
-  customIcon: z.any().optional(),
+  customIcon: z.custom<React.ReactNode>().optional(),
   /** Uniquely identifies the alert. */
   id: z.string().optional(),
   /** Flag indicating that the alert is expandable. */
@@ -26,8 +26,8 @@ or React fragment. */
   isLiveRegion: z.boolean().optional().default(false),
   /** Flag to indicate if the alert is plain. */
   isPlain: z.boolean().optional().default(false),
-  onMouseEnter: z.any().optional().default('() => {}'),
-  onMouseLeave: z.any().optional().default('() => {}'),
+  onMouseEnter: z.unknown().optional().default('() => {}'),
+  onMouseLeave: z.unknown().optional().default('() => {}'),
   /** Function to be executed on alert timeout. Relevant when the timeout prop is set. */
   onTimeout: z.function().optional().default('() => {}'),
   /** Value to overwrite the randomly generated data-ouia-component-id. */
@@ -41,7 +41,7 @@ be dismissed after that amount of time in milliseconds. */
 before finally dismissing the alert. */
   timeoutAnimation: z.number().optional().default(3000),
   /** Title of the alert. */
-  title: z.any(),
+  title: z.custom<React.ReactNode>(),
   /** Adds accessible text to the alert toggle. */
   toggleAriaLabel: z.string().optional(),
   /** Position of the tooltip which is displayed if text is truncated. */

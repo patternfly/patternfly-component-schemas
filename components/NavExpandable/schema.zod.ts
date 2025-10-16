@@ -1,12 +1,12 @@
 // Auto-generated Zod schema for NavExpandable
-// Generated on: 2025-10-10T18:12:17.775Z
+// Generated on: 2025-10-16T18:45:33.854Z
 import { z } from 'zod'
 
 export const NavExpandableSchema = z.object({
   /** Additional props added to the NavExpandable <button> */
-  buttonProps: z.any().optional(),
+  buttonProps: z.unknown().optional(),
   /** Anything that can be rendered inside of the expandable list */
-  children: z.any().optional().default(''),
+  children: z.custom<React.ReactNode>().optional().default(''),
   /** Additional classes added to the container */
   className: z.string().optional().default(''),
   /** Group identifier, will be returned with the onToggle and onSelect callback passed to the Nav component */
@@ -18,14 +18,14 @@ export const NavExpandableSchema = z.object({
   /** Boolean to pragmatically expand or collapse section */
   isExpanded: z.boolean().optional().default(false),
   /** allow consumer to optionally override this callback and manage expand state externally. if passed will not call Nav's onToggle. */
-  onExpand: z.any().optional(),
+  onExpand: z.custom<Event>().optional(),
   /** Value to overwrite the randomly generated data-ouia-component-id. */
   ouiaId: z.any().optional(),
   ouiaSafe: z.boolean().optional(),
   /** If defined, screen readers will read this text instead of the list title */
   srText: z.string().optional().default(''),
   /** Title content shown for the expandable list */
-  title: z.any()
+  title: z.custom<React.ReactNode>()
 })
 
 export type NavExpandableProps = z.infer<typeof NavExpandableSchema>

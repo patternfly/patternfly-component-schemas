@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for ExpandableSection
-// Generated on: 2025-10-10T18:12:17.784Z
+// Generated on: 2025-10-16T18:45:33.868Z
 import { z } from 'zod'
 
 export const ExpandableSectionSchema = z.object({
   /** Content rendered inside the expandable section. */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the expandable section. */
   className: z.string().optional().default(''),
   /** Id of the content of the expandable section. When passing in the isDetached property, this
@@ -22,9 +22,9 @@ property's value should match the contentId property of the expandable section t
   isWidthLimited: z.boolean().optional().default(false),
   /** Callback function to toggle the expandable section. Detached expandable sections should
 use the onToggle property of the expandable section toggle sub-component. */
-  onToggle: z.any().optional().default('(event, isExpanded): void => undefined'),
+  onToggle: z.custom<Event>().optional().default('(event, isExpanded): void => undefined'),
   /** React node that appears in the attached toggle in place of the toggleText property. */
-  toggleContent: z.any().optional(),
+  toggleContent: z.custom<React.ReactNode>().optional(),
   /** Id of the toggle of the expandable section, which provides an accessible name to the
 expandable section content via the aria-labelledby attribute. When the isDetached property
 is also passed in, the value of this property must match the toggleId property of the

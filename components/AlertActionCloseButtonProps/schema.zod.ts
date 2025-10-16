@@ -1,0 +1,16 @@
+// Auto-generated Zod schema for AlertActionCloseButtonProps
+// Generated on: 2025-10-16T18:45:33.886Z
+import { z } from 'zod'
+
+export const AlertActionCloseButtonPropsSchema = z.object({
+  /** Additional classes added to the alert action close button. */
+  className: z.string().optional(),
+  /** A callback for when the close button is clicked. */
+  onClose: z.function().optional(),
+  /** Accessible label for the close button */
+  'Unknown': z.string().optional(),
+  /** Variant Label for the close button. */
+  variantLabel: z.string().optional()
+})
+
+export type AlertActionCloseButtonPropsProps = z.infer<typeof AlertActionCloseButtonPropsSchema>

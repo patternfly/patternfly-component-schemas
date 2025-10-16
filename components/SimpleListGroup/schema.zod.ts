@@ -1,16 +1,16 @@
 // Auto-generated Zod schema for SimpleListGroup
-// Generated on: 2025-10-10T18:12:17.770Z
+// Generated on: 2025-10-16T18:45:33.843Z
 import { z } from 'zod'
 
 export const SimpleListGroupSchema = z.object({
   /** Content rendered inside the SimpleList group */
-  children: z.any().optional().default('null'),
+  children: z.custom<React.ReactNode>().optional().default('null'),
   /** Additional classes added to the SimpleList <ul> */
   className: z.string().optional().default(''),
   /** ID of SimpleList group */
   id: z.string().optional().default(''),
   /** Title of the SimpleList group */
-  title: z.any().optional().default(''),
+  title: z.custom<React.ReactNode>().optional().default(''),
   /** Additional classes added to the SimpleList group title */
   titleClassName: z.string().optional().default('')
 })

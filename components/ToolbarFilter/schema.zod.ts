@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ToolbarFilter
-// Generated on: 2025-10-10T18:12:17.766Z
+// Generated on: 2025-10-16T18:45:33.834Z
 import { z } from 'zod'
 
 export const ToolbarFilterSchema = z.object({
@@ -17,7 +17,7 @@ export const ToolbarFilterSchema = z.object({
   /** Unique category name to be used as a label for the label group */
   categoryName: z.any(),
   /** Content to be rendered inside the data toolbar item */
-  children: z.any(),
+  children: z.custom<React.ReactNode>(),
   /** Classes applied to root element of the data toolbar item */
   className: z.string().optional(),
   /** Sets only the column gap at various breakpoints. */
@@ -28,9 +28,9 @@ export const ToolbarFilterSchema = z.object({
   '2xl'?', 'columnGapNone', 'columnGapXs', 'columnGapSm', 'columnGapMd', 'columnGapLg', 'columnGapXl', 'columnGap_2xl', 'columnGap_3xl', 'columnGap_4xl';
 ']).optional(),
   /** Callback passed by consumer used to delete a label from the labels[] */
-  deleteLabel: z.function().optional(),
+  deleteLabel: z.any().optional(),
   /** Callback passed by consumer used to close the entire label group */
-  deleteLabelGroup: z.function().optional(),
+  deleteLabelGroup: z.any().optional(),
   /** Reference to a label container created with a custom expandable content group, for non-managed multiple toolbar toggle groups. */
   expandableLabelContainerRef: z.any().optional(),
   /** Sets both the column and row gap at various breakpoints. */
@@ -53,7 +53,7 @@ export const ToolbarFilterSchema = z.object({
   /** Customizable "Show Less" text string for the label group */
   labelGroupExpandedText: z.string().optional(),
   /** An array of strings to be displayed as labels in the expandable content */
-  labels: z.array(z.any()).optional().default('[]'),
+  labels: z.any().optional().default('[]'),
   /** Sets only the row gap at various breakpoints. */
   rowGap: z.enum(['rowGapNone', 'rowGapXs', 'rowGapSm', 'rowGapMd', 'rowGapLg', 'rowGapXl', 'rowGap_2xl', 'rowGap_3xl', 'rowGap_4xl';
   md?', 'rowGapNone', 'rowGapXs', 'rowGapSm', 'rowGapMd', 'rowGapLg', 'rowGapXl', 'rowGap_2xl', 'rowGap_3xl', 'rowGap_4xl';

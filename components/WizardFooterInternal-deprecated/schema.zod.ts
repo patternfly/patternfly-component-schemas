@@ -1,17 +1,17 @@
 // Auto-generated Zod schema for WizardFooterInternal-deprecated
-// Generated on: 2025-10-10T18:12:17.797Z
+// Generated on: 2025-10-16T18:45:33.890Z
 import { z } from 'zod'
 
 export const WizardFooterInternalSchema = z.object({
-  activeStep: z.any(),
-  backButtonText: z.any(),
-  cancelButtonText: z.any(),
+  activeStep: z.unknown(),
+  backButtonText: z.custom<React.ReactNode>(),
+  cancelButtonText: z.custom<React.ReactNode>(),
   firstStep: z.boolean(),
   isValid: z.boolean(),
-  nextButtonText: z.any(),
-  onBack: z.any(),
-  onClose: z.any(),
-  onNext: z.any()
+  nextButtonText: z.custom<React.ReactNode>(),
+  onBack: z.unknown(),
+  onClose: z.unknown(),
+  onNext: z.unknown()
 })
 
 export type WizardFooterInternalProps = z.infer<typeof WizardFooterInternalSchema>

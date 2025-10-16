@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for WizardState-deprecated
-// Generated on: 2025-10-10T18:12:17.798Z
+// Generated on: 2025-10-16T18:45:33.891Z
 import { z } from 'zod'
 
 export const WizardStateSchema = z.object({

@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for BreadcrumbItemRenderArgs
-// Generated on: 2025-10-10T18:12:17.792Z
+// Generated on: 2025-10-16T18:45:33.884Z
 import { z } from 'zod'
 
 export const BreadcrumbItemRenderArgsSchema = z.object({

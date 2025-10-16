@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for Masthead
-// Generated on: 2025-10-10T18:12:17.779Z
+// Generated on: 2025-10-16T18:45:33.862Z
 import { z } from 'zod'
 
 export const MastheadSchema = z.object({
   /** Content rendered inside of the masthead */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the masthead */
   className: z.string().optional(),
   /** Display type at various breakpoints */

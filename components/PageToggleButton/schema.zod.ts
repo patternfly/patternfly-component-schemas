@@ -1,18 +1,18 @@
 // Auto-generated Zod schema for PageToggleButton
-// Generated on: 2025-10-10T18:12:17.773Z
+// Generated on: 2025-10-16T18:45:33.851Z
 import { z } from 'zod'
 
 export const PageToggleButtonSchema = z.object({
   /** Adds accessible text to the button. */
   'aria-label': z.string().optional(),
   /** Content rendered inside the button */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the button */
   className: z.string().optional(),
   /** Sets the base component to render. defaults to button */
   component: z.any().optional(),
   /** Adds count number to button */
-  countOptions: z.any().optional(),
+  countOptions: z.unknown().optional(),
   /** Applies no padding on a plain button variant. Use when plain button is placed inline with text */
   hasNoPadding: z.boolean().optional(),
   /** Icon for the button. */
@@ -22,7 +22,7 @@ export const PageToggleButtonSchema = z.object({
   /** Button id */
   id: z.string().optional().default('nav-toggle'),
   /** Events to prevent when the button is in an aria-disabled state */
-  inoperableEvents: z.array(z.any()).optional(),
+  inoperableEvents: z.array(z.string()).optional(),
   /** Adds disabled styling and communicates that the button is disabled using the aria-disabled html attribute */
   isAriaDisabled: z.boolean().optional(),
   /** Adds block styling to button */

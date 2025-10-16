@@ -1,12 +1,12 @@
 // Auto-generated Zod schema for DataListContent
-// Generated on: 2025-10-10T18:12:17.788Z
+// Generated on: 2025-10-16T18:45:33.877Z
 import { z } from 'zod'
 
 export const DataListContentSchema = z.object({
   /** Adds accessible text to the DataList toggle */
   'aria-label': z.string(),
   /** Content rendered inside the DataList item */
-  children: z.any().optional().default('null'),
+  children: z.custom<React.ReactNode>().optional().default('null'),
   /** Additional classes added to the DataList cell */
   className: z.string().optional().default(''),
   /** Flag to remove padding from the expandable content */

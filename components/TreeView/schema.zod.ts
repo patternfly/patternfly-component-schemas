@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for TreeView
-// Generated on: 2025-10-10T18:12:17.764Z
+// Generated on: 2025-10-16T18:45:33.832Z
 import { z } from 'zod'
 
 export const TreeViewSchema = z.object({
   /** Active items of tree view. */
-  activeItems: z.array(z.any()).optional(),
+  activeItems: z.array(z.unknown()).optional(),
   /** Sets the expanded state on all tree nodes, overriding default behavior and current
 internal state. */
   allExpanded: z.boolean().optional(),
@@ -19,11 +19,11 @@ this or the aria-label property must be passed in. */
   /** Comparison function for determining active items. */
   compareItems: z.function().optional().default('(item, itemToCheck) => item.id === itemToCheck.id'),
   /** Data of the tree view. */
-  data: z.array(z.any()),
+  data: z.array(z.unknown()),
   /** Sets the default expanded behavior. */
   defaultAllExpanded: z.boolean().optional().default(false),
   /** Icon for all expanded node items. */
-  expandedIcon: z.any().optional(),
+  expandedIcon: z.custom<React.ReactNode>().optional(),
   /** Flag indicating if all nodes in the tree view should have badges. */
   hasBadges: z.boolean().optional().default(false),
   /** Flag indicating if all nodes in the tree view should have checkboxes. */
@@ -34,7 +34,7 @@ this or the aria-label property must be passed in. */
 children. */
   hasSelectableNodes: z.boolean().optional().default(false),
   /** Icon for all leaf or unexpanded node items. */
-  icon: z.any().optional(),
+  icon: z.custom<React.ReactNode>().optional(),
   /** ID of the tree view. */
   id: z.string().optional(),
   /** Flag indicating whether multiple nodes can be selected in the tree view. This will also set the
@@ -44,17 +44,17 @@ Can only be applied to the root tree view list. */
   /** Flag indicating if the tree view is nested. */
   isNested: z.boolean().optional().default(false),
   /** Callback for item checkbox selection. */
-  onCheck: z.any().optional(),
+  onCheck: z.custom<Event>().optional(),
   /** Callback for collapsing a node with children. */
-  onCollapse: z.any().optional(),
+  onCollapse: z.custom<Event>().optional(),
   /** Callback for expanding a node with children. */
-  onExpand: z.any().optional(),
+  onExpand: z.custom<Event>().optional(),
   /** Callback for item selection. */
-  onSelect: z.any().optional(),
+  onSelect: z.custom<Event>().optional(),
   /** Internal. Parent item of a tree view list item. */
-  parentItem: z.any().optional(),
+  parentItem: z.unknown().optional(),
   /** Toolbar to display above the tree view. */
-  toolbar: z.any().optional(),
+  toolbar: z.custom<React.ReactNode>().optional(),
   /** Flag indicating the tree view should utilize memoization to help render large data sets.
 Setting this property requires that the activeItems property is passed an array containing
 every node in the selected item's path. */

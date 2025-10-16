@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ToolbarLabelGroupContent
-// Generated on: 2025-10-10T18:12:17.765Z
+// Generated on: 2025-10-16T18:45:33.834Z
 import { z } from 'zod'
 
 export const ToolbarLabelGroupContentSchema = z.object({
@@ -12,11 +12,11 @@ export const ToolbarLabelGroupContentSchema = z.object({
   /** The breakpoint at which the listed filters in label groups are collapsed down to a summary */
   collapseListedFiltersBreakpoint: z.enum(['all', 'md', 'lg', 'xl', '2xl']).optional().default('lg'),
   /** Custom additional content appended to the generated labels. To maintain spacing and styling, each node should be a ToolbarItem or ToolbarGroup. This property will remove the built in "Clear all filters" button. */
-  customLabelGroupContent: z.any().optional(),
+  customLabelGroupContent: z.custom<React.ReactNode>().optional(),
   /** Flag indicating if a data toolbar toggle group's expandable content is expanded */
   isExpanded: z.boolean().optional(),
   /** Label group content reference for passing to data toolbar children */
-  labelGroupContentRef: z.any().optional(),
+  labelGroupContentRef: z.unknown().optional(),
   /** Total number of filters currently being applied across all ToolbarFilter components */
   numberOfFilters: z.number(),
   /** Text to display in the total number of applied filters ToolbarFilter */

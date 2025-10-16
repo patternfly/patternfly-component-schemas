@@ -1,20 +1,20 @@
 // Auto-generated Zod schema for MenuItem
-// Generated on: 2025-10-10T18:12:17.778Z
+// Generated on: 2025-10-16T18:45:33.859Z
 import { z } from 'zod'
 
 export const MenuItemSchema = z.object({
   /** Render item with one or more actions */
-  actions: z.any().optional(),
+  actions: z.custom<React.ReactNode>().optional(),
   /** Adds an accessible name to the menu item. */
   'aria-label': z.string().optional(),
   /** Content rendered inside the menu list item. */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the menu list item */
   className: z.string().optional(),
   /** Component used to render the menu item */
   component: z.any().optional(),
   /** Description of the menu item */
-  description: z.any().optional(),
+  description: z.custom<React.ReactNode>().optional(),
   /** Sub menu direction */
   direction: z.enum(['down', 'up']).optional(),
   /** Navigation link download. Only set when the to property is present. */
@@ -22,11 +22,11 @@ export const MenuItemSchema = z.object({
   /** Drilldown menu of the item. Should be a Menu or DrilldownMenu type. */
   drilldownMenu: z.any().optional(),
   /** Flyout menu. Should not be used if the to prop is defined. */
-  flyoutMenu: z.any().optional(),
+  flyoutMenu: z.custom<React.ReactElement>().optional(),
   /** Flag indicating the item has a checkbox */
   hasCheckbox: z.boolean().optional(),
   /** Render item with icon */
-  icon: z.any().optional(),
+  icon: z.custom<React.ReactNode>().optional(),
   /** Sets the id attribute on the menu item component. */
   id: z.string().optional(),
   /** Flag indicating whether the item is active */
@@ -53,7 +53,7 @@ export const MenuItemSchema = z.object({
   /** Flag indicating if the option is selected */
   isSelected: z.boolean().optional(),
   /** Identifies the component in the Menu onSelect or onActionClick callback */
-  itemId: z.any().optional(),
+  itemId: z.unknown().optional(),
   /** Callback for item click */
   onClick: z.function().optional(),
   /** Callback function when mouse leaves trigger */
@@ -65,7 +65,7 @@ export const MenuItemSchema = z.object({
   /** Target navigation link. Should not be used if the flyout prop is defined. */
   to: z.string().optional(),
   /** Props for adding a tooltip to a menu item */
-  tooltipProps: z.any().optional()
+  tooltipProps: z.unknown().optional()
 })
 
 export type MenuItemProps = z.infer<typeof MenuItemSchema>

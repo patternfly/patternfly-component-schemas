@@ -1,18 +1,18 @@
 // Auto-generated Zod schema for NotificationDrawerListItemHeader
-// Generated on: 2025-10-10T18:12:17.777Z
+// Generated on: 2025-10-16T18:45:33.857Z
 import { z } from 'zod'
 
 export const NotificationDrawerListItemHeaderSchema = z.object({
   /** Removes the offset of the notification drawer actions. */
   actionHasNoOffset: z.boolean().optional().default(false),
   /** Actions rendered inside the notification drawer list item header */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes for notification drawer list item header. */
   className: z.string().optional().default(''),
   /** Sets the heading level to use for the list item header title. Default is h2. */
   headingLevel: z.enum(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']).optional().default('h2'),
   /** Add custom icon for notification drawer list item header */
-  icon: z.any().optional().default('null'),
+  icon: z.custom<React.ReactNode>().optional().default('null'),
   /** Notification drawer list item header screen reader title */
   srTitle: z.string().optional(),
   /** Notification drawer list item title */

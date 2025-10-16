@@ -1,12 +1,12 @@
 // Auto-generated Zod schema for ClipboardCopyButton
-// Generated on: 2025-10-10T18:12:17.789Z
+// Generated on: 2025-10-16T18:45:33.879Z
 import { z } from 'zod'
 
 export const ClipboardCopyButtonSchema = z.object({
   /** Aria-label for the copy button */
   'aria-label': z.string().optional().default('Copyable input'),
   /** Content of the copy button */
-  children: z.any(),
+  children: z.custom<React.ReactNode>(),
   /** Additional classes added to the copy button */
   className: z.string().optional(),
   /** Entry delay on the copy button tooltip */
@@ -20,7 +20,7 @@ export const ClipboardCopyButtonSchema = z.object({
   /** Max width of the copy button tooltip */
   maxWidth: z.string().optional().default('100px'),
   /** Callback for the copy when the button is clicked */
-  onClick: z.any(),
+  onClick: z.custom<Event>(),
   /** Callback when tooltip's hide transition has finished executing */
   onTooltipHidden: z.function().optional().default('() => {}'),
   /** Position of the copy button tooltip */

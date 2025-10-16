@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ToggleGroup
-// Generated on: 2025-10-10T18:12:17.764Z
+// Generated on: 2025-10-16T18:45:33.833Z
 import { z } from 'zod'
 
 export const ToggleGroupSchema = z.object({
@@ -8,7 +8,7 @@ export const ToggleGroupSchema = z.object({
   /** Accessible label for the toggle group */
   'aria-label': z.string().optional(),
   /** Content rendered inside the toggle group */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the toggle group */
   className: z.string().optional(),
   /** Modifies the toggle group to include compact styling. */

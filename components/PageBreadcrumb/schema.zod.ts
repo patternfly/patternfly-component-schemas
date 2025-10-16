@@ -1,12 +1,12 @@
 // Auto-generated Zod schema for PageBreadcrumb
-// Generated on: 2025-10-10T18:12:17.774Z
+// Generated on: 2025-10-16T18:45:33.852Z
 import { z } from 'zod'
 
 export const PageBreadcrumbSchema = z.object({
   /** Adds an accessible name to the breadcrumb section. Required when the hasOverflowScroll prop is set to true. */
   'aria-label': z.string().optional(),
   /** Content rendered inside of the PageBreadcrumb */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes to apply to the PageBreadcrumb */
   className: z.string().optional().default(''),
   /** Flag indicating whether children passed to the component should be wrapped by a PageBody.

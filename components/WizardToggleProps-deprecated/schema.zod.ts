@@ -1,12 +1,12 @@
 // Auto-generated Zod schema for WizardToggleProps-deprecated
-// Generated on: 2025-10-10T18:12:17.797Z
+// Generated on: 2025-10-16T18:45:33.889Z
 import { z } from 'zod'
 
 export const WizardTogglePropsSchema = z.object({
   /** The currently active WizardStep */
-  activeStep: z.any(),
+  activeStep: z.unknown(),
   /** The WizardFooter */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Flag indicating the wizard has a drawer for at least one of the wizard steps */
   hasDrawer: z.boolean().optional(),
   /** Set to true to remove body padding */
@@ -24,13 +24,13 @@ a scrollbar. */
 The aria-labelledby will only be applied when the body content overflows and renders a scrollbar. */
   mainAriaLabelledBy: z.string().optional(),
   /** Function that returns the WizardNav component */
-  nav: z.any(),
+  nav: z.custom<React.ReactElement>(),
   /** Callback function for when the drawer is toggled */
   onExpandDrawer: z.function().optional(),
   /** Callback function for when the nav is toggled */
   onNavToggle: z.function(),
   /** The wizard steps */
-  steps: z.array(z.any()),
+  steps: z.array(z.unknown()),
   /** The button's aria-label */
   'Unknown': z.string().optional()
 })

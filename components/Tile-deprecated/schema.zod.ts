@@ -1,14 +1,14 @@
 // Auto-generated Zod schema for Tile-deprecated
-// Generated on: 2025-10-10T18:12:17.794Z
+// Generated on: 2025-10-16T18:45:33.888Z
 import { z } from 'zod'
 
 export const TileSchema = z.object({
   /** Content rendered inside the banner */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the banner */
   className: z.string().optional(),
   /** Icon in the tile title */
-  icon: z.any().optional(),
+  icon: z.custom<React.ReactNode>().optional(),
   /** Flag indicating if the tile is disabled */
   isDisabled: z.boolean().optional(),
   /** Flag indicating if the stacked tile icon is large */

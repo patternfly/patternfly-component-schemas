@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for EmptyStateHeader
-// Generated on: 2025-10-10T18:12:17.785Z
+// Generated on: 2025-10-16T18:45:33.870Z
 import { z } from 'zod'
 
 export const EmptyStateHeaderSchema = z.object({
@@ -8,11 +8,11 @@ export const EmptyStateHeaderSchema = z.object({
   /** The heading level to use, default is h1 */
   headingLevel: z.enum(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']).optional().default('EmptyStateHeadingLevel.h1'),
   /** Empty state icon element to be rendered. Can also be a spinner component */
-  icon: z.any().optional(),
+  icon: z.unknown().optional(),
   /** Additional classes added to the title inside empty state header */
   titleClassName: z.string().optional(),
   /** Text of the title inside empty state header, will be wrapped in headingLevel */
-  titleText: z.any().optional()
+  titleText: z.custom<React.ReactNode>().optional()
 })
 
 export type EmptyStateHeaderProps = z.infer<typeof EmptyStateHeaderSchema>

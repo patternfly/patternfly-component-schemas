@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for Pagination
-// Generated on: 2025-10-10T18:12:17.772Z
+// Generated on: 2025-10-16T18:45:33.850Z
 import { z } from 'zod'
 
 export const PaginationSchema = z.object({
   /** What should be rendered inside the pagination. */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes for the pagination container. */
   className: z.string().optional().default(''),
   /** Direction of dropdown context menu. */
@@ -41,17 +41,17 @@ greater than remaining rows. */
   /** Start index of rows to display, used in place of providing page. */
   offset: z.number().optional().default('null'),
   /** Function called when user clicks on navigate to first page. */
-  onFirstClick: z.any().optional().default('() => undefined'),
+  onFirstClick: z.custom<Event>().optional().default('() => undefined'),
   /** Function called when user clicks on navigate to last page. */
-  onLastClick: z.any().optional().default('() => undefined'),
+  onLastClick: z.custom<Event>().optional().default('() => undefined'),
   /** Function called when user clicks on navigate to next page. */
-  onNextClick: z.any().optional().default('() => undefined'),
+  onNextClick: z.custom<Event>().optional().default('() => undefined'),
   /** Function called when user inputs page number. */
-  onPageInput: z.any().optional().default('() => undefined'),
+  onPageInput: z.custom<Event>().optional().default('() => undefined'),
   /** Function called when user selects number of items per page. */
   onPerPageSelect: z.any().optional().default('() => undefined'),
   /** Function called when user clicks on navigate to previous page. */
-  onPreviousClick: z.any().optional().default('() => undefined'),
+  onPreviousClick: z.custom<Event>().optional().default('() => undefined'),
   /** Function called when user sets page. */
   onSetPage: z.any().optional().default('() => undefined'),
   /** Value to overwrite the randomly generated data-ouia-component-id. */
@@ -63,7 +63,7 @@ greater than remaining rows. */
   /** Number of items per page. */
   perPage: z.number().optional().default('defaultPerPageOptions[0].value'),
   /** Array of the number of items per page options. */
-  perPageOptions: z.array(z.any()).optional().default('[
+  perPageOptions: z.array(z.unknown()).optional().default('[
   {
     title: '10',
     value: 10
@@ -82,7 +82,7 @@ greater than remaining rows. */
   }
 ]'),
   /** Object with titles to display in pagination. */
-  titles: z.any().optional().default('{
+  titles: z.unknown().optional().default('{
   items: '',
   page: '',
   pages: '',

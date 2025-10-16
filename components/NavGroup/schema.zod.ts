@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for NavGroup
-// Generated on: 2025-10-10T18:12:17.775Z
+// Generated on: 2025-10-16T18:45:33.854Z
 import { z } from 'zod'
 
 export const NavGroupSchema = z.object({
   /** Anything that can be rendered inside of the group */
-  children: z.any().optional().default('null'),
+  children: z.custom<React.ReactNode>().optional().default('null'),
   /** Additional classes added to the container */
   className: z.string().optional().default(''),
   /** Identifier to use for the section aria label */

@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for ExpandableSectionToggle
-// Generated on: 2025-10-10T18:12:17.784Z
+// Generated on: 2025-10-16T18:45:33.868Z
 import { z } from 'zod'
 
 export const ExpandableSectionToggleSchema = z.object({
   /** Content rendered inside the expandable toggle. */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the expandable toggle. */
   className: z.string().optional().default(''),
   /** Id of the toggle's respective expandable section content. The value passed into this

@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for Content
-// Generated on: 2025-10-10T18:12:17.790Z
+// Generated on: 2025-10-16T18:45:33.880Z
 import { z } from 'zod'
 
 export const ContentSchema = z.object({
   /** Children rendered within the Content. */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the Content. */
   className: z.string().optional().default(''),
   /** The content component. If none provided, it will be a 'div' and styling will be applied to all its child components. */

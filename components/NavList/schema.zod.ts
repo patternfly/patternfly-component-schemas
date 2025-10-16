@@ -1,12 +1,12 @@
 // Auto-generated Zod schema for NavList
-// Generated on: 2025-10-10T18:12:17.775Z
+// Generated on: 2025-10-16T18:45:33.853Z
 import { z } from 'zod'
 
 export const NavListSchema = z.object({
   /** Aria-label for the back scroll button */
   backScrollAriaLabel: z.string().optional().default('Scroll back'),
   /** Children nodes */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the list */
   className: z.string().optional(),
   /** Aria-label for the forward scroll button */

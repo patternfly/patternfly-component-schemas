@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for Drawer
-// Generated on: 2025-10-10T18:12:17.787Z
+// Generated on: 2025-10-16T18:45:33.875Z
 import { z } from 'zod'
 
 export const DrawerSchema = z.object({
   /** Content rendered in the drawer panel */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the Drawer. */
   className: z.string().optional().default(''),
   /** Indicates if the drawer is expanded */

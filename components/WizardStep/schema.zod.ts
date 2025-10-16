@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for WizardStep
-// Generated on: 2025-10-10T18:12:17.763Z
+// Generated on: 2025-10-16T18:45:33.829Z
 import { z } from 'zod'
 
 export const WizardStepSchema = z.object({
   /** Props for WizardBody that wraps content by default. */
-  body: z.any().optional(),
+  body: z.unknown().optional(),
   /** Optional for when the step is used as a parent to sub-steps */
   children: z.any().optional(),
   /** Replaces the step's footer. The step's footer takes precedence over the wizard's footer. */
@@ -18,13 +18,13 @@ export const WizardStepSchema = z.object({
   /** Flag to determine whether the step is hidden */
   isHidden: z.boolean().optional(),
   /** Name of the step's navigation item */
-  name: z.any(),
+  name: z.custom<React.ReactNode>(),
   /** Replaces the step's navigation item or its properties. */
   navItem: z.any().optional(),
   /** Used to determine icon next to the step's navigation item */
   status: z.enum(['default', 'error', 'success']).optional(),
   /** Optional list of sub-steps */
-  steps: z.array(z.any()).optional()
+  steps: z.array(z.custom<React.ReactElement>()).optional()
 })
 
 export type WizardStepProps = z.infer<typeof WizardStepSchema>

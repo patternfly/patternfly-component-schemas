@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ToggleTemplate
-// Generated on: 2025-10-10T18:12:17.772Z
+// Generated on: 2025-10-16T18:45:33.849Z
 import { z } from 'zod'
 
 export const ToggleTemplateSchema = z.object({
@@ -12,7 +12,7 @@ export const ToggleTemplateSchema = z.object({
   /** The last index of the items being paginated */
   lastIndex: z.number().optional().default(0),
   /** The word that joins the index and itemCount/itemsTitle */
-  ofWord: z.any().optional().default('of')
+  ofWord: z.custom<React.ReactNode>().optional().default('of')
 })
 
 export type ToggleTemplateProps = z.infer<typeof ToggleTemplateSchema>

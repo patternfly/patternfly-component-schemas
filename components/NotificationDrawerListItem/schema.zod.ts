@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for NotificationDrawerListItem
-// Generated on: 2025-10-10T18:12:17.777Z
+// Generated on: 2025-10-16T18:45:33.858Z
 import { z } from 'zod'
 
 export const NotificationDrawerListItemSchema = z.object({
   /** Content rendered inside the list item */
-  children: z.any().optional().default('null'),
+  children: z.custom<React.ReactNode>().optional().default('null'),
   /** Additional classes added to the list item */
   className: z.string().optional().default(''),
   /** Modifies the list item to include hover styles on :hover */

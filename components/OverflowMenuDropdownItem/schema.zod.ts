@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for OverflowMenuDropdownItem
-// Generated on: 2025-10-10T18:12:17.773Z
+// Generated on: 2025-10-16T18:45:33.850Z
 import { z } from 'zod'
 
 export const OverflowMenuDropdownItemSchema = z.object({

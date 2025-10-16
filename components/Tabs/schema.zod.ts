@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Tabs
-// Generated on: 2025-10-10T18:12:17.768Z
+// Generated on: 2025-10-16T18:45:33.838Z
 import { z } from 'zod'
 
 export const TabsSchema = z.object({
@@ -12,7 +12,7 @@ export const TabsSchema = z.object({
   /** Aria-label for the back scroll button */
   backScrollAriaLabel: z.string().optional().default('Scroll back'),
   /** Content rendered inside the tabs component. Only `Tab` components or expressions resulting in a falsy value are allowed here. */
-  children: z.array(z.any()),
+  children: z.any(),
   /** Additional classes added to the tabs */
   className: z.string().optional(),
   /** Determines what tag is used around the tabs. Use "nav" to define the tabs inside a navigation region */
@@ -60,13 +60,13 @@ export const TabsSchema = z.object({
   /** Waits until the first "enter" transition to mount tab children (add them to the DOM) */
   mountOnEnter: z.boolean().optional().default(false),
   /** Callback for the add button. Passing this property inserts the add button */
-  onAdd: z.any().optional(),
+  onAdd: z.custom<Event>().optional(),
   /** Callback to handle tab closing and adds a basic close button to all tabs. This is overridden by the tab actions property. */
   onClose: z.any().optional(),
   /** Callback to handle tab selection */
   onSelect: z.any().optional().default('() => undefined as any'),
   /** Callback function to toggle the expandable tabs. */
-  onToggle: z.any().optional().default('(_event: React.MouseEvent, _isExpanded: boolean): void => undefined'),
+  onToggle: z.custom<Event>().optional().default('(_event: React.MouseEvent, _isExpanded: boolean): void => undefined'),
   /** Value to overwrite the randomly generated data-ouia-component-id. */
   ouiaId: z.any().optional(),
   /** Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false. */

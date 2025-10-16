@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Menu
-// Generated on: 2025-10-10T18:12:17.779Z
+// Generated on: 2025-10-16T18:45:33.861Z
 import { z } from 'zod'
 
 export const MenuSchema = z.object({
@@ -8,7 +8,7 @@ export const MenuSchema = z.object({
   /** ID of the currently active menu for the drilldown variant */
   activeMenu: z.string().optional(),
   /** Anything that can be rendered inside of the Menu */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the Menu */
   className: z.string().optional(),
   /** Indicates if menu contains a drilldown menu */
@@ -16,9 +16,9 @@ export const MenuSchema = z.object({
   /** Indicates if menu contains a flyout menu */
   containsFlyout: z.boolean().optional(),
   /** Indicates the path of drilled in menu itemIds */
-  drilldownItemPath: z.array(z.any()).optional(),
+  drilldownItemPath: z.array(z.string()).optional(),
   /** Array of menus that are drilled in */
-  drilledInMenus: z.array(z.any()).optional(),
+  drilledInMenus: z.array(z.string()).optional(),
   /** ID of the menu */
   id: z.string().optional(),
   /** Indicates if a menu is drilled into */
@@ -51,7 +51,7 @@ export const MenuSchema = z.object({
 one or more items selected, pass in "listbox". */
   role: z.string().optional(),
   /** Single itemId for single select menus, or array of itemIds for multi select. You can also specify isSelected on the MenuItem. */
-  selected: z.array(z.any()).optional()
+  selected: z.any().optional()
 })
 
 export type MenuProps = z.infer<typeof MenuSchema>

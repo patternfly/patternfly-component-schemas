@@ -1,20 +1,20 @@
 // Auto-generated Zod schema for NavItem
-// Generated on: 2025-10-10T18:12:17.775Z
+// Generated on: 2025-10-16T18:45:33.854Z
 import { z } from 'zod'
 
 export const NavItemSchema = z.object({
   /** Content rendered inside the nav item. */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the nav item */
   className: z.string().optional(),
   /** Component used to render NavItems if  React.isValidElement(children) is false */
   component: z.any().optional().default('a'),
   /** Flyout of a nav item. This should be a Menu component. Should not be used if the to prop is defined. */
-  flyout: z.any().optional(),
+  flyout: z.custom<React.ReactElement>().optional(),
   /** Group identifier, will be returned with the onToggle and onSelect callback passed to the Nav component */
   groupId: z.any().optional().default('null'),
   /** Icon added before the nav item children. */
-  icon: z.any().optional(),
+  icon: z.custom<React.ReactNode>().optional(),
   /** Flag indicating whether the item is active */
   isActive: z.boolean().optional().default(false),
   /** Item identifier, will be returned with the onToggle and onSelect callback passed to the Nav component */

@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for NotificationDrawerHeader
-// Generated on: 2025-10-10T18:12:17.777Z
+// Generated on: 2025-10-16T18:45:33.858Z
 import { z } from 'zod'
 
 export const NotificationDrawerHeaderSchema = z.object({
   /** Content rendered inside the drawer */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes for notification drawer header. */
   className: z.string().optional().default(''),
   /** Adds custom accessible text to the notification drawer close button. */

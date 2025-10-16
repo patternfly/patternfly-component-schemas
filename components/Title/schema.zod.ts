@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for Title
-// Generated on: 2025-10-10T18:12:17.767Z
+// Generated on: 2025-10-16T18:45:33.835Z
 import { z } from 'zod'
 
 export const TitleSchema = z.object({
   /** Content rendered inside the Title */
-  children: z.any().optional().default(''),
+  children: z.custom<React.ReactNode>().optional().default(''),
   /** Additional classes added to the Title */
   className: z.string().optional().default(''),
   /** The heading level to use */

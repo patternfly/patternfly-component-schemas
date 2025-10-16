@@ -1,18 +1,18 @@
 // Auto-generated Zod schema for Page
-// Generated on: 2025-10-10T18:12:17.774Z
+// Generated on: 2025-10-16T18:45:33.853Z
 import { z } from 'zod'
 
 export const PageSchema = z.object({
   /** Additional content of the group */
-  additionalGroupedContent: z.any().optional(),
+  additionalGroupedContent: z.custom<React.ReactNode>().optional(),
   /** Banner component for the page. This will be rendered above a breadcrumb if one is also passed. */
-  banner: z.any().optional(),
+  banner: z.custom<React.ReactNode>().optional(),
   /** Breadcrumb component for the page */
-  breadcrumb: z.any().optional(),
+  breadcrumb: z.custom<React.ReactNode>().optional(),
   /** Additional props of the breadcrumb */
-  breadcrumbProps: z.any().optional(),
+  breadcrumbProps: z.unknown().optional(),
   /** Content rendered inside the main section of the page layout (e.g. <PageSection />) */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the page layout */
   className: z.string().optional(),
   /** If true, the managed sidebar is initially open for desktop view */
@@ -74,9 +74,9 @@ https://github.com/patternfly/patternfly-react/blob/main/packages/react-core/src
   return 'default';
 }'),
   /** Additional props of the group */
-  groupProps: z.any().optional(),
+  groupProps: z.unknown().optional(),
   /** Horizontal sub navigation component for the page */
-  horizontalSubnav: z.any().optional(),
+  horizontalSubnav: z.custom<React.ReactNode>().optional(),
   /** Flag indicating if the breadcrumb should be in a group */
   isBreadcrumbGrouped: z.boolean().optional(),
   /** Flag indicating if breadcrumb width should be limited */
@@ -101,9 +101,9 @@ the sidebar component or add a callback onSidebarToggle function into the Masthe
   /** tabIndex to use for the [role="main"] element, null to unset it */
   mainTabIndex: z.any().optional().default(-1),
   /** Masthead component (e.g. <Masthead />) */
-  masthead: z.any().optional(),
+  masthead: z.custom<React.ReactNode>().optional(),
   /** Notification drawer component for an optional notification drawer (e.g. <NotificationDrawer />) */
-  notificationDrawer: z.any().optional(),
+  notificationDrawer: z.custom<React.ReactNode>().optional(),
   /** Callback when notification drawer panel is finished expanding. */
   onNotificationDrawerExpand: z.any().optional().default('() => null'),
   /** Can add callback to be notified when resize occurs, for example to set the sidebar isSidebarOpen prop to false for a width < 768px
@@ -113,9 +113,9 @@ Returns object { mobileView: boolean, windowSize: number } */
   role: z.string().optional(),
   /** Sidebar component for a side nav, recommended to be a PageSidebar. If set to null, the page grid layout
 will render without a sidebar. */
-  sidebar: z.any().optional(),
+  sidebar: z.custom<React.ReactNode>().optional(),
   /** Skip to content component for the page */
-  skipToContent: z.any().optional()
+  skipToContent: z.custom<React.ReactElement>().optional()
 })
 
 export type PageProps = z.infer<typeof PageSchema>

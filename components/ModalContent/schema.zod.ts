@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ModalContent
-// Generated on: 2025-10-10T18:12:17.780Z
+// Generated on: 2025-10-16T18:45:33.862Z
 import { z } from 'zod'
 
 export const ModalContentSchema = z.object({
@@ -16,7 +16,7 @@ export const ModalContentSchema = z.object({
   /** Id of the modal box container. */
   boxId: z.string(),
   /** Content rendered inside the modal. */
-  children: z.any(),
+  children: z.custom<React.ReactNode>(),
   /** Additional classes added to the modal box. */
   className: z.string().optional(),
   /** Flag to disable focus trap. */

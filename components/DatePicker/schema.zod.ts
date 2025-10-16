@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for DatePicker
-// Generated on: 2025-10-10T18:12:17.787Z
+// Generated on: 2025-10-16T18:45:33.875Z
 import { z } from 'zod'
 
 export const DatePickerSchema = z.object({
@@ -26,13 +26,13 @@ menuAppendTo={document.getElementById('target')} */
   /** How to parse the date in the text input. */
   dateParse: z.function().optional().default('(val: string) => (val.split('-').length === 3 ? new Date(`${val}T00:00:00`) : new Date(undefined))'),
   /** How to format days in buttons in table cells. */
-  dayFormat: z.any().optional(),
+  dayFormat: z.custom<React.ReactNode>().optional(),
   /** Helper text to display alongside the date picker. Expects a HelperText component. */
-  helperText: z.any().optional(),
+  helperText: z.custom<React.ReactNode>().optional(),
   /** Props used to ensure accessibility when displaying the calendar month inline. */
-  inlineProps: z.any().optional(),
+  inlineProps: z.unknown().optional(),
   /** Additional props for the text input. */
-  inputProps: z.any().optional().default('{}'),
+  inputProps: z.unknown().optional().default('{}'),
   /** Error message to display when the text input contains a non-empty value in an invalid format. */
   invalidFormatText: z.string().optional().default('Invalid date'),
   /** Flag indicating the date picker is disabled. */
@@ -41,32 +41,32 @@ menuAppendTo={document.getElementById('target')} */
 See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_identification_and_negotiation */
   locale: z.string().optional().default('undefined'),
   /** How to format days in header for screen readers. */
-  longWeekdayFormat: z.any().optional(),
+  longWeekdayFormat: z.custom<React.ReactNode>().optional(),
   /** How to format months in month select. */
-  monthFormat: z.any().optional(),
+  monthFormat: z.custom<React.ReactNode>().optional(),
   /** Accessible label for the next month button. */
   nextMonthAriaLabel: z.string().optional(),
   /** Callback called every time the text input loses focus. */
   onBlur: z.function().optional().default('(): any => undefined'),
   /** Callback called every time the text input value changes. */
-  onChange: z.any().optional().default('(): any => undefined'),
+  onChange: z.custom<Event>().optional().default('(): any => undefined'),
   /** String to display in the empty text input as a hint for the expected date format. */
   placeholder: z.string().optional().default('YYYY-MM-DD'),
   /** Props to pass to the popover that contains the calendar month component. */
-  popoverProps: z.any().optional(),
+  popoverProps: z.unknown().optional(),
   /** Accessible label for the previous month button. */
   prevMonthAriaLabel: z.string().optional(),
   /** Which date to start range styles from. */
   rangeStart: z.date().optional(),
   /** Options to customize the requirement of a date */
-  requiredDateOptions: z.any().optional(),
-  style: z.any().optional().default('{}'),
+  requiredDateOptions: z.unknown().optional(),
+  style: z.unknown().optional().default('{}'),
   /** Functions that returns an error message if a date is invalid. */
-  validators: z.array(z.any()).optional().default('[]'),
+  validators: z.array(z.unknown()).optional().default('[]'),
   /** Value of the text input. */
   value: z.string().optional().default(''),
   /** How to format week days in header. */
-  weekdayFormat: z.any().optional(),
+  weekdayFormat: z.custom<React.ReactNode>().optional(),
   /** Day of week that starts the week. 0 is Sunday, 6 is Saturday. */
   weekStart: z.any().optional(),
   /** Accessible label for the year input. */

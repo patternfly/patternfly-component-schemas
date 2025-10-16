@@ -1,12 +1,12 @@
 // Auto-generated Zod schema for ChipGroupProps-deprecated
-// Generated on: 2025-10-10T18:12:17.800Z
+// Generated on: 2025-10-16T18:45:33.895Z
 import { z } from 'zod'
 
 export const ChipGroupPropsSchema = z.object({
   /** Category name text for the chip group category.  If this prop is supplied the chip group with have a label and category styling applied */
   categoryName: z.string().optional(),
   /** Content rendered inside the chip group. Should be <Chip> elements. */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the chip item */
   className: z.string().optional(),
   /** Aria label for close button */
@@ -22,8 +22,8 @@ export const ChipGroupPropsSchema = z.object({
   /** Set number of chips to show before overflow */
   numChips: z.number().optional(),
   /** Function that is called when clicking on the chip group close button or on an overflow chip */
-  onClick: z.any().optional(),
-  onOverflowChipClick: z.any().optional(),
+  onClick: z.custom<Event>().optional(),
+  onOverflowChipClick: z.custom<Event>().optional(),
   /** Value to overwrite the randomly generated data-ouia-component-id. */
   ouiaId: z.any().optional(),
   /** Position of the tooltip which is displayed if the category name text is longer */

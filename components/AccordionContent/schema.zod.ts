@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for AccordionContent
-// Generated on: 2025-10-10T18:12:17.794Z
+// Generated on: 2025-10-16T18:45:33.887Z
 import { z } from 'zod'
 
 export const AccordionContentSchema = z.object({
@@ -8,17 +8,17 @@ export const AccordionContentSchema = z.object({
   /** Id of the controlling accordion toggle to label the content. */
   'aria-labelledby': z.string().optional(),
   /** Content rendered inside the Accordion */
-  children: z.any().optional().default('null'),
+  children: z.custom<React.ReactNode>().optional().default('null'),
   /** Additional classes added to the Accordion content */
   className: z.string().optional().default(''),
   /** Component to use as content container */
-  component: z.any().optional(),
+  component: z.unknown().optional(),
   /** Props passed to the AccordionExpandableContentBody * */
-  contentBodyProps: z.any().optional(),
+  contentBodyProps: z.unknown().optional(),
   /** Identify the AccordionContent item */
   id: z.string().optional().default(''),
   /** Flag indicating content is custom. Expanded content Body wrapper will be removed from children.  This allows multiple bodies to be rendered as content. */
-  isCustomContent: z.any().optional().default(false),
+  isCustomContent: z.custom<React.ReactNode>().optional().default(false),
   /** Flag to indicate Accordion content is fixed */
   isFixed: z.boolean().optional().default(false)
 })

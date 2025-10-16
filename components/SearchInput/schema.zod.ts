@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for SearchInput
-// Generated on: 2025-10-10T18:12:17.770Z
+// Generated on: 2025-10-16T18:45:33.844Z
 import { z } from 'zod'
 
 export const SearchInputSchema = z.object({
@@ -17,18 +17,18 @@ appendTo={document.getElementById('target')} */
   /** An accessible label for the search input. */
   'aria-label': z.string().optional(),
   /** Array of attribute values used for dynamically generated advanced search. */
-  attributes: z.array(z.any()).optional(),
+  attributes: z.any().optional(),
   /** Additional classes added to the search input. */
   className: z.string().optional(),
   /** Object that makes the search input expandable/collapsible. */
-  expandableInput: z.any().optional(),
-  formAdditionalItems: z.any().optional(),
+  expandableInput: z.unknown().optional(),
+  formAdditionalItems: z.custom<React.ReactNode>().optional(),
   /** Attribute label for strings unassociated with one of the provided listed attributes. */
-  hasWordsAttrLabel: z.any().optional(),
+  hasWordsAttrLabel: z.custom<React.ReactNode>().optional(),
   /** A suggestion for autocompleting. */
   hint: z.string().optional(),
   /** Additional props to spread to the search input element. */
-  inputProps: z.any().optional(),
+  inputProps: z.unknown().optional(),
   /** A flag for controlling the open state of a custom advanced search implementation. */
   isAdvancedSearchOpen: z.boolean().optional(),
   /** Flag indicating if search input is disabled. */
@@ -42,17 +42,17 @@ appendTo={document.getElementById('target')} */
   /** Accessible label for the button to navigate to next result. */
   nextNavigationButtonAriaLabel: z.string().optional(),
   /** A callback for when the input value changes. */
-  onChange: z.any().optional(),
+  onChange: z.custom<Event>().optional(),
   /** A callback for when the user clicks the clear button. */
-  onClear: z.any().optional(),
+  onClear: z.custom<Event>().optional(),
   /** A callback for when the user clicks to navigate to next result. */
-  onNextClick: z.any().optional(),
+  onNextClick: z.custom<Event>().optional(),
   /** A callback for when the user clicks to navigate to previous result. */
-  onPreviousClick: z.any().optional(),
+  onPreviousClick: z.custom<Event>().optional(),
   /** A callback for when the search button is clicked. */
-  onSearch: z.any().optional(),
+  onSearch: z.custom<Event>().optional(),
   /** A callback for when the open advanced search button is clicked. */
-  onToggleAdvancedSearch: z.any().optional(),
+  onToggleAdvancedSearch: z.custom<Event>().optional(),
   /** Accessible label for the button which opens the advanced search form menu. */
   openMenuButtonAriaLabel: z.string().optional(),
   /** Placeholder text of the search input. */
@@ -76,28 +76,28 @@ or a string representing the current result over the total number of results. i.
 Required whenever attributes are passed as props. */
   advancedSearchDelimiter: z.string().optional(),
   /** Array of attribute values used for dynamically generated advanced search. */
-  attributes: z.array(z.any()).optional().default('[]'),
+  attributes: z.any().optional().default('[]'),
   /** Additional classes added to the advanced search menu. */
   className: z.string().optional(),
-  formAdditionalItems: z.any().optional(),
+  formAdditionalItems: z.custom<React.ReactNode>().optional(),
   /** Function which builds an attribute-value map by parsing the value in the search input. */
   getAttrValueMap: z.function().optional(),
   /** Attribute label for strings unassociated with one of the provided listed attributes. */
-  hasWordsAttrLabel: z.any().optional().default('Has words'),
+  hasWordsAttrLabel: z.custom<React.ReactNode>().optional().default('Has words'),
   /** Flag for toggling the open/close state of the advanced search menu. */
   isSearchMenuOpen: z.boolean().optional(),
   /** A callback for when the input value changes. */
-  onChange: z.any().optional(),
+  onChange: z.custom<Event>().optional(),
   /** A callback for when the user clicks the clear button. */
-  onClear: z.any().optional(),
+  onClear: z.custom<Event>().optional(),
   /** A callback for when the search button is clicked. */
-  onSearch: z.any().optional(),
+  onSearch: z.custom<Event>().optional(),
   /** A callback for when the open advanced search button is clicked. */
-  onToggleAdvancedMenu: z.any().optional(),
+  onToggleAdvancedMenu: z.custom<Event>().optional(),
   /** Ref of the input element within the search input. */
-  parentInputRef: z.any().optional(),
+  parentInputRef: z.unknown().optional(),
   /** Ref of the div wrapping the whole search input. */
-  parentRef: z.any().optional(),
+  parentRef: z.unknown().optional(),
   /** Label for the button which resets the advanced search form and clears the search input. */
   resetButtonLabel: z.string().optional().default('Reset'),
   /** Label for the button which calls the onSearch event handler. */

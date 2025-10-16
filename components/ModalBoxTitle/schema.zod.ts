@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ModalBoxTitle
-// Generated on: 2025-10-10T18:12:17.780Z
+// Generated on: 2025-10-16T18:45:33.863Z
 import { z } from 'zod'
 
 export const ModalBoxTitleSchema = z.object({
@@ -8,7 +8,7 @@ export const ModalBoxTitleSchema = z.object({
   /** Id of the modal box title. */
   id: z.string().optional(),
   /** Content rendered inside the modal box title. */
-  title: z.any(),
+  title: z.custom<React.ReactNode>(),
   /** Optional alert icon (or other) to show before the title. When the predefined alert types
 are used the default styling will be automatically applied. */
   titleIconVariant: z.enum(['success', 'danger', 'warning', 'info', 'custom']).optional(),

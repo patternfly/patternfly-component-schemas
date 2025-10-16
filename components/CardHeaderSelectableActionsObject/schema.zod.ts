@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for CardHeaderSelectableActionsObject
-// Generated on: 2025-10-10T18:12:17.791Z
+// Generated on: 2025-10-16T18:45:33.882Z
 import { z } from 'zod'
 
 export const CardHeaderSelectableActionsObjectSchema = z.object({
@@ -15,9 +15,9 @@ export const CardHeaderSelectableActionsObjectSchema = z.object({
   /** Name for the input element of a selectable card. */
   name: z.string().optional(),
   /** Callback for when a selectable card input changes */
-  onChange: z.any().optional(),
+  onChange: z.custom<Event>().optional(),
   /** Action to call when a clickable-only card is clicked. This cannot be combined with the to prop. */
-  onClickAction: z.any().optional(),
+  onClickAction: z.custom<Event>().optional(),
   /** Adds an accessible name to the input of a selectable card or clickable button/anchor of a clickable-only card.
 This or selectableActionAriaLabelledby is required for clickable-only cards. */
   selectableActionAriaLabel: z.string().optional(),
@@ -29,7 +29,7 @@ for clickable-only cards. */
 If omitted, a random unique ID will be assigned to a selectable card's input. */
   selectableActionId: z.string().optional(),
   /** Additional props spread to a selectable card input or clickable-only card's button/anchor. */
-  selectableActionProps: z.any().optional(),
+  selectableActionProps: z.unknown().optional(),
   /** Link to navigate to when a clickable-only card is clicked. This cannot be combined with the onClickAction prop. */
   to: z.string().optional(),
   /** Determines the type of input to be used for a selectable card. */

@@ -1,26 +1,26 @@
 // Auto-generated Zod schema for Popper
-// Generated on: 2025-10-10T18:12:17.761Z
+// Generated on: 2025-10-16T18:45:33.828Z
 import { z } from 'zod'
 
 export const PopperSchema = z.object({
-  animationDuration: z.any().optional().default(0),
-  appendTo: z.any().optional().default('() => document.body'),
-  direction: z.any().optional().default('down'),
-  distance: z.any().optional().default(0),
-  enableFlip: z.any().optional().default(true),
-  entryDelay: z.any().optional().default(0),
-  exitDelay: z.any().optional().default(0),
-  flipBehavior: z.any().optional().default('flip'),
-  isVisible: z.any().optional().default(true),
-  minWidth: z.any().optional().default('trigger'),
-  onHidden: z.any().optional().default('() => {}'),
-  onHide: z.any().optional().default('() => {}'),
-  onMount: z.any().optional().default('() => {}'),
-  onShow: z.any().optional().default('() => {}'),
-  onShown: z.any().optional().default('() => {}'),
-  position: z.any().optional().default('start'),
-  preventOverflow: z.any().optional().default(false),
-  zIndex: z.any().optional().default(9999)
+  animationDuration: z.unknown().optional().default(0),
+  appendTo: z.unknown().optional().default('() => document.body'),
+  direction: z.unknown().optional().default('down'),
+  distance: z.unknown().optional().default(0),
+  enableFlip: z.unknown().optional().default(true),
+  entryDelay: z.unknown().optional().default(0),
+  exitDelay: z.unknown().optional().default(0),
+  flipBehavior: z.unknown().optional().default('flip'),
+  isVisible: z.unknown().optional().default(true),
+  minWidth: z.unknown().optional().default('trigger'),
+  onHidden: z.unknown().optional().default('() => {}'),
+  onHide: z.unknown().optional().default('() => {}'),
+  onMount: z.unknown().optional().default('() => {}'),
+  onShow: z.unknown().optional().default('() => {}'),
+  onShown: z.unknown().optional().default('() => {}'),
+  position: z.unknown().optional().default('start'),
+  preventOverflow: z.unknown().optional().default(false),
+  zIndex: z.unknown().optional().default(9999)
 })
 
 export type PopperProps = z.infer<typeof PopperSchema>

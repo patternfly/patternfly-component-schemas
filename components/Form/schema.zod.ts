@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for Form
-// Generated on: 2025-10-10T18:12:17.785Z
+// Generated on: 2025-10-16T18:45:33.870Z
 import { z } from 'zod'
 
 export const FormSchema = z.object({
   /** Anything that can be rendered as Form content. */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the Form. */
   className: z.string().optional(),
   /** Sets the Form to horizontal. */

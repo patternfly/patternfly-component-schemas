@@ -1,16 +1,16 @@
 // Auto-generated Zod schema for HelperTextItem
-// Generated on: 2025-10-10T18:12:17.783Z
+// Generated on: 2025-10-16T18:45:33.866Z
 import { z } from 'zod'
 
 export const HelperTextItemSchema = z.object({
   /** Content rendered inside the helper text item. */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes applied to the helper text item. */
   className: z.string().optional(),
   /** Sets the component type of the helper text item. */
   component: z.enum(['div', 'li']).optional().default('div'),
   /** Custom icon prefixing the helper text. This property will override the default icon when the variant property is passed in. */
-  icon: z.any().optional(),
+  icon: z.custom<React.ReactNode>().optional(),
   /** ID for the helper text item. The value of this prop can be passed into a form component's
 aria-describedby prop when you intend for only specific helper text items to be announced to
 assistive technologies. */

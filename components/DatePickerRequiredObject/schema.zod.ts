@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for DatePickerRequiredObject
-// Generated on: 2025-10-10T18:12:17.787Z
+// Generated on: 2025-10-16T18:45:33.875Z
 import { z } from 'zod'
 
 export const DatePickerRequiredObjectSchema = z.object({

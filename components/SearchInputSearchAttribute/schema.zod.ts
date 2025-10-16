@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for SearchInputSearchAttribute
-// Generated on: 2025-10-10T18:12:17.770Z
+// Generated on: 2025-10-16T18:45:33.844Z
 import { z } from 'zod'
 
 export const SearchInputSearchAttributeSchema = z.object({
@@ -8,7 +8,7 @@ It should have no spaces and be unique for every attribute. */
   attr: z.string(),
   /** The search attribute's display name. It is used to label the field in the advanced
 search menu. */
-  display: z.any()
+  display: z.custom<React.ReactNode>()
 })
 
 export type SearchInputSearchAttributeProps = z.infer<typeof SearchInputSearchAttributeSchema>

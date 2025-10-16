@@ -1,14 +1,14 @@
 // Auto-generated Zod schema for DescriptionListTerm
-// Generated on: 2025-10-10T18:12:17.789Z
+// Generated on: 2025-10-16T18:45:33.878Z
 import { z } from 'zod'
 
 export const DescriptionListTermSchema = z.object({
   /** Anything that can be rendered inside of list term */
-  children: z.any(),
+  children: z.custom<React.ReactNode>(),
   /** Additional classes added to the DescriptionListTerm */
   className: z.string().optional(),
   /** Icon that is rendered inside of list term to the left side of the children */
-  icon: z.any().optional()
+  icon: z.custom<React.ReactNode>().optional()
 })
 
 export type DescriptionListTermProps = z.infer<typeof DescriptionListTermSchema>

@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for TimePicker
-// Generated on: 2025-10-10T18:12:17.767Z
+// Generated on: 2025-10-16T18:45:33.836Z
 import { z } from 'zod'
 
 export const TimePickerSchema = z.object({
@@ -14,7 +14,7 @@ export const TimePickerSchema = z.object({
   /** Includes number of seconds with the chosen time and allows users to manually edit the seconds value. */
   includeSeconds: z.boolean().optional(),
   /** Additional props for input field */
-  inputProps: z.any().optional().default('{}'),
+  inputProps: z.unknown().optional().default('{}'),
   /** Error message to display when the time is provided in an invalid format. */
   invalidFormatErrorMessage: z.string().optional().default('Invalid time format'),
   /** Error message to display when the time provided is not within the minTime/maxTime constraints */
@@ -37,7 +37,7 @@ menuAppendTo={document.getElementById('target')} */
   /** A time string indicating the minimum value allowed. The format could be an ISO 8601 formatted date string or in 'HH{delimiter}MM' format */
   minTime: z.any().optional().default(''),
   /** Optional event handler called each time the value in the time picker input changes. */
-  onChange: z.any().optional(),
+  onChange: z.custom<Event>().optional(),
   /** String to display in the empty time picker field as a hint for the expected time format */
   placeholder: z.string().optional().default('hh:mm'),
   /** Handler invoked each time the open state of time picker updates */

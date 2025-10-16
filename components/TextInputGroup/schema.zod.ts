@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for TextInputGroup
-// Generated on: 2025-10-10T18:12:17.768Z
+// Generated on: 2025-10-16T18:45:33.836Z
 import { z } from 'zod'
 
 export const TextInputGroupSchema = z.object({
   /** Content rendered inside the text input group */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes applied to the text input group container */
   className: z.string().optional(),
   /** Adds disabled styling and a disabled context value which text input group main hooks into for the input itself */

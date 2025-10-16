@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for TimePickerState
-// Generated on: 2025-10-10T18:12:17.767Z
+// Generated on: 2025-10-16T18:45:33.836Z
 import { z } from 'zod'
 
 export const TimePickerStateSchema = z.object({
@@ -9,7 +9,7 @@ export const TimePickerStateSchema = z.object({
   maxTimeState: z.string(),
   minTimeState: z.string(),
   scrollIndex: z.number(),
-  timeRegex: z.any(),
+  timeRegex: z.unknown(),
   timeState: z.string()
 })
 

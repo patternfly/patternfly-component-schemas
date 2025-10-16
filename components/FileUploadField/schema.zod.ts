@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for FileUploadField
-// Generated on: 2025-10-10T18:12:17.784Z
+// Generated on: 2025-10-16T18:45:33.868Z
 import { z } from 'zod'
 
 export const FileUploadFieldSchema = z.object({
@@ -13,13 +13,13 @@ to elements such as helper text when there are file restrictions. */
   /** Text for the browse button. */
   browseButtonText: z.string().optional().default('Browse...'),
   /** Additional children to render after (or instead of) the file preview. */
-  children: z.any().optional().default('null'),
+  children: z.custom<React.ReactNode>().optional().default('null'),
   /** Additional classes added to the file upload field container element. */
   className: z.string().optional().default(''),
   /** Text for the clear button. */
   clearButtonText: z.string().optional().default('Clear'),
   /** A reference object to attach to the file upload field container element. */
-  containerRef: z.any().optional().default('null'),
+  containerRef: z.unknown().optional().default('null'),
   /** Value to be shown in the read-only filename field. */
   filename: z.string().optional().default(''),
   /** Aria-label for the read-only filename field. */
@@ -48,16 +48,16 @@ the children property to render an alternate preview. */
   /** Name property for the text input. */
   name: z.string().optional(),
   /** A callback for when the browse button is clicked. */
-  onBrowseButtonClick: z.any().optional().default('() => {}'),
+  onBrowseButtonClick: z.custom<Event>().optional().default('() => {}'),
   /** A callback for when the clear button is clicked. */
-  onClearButtonClick: z.any().optional().default('() => {}'),
+  onClearButtonClick: z.custom<Event>().optional().default('() => {}'),
   /** Callback for when focus is lost on the text area field. */
   onTextAreaBlur: z.function().optional(),
   /** A callback for when the text area is clicked. Can also be set via the onClick property
 of the file upload component. */
-  onTextAreaClick: z.any().optional(),
+  onTextAreaClick: z.custom<Event>().optional(),
   /** Text area text changed. */
-  onTextChange: z.any().optional(),
+  onTextChange: z.custom<Event>().optional(),
   /** Aria-valuetext for the loading spinner. */
   spinnerAriaValueText: z.string().optional(),
   /** Placeholder string to display in the empty text area field. */

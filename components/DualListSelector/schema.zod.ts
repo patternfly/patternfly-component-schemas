@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for DualListSelector
-// Generated on: 2025-10-10T18:12:17.786Z
+// Generated on: 2025-10-16T18:45:33.873Z
 import { z } from 'zod'
 
 export const DualListSelectorSchema = z.object({
   /** Content to be rendered in the dual list selector. */
-  children: z.any().optional().default(''),
+  children: z.custom<React.ReactNode>().optional().default(''),
   /** Additional classes applied to the dual list selector. */
   className: z.string().optional(),
   /** ID of the dual list selector. */

@@ -1,12 +1,12 @@
 // Auto-generated Zod schema for ProgressStepper
-// Generated on: 2025-10-10T18:12:17.771Z
+// Generated on: 2025-10-16T18:45:33.846Z
 import { z } from 'zod'
 
 export const ProgressStepperSchema = z.object({
   /** Adds an accessible label to the progress stepper. */
   'aria-label': z.string().optional(),
   /** Content rendered inside the progress stepper. */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes applied to the progress stepper container. */
   className: z.string().optional(),
   /** Flag indicating the progress stepper should be centered. */

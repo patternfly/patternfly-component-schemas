@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for PaginationNavigation
-// Generated on: 2025-10-10T18:12:17.772Z
+// Generated on: 2025-10-16T18:45:33.849Z
 import { z } from 'zod'
 
 export const PaginationNavigationSchema = z.object({
@@ -20,15 +20,15 @@ export const PaginationNavigationSchema = z.object({
   /** Label for the English word "of". */
   ofWord: z.string().optional().default('of'),
   /** Function called when user clicks to navigate to first page. */
-  onFirstClick: z.any().optional().default('() => undefined as any'),
+  onFirstClick: z.custom<Event>().optional().default('() => undefined as any'),
   /** Function called when user clicks to navigate to last page. */
-  onLastClick: z.any().optional().default('() => undefined as any'),
+  onLastClick: z.custom<Event>().optional().default('() => undefined as any'),
   /** Function called when user clicks to navigate to next page. */
-  onNextClick: z.any().optional().default('() => undefined as any'),
+  onNextClick: z.custom<Event>().optional().default('() => undefined as any'),
   /** Function called when user inputs page number. */
-  onPageInput: z.any().optional().default('() => undefined as any'),
+  onPageInput: z.custom<Event>().optional().default('() => undefined as any'),
   /** Function called when user clicks to navigate to previous page. */
-  onPreviousClick: z.any().optional().default('() => undefined as any'),
+  onPreviousClick: z.custom<Event>().optional().default('() => undefined as any'),
   /** Function called when page is changed. */
   onSetPage: z.any(),
   /** The number of the current page. */

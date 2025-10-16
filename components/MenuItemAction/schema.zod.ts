@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for MenuItemAction
-// Generated on: 2025-10-10T18:12:17.778Z
+// Generated on: 2025-10-16T18:45:33.859Z
 import { z } from 'zod'
 
 export const MenuItemActionSchema = z.object({
   /** Identifies the action item in the onActionClick on the Menu */
-  actionId: z.any().optional(),
+  actionId: z.unknown().optional(),
   /** Accessibility label */
   'aria-label': z.string(),
   /** Additional classes added to the action button */

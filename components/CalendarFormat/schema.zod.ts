@@ -1,21 +1,21 @@
 // Auto-generated Zod schema for CalendarFormat
-// Generated on: 2025-10-10T18:12:17.790Z
+// Generated on: 2025-10-16T18:45:33.881Z
 import { z } from 'zod'
 
 export const CalendarFormatSchema = z.object({
   /** Accessible label for the date cells. */
   cellAriaLabel: z.function().optional(),
   /** How to format days in buttons in table cells. */
-  dayFormat: z.any().optional(),
+  dayFormat: z.custom<React.ReactNode>().optional(),
   /** Props used to ensure accessibility when displaying the calendar month inline. */
-  inlineProps: z.any().optional(),
+  inlineProps: z.unknown().optional(),
   /** If using the default formatters which locale to use. Undefined defaults to current locale.
 See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_identification_and_negotiation */
   locale: z.string().optional(),
   /** How to format days in header for screen readers. */
-  longWeekdayFormat: z.any().optional(),
+  longWeekdayFormat: z.custom<React.ReactNode>().optional(),
   /** How to format months in month select. */
-  monthFormat: z.any().optional(),
+  monthFormat: z.custom<React.ReactNode>().optional(),
   /** Accessible label for the next month button. */
   nextMonthAriaLabel: z.string().optional(),
   /** Accessible label for the previous month button. */
@@ -23,7 +23,7 @@ See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Obj
   /** Which date to start range styles from. */
   rangeStart: z.date().optional(),
   /** How to format week days in header. */
-  weekdayFormat: z.any().optional(),
+  weekdayFormat: z.custom<React.ReactNode>().optional(),
   /** Day of week that starts the week. 0 is Sunday, 6 is Saturday. */
   weekStart: z.any().optional(),
   /** Accessible label for the year input. */

@@ -1,12 +1,12 @@
 // Auto-generated Zod schema for Tooltip
-// Generated on: 2025-10-10T18:12:17.765Z
+// Generated on: 2025-10-16T18:45:33.833Z
 import { z } from 'zod'
 
 export const TooltipSchema = z.object({
   /** CSS fade transition animation duration */
   animationDuration: z.number().optional().default(300),
   /** The element to append the tooltip to, defaults to body */
-  appendTo: z.function().optional().default('() => document.body'),
+  appendTo: z.any().optional().default('() => document.body'),
   /** aria-labelledby or aria-describedby for tooltip.
 The trigger will be cloned to add the aria attribute, and the corresponding id in the form of 'pf-tooltip-#' is added to the content container.
 If you don't want that or prefer to add the aria attribute yourself on the trigger, set aria to 'none'. */
@@ -18,11 +18,11 @@ assistive technologies. Otherwise the default behavior is 'off'. */
   /** The trigger reference element to which the Tooltip is relatively placed to.
 If you cannot wrap the element with the Tooltip, you can use the triggerRef prop instead.
 Usage: <Tooltip><Button>Reference</Button></Tooltip> */
-  children: z.any().optional(),
+  children: z.custom<React.ReactElement>().optional(),
   /** Tooltip additional class */
   className: z.string().optional().default(''),
   /** Tooltip content */
-  content: z.any(),
+  content: z.custom<React.ReactNode>(),
   /** Distance of the tooltip to its target, defaults to 15 */
   distance: z.number().optional().default(15),
   /** If true, tries to keep the tooltip in view by flipping it if necessary */
@@ -67,7 +67,7 @@ Set to manual to trigger tooltip programmatically (through the isVisible prop) *
 If you can wrap the element with the Tooltip, you can use the children prop instead, or both props together.
 When passed along with the trigger prop, the div element that wraps the trigger will be removed.
 Usage: <Tooltip triggerRef={() => document.getElementById('reference-element')} /> */
-  triggerRef: z.function().optional(),
+  triggerRef: z.any().optional(),
   /** z-index of the tooltip */
   zIndex: z.number().optional().default(9999)
 })

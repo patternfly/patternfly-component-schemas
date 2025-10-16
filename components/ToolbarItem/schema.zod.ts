@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ToolbarItem
-// Generated on: 2025-10-10T18:12:17.765Z
+// Generated on: 2025-10-16T18:45:33.834Z
 import { z } from 'zod'
 
 export const ToolbarItemSchema = z.object({
@@ -15,7 +15,7 @@ export const ToolbarItemSchema = z.object({
   /** Vertical alignment */
   alignSelf: z.enum(['start', 'center', 'baseline', 'default', 'end', 'stretch']).optional(),
   /** Content to be rendered inside the data toolbar item */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Classes applied to root element of the data toolbar item */
   className: z.string().optional(),
   /** Sets only the column gap at various breakpoints. */

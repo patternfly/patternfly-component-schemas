@@ -1,12 +1,12 @@
 // Auto-generated Zod schema for ToolbarContent
-// Generated on: 2025-10-10T18:12:17.766Z
+// Generated on: 2025-10-16T18:45:33.835Z
 import { z } from 'zod'
 
 export const ToolbarContentSchema = z.object({
   /** Vertical alignment of children */
   alignItems: z.enum(['start', 'center', 'baseline', 'default']).optional(),
   /** Content to be rendered as children of the content row */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Classes applied to root element of the data toolbar content row */
   className: z.string().optional(),
   /** Optional callback for clearing all filters in the toolbar */

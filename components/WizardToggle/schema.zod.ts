@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for WizardToggle
-// Generated on: 2025-10-10T18:12:17.763Z
+// Generated on: 2025-10-16T18:45:33.829Z
 import { z } from 'zod'
 
 export const WizardToggleSchema = z.object({
@@ -8,13 +8,13 @@ export const WizardToggleSchema = z.object({
   /** The expandable dropdown button's aria-label */
   'aria-label': z.string().optional().default('Wizard toggle'),
   /** Wizard footer */
-  footer: z.any(),
+  footer: z.custom<React.ReactElement>(),
   /** Flag to determine whether the dropdown navigation is expanded */
   isNavExpanded: z.boolean().optional(),
   /** Wizard navigation */
-  nav: z.any(),
+  nav: z.custom<React.ReactElement>(),
   /** List of steps and/or sub-steps */
-  steps: z.array(z.any()),
+  steps: z.array(z.unknown()),
   /** Callback to expand or collapse the dropdown navigation */
   toggleNavExpanded: z.any().optional()
 })

@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for FormSelectOption
-// Generated on: 2025-10-10T18:12:17.783Z
+// Generated on: 2025-10-16T18:45:33.867Z
 import { z } from 'zod'
 
 export const FormSelectOptionSchema = z.object({
@@ -12,7 +12,7 @@ export const FormSelectOptionSchema = z.object({
   /** the label for the option */
   label: z.string(),
   /** the value for the option */
-  value: z.any().optional().default('')
+  value: z.unknown().optional().default('')
 })
 
 export type FormSelectOptionProps = z.infer<typeof FormSelectOptionSchema>

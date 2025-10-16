@@ -8,6 +8,63 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const projectRoot = join(__dirname, '..');
 
+// Create a hash signature from component props for duplicate detection
+function getPropsSignature(componentData) {
+  return (componentData.props || [])
+    .map(p => `${p.name}:${p.type}`)
+    .sort()
+    .join('|');
+}
+
+// Cache regex for performance
+const ARRAY_GENERIC_REGEX = /Array<(.+)>/;
+
+// Helper to extract inner type from array notation
+function getArrayInnerType(type) {
+  // Handle string[] format
+  if (type.endsWith('[]')) {
+    return type.slice(0, -2);
+  }
+  // Handle Array<string> format
+  const match = type.match(ARRAY_GENERIC_REGEX);
+  if (match) {
+    return match[1];
+  }
+  return null;
+}
+
+// Helper to recursively convert a type to Zod (for nested types)
+function typeStringToZod(type) {
+  const trimmed = type.trim();
+  
+  switch (trimmed) {
+    case 'string':
+      return 'z.string()';
+    case 'number':
+      return 'z.number()';
+    case 'boolean':
+      return 'z.boolean()';
+    case 'Date':
+      return 'z.date()';
+    default:
+      // Use more specific types for complex React/DOM types
+      if (trimmed.includes('ReactNode') || trimmed.includes('React.ReactNode')) {
+        return 'z.custom<React.ReactNode>()';
+      }
+      if (trimmed.includes('ReactElement') || trimmed.includes('React.ReactElement')) {
+        return 'z.custom<React.ReactElement>()';
+      }
+      if (trimmed.includes('Event')) {
+        return 'z.custom<Event>()';
+      }
+      if (trimmed.includes('{') && trimmed.includes('}')) {
+        return 'z.record(z.unknown())';
+      }
+      // Fallback to unknown instead of any
+      return 'z.unknown()';
+  }
+}
+
 // Convert TypeScript type to Zod schema string
 function typeToZod(prop) {
   const { type, enumValues, defaultValue } = prop;
@@ -19,47 +76,73 @@ function typeToZod(prop) {
     zodType = `z.enum([${enumString}])`;
   }
   // Handle union types with numbers (like 0 | 1 | 2 | 3)
-  else if (type.includes('|') && /\d/.test(type)) {
+  else if (type.includes('|')) {
     const values = type.split('|').map(v => v.trim());
-    const allNumbers = values.every(v => !isNaN(Number(v)));
+    const allNumbers = values.every(v => /^\d+$/.test(v));
     if (allNumbers) {
       zodType = `z.union([${values.map(v => `z.literal(${v})`).join(', ')}])`;
     }
   }
-  // Handle basic types
-  else if (type === 'boolean') {
-    zodType = 'z.boolean()';
-  }
-  else if (type === 'string') {
-    zodType = 'z.string()';
-  }
-  else if (type === 'number') {
-    zodType = 'z.number()';
-  }
-  else if (type === 'Date') {
-    zodType = 'z.date()';
-  }
-  // Handle array types
-  else if (type.includes('[]') || type.includes('Array<')) {
-    zodType = 'z.array(z.any())';
-  }
-  // Handle React types
-  else if (type.includes('ReactNode') || type.includes('React.ReactNode')) {
-    zodType = 'z.any()';
-  }
-  else if (type.includes('ReactElement') || type.includes('React.ReactElement')) {
-    zodType = 'z.any()';
-  }
-  else if (type.includes('MouseEvent') || type.includes('KeyboardEvent') || type.includes('Event')) {
-    zodType = 'z.any()';
-  }
-  // Handle function types
-  else if (type.includes('=>') || type.includes('function') || type.includes('Function')) {
-    zodType = 'z.function()';
-  }
-  // Handle object types
-  else if (type.includes('{') && type.includes('}')) {
-    zodType = 'z.object({})';
+  // Handle basic and complex types
+  else {
+    switch (type) {
+      // Basic types
+      case 'boolean':
+        zodType = 'z.boolean()';
+        break;
+      case 'string':
+        zodType = 'z.string()';
+        break;
+      case 'number':
+        zodType = 'z.number()';
+        break;
+      case 'Date':
+        zodType = 'z.date()';
+        break;
+      
+      // Complex types - use pattern matching with early returns
+      default:
+        // Array types
+        if (type.includes('[]') || type.includes('Array<')) {
+          const innerType = getArrayInnerType(type);
+          zodType = innerType 
+            ? `z.array(${typeStringToZod(innerType)})` 
+            : 'z.array(z.unknown())';
+          break;
+        }
+        
+        // React types
+        if (type.includes('ReactNode') || type.includes('React.ReactNode')) {
+          zodType = 'z.custom<React.ReactNode>()';
+          break;
+        }
+        if (type.includes('ReactElement') || type.includes('React.ReactElement')) {
+          zodType = 'z.custom<React.ReactElement>()';
+          break;
+        }
+        
+        // Event types
+        if (type.includes('MouseEvent') || type.includes('KeyboardEvent') || type.includes('Event')) {
+          zodType = 'z.custom<Event>()';
+          break;
+        }
+        
+        // Function types
+        if (type.includes('=>') || type.includes('function') || type.includes('Function')) {
+          zodType = 'z.function()';
+          break;
+        }
+        
+        // Object types
+        if (type.includes('{') && type.includes('}')) {
+          zodType = 'z.record(z.unknown())';
+          break;
+        }
+        
+        // Fallback for unknown types
+        zodType = 'z.unknown()';
+        break;
+    }
   }
 
   // Add optional modifier if not required
@@ -190,33 +273,44 @@ function convertAllComponentsToZod(inputFile) {
   
   console.log(`🔍 Found ${Object.keys(metadata).length} components`);
   
-  const processedComponents = [];
-  let convertedCount = 0;
+  const { processedComponents, skippedCount } = Object.entries(metadata).reduce(
+    (acc, [componentName, componentData]) => {
+      // Generate signature for this component's props
+      const signature = getPropsSignature(componentData);
+      
+      // Skip if empty (no props) or duplicate
+      if (!signature || acc.seenSignatures.has(signature)) {
+        acc.skippedCount++;
+        return acc;
+      }
 
-  Object.entries(metadata).forEach(([componentName, componentData]) => {
-    // Skip Props interfaces - they're duplicates of component entries
-    // component-metadata.json contains both "Button" and "ButtonProps"
-    // We only generate from component entries (which have the same props)
-    if (componentName.endsWith('Props')) {
-      return;
-    }
+      // Process component
+      const result = createComponentZodSchema(componentName, componentData);
+      acc.processedComponents.push(result);
+      acc.seenSignatures.set(signature, componentName);
+      
+      // Log progress
+      if (acc.processedComponents.length % 10 === 0) {
+        console.log(`✅ Converted ${acc.processedComponents.length} components to Zod schemas...`);
+      }
 
-    const result = createComponentZodSchema(componentName, componentData);
-    processedComponents.push(result);
-    convertedCount++;
-
-    if (convertedCount % 10 === 0) {
-      console.log(`✅ Converted ${convertedCount} components to Zod schemas...`);
-    }
-  });
+      return acc;
+    },
+    { processedComponents: [], seenSignatures: new Map(), skippedCount: 0 }
+  );
 
   // Generate main Zod index file
   const componentNames = processedComponents.map(c => c.componentName);
   generateZodIndex(componentNames);
 
+  const convertedCount = processedComponents.length;
+  
   console.log(`\n🎉 Successfully converted ${convertedCount} components to Zod schemas!`);
   console.log(`📁 Component schemas: ${join(projectRoot, 'components/**/schema.zod.ts')}`);
   console.log(`📄 Zod index: ${join(projectRoot, 'zod/index.ts')}`);
+  if (skippedCount > 0) {
+    console.log(`⏭️  Skipped ${skippedCount} duplicate entries`);
+  }
   
   // Show summary
   console.log('\n📊 Summary:');

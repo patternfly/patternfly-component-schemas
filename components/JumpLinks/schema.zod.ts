@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for JumpLinks
-// Generated on: 2025-10-10T18:12:17.783Z
+// Generated on: 2025-10-16T18:45:33.867Z
 import { z } from 'zod'
 
 export const JumpLinksSchema = z.object({
@@ -10,7 +10,7 @@ export const JumpLinksSchema = z.object({
   /** Adds an accessible label to the internal nav element. Defaults to the value of the label prop. */
   'aria-label': z.string().optional().default('typeof label === 'string' ? label : null'),
   /** Children nodes */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Class for nav */
   className: z.string().optional(),
   /** When to collapse/expand at different breakpoints */
@@ -28,11 +28,11 @@ export const JumpLinksSchema = z.object({
   /** Whether the layout of children is vertical or horizontal. */
   isVertical: z.boolean().optional(),
   /** Label to add to nav element. */
-  label: z.any().optional(),
+  label: z.custom<React.ReactNode>().optional(),
   /** Offset to add to `scrollPosition`, potentially for a masthead which content scrolls under. */
   offset: z.number().optional().default(0),
   /** Reference to the scrollable element to spy on. Takes precedence over scrollableSelector. Not passing a scrollableRef or scrollableSelector disables spying. */
-  scrollableRef: z.function().optional(),
+  scrollableRef: z.any().optional(),
   /** Selector for the scrollable element to spy on. Not passing a scrollableSelector or scrollableRef disables spying. */
   scrollableSelector: z.string().optional(),
   /** Whether the current entry in the navigation history should be replaced when a JumpLinksItem is clicked. By default a new entry will be pushed to the navigation history. */

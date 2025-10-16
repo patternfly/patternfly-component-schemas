@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for LabelGroupState
-// Generated on: 2025-10-10T18:12:17.781Z
+// Generated on: 2025-10-16T18:45:33.865Z
 import { z } from 'zod'
 
 export const LabelGroupStateSchema = z.object({

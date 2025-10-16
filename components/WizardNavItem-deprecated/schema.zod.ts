@@ -1,12 +1,12 @@
 // Auto-generated Zod schema for WizardNavItem-deprecated
-// Generated on: 2025-10-10T18:12:17.797Z
+// Generated on: 2025-10-16T18:45:33.889Z
 import { z } from 'zod'
 
 export const WizardNavItemSchema = z.object({
   /** Can nest a WizardNav component for substeps */
-  children: z.any().optional().default('null'),
+  children: z.custom<React.ReactNode>().optional().default('null'),
   /** The content to display in the nav item */
-  content: z.any().optional().default(''),
+  content: z.custom<React.ReactNode>().optional().default(''),
   /** An optional url to use for when using an anchor component */
   href: z.string().optional().default('null'),
   /** The id for the nav item */

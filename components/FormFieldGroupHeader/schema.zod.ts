@@ -1,16 +1,16 @@
 // Auto-generated Zod schema for FormFieldGroupHeader
-// Generated on: 2025-10-10T18:12:17.785Z
+// Generated on: 2025-10-16T18:45:33.869Z
 import { z } from 'zod'
 
 export const FormFieldGroupHeaderSchema = z.object({
   /** Field group header actions */
-  actions: z.any().optional(),
+  actions: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the section */
   className: z.string().optional(),
   /** Field group header title description */
-  titleDescription: z.any().optional(),
+  titleDescription: z.custom<React.ReactNode>().optional(),
   /** Field group header title text */
-  titleText: z.any().optional()
+  titleText: z.unknown().optional()
 })
 
 export type FormFieldGroupHeaderProps = z.infer<typeof FormFieldGroupHeaderSchema>

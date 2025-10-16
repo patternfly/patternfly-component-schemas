@@ -1,16 +1,16 @@
 // Auto-generated Zod schema for Login
-// Generated on: 2025-10-10T18:12:17.781Z
+// Generated on: 2025-10-16T18:45:33.864Z
 import { z } from 'zod'
 
 export const LoginSchema = z.object({
   /** Content rendered inside the main section of the login layout */
-  children: z.any().optional().default('null'),
+  children: z.custom<React.ReactNode>().optional().default('null'),
   /** Additional classes added to the login layout */
   className: z.string().optional().default(''),
   /** Footer component (e.g. <LoginFooter />) */
-  footer: z.any().optional().default('null'),
+  footer: z.custom<React.ReactNode>().optional().default('null'),
   /** Header component (e.g. <LoginHeader />) */
-  header: z.any().optional().default('null')
+  header: z.custom<React.ReactNode>().optional().default('null')
 })
 
 export type LoginProps = z.infer<typeof LoginSchema>

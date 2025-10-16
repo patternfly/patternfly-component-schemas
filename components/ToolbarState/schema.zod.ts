@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for ToolbarState
-// Generated on: 2025-10-10T18:12:17.767Z
+// Generated on: 2025-10-16T18:45:33.835Z
 import { z } from 'zod'
 
 export const ToolbarStateSchema = z.object({
   /** Object managing information about how many labels are in each label group */
-  filterInfo: z.any(),
+  filterInfo: z.unknown(),
   /** Flag used if the user has opted NOT to manage the 'isExpanded' state of the toggle group.
 Indicates whether or not the toggle group is expanded. */
   isManagedToggleExpanded: z.boolean(),

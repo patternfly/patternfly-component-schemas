@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Popover
-// Generated on: 2025-10-10T18:12:17.772Z
+// Generated on: 2025-10-16T18:45:33.848Z
 import { z } from 'zod'
 
 export const PopoverSchema = z.object({
@@ -23,7 +23,7 @@ bodyContent={hide => <Button onClick={() => hide()}>Close</Button>} */
   /** The trigger reference element to which the popover is relatively placed to. If you cannot wrap
 the element with the Popover, you can use the triggerRef prop instead.
 Usage: <Popover><Button>Reference</Button></Popover> */
-  children: z.any().optional(),
+  children: z.custom<React.ReactElement>().optional(),
   /** Additional classes added to the popover. */
   className: z.string().optional().default(''),
   /** Accessible label for the close button. */
@@ -77,7 +77,7 @@ or you can provide a function which will receive a callback as an argument to hi
 popover, i.e. headerContent={hide => <Button onClick={() => hide()}>Close</Button>} */
   headerContent: z.any().optional().default('null'),
   /** Icon to be displayed in the popover header. * */
-  headerIcon: z.any().optional().default('null'),
+  headerIcon: z.custom<React.ReactNode>().optional().default('null'),
   /** Hides the popover when a click occurs outside (only works if isVisible is not controlled
 by the user). */
   hideOnOutsideClick: z.boolean().optional().default(true),
@@ -122,7 +122,7 @@ enter key is used on the focused trigger. */
 element with the popover, you can use the children prop instead, or both props together.
 When passed along with the trigger prop, the div element that wraps the trigger will be removed.
 Usage: <Popover triggerRef={() => document.getElementById('reference-element')} /> */
-  triggerRef: z.function().optional(),
+  triggerRef: z.any().optional(),
   /** Whether to trap focus in the popover. */
   withFocusTrap: z.boolean().optional(),
   /** The z-index of the popover. */

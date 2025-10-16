@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for TextArea
-// Generated on: 2025-10-10T18:12:17.768Z
+// Generated on: 2025-10-16T18:45:33.837Z
 import { z } from 'zod'
 
 export const TextAreaSchema = z.object({
@@ -14,7 +14,7 @@ export const TextAreaSchema = z.object({
   /** Flag to show if the text area is required. */
   isRequired: z.boolean().optional(),
   /** A callback for when the text area value changes. */
-  onChange: z.any().optional(),
+  onChange: z.custom<Event>().optional(),
   /** Read only variant. */
   readOnlyVariant: z.enum(['default', 'plain']).optional(),
   /** Sets the orientation to limit the resize to */

@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for TabContentBody
-// Generated on: 2025-10-10T18:12:17.769Z
+// Generated on: 2025-10-16T18:45:33.838Z
 import { z } from 'zod'
 
 export const TabContentBodySchema = z.object({
   /** Content rendered inside the tab content body. */
-  children: z.any(),
+  children: z.custom<React.ReactNode>(),
   /** Additional classes added to the tab content body. */
   className: z.string().optional(),
   /** Indicates if there should be padding around the tab content body */

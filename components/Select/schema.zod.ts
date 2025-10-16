@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Select
-// Generated on: 2025-10-10T18:12:17.771Z
+// Generated on: 2025-10-16T18:45:33.846Z
 import { z } from 'zod'
 
 export const SelectSchema = z.object({
@@ -8,7 +8,7 @@ export const SelectSchema = z.object({
   /** ID of the currently active menu for the drilldown variant */
   activeMenu: z.string().optional(),
   /** Anything that can be rendered inside of the Menu */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the Menu */
   className: z.string().optional(),
   /** Indicates if menu contains a drilldown menu */
@@ -16,9 +16,9 @@ export const SelectSchema = z.object({
   /** Indicates if menu contains a flyout menu */
   containsFlyout: z.boolean().optional(),
   /** Indicates the path of drilled in menu itemIds */
-  drilldownItemPath: z.array(z.any()).optional(),
+  drilldownItemPath: z.array(z.string()).optional(),
   /** Array of menus that are drilled in */
-  drilledInMenus: z.array(z.any()).optional(),
+  drilledInMenus: z.array(z.string()).optional(),
   /** Time in ms to wait before firing the toggles' focus event. Defaults to 0 */
   focusTimeoutDelay: z.number().optional(),
   /** ID of the menu */
@@ -51,11 +51,11 @@ export const SelectSchema = z.object({
 Triggered by clicking outside of the menu, or by pressing any keys specified in onOpenChangeKeys. */
   onOpenChange: z.function().optional(),
   /** Keys that trigger onOpenChange, defaults to tab and escape. It is highly recommended to include Escape in the array, while Tab may be omitted if the menu contains non-menu items that are focusable. */
-  onOpenChangeKeys: z.array(z.any()).optional(),
+  onOpenChangeKeys: z.array(z.string()).optional(),
   /** Callback for updating when item selection changes. You can also specify onClick on the MenuItem. */
   onSelect: z.any().optional(),
   /** Callback to override the toggle keydown behavior. By default, when the toggle has focus and the menu is open, pressing the up/down arrow keys will focus a valid non-disabled menu item - the first item for the down arrow key and last item for the up arrow key. */
-  onToggleKeydown: z.any().optional(),
+  onToggleKeydown: z.custom<Event>().optional(),
   /** Value to overwrite the randomly generated data-ouia-component-id. */
   ouiaId: z.any().optional(),
   /** Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false. */
@@ -63,12 +63,12 @@ Triggered by clicking outside of the menu, or by pressing any keys specified in 
   /** ID of parent menu for drilldown menus */
   parentMenu: z.string().optional(),
   /** Additional properties to pass to the popper */
-  popperProps: z.any().optional(),
+  popperProps: z.unknown().optional(),
   /** Determines the accessible role of the menu. For a non-checkbox menu that can have
 one or more items selected, pass in "listbox". */
   role: z.string().optional(),
   /** Single itemId for single select menus, or array of itemIds for multi select. You can also specify isSelected on the MenuItem. */
-  selected: z.array(z.any()).optional(),
+  selected: z.any().optional(),
   /** Flag indicating the first menu item should be focused after opening the menu. */
   shouldFocusFirstItemOnOpen: z.boolean().optional(),
   /** Flag indicating the toggle should be focused after a selection. If this use case is too restrictive, the optional toggleRef property with a node toggle may be used to control focus. */

@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for PopoverHeaderText
-// Generated on: 2025-10-10T18:12:17.771Z
+// Generated on: 2025-10-16T18:45:33.848Z
 import { z } from 'zod'
 
 export const PopoverHeaderTextSchema = z.object({
   /** Content of the header text */
-  children: z.any(),
+  children: z.custom<React.ReactNode>(),
   /** Class to be applied to the header text */
   className: z.string().optional(),
   /** Heading level of the header title */

@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for WizardNav-deprecated
-// Generated on: 2025-10-10T18:12:17.797Z
+// Generated on: 2025-10-16T18:45:33.890Z
 import { z } from 'zod'
 
 export const WizardNavSchema = z.object({
@@ -8,7 +8,7 @@ export const WizardNavSchema = z.object({
   /** Sets the aria-labelledby attribute on the nav element */
   'aria-labelledby': z.string().optional(),
   /** children should be WizardNavItem components */
-  children: z.any().optional(),
+  children: z.unknown().optional(),
   /** Whether the nav is expanded */
   isOpen: z.boolean().optional().default(false),
   ouiaId: z.any().optional(),

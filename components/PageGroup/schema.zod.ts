@@ -1,12 +1,12 @@
 // Auto-generated Zod schema for PageGroup
-// Generated on: 2025-10-10T18:12:17.774Z
+// Generated on: 2025-10-16T18:45:33.852Z
 import { z } from 'zod'
 
 export const PageGroupSchema = z.object({
   /** Adds an accessible name to the page group when the hasOverflowScroll prop is set to true. */
   'aria-label': z.string().optional(),
   /** Content rendered inside of the PageGroup */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes to apply to the PageGroup */
   className: z.string().optional().default(''),
   /** Flag indicating if the PageGroup has a scrolling overflow */

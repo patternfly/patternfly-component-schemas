@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for Skeleton
-// Generated on: 2025-10-10T18:12:17.769Z
+// Generated on: 2025-10-16T18:45:33.840Z
 import { z } from 'zod'
 
 export const SkeletonSchema = z.object({

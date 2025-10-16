@@ -1,12 +1,12 @@
 // Auto-generated Zod schema for ClipboardCopy
-// Generated on: 2025-10-10T18:12:17.789Z
+// Generated on: 2025-10-16T18:45:33.879Z
 import { z } from 'zod'
 
 export const ClipboardCopySchema = z.object({
   /** Additional actions for inline clipboard copy. Should be wrapped with ClipboardCopyAction. */
-  additionalActions: z.any().optional().default('null'),
+  additionalActions: z.custom<React.ReactNode>().optional().default('null'),
   /** The text which is copied. */
-  children: z.array(z.any()),
+  children: z.any(),
   /** Additional classes added to the clipboard copy container. */
   className: z.string().optional(),
   /** Tooltip message to display when clicking the copy button */
@@ -28,9 +28,9 @@ export const ClipboardCopySchema = z.object({
   /** Maximum width of the tooltip (default 150px). */
   maxWidth: z.string().optional().default('150px'),
   /** A function that is triggered on changing the text. */
-  onChange: z.any().optional().default('(): any => undefined'),
+  onChange: z.custom<Event>().optional().default('(): any => undefined'),
   /** A function that is triggered on clicking the copy button. This will replace the existing clipboard copy functionality entirely. */
-  onCopy: z.any().optional().default('(_event: React.ClipboardEvent<HTMLDivElement>, text?: React.ReactNode) => {
+  onCopy: z.custom<React.ReactNode>().optional().default('(_event: React.ClipboardEvent<HTMLDivElement>, text?: React.ReactNode) => {
   try {
     navigator.clipboard.writeText(text.toString());
   } catch (error) {

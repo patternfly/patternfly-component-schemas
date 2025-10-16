@@ -1,14 +1,14 @@
 // Auto-generated Zod schema for Card
-// Generated on: 2025-10-10T18:12:17.791Z
+// Generated on: 2025-10-16T18:45:33.883Z
 import { z } from 'zod'
 
 export const CardSchema = z.object({
   /** Content rendered inside the Card */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the Card */
   className: z.string().optional(),
   /** Sets the base component to render. defaults to div */
-  component: z.any().optional().default('div'),
+  component: z.unknown().optional().default('div'),
   /** ID of the Card. Also passed back in the CardHeader onExpand callback. */
   id: z.string().optional().default(''),
   /** Flag indicating that the card is clickable and contains some action that triggers on click. */

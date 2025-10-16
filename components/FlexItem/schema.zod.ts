@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for FlexItem
-// Generated on: 2025-10-10T18:12:17.760Z
+// Generated on: 2025-10-16T18:45:33.826Z
 import { z } from 'zod'
 
 export const FlexItemSchema = z.object({
@@ -20,7 +20,7 @@ export const FlexItemSchema = z.object({
   '2xl'?: 'alignSelfFlexStart', 'alignSelfFlexEnd', 'alignSelfCenter', 'alignSelfStretch', 'alignSelfBaseline';
 ']).optional(),
   /** content rendered inside the Flex layout */
-  children: z.any().optional().default('null'),
+  children: z.custom<React.ReactNode>().optional().default('null'),
   /** additional classes added to the Flex layout */
   className: z.string().optional().default(''),
   /** Sets the base component to render. defaults to div */
@@ -34,13 +34,13 @@ export const FlexItemSchema = z.object({
   '2xl'?: 'flexDefault', 'flexNone', 'flex_1', 'flex_2', 'flex_3', 'flex_4';
 ']).optional(),
   /** Whether to set width: 100% at various breakpoints */
-  fullWidth: z.object({}).optional(),
+  fullWidth: z.record(z.unknown()).optional(),
   /** Whether to add flex: grow at various breakpoints */
-  grow: z.object({}).optional(),
+  grow: z.record(z.unknown()).optional(),
   /** Modifies the flex layout element order property */
-  order: z.object({}).optional(),
+  order: z.record(z.unknown()).optional(),
   /** Whether to add flex: shrink at various breakpoints */
-  shrink: z.object({}).optional(),
+  shrink: z.record(z.unknown()).optional(),
   /** Spacers at various breakpoints */
   spacer: z.enum(['spacerNone', 'spacerXs', 'spacerSm', 'spacerMd', 'spacerLg', 'spacerXl', 'spacer2xl', 'spacer3xl', 'spacer4xl';
   sm?', 'spacerNone', 'spacerXs', 'spacerSm', 'spacerMd', 'spacerLg', 'spacerXl', 'spacer2xl', 'spacer3xl', 'spacer4xl';

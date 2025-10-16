@@ -1,17 +1,17 @@
 // Auto-generated Zod schema for Timestamp
-// Generated on: 2025-10-10T18:12:17.767Z
+// Generated on: 2025-10-16T18:45:33.836Z
 import { z } from 'zod'
 
 export const TimestampSchema = z.object({
   /** Displays custom content inside the timestamp, such as a relative time. This prop will
 override the default content that is displayed. Custom content will not be affected by
 any props that format or add to displayed content. */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Class to add to the outer span. */
   className: z.string().optional(),
   /** Applies custom formatting to the displayed date and/or time. Passing this prop in will
 override the dateFormat and timeFormat props. */
-  customFormat: z.object({}).optional(),
+  customFormat: z.record(z.unknown()).optional(),
   /** Determines the default content that is displayed inside the timestamp and the value of
 the inner time element's datetime attribute. */
   date: z.date().optional(),
@@ -41,7 +41,7 @@ instead of a local string. */
 "Short" => 11:25 AM */
   timeFormat: z.enum(['full', 'long', 'medium', 'short']).optional(),
   /** Adds a tooltip to the timestamp. */
-  tooltip: z.any().optional()
+  tooltip: z.unknown().optional()
 })
 
 export type TimestampProps = z.infer<typeof TimestampSchema>

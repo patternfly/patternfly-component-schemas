@@ -1,26 +1,26 @@
 // Auto-generated Zod schema for WizardProps-deprecated
-// Generated on: 2025-10-10T18:12:17.798Z
+// Generated on: 2025-10-16T18:45:33.891Z
 import { z } from 'zod'
 
 export const WizardPropsSchema = z.object({
   /** The parent container to append the modal to. Defaults to document.body */
-  appendTo: z.function().optional(),
+  appendTo: z.any().optional(),
   /** (Unused if footer is controlled) The Back button text */
-  backButtonText: z.any().optional(),
+  backButtonText: z.custom<React.ReactNode>().optional(),
   /** (Unused if footer is controlled) The Cancel button text */
-  cancelButtonText: z.any().optional(),
+  cancelButtonText: z.custom<React.ReactNode>().optional(),
   /** Additional classes spread to the Wizard */
   className: z.string().optional(),
   /** (Unused if footer is controlled) aria-label for the close button */
   closeButtonAriaLabel: z.string().optional(),
   /** The wizard description */
-  description: z.any().optional(),
+  description: z.custom<React.ReactNode>().optional(),
   /** Component type of the description */
   descriptionComponent: z.enum(['div', 'p']).optional(),
   /** An optional id for the description */
   descriptionId: z.string().optional(),
   /** (Use to control the footer) Passing in a footer component lets you control the buttons yourself */
-  footer: z.any().optional(),
+  footer: z.custom<React.ReactNode>().optional(),
   /** Flag indicating the wizard has a drawer for at least one of the wizard steps */
   hasDrawer: z.boolean().optional(),
   /** Can remove the default padding around the main body content by setting this to true */
@@ -46,7 +46,7 @@ The aria-labelledby will only be applied when the body content overflows and ren
   /** Sets aria-labelledby on nav element */
   navAriaLabelledBy: z.string().optional(),
   /** (Unused if footer is controlled) The Next button text */
-  nextButtonText: z.any().optional(),
+  nextButtonText: z.custom<React.ReactNode>().optional(),
   /** (Unused if footer is controlled) Callback function after Back button is clicked */
   onBack: z.function().optional(),
   /** Callback function to close the wizard */
@@ -64,7 +64,7 @@ The aria-labelledby will only be applied when the body content overflows and ren
   /** The current step the wizard is on (1 or higher) */
   startAtStep: z.number().optional(),
   /** The wizard steps configuration object */
-  steps: z.array(z.any()),
+  steps: z.array(z.unknown()),
   /** The wizard title to display if header is desired */
   title: z.string().optional(),
   /** An optional id for the title */

@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for DrawerPanelContent
-// Generated on: 2025-10-10T18:12:17.786Z
+// Generated on: 2025-10-16T18:45:33.874Z
 import { z } from 'zod'
 
 export const DrawerPanelContentSchema = z.object({
   /** Content to be rendered in the drawer panel. */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the drawer. */
   className: z.string().optional(),
   /** Color variant of the background of the drawer panel */
@@ -12,7 +12,7 @@ export const DrawerPanelContentSchema = z.object({
   /** The starting size of a drawer. */
   defaultSize: z.string().optional(),
   /** Adds and customizes a focus trap on the drawer panel content. */
-  focusTrap: z.any().optional(),
+  focusTrap: z.unknown().optional(),
   /** Flag indicating that the drawer panel should not have a border. */
   hasNoBorder: z.boolean().optional().default(false),
   /** ID of the drawer panel */

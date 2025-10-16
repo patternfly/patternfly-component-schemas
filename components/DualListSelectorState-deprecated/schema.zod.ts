@@ -1,18 +1,18 @@
 // Auto-generated Zod schema for DualListSelectorState-deprecated
-// Generated on: 2025-10-10T18:12:17.800Z
+// Generated on: 2025-10-16T18:45:33.892Z
 import { z } from 'zod'
 
 export const DualListSelectorStateSchema = z.object({
-  availableFilteredOptions: z.array(z.any()),
-  availableOptions: z.array(z.any()),
-  availableOptionsSelected: z.array(z.any()),
-  availableTreeFilteredOptions: z.array(z.any()),
-  availableTreeOptionsChecked: z.array(z.any()),
-  chosenFilteredOptions: z.array(z.any()),
-  chosenOptions: z.array(z.any()),
-  chosenOptionsSelected: z.array(z.any()),
-  chosenTreeFilteredOptions: z.array(z.any()),
-  chosenTreeOptionsChecked: z.array(z.any())
+  availableFilteredOptions: z.array(z.custom<React.ReactNode>()),
+  availableOptions: z.array(z.custom<React.ReactNode>()),
+  availableOptionsSelected: z.array(z.number()),
+  availableTreeFilteredOptions: z.array(z.string()),
+  availableTreeOptionsChecked: z.array(z.string()),
+  chosenFilteredOptions: z.array(z.custom<React.ReactNode>()),
+  chosenOptions: z.array(z.custom<React.ReactNode>()),
+  chosenOptionsSelected: z.array(z.number()),
+  chosenTreeFilteredOptions: z.array(z.string()),
+  chosenTreeOptionsChecked: z.array(z.string())
 })
 
 export type DualListSelectorStateProps = z.infer<typeof DualListSelectorStateSchema>

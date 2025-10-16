@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for MultipleFileUploadButton
-// Generated on: 2025-10-10T18:12:17.777Z
+// Generated on: 2025-10-16T18:45:33.857Z
 import { z } from 'zod'
 
 export const MultipleFileUploadButtonSchema = z.object({

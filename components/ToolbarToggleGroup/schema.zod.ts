@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ToolbarToggleGroup
-// Generated on: 2025-10-10T18:12:17.765Z
+// Generated on: 2025-10-16T18:45:33.834Z
 import { z } from 'zod'
 
 export const ToolbarToggleGroupSchema = z.object({
@@ -17,7 +17,7 @@ export const ToolbarToggleGroupSchema = z.object({
   /** Controls when filters are shown and when the toggle button is hidden. */
   breakpoint: z.enum(['md', 'lg', 'xl', '2xl']),
   /** Content to be rendered inside the data toolbar group */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Classes applied to root element of the data toolbar group */
   className: z.string().optional(),
   /** Optional callback for clearing all filters in the toolbar toggle group */
@@ -43,9 +43,9 @@ export const ToolbarToggleGroupSchema = z.object({
   /** Flag that modifies the toolbar group to hide overflow and respond to available space. Used for horizontal navigation. */
   isOverflowContainer: z.boolean().optional(),
   /** Reference to a label container group for filters inside the toolbar toggle group */
-  labelContainerRef: z.any().optional(),
+  labelContainerRef: z.unknown().optional(),
   /** Callback for toggle group click event for non-managed toolbar toggle groups. */
-  onToggle: z.any().optional(),
+  onToggle: z.custom<Event>().optional(),
   /** Sets only the row gap at various breakpoints. */
   rowGap: z.enum(['rowGapNone', 'rowGapXs', 'rowGapSm', 'rowGapMd', 'rowGapLg', 'rowGapXl', 'rowGap_2xl', 'rowGap_3xl', 'rowGap_4xl';
   md?', 'rowGapNone', 'rowGapXs', 'rowGapSm', 'rowGapMd', 'rowGapLg', 'rowGapXl', 'rowGap_2xl', 'rowGap_3xl', 'rowGap_4xl';
@@ -64,7 +64,7 @@ export const ToolbarToggleGroupSchema = z.object({
   /** Flag indicating that the clear all filters button should be visible in the toolbar toggle group */
   showClearFiltersButton: z.boolean().optional(),
   /** An icon to be rendered when the toggle group has collapsed down */
-  toggleIcon: z.any(),
+  toggleIcon: z.custom<React.ReactNode>(),
   /** A type modifier which modifies spacing specifically depending on the type of group */
   variant: z.enum(['filter-group', 'action-group', 'action-group-inline', 'action-group-plain', 'label-group']).optional(),
   /** Visibility at various breakpoints. */

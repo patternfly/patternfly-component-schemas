@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for JumpLinksItem
-// Generated on: 2025-10-10T18:12:17.783Z
+// Generated on: 2025-10-16T18:45:33.867Z
 import { z } from 'zod'
 
 export const JumpLinksItemSchema = z.object({
   /** Text to be rendered inside span */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Class to add to li */
   className: z.string().optional(),
   /** Href for this link */
@@ -14,7 +14,7 @@ export const JumpLinksItemSchema = z.object({
   /** Selector or HTMLElement to spy on */
   node: z.any().optional(),
   /** Click handler for anchor tag. Parent JumpLinks components tap into this. */
-  onClick: z.any().optional()
+  onClick: z.custom<Event>().optional()
 })
 
 export type JumpLinksItemProps = z.infer<typeof JumpLinksItemSchema>

@@ -1,23 +1,23 @@
 // Auto-generated Zod schema for ChipProps-deprecated
-// Generated on: 2025-10-10T18:12:17.801Z
+// Generated on: 2025-10-16T18:45:33.895Z
 import { z } from 'zod'
 
 export const ChipPropsSchema = z.object({
   /** Badge to add to the chip. The badge will be rendered after the chip text. */
-  badge: z.any().optional(),
+  badge: z.custom<React.ReactNode>().optional(),
   /** Content rendered inside the chip text */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the chip item */
   className: z.string().optional(),
   /** Aria Label for close button */
   closeBtnAriaLabel: z.string().optional(),
-  component: z.any().optional(),
+  component: z.custom<React.ReactNode>().optional(),
   /** Flag indicating if the chip is an overflow chip */
   isOverflowChip: z.boolean().optional(),
   /** Flag indicating if chip is read only */
   isReadOnly: z.boolean().optional(),
   /** Function that is called when clicking on the chip close button */
-  onClick: z.any().optional(),
+  onClick: z.custom<Event>().optional(),
   /** Value to overwrite the randomly generated data-ouia-component-id. */
   ouiaId: z.any().optional(),
   /** Css property expressed in percentage or any css unit that overrides the default value of the max-width of the chip's text */

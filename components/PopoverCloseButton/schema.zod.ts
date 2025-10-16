@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for PopoverCloseButton
-// Generated on: 2025-10-10T18:12:17.772Z
+// Generated on: 2025-10-16T18:45:33.848Z
 import { z } from 'zod'
 
 export const PopoverCloseButtonSchema = z.object({

@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for WizardBasicStep
-// Generated on: 2025-10-10T18:12:17.762Z
+// Generated on: 2025-10-16T18:45:33.828Z
 import { z } from 'zod'
 
 export const WizardBasicStepSchema = z.object({
   /** Content shown when the step's navigation item is selected. When treated as a parent step, only sub-step content will be shown. */
-  component: z.any().optional(),
+  component: z.custom<React.ReactElement>().optional(),
   /** Replaces the step's footer. The step's footer takes precedence over the wizard's footer. */
   footer: z.any().optional(),
   /** Unique identifier */
@@ -18,9 +18,9 @@ export const WizardBasicStepSchema = z.object({
   /** Flag to represent whether the step has been visited (navigated to) */
   isVisited: z.boolean().optional(),
   /** Name of the step's navigation item */
-  name: z.any(),
+  name: z.custom<React.ReactNode>(),
   /** Replaces the step's navigation item or its properties. */
-  navItem: z.any().optional(),
+  navItem: z.unknown().optional(),
   /** Used to determine icon next to the step's navItem */
   status: z.enum(['default', 'error', 'success']).optional()
 })

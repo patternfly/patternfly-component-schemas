@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for TreeViewRoot
-// Generated on: 2025-10-10T18:12:17.764Z
+// Generated on: 2025-10-16T18:45:33.832Z
 import { z } from 'zod'
 
 export const TreeViewRootSchema = z.object({
   /** Child nodes of the tree view */
-  children: z.any(),
+  children: z.custom<React.ReactNode>(),
   /** Class to add to add if not passed a parentItem */
   className: z.string().optional(),
   /** Flag indicating if the tree view has checkboxes. */

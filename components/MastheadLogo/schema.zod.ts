@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for MastheadLogo
-// Generated on: 2025-10-10T18:12:17.779Z
+// Generated on: 2025-10-16T18:45:33.862Z
 import { z } from 'zod'
 
 export const MastheadLogoSchema = z.object({
   /** Content rendered inside of the masthead logo. */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the masthead logo. */
   className: z.string().optional(),
   /** Component type of the masthead logo. */

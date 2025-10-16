@@ -1,14 +1,14 @@
 // Auto-generated Zod schema for LoginForm
-// Generated on: 2025-10-10T18:12:17.781Z
+// Generated on: 2025-10-16T18:45:33.864Z
 import { z } from 'zod'
 
 export const LoginFormSchema = z.object({
   /** Additional classes added to the login main body's form */
   className: z.string().optional().default(''),
   /** Content displayed in the helper text component * */
-  helperText: z.any().optional().default('null'),
+  helperText: z.custom<React.ReactNode>().optional().default('null'),
   /** Icon displayed to the left in the helper text */
-  helperTextIcon: z.any().optional().default('null'),
+  helperTextIcon: z.custom<React.ReactNode>().optional().default('null'),
   /** Accessible label for the hide password button */
   hidePasswordAriaLabel: z.string().optional().default('Hide password'),
   /** Flag indicating if the login button is disabled */
@@ -28,13 +28,13 @@ export const LoginFormSchema = z.object({
   /** Flag to indicate if the first dropdown item should not gain initial focus */
   noAutoFocus: z.boolean().optional().default(false),
   /** Function that handles the onChange event for the password */
-  onChangePassword: z.any().optional().default('() => undefined as any'),
+  onChangePassword: z.custom<Event>().optional().default('() => undefined as any'),
   /** Function that handles the onChange event for the remember me checkbox */
-  onChangeRememberMe: z.any().optional().default('() => undefined as any'),
+  onChangeRememberMe: z.custom<Event>().optional().default('() => undefined as any'),
   /** Function that handles the onChange event for the username */
-  onChangeUsername: z.any().optional().default('() => undefined as any'),
+  onChangeUsername: z.custom<Event>().optional().default('() => undefined as any'),
   /** Function that is called when the login button is clicked */
-  onLoginButtonClick: z.any().optional().default('() => undefined as any'),
+  onLoginButtonClick: z.custom<Event>().optional().default('() => undefined as any'),
   /** Label for the password input field */
   passwordLabel: z.string().optional().default('Password'),
   /** Value for the password */

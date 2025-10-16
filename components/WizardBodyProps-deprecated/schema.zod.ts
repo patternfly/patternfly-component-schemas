@@ -1,19 +1,19 @@
 // Auto-generated Zod schema for WizardBodyProps-deprecated
-// Generated on: 2025-10-10T18:12:17.798Z
+// Generated on: 2025-10-16T18:45:33.891Z
 import { z } from 'zod'
 
 export const WizardBodyPropsSchema = z.object({
   /** The currently active WizardStep */
-  activeStep: z.any(),
+  activeStep: z.unknown(),
   /** Anything that can be rendered in the Wizard body */
-  children: z.any(),
+  children: z.unknown(),
   hasDrawer: z.boolean().optional(),
   /** Set to true to remove the default body padding */
   hasNoBodyPadding: z.boolean(),
   /** Flag indicating the wizard drawer is expanded */
   isDrawerExpanded: z.boolean().optional(),
   /** Component used as the primary content container */
-  mainComponent: z.any().optional(),
+  mainComponent: z.unknown().optional(),
   /** Callback function for when the drawer is toggled */
   onExpandDrawer: z.function().optional(),
   /** Adds an accessible name to the wizard body by passing the the id of one or more elements.

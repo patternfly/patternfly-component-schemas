@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for WizardNav
-// Generated on: 2025-10-10T18:12:17.763Z
+// Generated on: 2025-10-16T18:45:33.830Z
 import { z } from 'zod'
 
 export const WizardNavSchema = z.object({
@@ -8,7 +8,7 @@ export const WizardNavSchema = z.object({
   /** Sets the aria-labelledby attribute on the navigation element */
   'aria-labelledby': z.string().optional(),
   /** children should be WizardNavItem components */
-  children: z.any().optional(),
+  children: z.unknown().optional(),
   /** Additional classes spread to the wizard nav */
   className: z.string().optional(),
   /** Whether the navigation is expanded */

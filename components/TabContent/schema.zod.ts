@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for TabContent
-// Generated on: 2025-10-10T18:12:17.769Z
+// Generated on: 2025-10-16T18:45:33.838Z
 import { z } from 'zod'
 
 export const TabContentSchema = z.object({
@@ -8,9 +8,9 @@ export const TabContentSchema = z.object({
   /** title of controlling Tab if used outside Tabs component */
   'aria-label': z.string().optional(),
   /** Child to show in the content area */
-  child: z.any().optional(),
+  child: z.custom<React.ReactElement>().optional(),
   /** content rendered inside the tab content area if used outside Tabs component */
-  children: z.any().optional(),
+  children: z.unknown().optional(),
   /** class of tab content area if used outside Tabs component */
   className: z.string().optional(),
   /** uniquely identifies the controlling Tab if used outside Tabs component */

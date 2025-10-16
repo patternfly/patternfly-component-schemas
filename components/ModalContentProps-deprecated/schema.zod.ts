@@ -1,11 +1,11 @@
 // Auto-generated Zod schema for ModalContentProps-deprecated
-// Generated on: 2025-10-10T18:12:17.795Z
+// Generated on: 2025-10-16T18:45:33.888Z
 import { z } from 'zod'
 
 export const ModalContentPropsSchema = z.object({
   /** Action buttons to add to the standard modal footer. Ignored if the footer property
 is passed in. */
-  actions: z.any().optional(),
+  actions: z.unknown().optional(),
   /** Id of the backdrop. */
   backdropId: z.string().optional(),
   /** Accessible label applied to the modal box body. This should be used to communicate
@@ -19,11 +19,11 @@ based on the modal content and context. */
   /** Id of the modal box container. */
   boxId: z.string(),
   /** Content rendered inside the modal. */
-  children: z.any(),
+  children: z.custom<React.ReactNode>(),
   /** Additional classes added to the modal box. */
   className: z.string().optional(),
   /** Description of the modal. */
-  description: z.any().optional(),
+  description: z.custom<React.ReactNode>().optional(),
   /** Id of the modal box description. */
   descriptorId: z.string(),
   /** Flag to disable focus trap. */
@@ -32,13 +32,13 @@ based on the modal content and context. */
 focusable element will receive focus. */
   elementToFocus: z.any().optional(),
   /** Custom footer. */
-  footer: z.any().optional(),
+  footer: z.custom<React.ReactNode>().optional(),
   /** Flag indicating if modal content should be placed in a modal box body wrapper. */
   hasNoBodyWrapper: z.boolean().optional(),
   /** Complex header (more than just text), supersedes the title property for header content. */
-  header: z.any().optional(),
+  header: z.custom<React.ReactNode>().optional(),
   /** Optional help section for the modal header. */
-  help: z.any().optional(),
+  help: z.custom<React.ReactNode>().optional(),
   /** Flag to show the modal. */
   isOpen: z.boolean().optional(),
   /** Id of the modal box title. */
@@ -58,7 +58,7 @@ focusable element will receive focus. */
   /** Flag to show the close button in the header area of the modal. */
   showClose: z.boolean().optional(),
   /** Text content of the modal header. */
-  title: z.any().optional(),
+  title: z.custom<React.ReactNode>().optional(),
   /** Optional alert icon (or other) to show before the title of the modal header. When the
 predefined alert types are used the default styling will be automatically applied. */
   titleIconVariant: z.enum(['success', 'danger', 'warning', 'info', 'custom']).optional(),

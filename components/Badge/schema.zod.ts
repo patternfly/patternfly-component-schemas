@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for Badge
-// Generated on: 2025-10-10T18:12:17.792Z
+// Generated on: 2025-10-16T18:45:33.884Z
 import { z } from 'zod'
 
 export const BadgeSchema = z.object({
   /** content rendered inside the Badge */
-  children: z.any().optional().default(''),
+  children: z.custom<React.ReactNode>().optional().default(''),
   /** additional classes added to the Badge */
   className: z.string().optional().default(''),
   /** Adds styling to the badge to indicate it is disabled */

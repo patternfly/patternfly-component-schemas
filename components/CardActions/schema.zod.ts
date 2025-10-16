@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for CardActions
-// Generated on: 2025-10-10T18:12:17.791Z
+// Generated on: 2025-10-16T18:45:33.883Z
 import { z } from 'zod'
 
 export const CardActionsSchema = z.object({
   /** Content rendered inside the card action */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the action */
   className: z.string().optional(),
   /** Flag indicating that the actions have no offset */

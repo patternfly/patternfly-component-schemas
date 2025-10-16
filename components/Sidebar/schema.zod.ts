@@ -1,9 +1,9 @@
 // Auto-generated Zod schema for Sidebar
-// Generated on: 2025-10-10T18:12:17.770Z
+// Generated on: 2025-10-16T18:45:33.844Z
 import { z } from 'zod'
 
 export const SidebarSchema = z.object({
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Adds a border between the panel and content. */
   hasBorder: z.boolean().optional(),
   /** Adds space between the panel and content. */

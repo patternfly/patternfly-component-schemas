@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for FormSelectOptionGroup
-// Generated on: 2025-10-10T18:12:17.783Z
+// Generated on: 2025-10-16T18:45:33.867Z
 import { z } from 'zod'
 
 export const FormSelectOptionGroupSchema = z.object({
   /** content rendered inside the Select Option Group */
-  children: z.any().optional().default('null'),
+  children: z.custom<React.ReactNode>().optional().default('null'),
   /** additional classes added to the Select Option */
   className: z.string().optional().default(''),
   /** flag indicating if the Option Group is disabled */

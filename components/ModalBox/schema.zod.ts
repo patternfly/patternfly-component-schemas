@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ModalBox
-// Generated on: 2025-10-10T18:12:17.780Z
+// Generated on: 2025-10-16T18:45:33.863Z
 import { z } from 'zod'
 
 export const ModalBoxSchema = z.object({
@@ -10,7 +10,7 @@ export const ModalBoxSchema = z.object({
   /** Id to use for the modal box label. */
   'aria-labelledby': z.string().optional(),
   /** Content rendered inside the modal box. */
-  children: z.any(),
+  children: z.custom<React.ReactNode>(),
   /** Additional classes added to the modal box. */
   className: z.string().optional(),
   /** Position of the modal. By default a modal will be positioned vertically and horizontally centered. */

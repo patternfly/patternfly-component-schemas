@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for Modal
-// Generated on: 2025-10-10T18:12:17.780Z
+// Generated on: 2025-10-16T18:45:33.864Z
 import { z } from 'zod'
 
 export const ModalSchema = z.object({
   /** The parent container to append the modal to. Defaults to "document.body". */
-  appendTo: z.function().optional().default('() => document.body'),
+  appendTo: z.any().optional().default('() => document.body'),
   /** Id to use for the modal box description. This should match the ModalHeader labelId or descriptorId. */
   'aria-describedby': z.string().optional(),
   /** Adds an accessible name to the modal when there is no title in the ModalHeader. */
@@ -14,7 +14,7 @@ export const ModalSchema = z.object({
   /** Additional classes added to the modal backdrop. */
   backdropClassName: z.string().optional(),
   /** Content rendered inside the modal. */
-  children: z.any(),
+  children: z.custom<React.ReactNode>(),
   /** Additional classes added to the modal. */
   className: z.string().optional(),
   /** Flag to disable focus trap. */
@@ -32,7 +32,7 @@ focusable element will receive focus. */
   onClose: z.any().optional(),
   /** Modal handles pressing of the escape key and closes the modal. If you want to handle
 this yourself you can use this callback function. */
-  onEscapePress: z.any().optional(),
+  onEscapePress: z.custom<Event>().optional(),
   /** Value to overwrite the randomly generated data-ouia-component-id. */
   ouiaId: z.any().optional(),
   /** Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false. */

@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for PopoverHeader
-// Generated on: 2025-10-10T18:12:17.771Z
+// Generated on: 2025-10-16T18:45:33.848Z
 import { z } from 'zod'
 
 export const PopoverHeaderSchema = z.object({
@@ -8,11 +8,11 @@ export const PopoverHeaderSchema = z.object({
   /** Severity variants for an alert popover. This modifies the color of the header to match the severity. */
   alertSeverityVariant: z.enum(['custom', 'info', 'warning', 'success', 'danger']).optional(),
   /** Content of the popover header. */
-  children: z.any(),
+  children: z.custom<React.ReactNode>(),
   /** Class to be applied to the header. */
   className: z.string().optional(),
   /** Indicates the header contains an icon. */
-  icon: z.any().optional(),
+  icon: z.custom<React.ReactNode>().optional(),
   /** Id of the header */
   id: z.string().optional(),
   /** Heading level of the header title */

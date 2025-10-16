@@ -1,30 +1,30 @@
 // Auto-generated Zod schema for Chip-deprecated
-// Generated on: 2025-10-10T18:12:17.800Z
+// Generated on: 2025-10-16T18:45:33.895Z
 import { z } from 'zod'
 
 export const ChipSchema = z.object({
   /** Badge to add to the chip. The badge will be rendered after the chip text. */
-  badge: z.any().optional(),
+  badge: z.custom<React.ReactNode>().optional(),
   /** Content rendered inside the label. */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the label. */
   className: z.string().optional().default(''),
   /** Node for custom close button. */
-  closeBtn: z.any().optional(),
+  closeBtn: z.custom<React.ReactNode>().optional(),
   /** Aria label for close button */
   closeBtnAriaLabel: z.string().optional(),
   /** Additional properties for the default close button. */
-  closeBtnProps: z.any().optional(),
+  closeBtnProps: z.unknown().optional(),
   /** Color of the label. */
   color: z.enum(['blue', 'teal', 'green', 'orange', 'purple', 'red', 'orangered', 'grey', 'yellow']).optional(),
   /** Component that will be used for chip. It is recommended that <button> or <li>  are used when the chip is an overflow chip. */
-  component: z.any().optional(),
+  component: z.custom<React.ReactNode>().optional(),
   /** Additional props passed to the editable label text div. Optionally passing onInput and onBlur callbacks will allow finer custom text input control. */
-  editableProps: z.any().optional(),
+  editableProps: z.unknown().optional(),
   /** Href for a label that is a link. If present, the label will change to an anchor element. This should not be passed in if the onClick prop is also passed in. */
   href: z.string().optional(),
   /** Icon added to the left of the label text. Overrides the icon set by the status property. */
-  icon: z.any().optional(),
+  icon: z.custom<React.ReactNode>().optional(),
   /** Flag indicating the label is clickable. This flag will automatically be set if a href is passed, or if an onClick handler is passed and the label is not an overflow or add variant. This should be manually set when using the render prop. */
   isClickable: z.boolean().optional(),
   /** Flag indicating the label is compact. */
@@ -38,18 +38,18 @@ export const ChipSchema = z.object({
   /** Flag indicating if chip is read only */
   isReadOnly: z.boolean().optional().default(false),
   /** Callback for when the label is clicked. This should not be passed in if the href or isEditable props are also passed in. */
-  onClick: z.any().optional().default('(_e: React.MouseEvent) => undefined as any'),
+  onClick: z.custom<Event>().optional().default('(_e: React.MouseEvent) => undefined as any'),
   /** Close click callback for removable labels. If present, label will have a close button. */
-  onClose: z.any().optional(),
+  onClose: z.custom<Event>().optional(),
   /** Callback when an editable label cancels an edit. */
-  onEditCancel: z.any().optional(),
+  onEditCancel: z.custom<Event>().optional(),
   /** Callback when an editable label completes an edit. */
   onEditComplete: z.any().optional(),
   /** Value to overwrite the randomly generated data-ouia-component-id. */
   ouiaId: z.any().optional(),
   ouiaSafe: z.boolean().optional(),
   /** Forwards the label content and className to rendered function.  Use this prop for react router support. */
-  render: z.any().optional(),
+  render: z.custom<React.ReactNode>().optional(),
   /** Status of the label with a respective icon and color. Overrides the color set by the color property. */
   status: z.enum(['success', 'warning', 'danger', 'info', 'custom']).optional(),
   /** The max width of the label before it is truncated. Can be any valid CSS unit, such as '100%', '100px', or '16ch'. */

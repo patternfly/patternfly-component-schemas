@@ -1,12 +1,12 @@
 // Auto-generated Zod schema for Nav
-// Generated on: 2025-10-10T18:12:17.775Z
+// Generated on: 2025-10-16T18:45:33.855Z
 import { z } from 'zod'
 
 export const NavSchema = z.object({
   /** Accessible label for the nav when there are multiple navs on the page */
   'aria-label': z.string().optional(),
   /** Anything that can be rendered inside of the nav */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the container */
   className: z.string().optional(),
   /** Callback for updating when item selection changes */

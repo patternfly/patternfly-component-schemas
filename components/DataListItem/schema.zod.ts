@@ -1,12 +1,12 @@
 // Auto-generated Zod schema for DataListItem
-// Generated on: 2025-10-10T18:12:17.788Z
+// Generated on: 2025-10-16T18:45:33.876Z
 import { z } from 'zod'
 
 export const DataListItemSchema = z.object({
   /** Adds an accessible name to the selectable input if one is rendered */
   'aria-labelledby': z.string().optional().default(''),
   /** Content rendered inside the DataList item */
-  children: z.any().optional().default('null'),
+  children: z.custom<React.ReactNode>().optional().default('null'),
   /** Additional classes added to the DataList item should be either <DataListItemRow> or <DataListContent> */
   className: z.string().optional().default(''),
   /** Unique id for the DataList item */

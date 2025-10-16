@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for PageSidebarBody
-// Generated on: 2025-10-10T18:12:17.773Z
+// Generated on: 2025-10-16T18:45:33.851Z
 import { z } from 'zod'
 
 export const PageSidebarBodySchema = z.object({
   /** Content rendered inside the page sidebar body */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the page sidebar body */
   className: z.string().optional(),
   /** Flag indicating that the page sidebar body is for a context selector/perspective switcher */

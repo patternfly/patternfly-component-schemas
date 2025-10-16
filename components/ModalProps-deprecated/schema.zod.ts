@@ -1,13 +1,13 @@
 // Auto-generated Zod schema for ModalProps-deprecated
-// Generated on: 2025-10-10T18:12:17.796Z
+// Generated on: 2025-10-16T18:45:33.889Z
 import { z } from 'zod'
 
 export const ModalPropsSchema = z.object({
   /** Action buttons to add to the standard modal footer. Ignored if the footer property
 is passed in. */
-  actions: z.any().optional(),
+  actions: z.unknown().optional(),
   /** The parent container to append the modal to. Defaults to "document.body". */
-  appendTo: z.function().optional(),
+  appendTo: z.any().optional(),
   /** Accessible label applied to the modal box body. This should be used to communicate
 important information about the modal box body div element if needed, such as that it
 is scrollable. */
@@ -17,24 +17,24 @@ bodyAriaLabel property is passed in. Set to a more appropriate role as applicabl
 based on the modal content and context. */
   bodyAriaRole: z.string().optional(),
   /** Content rendered inside the modal. */
-  children: z.any(),
+  children: z.custom<React.ReactNode>(),
   /** Additional classes added to the modal. */
   className: z.string().optional(),
   /** Description of the modal. */
-  description: z.any().optional(),
+  description: z.custom<React.ReactNode>().optional(),
   /** Flag to disable focus trap. */
   disableFocusTrap: z.boolean().optional(),
   /** The element to focus when the modal opens. By default the first
 focusable element will receive focus. */
   elementToFocus: z.any().optional(),
   /** Custom footer. */
-  footer: z.any().optional(),
+  footer: z.custom<React.ReactNode>().optional(),
   /** Flag indicating if modal content should be placed in a modal box body wrapper. */
   hasNoBodyWrapper: z.boolean().optional(),
   /** Complex header (more than just text), supersedes the title property for header content. */
-  header: z.any().optional(),
+  header: z.custom<React.ReactNode>().optional(),
   /** Optional help section for the modal header. */
-  help: z.any().optional(),
+  help: z.custom<React.ReactNode>().optional(),
   /** An id to use for the modal box container. */
   id: z.string().optional(),
   /** Flag to show the modal. */
@@ -45,7 +45,7 @@ focusable element will receive focus. */
   onClose: z.any().optional(),
   /** Modal handles pressing of the escape key and closes the modal. If you want to handle
 this yourself you can use this callback function. */
-  onEscapePress: z.any().optional(),
+  onEscapePress: z.custom<Event>().optional(),
   /** Value to overwrite the randomly generated data-ouia-component-id. */
   ouiaId: z.any().optional(),
   /** Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false. */
@@ -57,7 +57,7 @@ this yourself you can use this callback function. */
   /** Flag to show the close button in the header area of the modal. */
   showClose: z.boolean().optional(),
   /** Text content of the modal header. */
-  title: z.any().optional(),
+  title: z.custom<React.ReactNode>().optional(),
   /** Optional alert icon (or other) to show before the title of the modal header. When the
 predefined alert types are used the default styling will be automatically applied. */
   titleIconVariant: z.enum(['success', 'danger', 'warning', 'info', 'custom']).optional(),

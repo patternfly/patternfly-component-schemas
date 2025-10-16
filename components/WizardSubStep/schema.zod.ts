@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for WizardSubStep
-// Generated on: 2025-10-10T18:12:17.762Z
+// Generated on: 2025-10-16T18:45:33.829Z
 import { z } from 'zod'
 
 export const WizardSubStepSchema = z.object({

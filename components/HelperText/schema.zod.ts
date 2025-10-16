@@ -1,12 +1,12 @@
 // Auto-generated Zod schema for HelperText
-// Generated on: 2025-10-10T18:12:17.783Z
+// Generated on: 2025-10-16T18:45:33.866Z
 import { z } from 'zod'
 
 export const HelperTextSchema = z.object({
   /** Adds an accessible label to the helper text when component is a "ul". */
   'aria-label': z.string().optional(),
   /** Content rendered inside the helper text container. */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes applied to the helper text container. */
   className: z.string().optional(),
   /** Component type of the helper text container */

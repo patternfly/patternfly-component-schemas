@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for FormFieldGroupToggle
-// Generated on: 2025-10-10T18:12:17.784Z
+// Generated on: 2025-10-16T18:45:33.869Z
 import { z } from 'zod'
 
 export const FormFieldGroupToggleSchema = z.object({

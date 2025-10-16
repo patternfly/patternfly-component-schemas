@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for BreakpointModifiers
-// Generated on: 2025-10-10T18:12:17.789Z
+// Generated on: 2025-10-16T18:45:33.878Z
 import { z } from 'zod'
 
 export const BreakpointModifiersSchema = z.object({

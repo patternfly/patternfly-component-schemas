@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for OverflowTab
-// Generated on: 2025-10-10T18:12:17.769Z
+// Generated on: 2025-10-16T18:45:33.839Z
 import { z } from 'zod'
 
 export const OverflowTabSchema = z.object({
@@ -10,7 +10,7 @@ export const OverflowTabSchema = z.object({
   /** Time in ms to wait before firing the toggles' focus event. Defaults to 0 */
   focusTimeoutDelay: z.number().optional().default(0),
   /** The tabs that should be displayed in the menu */
-  overflowingTabs: z.array(z.any()).optional().default('[]'),
+  overflowingTabs: z.array(z.unknown()).optional().default('[]'),
   /** Flag indicating if scroll on focus of the first menu item should occur. */
   shouldPreventScrollOnItemFocus: z.boolean().optional().default(true),
   /** Flag which shows the count of overflowing tabs when enabled */

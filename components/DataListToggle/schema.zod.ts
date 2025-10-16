@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for DataListToggle
-// Generated on: 2025-10-10T18:12:17.788Z
+// Generated on: 2025-10-16T18:45:33.875Z
 import { z } from 'zod'
 
 export const DataListToggleSchema = z.object({
@@ -10,7 +10,7 @@ export const DataListToggleSchema = z.object({
   /** Adds accessible text to the DataList toggle */
   'aria-labelledby': z.string().optional(),
   /** Additional properties spread to the toggle button */
-  buttonProps: z.any().optional(),
+  buttonProps: z.unknown().optional(),
   /** Additional classes added to the DataList cell */
   className: z.string().optional().default(''),
   /** Identify the DataList toggle number */

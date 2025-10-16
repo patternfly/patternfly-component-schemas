@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for ProgressStep
-// Generated on: 2025-10-10T18:12:17.771Z
+// Generated on: 2025-10-16T18:45:33.847Z
 import { z } from 'zod'
 
 export const ProgressStepSchema = z.object({
@@ -7,17 +7,17 @@ export const ProgressStepSchema = z.object({
 step's icon, including the variant and the completed status. */
   'aria-label': z.string().optional(),
   /** Content rendered inside the progress step. */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes applied to the progress step container. */
   className: z.string().optional(),
   /** Description text of a progress step. */
-  description: z.any().optional(),
+  description: z.custom<React.ReactNode>().optional(),
   /** Custom icon of a progress step. Will override default icons provided by the variant. */
-  icon: z.any().optional(),
+  icon: z.custom<React.ReactNode>().optional(),
   /** Flag indicating the progress step is the current step. */
   isCurrent: z.boolean().optional(),
   /** Forwards the step ref to rendered function.  Use this prop to add a popover to the step. */
-  popoverRender: z.any().optional(),
+  popoverRender: z.custom<React.ReactNode>().optional(),
   /** ID of the title of the progress step. */
   titleId: z.string().optional(),
   /** Variant of the progress step. Each variant has a default icon. */

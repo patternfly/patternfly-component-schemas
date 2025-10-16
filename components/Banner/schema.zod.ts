@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for Banner
-// Generated on: 2025-10-10T18:12:17.792Z
+// Generated on: 2025-10-16T18:45:33.885Z
 import { z } from 'zod'
 
 export const BannerSchema = z.object({
   /** Content rendered inside the banner. */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the banner. */
   className: z.string().optional(),
   /** Color options for the banner, will be overwritten by any applied using the status prop. */

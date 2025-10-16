@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for NumberInput
-// Generated on: 2025-10-10T18:12:17.776Z
+// Generated on: 2025-10-16T18:45:33.855Z
 import { z } from 'zod'
 
 export const NumberInputSchema = z.object({
@@ -10,7 +10,7 @@ export const NumberInputSchema = z.object({
   /** Name of the input */
   inputName: z.string().optional(),
   /** Additional properties added to the text input */
-  inputProps: z.any().optional(),
+  inputProps: z.unknown().optional(),
   /** Indicates the whole number input should be disabled */
   isDisabled: z.boolean().optional().default(false),
   /** Maximum value of the number input, disabling the plus button when reached */
@@ -20,21 +20,21 @@ export const NumberInputSchema = z.object({
   /** Aria label of the minus button */
   minusBtnAriaLabel: z.string().optional().default('Minus'),
   /** Additional properties added to the minus button */
-  minusBtnProps: z.any().optional(),
+  minusBtnProps: z.unknown().optional(),
   /** Callback function when text input is blurred (focus leaves) */
   onBlur: z.function().optional(),
   /** Callback for the text input changing */
-  onChange: z.any().optional(),
+  onChange: z.custom<Event>().optional(),
   /** Callback for the minus button */
-  onMinus: z.any().optional().default('() => {}'),
+  onMinus: z.custom<Event>().optional().default('() => {}'),
   /** Callback for the plus button */
-  onPlus: z.any().optional().default('() => {}'),
+  onPlus: z.custom<Event>().optional().default('() => {}'),
   /** Aria label of the plus button */
   plusBtnAriaLabel: z.string().optional().default('Plus'),
   /** Additional properties added to the plus button */
-  plusBtnProps: z.any().optional(),
+  plusBtnProps: z.unknown().optional(),
   /** Adds the given unit to the number input */
-  unit: z.any().optional(),
+  unit: z.custom<React.ReactNode>().optional(),
   /** Position of the number input unit in relation to the number input */
   unitPosition: z.enum(['before', 'after']).optional().default('after'),
   /** Value to indicate if the input is modified to show that validation state */

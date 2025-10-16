@@ -1,12 +1,12 @@
 // Auto-generated Zod schema for SelectList
-// Generated on: 2025-10-10T18:12:17.770Z
+// Generated on: 2025-10-16T18:45:33.845Z
 import { z } from 'zod'
 
 export const SelectListSchema = z.object({
   /** Adds an accessible name to the menu. */
   'aria-label': z.string().optional(),
   /** Anything that can be rendered inside of menu list */
-  children: z.any(),
+  children: z.custom<React.ReactNode>(),
   /** Additional classes added to the menu list */
   className: z.string().optional(),
   /** Indicates to assistive technologies whether more than one item can be selected

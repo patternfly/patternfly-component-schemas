@@ -1,5 +1,5 @@
 // Auto-generated Zod schema for FileUpload
-// Generated on: 2025-10-10T18:12:17.784Z
+// Generated on: 2025-10-16T18:45:33.868Z
 import { z } from 'zod'
 
 export const FileUploadSchema = z.object({
@@ -13,13 +13,13 @@ to elements such as helper text when there are file restrictions. */
   /** Text for the browse button. */
   browseButtonText: z.string().optional(),
   /** Additional children to render after (or instead of) the file preview. */
-  children: z.any().optional().default('null'),
+  children: z.custom<React.ReactNode>().optional().default('null'),
   /** Additional classes added to the file upload container element. */
   className: z.string().optional(),
   /** Text for the clear button. */
   clearButtonText: z.string().optional(),
   /** Optional extra props to customize react-dropzone. */
-  dropzoneProps: z.any().optional().default('{}'),
+  dropzoneProps: z.unknown().optional().default('{}'),
   /** Value to be shown in the read-only filename field. */
   filename: z.string().optional().default(''),
   /** Aria-label for the read-only filename field. */
@@ -40,22 +40,22 @@ the children property to render an alternate preview. */
   /** Flag to show if the field is required. */
   isRequired: z.boolean().optional(),
   /** Clear button was clicked. */
-  onClearClick: z.any().optional(),
+  onClearClick: z.custom<Event>().optional(),
   /** Callback for clicking on the file upload field text area. By default, prevents a click
 in the text area from opening file dialog. */
-  onClick: z.any().optional().default('(event) => event.preventDefault()'),
+  onClick: z.custom<Event>().optional().default('(event) => event.preventDefault()'),
   /** On data changed - if type='text' or type='dataURL' and file was loaded it will call this method */
-  onDataChange: z.any().optional(),
+  onDataChange: z.custom<Event>().optional(),
   /** Change event emitted from the hidden \<input type="file" \> field associated with the component */
-  onFileInputChange: z.any().optional().default('null'),
+  onFileInputChange: z.custom<Event>().optional().default('null'),
   /** A callback for when the FileReader API fails. */
-  onReadFailed: z.any().optional().default('() => {}'),
+  onReadFailed: z.custom<Event>().optional().default('() => {}'),
   /** A callback for when a selected file finishes loading. */
-  onReadFinished: z.any().optional().default('() => {}'),
+  onReadFinished: z.custom<Event>().optional().default('() => {}'),
   /** A callback for when a selected file starts loading. */
-  onReadStarted: z.any().optional().default('() => {}'),
+  onReadStarted: z.custom<Event>().optional().default('() => {}'),
   /** Text area text changed. */
-  onTextChange: z.any().optional(),
+  onTextChange: z.custom<Event>().optional(),
   /** Aria-valuetext for the loading spinner. */
   spinnerAriaValueText: z.string().optional(),
   /** What type of file. Determines whether 'onDataChange` is called and what is

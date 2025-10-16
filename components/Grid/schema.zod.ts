@@ -1,10 +1,10 @@
 // Auto-generated Zod schema for Grid
-// Generated on: 2025-10-10T18:12:17.761Z
+// Generated on: 2025-10-16T18:45:33.827Z
 import { z } from 'zod'
 
 export const GridSchema = z.object({
   /** content rendered inside the Grid layout */
-  children: z.any().optional().default('null'),
+  children: z.custom<React.ReactNode>().optional().default('null'),
   /** additional classes added to the Grid layout */
   className: z.string().optional().default(''),
   /** Sets the base component to render. defaults to div */
@@ -16,7 +16,7 @@ export const GridSchema = z.object({
   /** the number of columns all grid items should span on a medium device */
   md: z.union([z.literal(1), z.literal(2), z.literal(3), z.literal(4), z.literal(5), z.literal(6), z.literal(7), z.literal(8), z.literal(9), z.literal(10), z.literal(11), z.literal(12)]).optional(),
   /** Modifies the flex layout element order property */
-  order: z.object({}).optional(),
+  order: z.record(z.unknown()).optional(),
   /** the number of columns all grid items should span on a small device */
   sm: z.union([z.literal(1), z.literal(2), z.literal(3), z.literal(4), z.literal(5), z.literal(6), z.literal(7), z.literal(8), z.literal(9), z.literal(10), z.literal(11), z.literal(12)]).optional(),
   /** The number of rows a column in the grid should span.  Value should be a number 1-12 */

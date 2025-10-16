@@ -1,14 +1,14 @@
 // Auto-generated Zod schema for SelectGroup
-// Generated on: 2025-10-10T18:12:17.770Z
+// Generated on: 2025-10-16T18:45:33.845Z
 import { z } from 'zod'
 
 export const SelectGroupSchema = z.object({
   /** Anything which can be rendered in a select group */
-  children: z.any(),
+  children: z.custom<React.ReactNode>(),
   /** Classes applied to root element of select group */
   className: z.string().optional(),
   /** Label of the select group */
-  label: z.any().optional()
+  label: z.custom<React.ReactNode>().optional()
 })
 
 export type SelectGroupProps = z.infer<typeof SelectGroupSchema>

@@ -1,14 +1,14 @@
 // Auto-generated Zod schema for TimestampTooltip
-// Generated on: 2025-10-10T18:12:17.767Z
+// Generated on: 2025-10-16T18:45:33.836Z
 import { z } from 'zod'
 
 export const TimestampTooltipSchema = z.object({
   /** Content displayed in the tooltip when using the "custom" variant. */
-  content: z.any().optional(),
+  content: z.custom<React.ReactNode>().optional(),
   /** A custom suffix to apply to a "default" variant tooltip. */
   suffix: z.string().optional(),
   /** Additional props passed to the tooltip. */
-  tooltipProps: z.any().optional(),
+  tooltipProps: z.unknown().optional(),
   /** The variant of the tooltip. The "default" variant displays the date passed into
 the timestamp's date prop as a UTC string. */
   variant: z.enum(['default', 'custom'])

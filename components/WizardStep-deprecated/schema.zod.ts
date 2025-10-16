@@ -1,16 +1,16 @@
 // Auto-generated Zod schema for WizardStep-deprecated
-// Generated on: 2025-10-10T18:12:17.798Z
+// Generated on: 2025-10-16T18:45:33.891Z
 import { z } from 'zod'
 
 export const WizardStepSchema = z.object({
   /** Enables or disables the step in the navigation. Enabled by default. */
   canJumpTo: z.boolean().optional(),
   /** The component to render in the main body */
-  component: z.any().optional(),
+  component: z.unknown().optional(),
   /** The content to render in the drawer panel (use when hasDrawer prop is set on the wizard). */
-  drawerPanelContent: z.any().optional(),
+  drawerPanelContent: z.unknown().optional(),
   /** Custom drawer toggle button that opens the drawer. */
-  drawerToggleButton: z.any().optional(),
+  drawerToggleButton: z.custom<React.ReactNode>().optional(),
   /** (Unused if footer is controlled) The condition needed to enable the Next button */
   enableNext: z.boolean().optional(),
   /** (Unused if footer is controlled) True to hide the Back button */
@@ -24,13 +24,13 @@ export const WizardStepSchema = z.object({
   /** Setting to true hides the side nav and footer */
   isFinishedStep: z.boolean().optional(),
   /** The name of the step */
-  name: z.any(),
+  name: z.custom<React.ReactNode>(),
   /** (Unused if footer is controlled) Can change the Next button text. If nextButtonText is also set for the Wizard, this step specific one overrides it. */
-  nextButtonText: z.any().optional(),
+  nextButtonText: z.custom<React.ReactNode>().optional(),
   /** Props to pass to the WizardNavItem */
   stepNavItemProps: z.any().optional(),
   /** Sub steps */
-  steps: z.array(z.any()).optional()
+  steps: z.array(z.unknown()).optional()
 })
 
 export type WizardStepProps = z.infer<typeof WizardStepSchema>

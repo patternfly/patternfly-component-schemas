@@ -1,12 +1,12 @@
 // Auto-generated Zod schema for Breadcrumb
-// Generated on: 2025-10-10T18:12:17.792Z
+// Generated on: 2025-10-16T18:45:33.884Z
 import { z } from 'zod'
 
 export const BreadcrumbSchema = z.object({
   /** Aria label added to the breadcrumb nav. */
   'aria-label': z.string().optional().default('Breadcrumb'),
   /** Children nodes be rendered to the BreadCrumb. Should be of type BreadCrumbItem. */
-  children: z.any().optional().default('null'),
+  children: z.custom<React.ReactNode>().optional().default('null'),
   /** Additional classes added to the breadcrumb nav. */
   className: z.string().optional().default(''),
   /** Value to overwrite the randomly generated data-ouia-component-id. */

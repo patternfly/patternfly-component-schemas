@@ -1,14 +1,14 @@
 // Auto-generated Zod schema for InputGroupText
-// Generated on: 2025-10-10T18:12:17.782Z
+// Generated on: 2025-10-16T18:45:33.865Z
 import { z } from 'zod'
 
 export const InputGroupTextSchema = z.object({
   /** Content rendered inside the input group text. */
-  children: z.any(),
+  children: z.custom<React.ReactNode>(),
   /** Additional classes added to the input group text. */
   className: z.string().optional(),
   /** Component that wraps the input group text. */
-  component: z.any().optional().default('span'),
+  component: z.custom<React.ReactNode>().optional().default('span'),
   /** Flag to indicate if the input group text is disabled. */
   isDisabled: z.boolean().optional(),
   /** Flag to to indicate if the input group item is plain. */

@@ -1,12 +1,12 @@
 // Auto-generated Zod schema for DataListCell
-// Generated on: 2025-10-10T18:12:17.788Z
+// Generated on: 2025-10-16T18:45:33.877Z
 import { z } from 'zod'
 
 export const DataListCellSchema = z.object({
   /** Aligns the cell content to the right of its parent. */
   alignRight: z.boolean().optional().default(false),
   /** Content rendered inside the DataList cell */
-  children: z.any().optional().default('null'),
+  children: z.custom<React.ReactNode>().optional().default('null'),
   /** Additional classes added to the DataList cell */
   className: z.string().optional().default(''),
   /** Enables the body Content to fill the height of the card */
