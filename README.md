@@ -1,12 +1,14 @@
 # @patternfly/patternfly-component-schemas
 
-JSON Schema metadata for PatternFly React components, providing structured validation and documentation for component props.
+JSON Schema and Zod schema metadata for PatternFly React components, providing structured validation and documentation for component props.
 
 ## 📦 Installation
 
 ```bash
 npm install @patternfly/patternfly-component-schemas
 ```
+
+> **Note:** This package includes **Zod v4** for runtime validation support.Learn more at [zod.dev/v4](https://zod.dev/v4).
 
 ## 🏗️ Structure
 
@@ -17,17 +19,23 @@ This package uses a split structure for optimal performance and modularity:
 ├── components/
 │   ├── AboutModal/
 │   │   ├── schema.json     # JSON Schema for AboutModal props
+│   │   ├── schema.zod.ts   # Zod Schema for AboutModal props ✨
 │   │   └── index.js        # Component metadata exports
 │   ├── Button/
 │   │   ├── schema.json
+│   │   ├── schema.zod.ts   ✨
 │   │   └── index.js
 │   ├── Alert/
 │   │   ├── schema.json
+│   │   ├── schema.zod.ts   ✨
 │   │   └── index.js
 │   └── ... (462 total components)
+├── zod/
+│   └── index.ts            # Barrel export of all Zod schemas ✨
 ├── scripts/
-│   └── generate-schemas.js # Generation script
-├── index.js                # Main export file
+│   ├── generate-schemas.js     # JSON Schema generation
+│   └── generate-zod-schemas.js # Zod Schema generation ✨
+├── index.js                # Main JSON Schema exports
 ├── component-metadata.json # Source metadata (dev only)
 └── package.json
 ```
@@ -73,11 +81,37 @@ const buttonSchema = await getComponentSchema('Button');
 // Returns JSON Schema with properties, required props, etc.
 ```
 
+### Zod Schema - Runtime Validation for LLM-Generated Components ✨
+```typescript
+import { ButtonSchema, AlertSchema } from '@patternfly/patternfly-component-schemas/zod';
+
+// Validate LLM-generated component props at runtime
+const llmGeneratedProps = {
+  variant: "primary",
+  size: "lg",
+  children: "Click me"
+};
+
+// Type-safe validation with detailed error messages
+const validatedProps = ButtonSchema.parse(llmGeneratedProps);
+// ✅ Returns type-safe props ready for React component
+
+// Safe parsing with error handling
+const result = AlertSchema.safeParse(userInput);
+if (result.success) {
+  // Use result.data with confidence
+  return <Alert {...result.data} />;
+} else {
+  console.error('Invalid props:', result.error.issues);
+}
+```
+
 ### AI Assistant Examples
 - **"What props does the Button component accept?"** → AI reads Button schema
 - **"Generate a PatternFly Alert component"** → AI uses Alert schema for validation
 - **"Show me all navigation components"** → AI filters components by name/description
 - **"Create a form with proper PatternFly components"** → AI selects appropriate form components
+- **"Validate this generated component"** → AI uses Zod schema for runtime validation ✨
 
 ## 📦 Package Architecture
 
@@ -148,8 +182,11 @@ The package is generated from `component-metadata.json` which contains the raw P
 ## 📊 Package Contents
 
 - **462 PatternFly components** with JSON Schema validation
+- **462 PatternFly components** with Zod Schema validation ✨
+- **3,487 component props** converted to Zod schemas ✨
 - **Individual exports** for tree-shaking optimization
 - **TypeScript-friendly** prop definitions
+- **Runtime type inference** from Zod schemas ✨
 - **Enum validation** for variant props
 - **Required prop** indicators
 - **Default value** documentation
@@ -157,12 +194,56 @@ The package is generated from `component-metadata.json` which contains the raw P
 ## 🤖 AI & Tooling Benefits
 
 This package is specifically designed for:
-- **AI/LLM consumption** via Model Context Protocol
+- **AI/LLM consumption** via Model Context Protocol (JSON Schema)
+- **Runtime validation** of LLM-generated components (Zod) ✨
+- **TypeScript type inference** from Zod schemas ✨
 - **IDE autocompletion** and IntelliSense
 - **Component validation** and linting
 - **Documentation generation** 
 - **Form builders** and UI tools
 - **Code generation** assistants
+
+## 🎯 Usage Examples
+
+### JSON Schema (Documentation & Tooling)
+```javascript
+import { Button, Alert } from '@patternfly/patternfly-component-schemas';
+
+// Use for documentation, IDE support, or MCP servers
+console.log(Button.schema); // Full JSON Schema
+console.log(Button.componentName); // "Button"
+console.log(Button.propsCount); // 24
+```
+
+### Zod Schema (Runtime Validation) ✨
+```typescript
+import { ButtonSchema, AlertSchema, type ButtonProps } from '@patternfly/patternfly-component-schemas/zod';
+import type { z } from 'zod';
+
+// Basic validation
+const props = ButtonSchema.parse({ variant: "primary" });
+
+// Type inference
+type InferredButtonProps = z.infer<typeof ButtonSchema>;
+// Or use the exported type directly
+const myProps: ButtonProps = { variant: "primary", size: "lg" };
+
+// Safe parsing with error handling
+const result = AlertSchema.safeParse(dynamicProps);
+if (result.success) {
+  console.log('Valid props:', result.data);
+} else {
+  console.error('Validation errors:', result.error.format());
+}
+
+// Dynamic component validation
+import { getComponentSchema } from '@patternfly/patternfly-component-schemas/zod';
+
+async function validateComponent(name: string, props: unknown) {
+  const schema = await getComponentSchema(name);
+  return schema.parse(props);
+}
+```
 
 ## 📄 License
 
