@@ -3,9 +3,7 @@ import { z } from 'zod'
 
 export const MenuStateSchema = z.object({
   currentDrilldownMenuId: z.string(),
-  disableHover: z.boolean(),
   flyoutRef: z.any(),
-  ouiaStateId: z.string(),
   transitionMoveTarget: z.unknown()
 })
 

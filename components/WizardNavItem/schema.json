@@ -67,7 +67,8 @@
       "enum": [
         "default",
         "error",
-        "success"
+        "success",
+        "warning"
       ],
       "default": "'default'"
     },

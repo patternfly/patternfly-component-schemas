@@ -17,8 +17,7 @@
     },
     "id": {
       "description": "Id of the pane.",
-      "type": "string",
-      "default": "getUniqueId('dual-list-selector-pane')"
+      "type": "string"
     },
     "isChosen": {
       "description": "Flag indicating if this pane is the chosen pane.",

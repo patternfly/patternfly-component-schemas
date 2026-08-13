@@ -4,6 +4,8 @@ import { z } from 'zod'
 export const FocusTrapSchema = z.object({
   active: z.boolean().optional().default(true),
   focusTrapOptions: z.unknown().optional().default('{}'),
+  /** Unique id that can optionally be applied to focus trap */
+  id: z.string().optional(),
   paused: z.boolean().optional().default(false),
   /** Prevent from scrolling to the previously focused element on deactivation */
   preventScrollOnDeactivate: z.boolean().optional().default(false)

@@ -11,6 +11,10 @@
       "description": "Additional classes added to the form field group.",
       "type": "string"
     },
+    "hasAnimations": {
+      "description": "Flag indicating whether an expandable form field group has animations. This will always render\nnested field group content rather than dynamically rendering them. This prop will be removed in\nthe next breaking change release in favor of defaulting to always-rendered items.",
+      "type": "boolean"
+    },
     "header": {
       "description": "Form field group header (Type: any)"
     },

@@ -233,7 +233,23 @@
       "description": "A type modifier which modifies spacing specifically depending on the type of group (Type: | ToolbarGroupVariant\n| 'filter-group'\n| 'action-group'\n| 'action-group-inline'\n| 'action-group-plain'\n| 'label-group')"
     },
     "visibility": {
-      "description": "Visibility at various breakpoints.",
+      "description": "Visibility at various width breakpoints.",
+      "enum": [
+        "hidden",
+        "visible",
+        "hidden",
+        "visible",
+        "hidden",
+        "visible",
+        "hidden",
+        "visible",
+        "2xl",
+        "hidden",
+        "visible"
+      ]
+    },
+    "visibilityAtHeight": {
+      "description": "Visibility at various height breakpoints.",
       "enum": [
         "hidden",
         "visible",

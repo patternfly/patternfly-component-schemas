@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "ToolbarFilter";
 export const componentDescription = "";
-export const propsCount = 23;
+export const propsCount = 24;
 export const requiredProps = ["categoryName","children"];

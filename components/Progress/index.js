@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "Progress";
 export const componentDescription = "";
-export const propsCount = 16;
+export const propsCount = 18;
 export const requiredProps = [];

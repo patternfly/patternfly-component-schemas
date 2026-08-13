@@ -10,12 +10,18 @@ export const ClipboardCopyPropsSchema = z.object({
   className: z.string().optional(),
   /** Tooltip message to display when clicking the copy button */
   clickTip: z.string().optional(),
+  /** Aria-label to use on the copy button */
+  copyAriaLabel: z.string().optional(),
   /** Delay in ms before the tooltip appears. */
   entryDelay: z.number().optional(),
   /** Delay in ms before the tooltip disappears. */
   exitDelay: z.number().optional(),
   /** Tooltip message to display when hover the copy button */
   hoverTip: z.string().optional(),
+  /** ID to use on the TextInput. */
+  inputId: z.string().optional(),
+  /** Name attribute to use on the TextInput. */
+  inputName: z.string().optional(),
   /** Flag to determine if inline clipboard copy should be block styling */
   isBlock: z.boolean().optional(),
   /** Flag to determine if clipboard copy content includes code */
@@ -30,6 +36,10 @@ export const ClipboardCopyPropsSchema = z.object({
   onChange: z.custom<Event>().optional(),
   /** A function that is triggered on clicking the copy button. This will replace the existing clipboard copy functionality entirely. */
   onCopy: z.custom<React.ReactNode>().optional(),
+  /** Callback function when text input is blurred (focus leaves) */
+  onInputBlur: z.custom<(event?: any) => void>().optional(),
+  /** Callback function when text input is focused */
+  onInputFocus: z.custom<(event?: any) => void>().optional(),
   /** Value to overwrite the randomly generated data-ouia-component-id. */
   ouiaId: z.any().optional(),
   /** Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false. */

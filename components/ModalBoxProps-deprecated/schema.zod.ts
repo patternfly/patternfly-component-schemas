@@ -1,10 +1,9 @@
 // Auto-generated Zod schema for ModalBoxProps-deprecated
-// Generated on: 2025-10-10T18:12:17.796Z
 import { z } from 'zod'
 
 export const ModalBoxPropsSchema = z.object({
   /** Content rendered inside the modal box. */
-  children: z.any(),
+  children: z.custom<React.ReactNode>(),
   /** Additional classes added to the modal box. */
   className: z.string().optional(),
   /** Position of the modal. By default a modal will be positioned vertically and horizontally centered. */

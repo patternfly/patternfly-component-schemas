@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "HorizontalOverflowObject";
 export const componentDescription = "";
-export const propsCount = 3;
+export const propsCount = 4;
 export const requiredProps = [];

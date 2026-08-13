@@ -9,7 +9,7 @@ export const DualListSelectorPaneSchema = z.object({
   /** Additional classes applied to the dual list selector pane. */
   className: z.string().optional().default(''),
   /** ID of the pane. */
-  id: z.string().optional().default('getUniqueId('dual-list-selector-pane')'),
+  id: z.string().optional(),
   /** Flag indicating if this pane is the chosen pane. */
   isChosen: z.boolean().optional().default(false),
   /** Flag indicating whether the component is disabled. */

@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "CalendarMonth";
 export const componentDescription = "The main calendar month component.";
-export const propsCount = 18;
+export const propsCount = 19;
 export const requiredProps = [];

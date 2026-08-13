@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "Dropdown";
 export const componentDescription = "See the Menu documentation for additional props that may be passed.";
-export const propsCount = 37;
+export const propsCount = 40;
 export const requiredProps = ["toggle"];

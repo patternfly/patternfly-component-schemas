@@ -2,6 +2,8 @@
 import { z } from 'zod'
 
 export const NavItemPropsSchema = z.object({
+  /** React ref for the anchor element within the nav item. */
+  anchorRef: z.unknown().optional(),
   /** Content rendered inside the nav item. */
   children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the nav item */
@@ -14,6 +16,7 @@ export const NavItemPropsSchema = z.object({
   groupId: z.any().optional(),
   /** Icon added before the nav item children. */
   icon: z.custom<React.ReactNode>().optional(),
+  innerRef: z.unknown().optional(),
   /** Flag indicating whether the item is active */
   isActive: z.boolean().optional(),
   /** Item identifier, will be returned with the onToggle and onSelect callback passed to the Nav component */

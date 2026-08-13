@@ -161,6 +161,18 @@ npm run build
 npm run rebuild
 ```
 
+### Customizing PatternFly Version (pfVersion)
+
+You can pass a custom PatternFly version (`pfVersion`) when generating JSON schemas. This version is added to the generated `schemas/index.json` under the `pfVersion` key and is also exported as `pfVersion` from the JSON-optimized entry point (`@patternfly/patternfly-component-schemas/json`).
+
+By default, the version is set to `6.x.x`, a compatible semver range.
+
+To pass a custom version:
+
+```bash
+npm run build:json -- --pf-version=6.0.0-beta.3
+```
+
 ### Source Data
 The package is generated from `component-metadata.json` which contains the raw PatternFly component metadata for the latest release. This file is included in the git repository for development but excluded from the NPM package.
 

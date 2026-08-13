@@ -6,6 +6,8 @@ export const LoginPageSchema = z.object({
   backgroundImgSrc: z.string().optional().default(''),
   /** Attribute that specifies the alt text of the brand image for the login page */
   brandImgAlt: z.string().optional().default(''),
+  /** Additional props for the brand image for the login page */
+  brandImgProps: z.unknown().optional(),
   /** Attribute that specifies the URL of the brand image for the login page */
   brandImgSrc: z.string().optional().default(''),
   /** Anything that can be rendered inside of the login page (e.g. <LoginPageForm>) */

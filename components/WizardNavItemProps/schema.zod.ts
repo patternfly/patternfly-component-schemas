@@ -25,7 +25,7 @@ export const WizardNavItemPropsSchema = z.object({
   /** Callback for when the navigation item is clicked */
   onClick: z.any().optional(),
   /** Used to determine the icon displayed next to content. Default has no icon. */
-  status: z.enum(['default', 'error', 'success']).optional(),
+  status: z.enum(['default', 'error', 'success', 'warning']).optional(),
   /** The step index passed into the onNavItemClick callback */
   stepIndex: z.number(),
   /** Where to display the linked URL when using an anchor component */

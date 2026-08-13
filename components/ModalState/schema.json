@@ -4,13 +4,13 @@
   "title": "ModalState Props",
   "description": "Props for the ModalState component",
   "properties": {
-    "ouiaStateId": {
+    "mounted": {
       "description": "",
-      "type": "string"
+      "type": "boolean"
     }
   },
   "required": [
-    "ouiaStateId"
+    "mounted"
   ],
   "additionalProperties": false
 }

@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "TabsState";
 export const componentDescription = "";
-export const propsCount = 10;
-export const requiredProps = ["disableBackScrollButton","disableForwardScrollButton","enableScrollButtons","ouiaStateId","overflowingTabCount","renderScrollButtons","shownKeys","showScrollButtons","uncontrolledActiveKey","uncontrolledIsExpandedLocal"];
+export const propsCount = 12;
+export const requiredProps = ["currentLinkAccentLength","currentLinkAccentStart","disableBackScrollButton","disableForwardScrollButton","enableScrollButtons","isInitializingAccent","overflowingTabCount","renderScrollButtons","shownKeys","showScrollButtons","uncontrolledActiveKey","uncontrolledIsExpandedLocal"];

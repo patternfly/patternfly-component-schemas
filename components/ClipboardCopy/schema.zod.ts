@@ -10,12 +10,18 @@ export const ClipboardCopySchema = z.object({
   className: z.string().optional(),
   /** Tooltip message to display when clicking the copy button */
   clickTip: z.string().optional().default('Successfully copied to clipboard!'),
+  /** Aria-label to use on the copy button */
+  copyAriaLabel: z.string().optional(),
   /** Delay in ms before the tooltip appears. */
   entryDelay: z.number().optional().default(300),
   /** Delay in ms before the tooltip disappears. */
   exitDelay: z.number().optional().default(1500),
   /** Tooltip message to display when hover the copy button */
   hoverTip: z.string().optional().default('Copy to clipboard'),
+  /** ID to use on the TextInput. */
+  inputId: z.string().optional(),
+  /** Name attribute to use on the TextInput. */
+  inputName: z.string().optional(),
   /** Flag to determine if inline clipboard copy should be block styling */
   isBlock: z.boolean().optional(),
   /** Flag to determine if clipboard copy content includes code */
@@ -46,6 +52,10 @@ export const ClipboardCopySchema = z.object({
     console.error(error);
   }
 }'),
+  /** Callback function when text input is blurred (focus leaves) */
+  onInputBlur: z.custom<(event?: any) => void>().optional(),
+  /** Callback function when text input is focused */
+  onInputFocus: z.custom<(event?: any) => void>().optional(),
   /** Value to overwrite the randomly generated data-ouia-component-id. */
   ouiaId: z.any().optional(),
   /** Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false. */

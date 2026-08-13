@@ -5,6 +5,8 @@ export const ProgressContainerSchema = z.object({
   /** Content which can be used to convey additional information about the progress component.
 We recommend the helper text component as it was designed for this purpose. */
   helperText: z.custom<React.ReactNode>().optional(),
+  /** Hide the status icon, helpful when space is limited (such as within table cells) */
+  hideStatusIcon: z.boolean().optional().default(false),
   /** Whether string title should be truncated */
   isTitleTruncated: z.boolean().optional().default(false),
   /** Label to indicate what progress is showing. */

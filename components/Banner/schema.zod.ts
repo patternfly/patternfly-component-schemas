@@ -8,6 +8,8 @@ export const BannerSchema = z.object({
   className: z.string().optional(),
   /** Color options for the banner, will be overwritten by any applied using the status prop. */
   color: z.enum(['red', 'orangered', 'orange', 'yellow', 'green', 'teal', 'blue', 'purple']).optional(),
+  /** If set to true, the banner will have a pill shape */
+  isPill: z.boolean().optional().default(false),
   /** If set to true, the banner sticks to the top of its container */
   isSticky: z.boolean().optional().default(false),
   /** Text announced by screen readers to indicate the type of banner. This prop should only

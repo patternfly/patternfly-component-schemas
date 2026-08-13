@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "CompassMessageBar Props",
+  "description": "Props for the CompassMessageBar component",
+  "properties": {
+    "children": {
+      "description": "Content of the message bar. Typically a @patternfly/chatbot MessageBar component. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the message bar",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

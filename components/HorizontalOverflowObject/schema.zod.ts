@@ -4,6 +4,8 @@ import { z } from 'zod'
 export const HorizontalOverflowObjectSchema = z.object({
   /** The text which displays when an overflowing tab isn't selected */
   defaultTitleText: z.string().optional(),
+  /** Additional props to spread to the popper menu. */
+  popperProps: z.unknown().optional(),
   /** Flag which shows the count of overflowing tabs when enabled */
   showTabCount: z.boolean().optional(),
   /** The aria label applied to the button which toggles the tab overflow menu */

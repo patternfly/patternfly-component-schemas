@@ -21,6 +21,13 @@
     "countOptions": {
       "description": "Adds count number to button (Type: BadgeCountObject)"
     },
+    "hamburgerVariant": {
+      "description": "Adjusts and animates the hamburger icon to indicate what will happen upon clicking the button.",
+      "enum": [
+        "expand",
+        "collapse"
+      ]
+    },
     "hasNoPadding": {
       "description": "Applies no padding on a plain button variant. Use when plain button is placed inline with text",
       "type": "boolean"
@@ -49,6 +56,10 @@
       "description": "Adds block styling to button",
       "type": "boolean"
     },
+    "isCircle": {
+      "description": "Flag indicating the button is a circle button. Intended for buttons that only contain an icon..",
+      "type": "boolean"
+    },
     "isClicked": {
       "description": "Adds clicked styling to button.",
       "type": "boolean"
@@ -61,12 +72,40 @@
       "description": "Adds disabled styling and disables the button using the disabled html attribute",
       "type": "boolean"
     },
+    "isDocked": {
+      "description": "Flag indicating the button is a docked variant button. For use in docked navigation.",
+      "type": "boolean"
+    },
+    "isExpanded": {
+      "description": "Flag indicating whether content the button controls is expanded or not. Required when isHamburger is true.",
+      "type": "boolean"
+    },
+    "isFavorite": {
+      "description": "Adds favorite styling to a button",
+      "type": "boolean"
+    },
+    "isFavorited": {
+      "description": "Flag indicating whether the button is favorited or not, only when isFavorite is true.",
+      "type": "boolean"
+    },
+    "isHamburger": {
+      "description": "Flag indicating the button is a hamburger button. This will override the icon property.",
+      "type": "boolean"
+    },
     "isInline": {
       "description": "Adds inline styling to a link button",
       "type": "boolean"
     },
     "isLoading": {
       "description": "Adds progress styling to button",
+      "type": "boolean"
+    },
+    "isSettings": {
+      "description": "Flag indicating the button is a settings button. This will override the icon property.",
+      "type": "boolean"
+    },
+    "isTextExpanded": {
+      "description": "Flag indicating the docked button should display text. Only applies when isDocked is true.",
       "type": "boolean"
     },
     "ouiaId": {

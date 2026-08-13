@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "CompassMainHeader Props",
+  "description": "The wrapper component for header content in the main Compass area. When building out a custom implementation,\nyou should ensure any content within the main header is rendered inside a Panel, PanelMain, PanelMainBody stack and main header content wrappers.",
+  "properties": {
+    "children": {
+      "description": "Custom main header content. To opt into a default styling, use the title and toolbar props instead. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the main header",
+      "type": "string"
+    },
+    "panelProps": {
+      "description": "Additional props passed to the Panel that wraps the main header content when using the title or toolbar props. When using the\nchildren prop, you should pass your own Panel. (Type: Omit<PanelProps, 'children'>)"
+    },
+    "title": {
+      "description": "Styled title. If title or toolbar is provided, the children will be ignored. (React component or element)"
+    },
+    "toolbar": {
+      "description": "Styled toolbar. If title or toolbar is provided, the children will be ignored. (React component or element)"
+    }
+  },
+  "additionalProperties": false
+}

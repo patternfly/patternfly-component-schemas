@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "Card";
 export const componentDescription = "";
-export const propsCount = 17;
+export const propsCount = 18;
 export const requiredProps = [];

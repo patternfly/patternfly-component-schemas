@@ -5,7 +5,7 @@
   "description": "Props for the OverflowMenu component",
   "properties": {
     "breakpoint": {
-      "description": "Indicates breakpoint at which to switch between horizontal menu and vertical dropdown",
+      "description": "Indicates breakpoint at which to switch between expanded and collapsed states. The \"sm\" breakpoint does not apply to vertical overflow menus.",
       "enum": [
         "sm",
         "md",
@@ -23,6 +23,11 @@
     "className": {
       "description": "Additional classes added to the OverflowMenu.",
       "type": "string"
+    },
+    "isVertical": {
+      "description": "Indicates the overflow menu orientation is vertical and should respond to height changes instead of width.",
+      "type": "boolean",
+      "default": false
     }
   },
   "required": [

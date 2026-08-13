@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "ExpandableSection";
 export const componentDescription = "The main expandable section component.";
-export const propsCount = 16;
+export const propsCount = 22;
 export const requiredProps = [];

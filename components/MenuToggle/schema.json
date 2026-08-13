@@ -17,8 +17,16 @@
     "icon": {
       "description": "Optional icon or image rendered inside the toggle, before the children content. It is\nrecommended to wrap most basic icons in our icon component. (React component or element)"
     },
+    "isCircle": {
+      "description": "Flag indicating the toggle has circular styling. Can only be applied to plain toggles.",
+      "type": "boolean"
+    },
     "isDisabled": {
       "description": "Flag indicating the toggle is disabled",
+      "type": "boolean"
+    },
+    "isDocked": {
+      "description": "Flag indicating the menu toggle is a docked variant. For use in docked navigation.",
       "type": "boolean"
     },
     "isExpanded": {
@@ -33,8 +41,20 @@
       "description": "Flag indicating the toggle takes up the full width of its parent",
       "type": "boolean"
     },
+    "isInForm": {
+      "description": "Flag indicating the toggle is placed inside a form",
+      "type": "boolean"
+    },
     "isPlaceholder": {
       "description": "Flag indicating the toggle contains placeholder text",
+      "type": "boolean"
+    },
+    "isSettings": {
+      "description": "Flag indicating whether the toggle is a settings toggle. This will override the icon property",
+      "type": "boolean"
+    },
+    "isTextExpanded": {
+      "description": "Flag indicating the docked toggle should display text. Only applies when isDocked is true.",
       "type": "boolean"
     },
     "ouiaId": {

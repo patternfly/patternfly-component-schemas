@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "ModalContent";
 export const componentDescription = "";
-export const propsCount = 19;
+export const propsCount = 20;
 export const requiredProps = ["boxId","children"];

@@ -7,7 +7,7 @@ export const NavGroupSchema = z.object({
   /** Additional classes added to the container */
   className: z.string().optional().default(''),
   /** Identifier to use for the section aria label */
-  id: z.string().optional().default('getUniqueId()'),
+  id: z.string().optional(),
   /** Title shown for the group */
   title: z.string().optional()
 })

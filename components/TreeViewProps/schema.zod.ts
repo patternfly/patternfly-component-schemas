@@ -17,6 +17,10 @@ internal state. */
   defaultAllExpanded: z.boolean().optional(),
   /** Icon for all expanded node items. */
   expandedIcon: z.custom<React.ReactNode>().optional(),
+  /** Flag indicating whether a tree view has animations. This will always render
+nested tree view items rather than dynamically rendering them. This prop will be removed in
+the next breaking change release in favor of defaulting to always-rendered items. */
+  hasAnimations: z.boolean().optional(),
   /** Flag indicating if all nodes in the tree view should have badges. */
   hasBadges: z.boolean().optional(),
   /** Flag indicating if all nodes in the tree view should have checkboxes. */

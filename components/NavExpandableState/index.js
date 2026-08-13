@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "NavExpandableState";
 export const componentDescription = "";
-export const propsCount = 2;
-export const requiredProps = ["expandedState","ouiaStateId"];
+export const propsCount = 1;
+export const requiredProps = ["expandedState"];

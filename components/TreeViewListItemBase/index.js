@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "TreeViewListItemBase";
 export const componentDescription = "";
-export const propsCount = 25;
+export const propsCount = 28;
 export const requiredProps = ["name","title"];

@@ -16,6 +16,13 @@
       "description": "Id of the content of the expandable section. When passing in the isDetached property, this\nproperty's value should match the contentId property of the expandable section toggle sub-component.",
       "type": "string"
     },
+    "direction": {
+      "description": "Sets the direction of the expandable animation when isDetached is true. If this prop is not passed,\nanimation will not occur.",
+      "enum": [
+        "up",
+        "down"
+      ]
+    },
     "displaySize": {
       "description": "Display size variant. Set to \"lg\" for disclosure styling.",
       "enum": [
@@ -24,8 +31,12 @@
       ],
       "default": "'default'"
     },
+    "hasToggleIcon": {
+      "description": "Whether to show a toggle icon when variant is not truncated. If omitted, it is important to ensure the current state of the ExpandableSection is conveyed, most likely by having dynamic toggle text.",
+      "type": "boolean"
+    },
     "isDetached": {
-      "description": "Indicates the expandable section has a detached toggle.",
+      "description": "Flag indicating that the expandable section and expandable toggle are detached from one another.",
       "type": "boolean",
       "default": false
     },
@@ -47,8 +58,21 @@
       "description": "Callback function to toggle the expandable section. Detached expandable sections should\nuse the onToggle property of the expandable section toggle sub-component. (Function: (event: React.MouseEvent, isExpanded: boolean) => void)",
       "default": "(event, isExpanded): void => undefined"
     },
+    "toggleAriaLabel": {
+      "description": "Accessible name via human readable string for the expandable section toggle.",
+      "type": "string",
+      "default": "undefined"
+    },
+    "toggleAriaLabelledBy": {
+      "description": "Accessible name via space delimtted list of IDs for the expandable section toggle.",
+      "type": "string",
+      "default": "undefined"
+    },
     "toggleContent": {
-      "description": "React node that appears in the attached toggle in place of the toggleText property. (React component or element)"
+      "description": "React node that appears in the attached toggle in place of the toggleText property.\nCan also be a function that receives the expanded state and returns a React node. (React component or element)"
+    },
+    "toggleIcon": {
+      "description": "Icon shown in toggle when variant is not truncated. (React component or element)"
     },
     "toggleId": {
       "description": "Id of the toggle of the expandable section, which provides an accessible name to the\nexpandable section content via the aria-labelledby attribute. When the isDetached property\nis also passed in, the value of this property must match the toggleId property of the\nexpandable section toggle sub-component.",
@@ -68,6 +92,18 @@
       "description": "Text that appears in the attached toggle when expanded (will override toggleText if\nboth are specified; used for uncontrolled expandable with dynamic toggle text).",
       "type": "string",
       "default": "''"
+    },
+    "toggleWrapper": {
+      "description": "The HTML element to use for the toggle wrapper. Can be 'div' (default) or any heading level.\nWhen using heading elements, the button will be rendered inside the heading for proper semantics.\nThis is useful when the toggle text should function as a heading in the document structure.",
+      "enum": [
+        "div",
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ]
     },
     "truncateMaxLines": {
       "description": "Truncates the expandable content to the specified number of lines when using the\n\"truncate\" variant.",

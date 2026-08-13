@@ -28,8 +28,11 @@ export const ToolbarPropsSchema = z.object({
   isFullHeight: z.boolean().optional(),
   /** Flag indicating the toolbar is static */
   isStatic: z.boolean().optional(),
-  /** Flag indicating the toolbar should stick to the top of its container */
+  /** Flag indicating the toolbar should stick to the top of its container. This property applies both the sticky position and styling. */
   isSticky: z.boolean().optional(),
+  isStickyBase: z.boolean().optional(),
+  isStickyStuck: z.boolean().optional(),
+  isVertical: z.boolean().optional(),
   /** Text to display in the total number of applied filters ToolbarFilter */
   numberOfFiltersText: z.custom<(numberOfFilters: number) => string>().optional(),
   /** Value to overwrite the randomly generated data-ouia-component-id. */

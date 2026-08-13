@@ -23,17 +23,12 @@
     },
     "onClick": {
       "description": " (Function: (event: React.MouseEvent) => void)"
-    },
-    "textId": {
-      "description": "",
-      "type": "string"
     }
   },
   "required": [
     "contentId",
     "id",
-    "onClick",
-    "textId"
+    "onClick"
   ],
   "additionalProperties": false
 }

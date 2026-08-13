@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "title": "Popper Props",
-  "description": "Props for the Popper component",
+  "description": "Extends PopperOptions",
   "properties": {
     "animationDuration": {
       "description": " (Type: No type info)",

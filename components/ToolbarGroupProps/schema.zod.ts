@@ -25,8 +25,10 @@ export const ToolbarGroupPropsSchema = z.object({
   rowWrap: z.record(z.unknown()).optional(),
   /** A type modifier which modifies spacing specifically depending on the type of group */
   variant: z.enum(['filter-group', 'action-group', 'action-group-inline', 'action-group-plain', 'label-group']).optional(),
-  /** Visibility at various breakpoints. */
-  visibility: z.record(z.unknown()).optional()
+  /** Visibility at various width breakpoints. */
+  visibility: z.record(z.unknown()).optional(),
+  /** Visibility at various height breakpoints. */
+  visibilityAtHeight: z.record(z.unknown()).optional()
 })
 
 export type ToolbarGroupPropsProps = z.infer<typeof ToolbarGroupPropsSchema>

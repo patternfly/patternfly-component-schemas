@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "Pagination";
 export const componentDescription = "The main pagination component.";
-export const propsCount = 32;
+export const propsCount = 34;
 export const requiredProps = [];

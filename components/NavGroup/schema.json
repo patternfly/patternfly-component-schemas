@@ -15,8 +15,7 @@
     },
     "id": {
       "description": "Identifier to use for the section aria label",
-      "type": "string",
-      "default": "getUniqueId()"
+      "type": "string"
     },
     "title": {
       "description": "Title shown for the group",

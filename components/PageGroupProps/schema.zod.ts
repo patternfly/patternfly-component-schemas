@@ -14,6 +14,11 @@ export const PageGroupPropsSchema = z.object({
   hasShadowTop: z.boolean().optional(),
   /** Enables the page group to fill the available vertical space if true, or disable filling if false. */
   isFilled: z.boolean().optional(),
+  isNoPlainOnGlass: z.boolean().optional(),
+  /** Adds plain styling to the page group. */
+  isPlain: z.boolean().optional(),
+  isStickyStuck: z.boolean().optional(),
+  stickyBase: z.enum(['top', 'bottom']).optional(),
   /** Modifier indicating if the PageBreadcrumb is sticky to the top or bottom at various breakpoints */
   stickyOnBreakpoint: z.record(z.unknown()).optional(),
   /** Adds an accessible name to the page group when the hasOverflowScroll prop is set to true. */

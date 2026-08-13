@@ -190,8 +190,9 @@
       "description": "The trigger reference element to which the popover is relatively placed to. If you can wrap the\nelement with the popover, you can use the children prop instead, or both props together.\nWhen passed along with the trigger prop, the div element that wraps the trigger will be removed.\nUsage: <Popover triggerRef={() => document.getElementById('reference-element')} /> (Type: HTMLElement | (() => HTMLElement) | React.RefObject<any>)"
     },
     "withFocusTrap": {
-      "description": "Whether to trap focus in the popover.",
-      "type": "boolean"
+      "description": "Whether to trap focus in the popover. When using a triggerAction of \"hover\", this will be set to false\nby default and must remain false.",
+      "type": "boolean",
+      "default": "triggerAction === 'hover' ? false : undefined"
     },
     "zIndex": {
       "description": "The z-index of the popover.",

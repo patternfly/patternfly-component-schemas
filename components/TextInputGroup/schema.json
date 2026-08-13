@@ -20,11 +20,12 @@
       "type": "boolean"
     },
     "validated": {
-      "description": "Status variant of the text input group.",
+      "description": "Value to indicate if the text input group is modified to show that validation state.\nIf set to success, warning, or error, the group will show that state.\nIf set to default, no validation styling is applied (use to clear a prior validation state).",
       "enum": [
         "success",
         "warning",
-        "error"
+        "error",
+        "default"
       ]
     }
   },

@@ -9,7 +9,8 @@ export const MastheadPropsSchema = z.object({
   /** Display type at various breakpoints */
   display: z.record(z.unknown()).optional(),
   /** Insets at various breakpoints */
-  inset: z.record(z.unknown()).optional()
+  inset: z.record(z.unknown()).optional(),
+  variant: z.enum(['default', 'docked']).optional()
 })
 
 export type MastheadPropsProps = z.infer<typeof MastheadPropsSchema>

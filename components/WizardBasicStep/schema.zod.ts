@@ -21,7 +21,7 @@ export const WizardBasicStepSchema = z.object({
   /** Replaces the step's navigation item or its properties. */
   navItem: z.unknown().optional(),
   /** Used to determine icon next to the step's navItem */
-  status: z.enum(['default', 'error', 'success']).optional()
+  status: z.enum(['default', 'error', 'success', 'warning']).optional()
 })
 
 export type WizardBasicStepProps = z.infer<typeof WizardBasicStepSchema>

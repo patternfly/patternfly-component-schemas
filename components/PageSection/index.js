@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "PageSection";
 export const componentDescription = "";
-export const propsCount = 15;
+export const propsCount = 19;
 export const requiredProps = [];

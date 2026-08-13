@@ -10,6 +10,7 @@ export const CardPropsSchema = z.object({
   component: z.unknown().optional(),
   /** ID of the Card. Also passed back in the CardHeader onExpand callback. */
   id: z.string().optional(),
+  innerRef: z.unknown().optional(),
   /** Flag indicating that the card is clickable and contains some action that triggers on click. */
   isClickable: z.boolean().optional(),
   /** Flag indicating whether a card that is either only clickable or that is both clickable and selectable
@@ -23,6 +24,8 @@ is currently clicked and has clicked styling. */
   isExpanded: z.boolean().optional(),
   /** Cause component to consume the available height of its container */
   isFullHeight: z.boolean().optional(),
+  /** Modifies the card to include glass styling when glass theme is enabled */
+  isGlass: z.boolean().optional(),
   /** Modifies the card to be large. Should not be used with isCompact. */
   isLarge: z.boolean().optional(),
   /** Modifies the card to include plain styling; this removes border and background */

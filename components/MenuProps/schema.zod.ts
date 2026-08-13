@@ -40,7 +40,7 @@ export const MenuPropsSchema = z.object({
   /** Callback for collecting menu heights */
   onGetMenuHeight: z.custom<(menuId: string, height: number) => void>().optional(),
   /** Callback for updating when item selection changes. You can also specify onClick on the MenuItem. */
-  onSelect: z.any().optional(),
+  onSelect: z.custom<Event>().optional(),
   /** Value to overwrite the randomly generated data-ouia-component-id. */
   ouiaId: z.any().optional(),
   /** Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false. */

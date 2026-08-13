@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "CompassDockMain Props",
+  "description": "Props for the CompassDockMain component",
+  "properties": {
+    "children": {
+      "description": "Content of the compass dock main container. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the compass dock main container.",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

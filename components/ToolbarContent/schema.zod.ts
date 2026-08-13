@@ -20,8 +20,10 @@ export const ToolbarContentSchema = z.object({
   showClearFiltersButton: z.boolean().optional().default(false),
   /** Id of the parent Toolbar component */
   toolbarId: z.string().optional(),
-  /** Visibility at various breakpoints. */
-  visibility: z.record(z.unknown()).optional()
+  /** Visibility at various width breakpoints. */
+  visibility: z.record(z.unknown()).optional(),
+  /** Visibility at various height breakpoints. */
+  visibilityAtHeight: z.record(z.unknown()).optional()
 })
 
 export type ToolbarContentProps = z.infer<typeof ToolbarContentSchema>

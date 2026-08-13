@@ -88,6 +88,14 @@
         "vertical",
         "horizontal"
       ]
+    },
+    "role": {
+      "description": "The ARIA role of the divider when the component property has a value other than \"hr\".",
+      "enum": [
+        "separator",
+        "presentation"
+      ],
+      "default": "'separator'"
     }
   },
   "additionalProperties": false

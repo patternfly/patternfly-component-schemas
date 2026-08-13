@@ -13,7 +13,7 @@ export const LabelSchema = z.object({
   /** Additional properties for the default close button. */
   closeBtnProps: z.unknown().optional(),
   /** Color of the label. */
-  color: z.enum(['blue', 'teal', 'green', 'orange', 'purple', 'red', 'orangered', 'grey', 'yellow']).optional().default('grey'),
+  color: z.enum(['blue', 'teal', 'green', 'orange', 'purple', 'red', 'orangered', 'grey', 'yellow']).optional().default('LabelColor.grey'),
   /** Additional props passed to the editable label text div. Optionally passing onInput and onBlur callbacks will allow finer custom text input control. */
   editableProps: z.unknown().optional(),
   /** Href for a label that is a link. If present, the label will change to an anchor element. This should not be passed in if the onClick prop is also passed in. */

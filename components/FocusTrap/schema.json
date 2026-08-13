@@ -13,6 +13,10 @@
       "description": " (Type: FocusTrapOptions)",
       "default": {}
     },
+    "id": {
+      "description": "Unique id that can optionally be applied to focus trap",
+      "type": "string"
+    },
     "paused": {
       "description": "",
       "type": "boolean",

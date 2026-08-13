@@ -6,8 +6,7 @@ export const ClipboardCopyToggleSchema = z.object({
   contentId: z.string(),
   id: z.string(),
   isExpanded: z.boolean().optional().default(false),
-  onClick: z.custom<Event>(),
-  textId: z.string()
+  onClick: z.custom<Event>()
 })
 
 export type ClipboardCopyToggleProps = z.infer<typeof ClipboardCopyToggleSchema>

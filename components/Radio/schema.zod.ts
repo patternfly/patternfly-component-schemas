@@ -2,6 +2,8 @@
 import { z } from 'zod'
 
 export const RadioSchema = z.object({
+  /** Custom aria-describedby value for the radio input. If not provided and description is set, a unique ID will be generated automatically. */
+  'aria-describedby': z.string().optional(),
   /** Aria label for the radio. */
   'aria-label': z.string().optional(),
   /** Body of the radio. */

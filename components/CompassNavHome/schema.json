@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "CompassNavHome Props",
+  "description": "Props for the CompassNavHome component",
+  "properties": {
+    "aria-label": {
+      "description": "Accessible label for the nav home.",
+      "type": "string",
+      "default": "'Home'"
+    },
+    "className": {
+      "description": "Additional classes added to the nav home wrapper.",
+      "type": "string"
+    },
+    "onClick": {
+      "description": "Click handler for the home button. (Type: React.MouseEventHandler<HTMLButtonElement>)"
+    },
+    "tooltipContent": {
+      "description": "Content to display in the tooltip. Defaults to \"Home\". (React component or element)",
+      "default": "'Home'"
+    }
+  },
+  "additionalProperties": false
+}

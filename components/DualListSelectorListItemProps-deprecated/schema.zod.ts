@@ -1,10 +1,9 @@
 // Auto-generated Zod schema for DualListSelectorListItemProps-deprecated
-// Generated on: 2025-10-10T18:12:17.799Z
 import { z } from 'zod'
 
 export const DualListSelectorListItemPropsSchema = z.object({
   /** Content rendered inside the dual list selector. */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes applied to the dual list selector. */
   className: z.string().optional(),
   /** Accessible label for the draggable button on draggable list items */

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "CompassNavMain Props",
+  "description": "Props for the CompassNavMain component",
+  "properties": {
+    "children": {
+      "description": "Content of the nav main section (typically tabs). (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the nav main section.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "children"
+  ],
+  "additionalProperties": false
+}

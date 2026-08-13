@@ -100,7 +100,6 @@ enter key is used on the focused trigger. */
   shouldOpen: z.any().optional(),
   /** Flag indicating whether the close button should be shown. */
   showClose: z.boolean().optional(),
-  /** Sets an interaction to open popover, defaults to "click" */
   triggerAction: z.enum(['click', 'hover']).optional(),
   /** The trigger reference element to which the popover is relatively placed to. If you can wrap the
 element with the popover, you can use the children prop instead, or both props together.
@@ -109,7 +108,8 @@ Usage: <Popover triggerRef={() => document.getElementById('reference-element')} 
   triggerRef: z.any().optional(),
   /** Accessible label for the popover, required when header is not present. */
   'Unknown': z.string().optional(),
-  /** Whether to trap focus in the popover. */
+  /** Whether to trap focus in the popover. When using a triggerAction of "hover", this will be set to false
+by default and must remain false. */
   withFocusTrap: z.boolean().optional(),
   /** The z-index of the popover. */
   zIndex: z.number().optional()

@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "NavExpandable";
 export const componentDescription = "";
-export const propsCount = 12;
+export const propsCount = 13;
 export const requiredProps = ["title"];

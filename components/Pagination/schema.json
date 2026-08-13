@@ -87,7 +87,17 @@
       "default": false
     },
     "isSticky": {
-      "description": "Flag indicating if pagination should stick to its position (based on variant).",
+      "description": "Flag indicating if pagination should stick to its position (based on variant). For dynamic sticky control, use isStickyBase\nand isStickyStuck instead.",
+      "type": "boolean",
+      "default": false
+    },
+    "isStickyBase": {
+      "description": "Flag indicating the pagination should have sticky positioning relative to its container.",
+      "type": "boolean",
+      "default": false
+    },
+    "isStickyStuck": {
+      "description": "Flag indicating the pagination should have stuck styling, when the pagination is not at the top (for top variant) or bottom (for bottom variant) of the scroll container.",
       "type": "boolean",
       "default": false
     },

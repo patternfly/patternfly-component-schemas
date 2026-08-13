@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "SampleRowData Props",
+  "description": "Props for the SampleRowData component",
+  "properties": {
+    "lastModified": {
+      "description": "",
+      "type": "string"
+    },
+    "location": {
+      "description": "",
+      "type": "string"
+    },
+    "status": {
+      "description": "",
+      "type": "string"
+    }
+  },
+  "required": [
+    "lastModified",
+    "location",
+    "status"
+  ],
+  "additionalProperties": false
+}

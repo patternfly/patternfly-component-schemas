@@ -11,7 +11,9 @@ export const MastheadSchema = z.object({
   md: 'inline'
 }'),
   /** Insets at various breakpoints */
-  inset: z.record(z.unknown()).optional()
+  inset: z.record(z.unknown()).optional(),
+  /** Indicates the variant of the masthead */
+  variant: z.enum(['default', 'docked']).optional().default('default')
 })
 
 export type MastheadProps = z.infer<typeof MastheadSchema>

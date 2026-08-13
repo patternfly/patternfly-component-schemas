@@ -16,6 +16,14 @@ export const PageGroupSchema = z.object({
   hasShadowTop: z.boolean().optional().default(false),
   /** Enables the page group to fill the available vertical space if true, or disable filling if false. */
   isFilled: z.boolean().optional(),
+  /** Prevents the page group from automatically applying plain styling when glass theme is enabled. */
+  isNoPlainOnGlass: z.boolean().optional().default(false),
+  /** Adds plain styling to the page group. */
+  isPlain: z.boolean().optional().default(false),
+  /** Flag indicating if the group has stuck styling, applied when the group is not at the edge of the scroll parent container. */
+  isStickyStuck: z.boolean().optional().default(false),
+  /** Applies the base sticky positioning to the top or bottom of the scroll parent container. */
+  stickyBase: z.enum(['top', 'bottom']).optional(),
   /** Modifier indicating if the PageBreadcrumb is sticky to the top or bottom at various breakpoints */
   stickyOnBreakpoint: z.record(z.unknown()).optional()
 })

@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "DualListSelectorTreeItemBase";
 export const componentDescription = "";
-export const propsCount = 13;
+export const propsCount = 14;
 export const requiredProps = ["id","text"];

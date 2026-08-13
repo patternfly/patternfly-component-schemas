@@ -8,16 +8,8 @@
       "description": "",
       "type": "string"
     },
-    "disableHover": {
-      "description": "",
-      "type": "boolean"
-    },
     "flyoutRef": {
       "description": " (Type: React.Ref<HTMLLIElement> | null)"
-    },
-    "ouiaStateId": {
-      "description": "",
-      "type": "string"
     },
     "transitionMoveTarget": {
       "description": " (Type: HTMLElement)"
@@ -25,9 +17,7 @@
   },
   "required": [
     "currentDrilldownMenuId",
-    "disableHover",
     "flyoutRef",
-    "ouiaStateId",
     "transitionMoveTarget"
   ],
   "additionalProperties": false

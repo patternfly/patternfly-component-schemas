@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "CompassNavContent Props",
+  "description": "Props for the CompassNavContent component",
+  "properties": {
+    "children": {
+      "description": "Content of the nav content wrapper. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the nav content.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "children"
+  ],
+  "additionalProperties": false
+}

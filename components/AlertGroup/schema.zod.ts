@@ -1,14 +1,13 @@
 // Auto-generated Zod schema for AlertGroup
-// Generated on: 2025-10-10T18:12:17.793Z
 import { z } from 'zod'
 
 export const AlertGroupSchema = z.object({
   /** Determine where the alert is appended to */
-  appendTo: z.function().optional(),
+  appendTo: z.any().optional(),
   /** Adds an accessible label to the alert group. */
   'aria-label': z.string().optional(),
   /** Alerts to be rendered in the AlertGroup */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the AlertGroup */
   className: z.string().optional(),
   /** Flag to indicate whether Alerts are animated upon rendering and being dismissed. This is intended
@@ -19,7 +18,7 @@ to remain false for testing purposes only. */
   /** Toast notifications are positioned at the top right corner of the viewport */
   isToast: z.boolean().optional(),
   /** Function to call if user clicks on overflow message */
-  onOverflowClick: z.function().optional(),
+  onOverflowClick: z.custom<() => void>().optional(),
   /** Custom text to show for the overflow message */
   overflowMessage: z.string().optional()
 })

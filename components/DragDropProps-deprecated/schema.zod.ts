@@ -1,16 +1,15 @@
 // Auto-generated Zod schema for DragDropProps-deprecated
-// Generated on: 2025-10-10T18:12:17.800Z
 import { z } from 'zod'
 
 export const DragDropPropsSchema = z.object({
   /** Potentially Droppable and Draggable children */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Callback for drag event. Return true to allow drag, false to disallow. */
-  onDrag: z.function().optional(),
+  onDrag: z.custom<(source: DraggableItemPosition) => boolean>().optional(),
   /** Callback on mouse move while dragging. */
-  onDragMove: z.function().optional(),
+  onDragMove: z.custom<(source: DraggableItemPosition, dest?: DraggableItemPosition) => void>().optional(),
   /** Callback for drop event. Return true to allow drop, false to disallow. */
-  onDrop: z.function().optional()
+  onDrop: z.custom<(source: DraggableItemPosition, dest?: DraggableItemPosition) => boolean>().optional()
 })
 
 export type DragDropPropsProps = z.infer<typeof DragDropPropsSchema>

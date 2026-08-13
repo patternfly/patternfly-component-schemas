@@ -8,6 +8,9 @@
       "description": "The text which displays when an overflowing tab isn't selected",
       "type": "string"
     },
+    "popperProps": {
+      "description": "Additional props to spread to the popper menu. (Type: HorizontalOverflowPopperProps)"
+    },
     "showTabCount": {
       "description": "Flag which shows the count of overflowing tabs when enabled",
       "type": "boolean"

@@ -4,6 +4,11 @@
   "title": "Progress Props",
   "description": "Props for the Progress component",
   "properties": {
+    "aria-describedby": {
+      "description": "Adds an accessible description to the ProgressBar via space separated list of ids. Required when helperText is passed in.",
+      "type": "string",
+      "default": null
+    },
     "aria-label": {
       "description": "Adds accessible text to the ProgressBar. Required when title not used and there is not any label associated with the progress bar",
       "type": "string",
@@ -21,6 +26,10 @@
     },
     "helperText": {
       "description": "Content which can be used to convey additional information about the progress component.\nWe recommend the helper text component as it was designed for this purpose. (React component or element)"
+    },
+    "hideStatusIcon": {
+      "description": "Flag indicating whether the status icon should be hidden, helpful when space is limited (such as within table cells). When set to true, you must ensure the context of the status is provided in another way, such as via the progress measure.",
+      "type": "boolean"
     },
     "id": {
       "description": "DOM id for progress component.",

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "Compass Props",
+  "description": "Props for the Compass component",
+  "properties": {
+    "className": {
+      "description": "Additional classes added to the Compass.",
+      "type": "string"
+    },
+    "dock": {
+      "description": "Content of the docked navigation area of the layout (React component or element)"
+    },
+    "drawerContent": {
+      "description": "Content rendered in an optional drawer wrapping the layout (React component or element)"
+    },
+    "drawerProps": {
+      "description": "Additional props passed to the drawer (Type: DrawerProps)"
+    },
+    "footer": {
+      "description": "Content placed at the bottom of the layout (React component or element)"
+    },
+    "header": {
+      "description": "Content placed at the top of the compass layout (React component or element)"
+    },
+    "isDockExpanded": {
+      "description": "Flag indicating the docked nav is expanded on mobile. Only applies when dock content is passed.",
+      "type": "boolean"
+    },
+    "isDockTextExpanded": {
+      "description": "Flag indicating the docked nav should display text on desktop. Only applies when dock content is passed, and\nwill handle toggling the visibility of the text in individual isDocked components.",
+      "type": "boolean"
+    },
+    "isFooterExpanded": {
+      "description": "Flag indicating if the footer is expanded",
+      "type": "boolean",
+      "default": true
+    },
+    "isHeaderExpanded": {
+      "description": "Flag indicating if the header is expanded",
+      "type": "boolean",
+      "default": true
+    },
+    "isSidebarEndExpanded": {
+      "description": "Flag indicating if the end sidebar is expanded",
+      "type": "boolean",
+      "default": true
+    },
+    "isSidebarStartExpanded": {
+      "description": "Flag indicating if the start sidebar is expanded",
+      "type": "boolean",
+      "default": true
+    },
+    "main": {
+      "description": "Content placed at the center of the layout (React component or element)"
+    },
+    "masthead": {
+      "description": "The horizontal masthead content (e.g. <Masthead />). This masthead will only render when dock content is passed and only at mobile viewports. (React component or element)"
+    },
+    "sidebarEnd": {
+      "description": "Content placed at the horizontal end of the layout, after the main content (React component or element)"
+    },
+    "sidebarStart": {
+      "description": "Content placed at the horizontal start of the layout, before the main content (React component or element)"
+    }
+  },
+  "additionalProperties": false
+}

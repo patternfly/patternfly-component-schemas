@@ -83,6 +83,14 @@
         "inset2xl",
         "inset3xl"
       ]
+    },
+    "variant": {
+      "description": "Indicates the variant of the masthead",
+      "enum": [
+        "default",
+        "docked"
+      ],
+      "default": "'default'"
     }
   },
   "additionalProperties": false

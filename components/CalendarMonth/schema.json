@@ -35,6 +35,13 @@
       "description": "How to format days in header for screen readers. (React component or element)",
       "default": "(date) => date.toLocaleDateString(locale, { weekday: 'long' })"
     },
+    "monthAppendTo": {
+      "description": "The container to append the month select menu to. Defaults to 'inline'.\nIf your menu is being cut off you can append it to an element higher up the DOM tree.\nSome examples:\nmonthAppendTo={() => document.body};\nmonthAppendTo={document.getElementById('target')}",
+      "enum": [
+        "inline"
+      ],
+      "default": "'inline'"
+    },
     "monthFormat": {
       "description": "How to format months in month select. (React component or element)",
       "default": "(date) => date.toLocaleDateString(locale, { month: 'long' })"

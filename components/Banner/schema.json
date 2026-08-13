@@ -24,6 +24,11 @@
         "purple"
       ]
     },
+    "isPill": {
+      "description": "If set to true, the banner will have a pill shape",
+      "type": "boolean",
+      "default": false
+    },
     "isSticky": {
       "description": "If set to true, the banner sticks to the top of its container",
       "type": "boolean",

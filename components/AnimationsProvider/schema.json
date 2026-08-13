@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "AnimationsProvider Props",
+  "description": "AnimationsProvider is an application-level provider that provides uniform\nanimation configuration for all PatternFly React components via the React context API.\n\n**Usage**: Place this provider at the root of your application to enable global\nanimation control without requiring manual prop drilling throughout your component tree.\n\n**Benefits**:\n- Centralized animation control for the entire application\n- Respects user accessibility preferences (reduced motion)\n- Components can still override the global setting when needed\n- Works with all PatternFly components that support animations\n\n@example\n```tsx\n// App.tsx - Place at your application root\nimport { AnimationsProvider } from '@patternfly/react-core';\n\nconst App = () => (\n  <AnimationsProvider config={{ hasAnimations: true }}>\n    <MyApplication />\n  </AnimationsProvider>\n);\n```",
+  "properties": {
+    "children": {
+      "description": "Child components that will have access to the animations context (Type: ReactNode)"
+    },
+    "config": {
+      "description": "Animation configuration settings (Type: AnimationsConfig)"
+    }
+  },
+  "required": [
+    "children",
+    "config"
+  ],
+  "additionalProperties": false
+}

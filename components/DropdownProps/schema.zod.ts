@@ -6,6 +6,12 @@ export const DropdownPropsSchema = z.object({
   children: z.custom<React.ReactNode>().optional(),
   /** Classes applied to root element of dropdown. */
   className: z.string().optional(),
+  /** Sets the base component to render for the container. Defaults to <span> */
+  containerComponent: z.custom<React.ReactNode>().optional(),
+  /** When applied, wraps dropdown in a container with a data-ouia-component-id. */
+  containerOuiaId: z.any().optional(),
+  /** Set the value of data-ouia-safe for the container when containerOuiaId is applied. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false. */
+  containerOuiaSafe: z.boolean().optional(),
   /** Time in ms to wait before firing the toggles' focus event. Defaults to 0 */
   focusTimeoutDelay: z.number().optional(),
   innerRef: z.unknown().optional(),
@@ -25,7 +31,7 @@ Triggered by clicking outside of the menu, or by pressing any keys specified in 
   /** Keys that trigger onOpenChange, defaults to tab and escape. It is highly recommended to include Escape in the array, while Tab may be omitted if the menu contains non-menu items that are focusable. */
   onOpenChangeKeys: z.array(z.string()).optional(),
   /** Function callback called when user selects item. */
-  onSelect: z.any().optional(),
+  onSelect: z.custom<Event>().optional(),
   /** Callback to override the toggle keydown behavior. By default, when the toggle has focus and the menu is open, pressing the up/down arrow keys will focus a valid non-disabled menu item - the first item for the down arrow key and last item for the up arrow key. */
   onToggleKeydown: z.custom<Event>().optional(),
   /** Value to overwrite the randomly generated data-ouia-component-id. */

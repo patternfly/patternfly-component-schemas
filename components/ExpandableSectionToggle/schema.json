@@ -29,6 +29,10 @@
       "type": "boolean",
       "default": false
     },
+    "isDetached": {
+      "description": "Flag indicating that the expandable section and expandable toggle are detached from one another.",
+      "type": "boolean"
+    },
     "isExpanded": {
       "description": "Flag indicating if the expandable section is expanded.",
       "type": "boolean",
@@ -37,9 +41,30 @@
     "onToggle": {
       "description": "Callback function to toggle the expandable content. (Function: (isExpanded: boolean) => void)"
     },
+    "toggleAriaLabel": {
+      "description": "Accessible name via human readable string for the expandable section toggle.",
+      "type": "string"
+    },
+    "toggleAriaLabelledBy": {
+      "description": "Accessible name via space delimtted list of IDs for the expandable section toggle.",
+      "type": "string"
+    },
     "toggleId": {
       "description": "Id of the toggle. The value passed into this property should match the aria-labelledby\nproperty of the main expandable section component.",
       "type": "string"
+    },
+    "toggleWrapper": {
+      "description": "The HTML element to use for the toggle wrapper. Can be 'div' (default) or any heading level.\nWhen using heading elements, the button will be rendered inside the heading for proper semantics.\nThis is useful when the toggle text should function as a heading in the document structure.",
+      "enum": [
+        "div",
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ],
+      "default": "'div'"
     }
   },
   "additionalProperties": false

@@ -14,6 +14,11 @@
     "isIconList": {
       "description": "Flag indicating the action list contains multiple icons and item padding should be removed",
       "type": "boolean"
+    },
+    "isVertical": {
+      "description": "Whether the layout of children is vertical or horizontal.",
+      "type": "boolean",
+      "default": false
     }
   },
   "additionalProperties": false

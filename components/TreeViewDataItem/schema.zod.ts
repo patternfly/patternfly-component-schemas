@@ -24,6 +24,10 @@ export const TreeViewDataItemSchema = z.object({
   icon: z.custom<React.ReactNode>().optional(),
   /** ID of a tree view item. */
   id: z.string().optional(),
+  /** Flag indicating if the tree view item is disabled. */
+  isDisabled: z.boolean().optional(),
+  /** Flag indicating if the tree view item toggle is disabled. */
+  isToggleDisabled: z.boolean().optional(),
   /** Internal content of a tree view item. */
   name: z.custom<React.ReactNode>(),
   /** Title of a tree view item. Only used in compact presentations. */

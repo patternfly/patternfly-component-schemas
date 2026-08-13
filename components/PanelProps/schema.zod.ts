@@ -6,7 +6,12 @@ export const PanelPropsSchema = z.object({
   children: z.custom<React.ReactNode>().optional(),
   /** Class to add to outer div */
   className: z.string().optional(),
+  hasNoBorder: z.boolean().optional(),
   innerRef: z.unknown().optional(),
+  isAutoHeight: z.boolean().optional(),
+  isFullHeight: z.boolean().optional(),
+  isGlass: z.boolean().optional(),
+  isPill: z.boolean().optional(),
   /** Flag to add scrollable styling to the panel */
   isScrollable: z.boolean().optional(),
   /** Adds panel variant styles */

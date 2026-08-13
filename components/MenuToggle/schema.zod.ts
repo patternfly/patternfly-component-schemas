@@ -11,16 +11,26 @@ export const MenuToggleSchema = z.object({
   /** Optional icon or image rendered inside the toggle, before the children content. It is
 recommended to wrap most basic icons in our icon component. */
   icon: z.custom<React.ReactNode>().optional(),
+  /** Flag indicating the toggle has circular styling. Can only be applied to plain toggles. */
+  isCircle: z.boolean().optional(),
   /** Flag indicating the toggle is disabled */
   isDisabled: z.boolean().optional(),
+  /** Flag indicating the menu toggle is a docked variant. For use in docked navigation. */
+  isDocked: z.boolean().optional(),
   /** Flag indicating the toggle has expanded styling */
   isExpanded: z.boolean().optional(),
   /** Flag indicating the toggle is full height */
   isFullHeight: z.boolean().optional(),
   /** Flag indicating the toggle takes up the full width of its parent */
   isFullWidth: z.boolean().optional(),
+  /** Flag indicating the toggle is placed inside a form */
+  isInForm: z.boolean().optional(),
   /** Flag indicating the toggle contains placeholder text */
   isPlaceholder: z.boolean().optional(),
+  /** Flag indicating whether the toggle is a settings toggle. This will override the icon property */
+  isSettings: z.boolean().optional(),
+  /** Flag indicating the docked toggle should display text. Only applies when isDocked is true. */
+  isTextExpanded: z.boolean().optional(),
   /** Value to overwrite the randomly generated data-ouia-component-id. It will always target the toggle button. */
   ouiaId: z.any().optional(),
   /** Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false. */

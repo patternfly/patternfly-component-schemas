@@ -122,8 +122,9 @@ element with the popover, you can use the children prop instead, or both props t
 When passed along with the trigger prop, the div element that wraps the trigger will be removed.
 Usage: <Popover triggerRef={() => document.getElementById('reference-element')} /> */
   triggerRef: z.any().optional(),
-  /** Whether to trap focus in the popover. */
-  withFocusTrap: z.boolean().optional(),
+  /** Whether to trap focus in the popover. When using a triggerAction of "hover", this will be set to false
+by default and must remain false. */
+  withFocusTrap: z.boolean().optional().default('triggerAction === 'hover' ? false : undefined'),
   /** The z-index of the popover. */
   zIndex: z.number().optional().default(9999)
 })

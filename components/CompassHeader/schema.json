@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "CompassHeader Props",
+  "description": "Props for the CompassHeader component",
+  "properties": {
+    "logo": {
+      "description": "Content of the logo area (React component or element)"
+    },
+    "nav": {
+      "description": "Content of the navigation area (React component or element)"
+    },
+    "profile": {
+      "description": "Content of the profile area (React component or element)"
+    }
+  },
+  "additionalProperties": false
+}

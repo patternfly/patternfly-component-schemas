@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "Truncate";
 export const componentDescription = "";
-export const propsCount = 5;
+export const propsCount = 9;
 export const requiredProps = ["content"];

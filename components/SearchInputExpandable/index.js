@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "SearchInputExpandable";
 export const componentDescription = "Properties for creating an expandable search input. These properties should be passed into\nthe search input component's expandableInput property.";
-export const propsCount = 3;
+export const propsCount = 4;
 export const requiredProps = ["isExpanded","onToggleExpand","toggleAriaLabel"];

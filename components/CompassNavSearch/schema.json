@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "CompassNavSearch Props",
+  "description": "Props for the CompassNavSearch component",
+  "properties": {
+    "aria-label": {
+      "description": "Accessible label for the nav search.",
+      "type": "string",
+      "default": "'Search'"
+    },
+    "className": {
+      "description": "Additional classes added to the nav search wrapper.",
+      "type": "string"
+    },
+    "onClick": {
+      "description": "Click handler for the search button. (Type: React.MouseEventHandler<HTMLButtonElement>)"
+    },
+    "tooltipContent": {
+      "description": "Content to display in the tooltip. Defaults to \"Search\". (React component or element)",
+      "default": "'Search'"
+    }
+  },
+  "additionalProperties": false
+}

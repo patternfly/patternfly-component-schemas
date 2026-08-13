@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "CompassMainHeaderContent Props",
+  "description": "A wrapper component to be passed as custom content for the Compass main header. This should also be wrapped\nin a `Panel` with `PanelMain` and `PanelMainBody`.",
+  "properties": {
+    "children": {
+      "description": "Content of the main header content. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the main header content.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "children"
+  ],
+  "additionalProperties": false
+}

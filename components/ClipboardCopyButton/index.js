@@ -8,4 +8,4 @@ export { schema };
 export const componentName = "ClipboardCopyButton";
 export const componentDescription = "";
 export const propsCount = 13;
-export const requiredProps = ["children","id","onClick","textId"];
+export const requiredProps = ["children","id","onClick"];

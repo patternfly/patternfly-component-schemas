@@ -20,6 +20,9 @@
       "description": "Group identifier, will be returned with the onToggle and onSelect callback passed to the Nav component (Type: string | number)",
       "default": null
     },
+    "icon": {
+      "description": "Icon added before the nav item children. (React component or element)"
+    },
     "id": {
       "description": "Identifier to use for the section aria label",
       "type": "string",

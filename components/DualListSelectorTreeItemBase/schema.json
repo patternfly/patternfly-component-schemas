@@ -21,6 +21,10 @@
       "description": "Flag indicating this option is expanded by default.",
       "type": "boolean"
     },
+    "hasAnimations": {
+      "description": "Flag indicating whether a tree dual list selector has animations. This will always render\nnested dual list selector items rather than dynamically rendering them. This prop will be removed in\nthe next breaking change release in favor of defaulting to always-rendered items.",
+      "type": "boolean"
+    },
     "hasBadge": {
       "description": "Flag indicating this option has a badge.",
       "type": "boolean"

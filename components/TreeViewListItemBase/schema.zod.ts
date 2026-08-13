@@ -22,6 +22,10 @@ export const TreeViewListItemBaseSchema = z.object({
   defaultExpanded: z.boolean().optional().default(false),
   /** Expanded icon of a tree view item. */
   expandedIcon: z.custom<React.ReactNode>().optional(),
+  /** Flag indicating whether a tree view has animations. This will always render
+nested tree view items rather than dynamically rendering them. This prop will be removed in
+the next breaking change release in favor of defaulting to always-rendered items. */
+  hasAnimations: z.boolean().optional(),
   /** Flag indicating if a tree view item has a badge. */
   hasBadge: z.boolean().optional().default(false),
   /** Flag indicating if a tree view item has a checkbox. */
@@ -32,11 +36,15 @@ export const TreeViewListItemBaseSchema = z.object({
   id: z.string().optional(),
   /** Flag indicating if the tree view is using a compact variation. */
   isCompact: z.boolean().optional(),
+  /** Flag indicating if the tree view item is disabled. */
+  isDisabled: z.boolean().optional().default(false),
   /** Flag indicating if the node is expanded, overrides internal state. */
   isExpanded: z.boolean().optional(),
   /** Flag indicating that tree nodes should be independently selectable, even when having
 children. */
   isSelectable: z.boolean().optional().default(false),
+  /** Flag indicating if the tree view item toggle is disabled. */
+  isToggleDisabled: z.boolean().optional().default(false),
   /** Data structure of tree view item. */
   itemData: z.unknown().optional(),
   /** Internal content of a tree view item. */

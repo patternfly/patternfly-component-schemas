@@ -1,10 +1,9 @@
 // Auto-generated Zod schema for DualListSelectorTreeProps-deprecated
-// Generated on: 2025-10-10T18:12:17.799Z
 import { z } from 'zod'
 
 export const DualListSelectorTreePropsSchema = z.object({
   /** Data of the tree view */
-  data: z.array(z.any()),
+  data: z.any(),
   /** Sets the default expanded behavior */
   defaultAllExpanded: z.boolean().optional(),
   /** Flag indicating if all options should have badges */

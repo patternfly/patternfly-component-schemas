@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "Avatar";
 export const componentDescription = "";
-export const propsCount = 5;
+export const propsCount = 8;
 export const requiredProps = ["alt"];

@@ -25,7 +25,7 @@ export const ClipboardCopyButtonSchema = z.object({
   /** Position of the copy button tooltip */
   position: z.enum(['auto', 'top', 'bottom', 'left', 'right', 'top-start', 'top-end', 'bottom-start', 'bottom-end', 'left-start', 'left-end', 'right-start', 'right-end']).optional().default('top'),
   /** ID of the content that is being copied */
-  textId: z.string(),
+  textId: z.string().optional(),
   /** Variant of the copy button */
   variant: z.enum(['control', 'plain']).optional().default('control')
 })

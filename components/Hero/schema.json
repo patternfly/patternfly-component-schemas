@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "Hero Props",
+  "description": "The main Hero component that allows adjusting of its background images and gradients in different color modes (such as light and dark).",
+  "properties": {
+    "backgroundSrcDark": {
+      "description": "Dark theme background image path of the hero",
+      "type": "string"
+    },
+    "backgroundSrcLight": {
+      "description": "Light theme background image path of the hero",
+      "type": "string"
+    },
+    "bodyMaxWidth": {
+      "description": "Modifies the max-width of the hero body.",
+      "type": "string"
+    },
+    "bodyWidth": {
+      "description": "Modifies the width of the hero body.",
+      "type": "string"
+    },
+    "children": {
+      "description": "Content of the hero (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the hero",
+      "type": "string"
+    },
+    "gradientDark": {
+      "description": "Dark theme gradient of the hero, taking any valid CSS color values for each stop property. (Type: {\n  stop1?: string;\n  stop2?: string;\n  stop3?: string;\n})"
+    },
+    "gradientLight": {
+      "description": "Light theme gradient of the hero, taking any valid CSS color values for each stop property. (Type: {\n  stop1?: string;\n  stop2?: string;\n  stop3?: string;\n})"
+    },
+    "isGlass": {
+      "description": "Flag indicating the hero has glass styling when glass theme is applied.",
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "additionalProperties": false
+}

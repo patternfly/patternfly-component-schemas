@@ -1,0 +1,35 @@
+// Auto-generated Zod schema for ExpandableSectionToggleProps
+import { z } from 'zod'
+
+export const ExpandableSectionTogglePropsSchema = z.object({
+  /** Content rendered inside the expandable toggle. */
+  children: z.custom<React.ReactNode>().optional(),
+  /** Additional classes added to the expandable toggle. */
+  className: z.string().optional(),
+  /** Id of the toggle's respective expandable section content. The value passed into this
+property should match the contentId property of the main expandable section component. */
+  contentId: z.string().optional(),
+  /** Direction the toggle arrow should point when the expandable section is expanded. */
+  direction: z.enum(['up', 'down']).optional(),
+  /** Flag to determine toggle styling when the expandable content is truncated. */
+  hasTruncatedContent: z.boolean().optional(),
+  /** Flag indicating that the expandable section and expandable toggle are detached from one another. */
+  isDetached: z.boolean().optional(),
+  /** Flag indicating if the expandable section is expanded. */
+  isExpanded: z.boolean().optional(),
+  /** Callback function to toggle the expandable content. */
+  onToggle: z.custom<(isExpanded: boolean) => void>().optional(),
+  /** Accessible name via human readable string for the expandable section toggle. */
+  toggleAriaLabel: z.string().optional(),
+  /** Accessible name via space delimtted list of IDs for the expandable section toggle. */
+  toggleAriaLabelledBy: z.string().optional(),
+  /** Id of the toggle. The value passed into this property should match the aria-labelledby
+property of the main expandable section component. */
+  toggleId: z.string().optional(),
+  /** The HTML element to use for the toggle wrapper. Can be 'div' (default) or any heading level.
+When using heading elements, the button will be rendered inside the heading for proper semantics.
+This is useful when the toggle text should function as a heading in the document structure. */
+  toggleWrapper: z.enum(['div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']).optional()
+})
+
+export type ExpandableSectionTogglePropsProps = z.infer<typeof ExpandableSectionTogglePropsSchema>

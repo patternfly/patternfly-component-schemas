@@ -38,6 +38,10 @@
     "expandedIcon": {
       "description": "Expanded icon of a tree view item. (React component or element)"
     },
+    "hasAnimations": {
+      "description": "Flag indicating whether a tree view has animations. This will always render\nnested tree view items rather than dynamically rendering them. This prop will be removed in\nthe next breaking change release in favor of defaulting to always-rendered items.",
+      "type": "boolean"
+    },
     "hasBadge": {
       "description": "Flag indicating if a tree view item has a badge.",
       "type": "boolean",
@@ -59,12 +63,22 @@
       "description": "Flag indicating if the tree view is using a compact variation.",
       "type": "boolean"
     },
+    "isDisabled": {
+      "description": "Flag indicating if the tree view item is disabled.",
+      "type": "boolean",
+      "default": false
+    },
     "isExpanded": {
       "description": "Flag indicating if the node is expanded, overrides internal state.",
       "type": "boolean"
     },
     "isSelectable": {
       "description": "Flag indicating that tree nodes should be independently selectable, even when having\nchildren.",
+      "type": "boolean",
+      "default": false
+    },
+    "isToggleDisabled": {
+      "description": "Flag indicating if the tree view item toggle is disabled.",
       "type": "boolean",
       "default": false
     },
@@ -75,7 +89,7 @@
       "description": "Internal content of a tree view item. (React component or element)"
     },
     "onCheck": {
-      "description": "Callback for item checkbox selection. (Function: (event: React.ChangeEvent<HTMLInputElement>, item: TreeViewDataItem, parent: TreeViewDataItem) => void)"
+      "description": "Callback for item checkbox selection. (Function: (event: React.ChangeEvent<HTMLInputElement>, item: TreeViewDataItem, parentItem: TreeViewDataItem) => void)"
     },
     "onCollapse": {
       "description": "Callback for collapsing a node with children. (Function: (event: React.MouseEvent, item: TreeViewDataItem, parentItem: TreeViewDataItem) => void)"
@@ -84,7 +98,7 @@
       "description": "Callback for expanding a node with children. (Function: (event: React.MouseEvent, item: TreeViewDataItem, parentItem: TreeViewDataItem) => void)"
     },
     "onSelect": {
-      "description": "Callback for item selection. Note: calling event.preventDefault() will prevent the node\nfrom toggling. (Function: (event: React.MouseEvent, item: TreeViewDataItem, parent: TreeViewDataItem) => void)"
+      "description": "Callback for item selection. Note: calling event.preventDefault() will prevent the node\nfrom toggling. (Function: (event: React.MouseEvent, item: TreeViewDataItem, parentItem: TreeViewDataItem) => void)"
     },
     "parentItem": {
       "description": "Parent item of tree view item. (Type: TreeViewDataItem)"

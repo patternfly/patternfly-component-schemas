@@ -12,6 +12,10 @@ export const DualListSelectorTreeItemBaseSchema = z.object({
   className: z.string().optional(),
   /** Flag indicating this option is expanded by default. */
   defaultExpanded: z.boolean().optional(),
+  /** Flag indicating whether a tree dual list selector has animations. This will always render
+nested dual list selector items rather than dynamically rendering them. This prop will be removed in
+the next breaking change release in favor of defaulting to always-rendered items. */
+  hasAnimations: z.boolean().optional(),
   /** Flag indicating this option has a badge. */
   hasBadge: z.boolean().optional(),
   /** ID of the option. */

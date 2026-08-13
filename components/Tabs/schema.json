@@ -33,8 +33,7 @@
       "enum": [
         "div",
         "nav"
-      ],
-      "default": "TabsComponent.div"
+      ]
     },
     "defaultActiveKey": {
       "description": "The index of the default active tab. Set this for uncontrolled Tabs (Type: number | string)"
@@ -117,6 +116,10 @@
         "inset2xl"
       ]
     },
+    "isAddButtonDisabled": {
+      "description": "Flag indicating that the add button is disabled when onAdd is passed in",
+      "type": "boolean"
+    },
     "isBox": {
       "description": "Enables box styling to the tab component",
       "type": "boolean",
@@ -128,6 +131,11 @@
     },
     "isFilled": {
       "description": "Enables the filled tab list layout",
+      "type": "boolean",
+      "default": false
+    },
+    "isNav": {
+      "description": "Enables horizontal nav tab styling",
       "type": "boolean",
       "default": false
     },
@@ -158,10 +166,10 @@
       "description": "Callback for the add button. Passing this property inserts the add button (Function: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void)"
     },
     "onClose": {
-      "description": "Callback to handle tab closing and adds a basic close button to all tabs. This is overridden by the tab actions property. (Type: (event: React.MouseEvent<HTMLElement, MouseEvent>, eventKey: number | string) => void)"
+      "description": "Callback to handle tab closing and adds a basic close button to all tabs. This is overridden by the tab actions property. (Function: (event: React.MouseEvent<HTMLElement, MouseEvent>, eventKey: TabProps['eventKey']) => void)"
     },
     "onSelect": {
-      "description": "Callback to handle tab selection (Type: (event: React.MouseEvent<HTMLElement, MouseEvent>, eventKey: number | string) => void)",
+      "description": "Callback to handle tab selection (Function: (event: React.MouseEvent<HTMLElement, MouseEvent>, eventKey: TabProps['eventKey']) => void)",
       "default": "() => undefined as any"
     },
     "onToggle": {
@@ -180,6 +188,14 @@
       "description": "Please use forwardScrollAriaLabel. Aria-label for the right scroll button",
       "type": "string",
       "default": "'Scroll right'"
+    },
+    "tabListAriaLabel": {
+      "description": "A readable string to create an accessible name for the tablist element. This can be used to differentiate multiple tablists on a page, and should be used for subtabs.",
+      "type": "string"
+    },
+    "tabListAriaLabelledBy": {
+      "description": "Id of an element that provides an accessible name for the tablist. Use this when a visible label already exists on the page.",
+      "type": "string"
     },
     "toggleAriaLabel": {
       "description": "Aria-label for the expandable toggle",

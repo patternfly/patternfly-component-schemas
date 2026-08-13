@@ -18,6 +18,16 @@
       "description": "Additional classes added to the Menu",
       "type": "string"
     },
+    "containerComponent": {
+      "description": "Sets the base component to render for the container. Defaults to <span> (React component or element)"
+    },
+    "containerOuiaId": {
+      "description": "When applied, wraps dropdown in a container with a data-ouia-component-id. (Type: number | string)"
+    },
+    "containerOuiaSafe": {
+      "description": "Set the value of data-ouia-safe for the container when containerOuiaId is applied. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false.",
+      "type": "boolean"
+    },
     "containsDrilldown": {
       "description": "Indicates if menu contains a drilldown menu",
       "type": "boolean"
@@ -94,7 +104,7 @@
       "type": "array"
     },
     "onSelect": {
-      "description": "Callback for updating when item selection changes. You can also specify onClick on the MenuItem. (Type: (event?: React.MouseEvent<Element, MouseEvent>, value?: string | number) => void)"
+      "description": "Callback for updating when item selection changes. You can also specify onClick on the MenuItem. (Function: (event?: React.MouseEvent<Element, MouseEvent>, value?: DropdownItemProps['value']) => void)"
     },
     "onToggleKeydown": {
       "description": "Callback to override the toggle keydown behavior. By default, when the toggle has focus and the menu is open, pressing the up/down arrow keys will focus a valid non-disabled menu item - the first item for the down arrow key and last item for the up arrow key. (Function: (event: KeyboardEvent) => void)"
@@ -111,7 +121,7 @@
       "type": "string"
     },
     "popperProps": {
-      "description": "Additional properties to pass to the Popper (Type: DropdownPopperProps)"
+      "description": "Additional properties to pass to the Popper (Type: PopperOptions)"
     },
     "role": {
       "description": "Determines the accessible role of the menu. For a non-checkbox menu that can have\none or more items selected, pass in \"listbox\".",

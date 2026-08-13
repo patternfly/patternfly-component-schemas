@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "TreeViewDataItem";
 export const componentDescription = "Properties that make up a tree view data item. These properties should be passed in as an\nobject to one of the various tree view component properties which accept TreeViewDataItem as\na type.";
-export const propsCount = 13;
+export const propsCount = 15;
 export const requiredProps = ["name"];

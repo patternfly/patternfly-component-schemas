@@ -10,6 +10,8 @@ export const ToggleGroupPropsSchema = z.object({
   className: z.string().optional(),
   /** Modifies the toggle group to include compact styling. */
   isCompact: z.boolean().optional(),
+  /** Modifies the toggle group items to fill the available space. */
+  isFill: z.boolean().optional(),
   /** Accessible label for the toggle group */
   'Unknown': z.string().optional()
 })

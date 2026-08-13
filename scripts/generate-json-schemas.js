@@ -80,7 +80,7 @@ function convertMetadataToJsonSchema(metadata) {
 }
 
 // Generate lightweight JSON schemas
-function generateJsonSchemas(inputFile) {
+function generateJsonSchemas(inputFile, pfVersion) {
   console.log('📖 Reading metadata file...');
 
   if (!existsSync(inputFile)) {
@@ -142,6 +142,7 @@ function generateJsonSchemas(inputFile) {
   // Create metadata structure
   const lightweightIndex = {
     version: '1.0.0',
+    ...((pfVersion && { pfVersion }) || {}),
     generated: new Date().toISOString(),
     totalComponents: Object.keys(components).length,
     totalProps,
@@ -176,6 +177,7 @@ export { index };
 export const componentNames = Object.keys(index.components);
 export const componentCount = index.totalComponents;
 export const schemaVersion = index.version;
+export const pfVersion = index.pfVersion;
 
 // Get all schemas on-demand
 export async function getAllSchemas() {
@@ -245,5 +247,28 @@ export default index;
 }
 
 // Main execution
-const inputFile = process.argv[2];
-generateJsonSchemas(inputFile);
+const args = process.argv.slice(2);
+let inputFile = null;
+let pfVersion = '6.x.x';
+
+for (let i = 0; i < args.length; i++) {
+  const arg = args[i];
+  if (arg.startsWith('--pf-version=')) {
+    pfVersion = arg.split('=')[1];
+  } else if (arg === '--pf-version') {
+    if (args[i + 1] && !args[i + 1].startsWith('-')) {
+      pfVersion = args[i + 1];
+      i+=1;
+    }
+  } else if (!arg.startsWith('-')) {
+    if (!inputFile) {
+      inputFile = arg;
+    }
+  }
+}
+
+if (!inputFile) {
+  inputFile = 'component-metadata.json';
+}
+
+generateJsonSchemas(inputFile, pfVersion);

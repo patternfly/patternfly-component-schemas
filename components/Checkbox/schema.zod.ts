@@ -2,6 +2,8 @@
 import { z } from 'zod'
 
 export const CheckboxSchema = z.object({
+  /** Custom aria-describedby value for the checkbox input. If not provided and description is set, a unique ID will be generated automatically. */
+  'aria-describedby': z.string().optional(),
   /** Aria-label of the checkbox. */
   'aria-label': z.string().optional(),
   /** Body text of the checkbox */

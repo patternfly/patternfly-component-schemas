@@ -10,6 +10,8 @@ export const OverflowTabSchema = z.object({
   focusTimeoutDelay: z.number().optional().default(0),
   /** The tabs that should be displayed in the menu */
   overflowingTabs: z.array(z.unknown()).optional().default('[]'),
+  /** Additional props to spread to the popper menu. */
+  popperProps: z.unknown().optional(),
   /** Flag indicating if scroll on focus of the first menu item should occur. */
   shouldPreventScrollOnItemFocus: z.boolean().optional().default(true),
   /** Flag which shows the count of overflowing tabs when enabled */

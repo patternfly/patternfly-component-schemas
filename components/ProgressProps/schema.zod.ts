@@ -7,6 +7,8 @@ export const ProgressPropsSchema = z.object({
   /** Content which can be used to convey additional information about the progress component.
 We recommend the helper text component as it was designed for this purpose. */
   helperText: z.custom<React.ReactNode>().optional(),
+  /** Flag indicating whether the status icon should be hidden, helpful when space is limited (such as within table cells). When set to true, you must ensure the context of the status is provided in another way, such as via the progress measure. */
+  hideStatusIcon: z.boolean().optional(),
   /** DOM id for progress component. */
   id: z.string().optional(),
   /** Indicate whether to truncate the string title */
@@ -25,7 +27,7 @@ We recommend the helper text component as it was designed for this purpose. */
   title: z.custom<React.ReactNode>().optional(),
   /** Position of the tooltip which is displayed if title is truncated */
   tooltipPosition: z.enum(['auto', 'top', 'bottom', 'left', 'right']).optional(),
-  /** Associates the ProgressBar with it's label for accessibility purposes. Required when title not used */
+  /** Adds an accessible description to the ProgressBar via space separated list of ids. Required when helperText is passed in. */
   'Unknown': z.string().optional(),
   /** Actual value of progress. */
   value: z.number().optional(),

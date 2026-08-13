@@ -4,6 +4,10 @@
   "title": "Checkbox Props",
   "description": "Props for the Checkbox component",
   "properties": {
+    "aria-describedby": {
+      "description": "Custom aria-describedby value for the checkbox input. If not provided and description is set, a unique ID will be generated automatically.",
+      "type": "string"
+    },
     "aria-label": {
       "description": "Aria-label of the checkbox.",
       "type": "string"

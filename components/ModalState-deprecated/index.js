@@ -8,4 +8,4 @@ export { schema };
 export const componentName = "ModalState-deprecated";
 export const componentDescription = "";
 export const propsCount = 1;
-export const requiredProps = ["ouiaStateId"];
+export const requiredProps = ["mounted"];

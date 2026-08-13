@@ -5,7 +5,7 @@ export const NotificationBadgeSchema = z.object({
   /** Adds an accessible label to the notification badge. */
   'aria-label': z.string().optional(),
   /** Icon to display for attention variant. */
-  attentionIcon: z.custom<React.ReactNode>().optional().default('<AttentionBellIcon />'),
+  attentionIcon: z.custom<React.ReactNode>().optional().default('<RhUiAttentionBellFillIcon />'),
   /** Content rendered inside the notification badge. */
   children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the notification badge. */
@@ -13,7 +13,7 @@ export const NotificationBadgeSchema = z.object({
   /** A number displayed in the badge alongside the icon. */
   count: z.number().optional().default(0),
   /** Icon to display in the notification badge. */
-  icon: z.custom<React.ReactNode>().optional().default('<BellIcon />'),
+  icon: z.custom<React.ReactNode>().optional().default('<RhUiNotificationFillIcon />'),
   /** Flag for applying expanded styling and setting the aria-expanded attribute on the
 notification badge. */
   isExpanded: z.boolean().optional().default(false),
@@ -23,7 +23,7 @@ notification badge. */
 time this prop is true, the animation will be triggered a single time. */
   shouldNotify: z.boolean().optional().default(false),
   /** Determines the variant of the notification badge. */
-  variant: z.enum(['read', 'unread', 'attention']).optional().default('NotificationBadgeVariant.read')
+  variant: z.enum(['read', 'unread', 'attention', 'plain']).optional().default('NotificationBadgeVariant.read')
 })
 
 export type NotificationBadgeProps = z.infer<typeof NotificationBadgeSchema>

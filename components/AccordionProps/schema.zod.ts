@@ -14,6 +14,8 @@ export const AccordionPropsSchema = z.object({
   headingLevel: z.enum(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']).optional(),
   /** Flag to indicate the accordion had a border */
   isBordered: z.boolean().optional(),
+  isNoPlainOnGlass: z.boolean().optional(),
+  isPlain: z.boolean().optional(),
   /** Sets the toggle icon position for all accordion toggles. */
   togglePosition: z.enum(['start', 'end']).optional(),
   /** Adds accessible text to the Accordion */

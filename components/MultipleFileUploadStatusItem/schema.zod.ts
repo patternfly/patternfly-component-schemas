@@ -26,6 +26,8 @@ export const MultipleFileUploadStatusItemSchema = z.object({
   onReadStarted: z.custom<(fileHandle: File) => void>().optional().default('() => {}'),
   /** A callback for when the FileReader successfully reads the file */
   onReadSuccess: z.custom<(data: string, file: File) => void>().optional().default('() => {}'),
+  /** Adds an accessible description to the ProgressBar via space separated list of ids. Required when helperText is passed in. */
+  progressAriaDescribedBy: z.string().optional(),
   /** Adds accessible text to the progress bar. Required when title not used and there is not any label associated with the progress bar */
   progressAriaLabel: z.string().optional(),
   /** Associates the progress bar with it's label for accessibility purposes. Required when title not used */

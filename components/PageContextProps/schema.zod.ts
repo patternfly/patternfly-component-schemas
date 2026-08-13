@@ -6,6 +6,7 @@ export const PageContextPropsSchema = z.object({
   getVerticalBreakpoint: z.enum(['sm', 'md', 'lg', 'xl', '2xl']),
   height: z.number(),
   isManagedSidebar: z.boolean(),
+  isMobile: z.boolean(),
   isSidebarOpen: z.boolean(),
   onSidebarToggle: z.custom<() => void>(),
   width: z.number()

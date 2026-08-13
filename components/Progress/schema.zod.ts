@@ -2,6 +2,8 @@
 import { z } from 'zod'
 
 export const ProgressSchema = z.object({
+  /** Adds an accessible description to the ProgressBar via space separated list of ids. Required when helperText is passed in. */
+  'aria-describedby': z.string().optional().default('null'),
   /** Adds accessible text to the ProgressBar. Required when title not used and there is not any label associated with the progress bar */
   'aria-label': z.string().optional().default('null'),
   /** Associates the ProgressBar with it's label for accessibility purposes. Required when title not used */
@@ -11,6 +13,8 @@ export const ProgressSchema = z.object({
   /** Content which can be used to convey additional information about the progress component.
 We recommend the helper text component as it was designed for this purpose. */
   helperText: z.custom<React.ReactNode>().optional(),
+  /** Flag indicating whether the status icon should be hidden, helpful when space is limited (such as within table cells). When set to true, you must ensure the context of the status is provided in another way, such as via the progress measure. */
+  hideStatusIcon: z.boolean().optional(),
   /** DOM id for progress component. */
   id: z.string().optional().default(''),
   /** Indicate whether to truncate the string title */

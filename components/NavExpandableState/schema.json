@@ -7,15 +7,10 @@
     "expandedState": {
       "description": "",
       "type": "boolean"
-    },
-    "ouiaStateId": {
-      "description": "",
-      "type": "string"
     }
   },
   "required": [
-    "expandedState",
-    "ouiaStateId"
+    "expandedState"
   ],
   "additionalProperties": false
 }

@@ -2,11 +2,13 @@
 import { z } from 'zod'
 
 export const TabsStateSchema = z.object({
+  currentLinkAccentLength: z.string(),
+  currentLinkAccentStart: z.string(),
   disableBackScrollButton: z.boolean(),
   disableForwardScrollButton: z.boolean(),
   /** Used to signal if the scroll buttons should be used */
   enableScrollButtons: z.boolean(),
-  ouiaStateId: z.string(),
+  isInitializingAccent: z.boolean(),
   overflowingTabCount: z.number(),
   /** Used to control if the scroll buttons should be rendered. Rendering must occur before the scroll buttons are
 shown and rendering must be stopped after they stop being shown to preserve CSS transitions. */

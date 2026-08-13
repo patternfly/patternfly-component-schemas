@@ -42,6 +42,14 @@
       "description": "ID of a tree view item.",
       "type": "string"
     },
+    "isDisabled": {
+      "description": "Flag indicating if the tree view item is disabled.",
+      "type": "boolean"
+    },
+    "isToggleDisabled": {
+      "description": "Flag indicating if the tree view item toggle is disabled.",
+      "type": "boolean"
+    },
     "name": {
       "description": "Internal content of a tree view item. (React component or element)"
     },

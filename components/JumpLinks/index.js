@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "JumpLinks";
 export const componentDescription = "";
-export const propsCount = 15;
+export const propsCount = 16;
 export const requiredProps = [];

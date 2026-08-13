@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "Divider";
 export const componentDescription = "";
-export const propsCount = 4;
+export const propsCount = 5;
 export const requiredProps = [];

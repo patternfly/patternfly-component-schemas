@@ -281,7 +281,23 @@
       ]
     },
     "visibility": {
-      "description": "Visibility at various breakpoints.",
+      "description": "Visibility at various width breakpoints.",
+      "enum": [
+        "hidden",
+        "visible",
+        "hidden",
+        "visible",
+        "hidden",
+        "visible",
+        "hidden",
+        "visible",
+        "2xl",
+        "hidden",
+        "visible"
+      ]
+    },
+    "visibilityAtHeight": {
+      "description": "Visibility at various height breakpoints.",
       "enum": [
         "hidden",
         "visible",

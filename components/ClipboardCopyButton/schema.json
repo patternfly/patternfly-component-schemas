@@ -67,8 +67,7 @@
   "required": [
     "children",
     "id",
-    "onClick",
-    "textId"
+    "onClick"
   ],
   "additionalProperties": false
 }

@@ -6,7 +6,8 @@ export const DrawerPanelContentPropsSchema = z.object({
   children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the drawer. */
   className: z.string().optional(),
-  /** Color variant of the background of the drawer panel */
+  /** Color variant of the background of the drawer panel.
+The `no-background`is deprecated; use the `isPlain` prop instead. */
   colorVariant: z.enum(['no-background', 'default', 'secondary']).optional(),
   /** The starting size of a drawer. */
   defaultSize: z.string().optional(),
@@ -14,10 +15,14 @@ export const DrawerPanelContentPropsSchema = z.object({
   focusTrap: z.unknown().optional(),
   /** Flag indicating that the drawer panel should not have a border. */
   hasNoBorder: z.boolean().optional(),
+  hasNoGlass: z.boolean().optional(),
   /** ID of the drawer panel */
   id: z.string().optional(),
   /** The increment amount for keyboard drawer resizing. */
   increment: z.number().optional(),
+  isGlass: z.boolean().optional(),
+  isNoPlainOnGlass: z.boolean().optional(),
+  isPlain: z.boolean().optional(),
   /** Flag indicating that the drawer panel should be resizable. */
   isResizable: z.boolean().optional(),
   /** The maximum size of a drawer. */

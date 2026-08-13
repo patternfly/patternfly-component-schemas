@@ -22,6 +22,11 @@
       "type": "boolean",
       "default": false
     },
+    "isPill": {
+      "description": "Indicates if the drawer will have pill styles",
+      "type": "boolean",
+      "default": false
+    },
     "isStatic": {
       "description": "Indicates if the drawer will always show both content and panel.",
       "type": "boolean",

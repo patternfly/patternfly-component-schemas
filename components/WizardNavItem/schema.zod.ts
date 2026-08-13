@@ -27,7 +27,7 @@ export const WizardNavItemSchema = z.object({
   ouiaId: z.any().optional(),
   ouiaSafe: z.boolean().optional().default(true),
   /** Used to determine the icon displayed next to content. Default has no icon. */
-  status: z.enum(['default', 'error', 'success']).optional().default('default'),
+  status: z.enum(['default', 'error', 'success', 'warning']).optional().default('default'),
   /** The step index passed into the onNavItemClick callback */
   stepIndex: z.number(),
   /** Where to display the linked URL when using an anchor component */

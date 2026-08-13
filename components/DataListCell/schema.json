@@ -10,30 +10,30 @@
       "default": false
     },
     "children": {
-      "description": "Content rendered inside the DataList cell (React component or element)",
+      "description": "Content rendered inside the data list cell (React component or element)",
       "default": null
     },
     "className": {
-      "description": "Additional classes added to the DataList cell",
+      "description": "Additional classes added to the data list cell",
       "type": "string",
       "default": "''"
     },
     "isFilled": {
-      "description": "Enables the body Content to fill the height of the card",
+      "description": "Enables the body content to fill the height of the card",
       "type": "boolean",
       "default": true
     },
     "isIcon": {
-      "description": "Set to true if the cell content is an Icon",
+      "description": "Set to true if the cell content is an icon",
       "type": "boolean",
       "default": false
     },
     "width": {
-      "description": "Width (from 1-5) to the DataList cell (Type: 1 | 2 | 3 | 4 | 5)",
+      "description": "Width (from 1-5) to the data list cell (Type: 1 | 2 | 3 | 4 | 5)",
       "default": 1
     },
     "wrapModifier": {
-      "description": "Determines which wrapping modifier to apply to the DataListCell",
+      "description": "Determines which wrapping modifier to apply to the data list cell",
       "enum": [
         "nowrap",
         "truncate",

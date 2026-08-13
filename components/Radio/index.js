@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "Radio";
 export const componentDescription = "";
-export const propsCount = 18;
+export const propsCount = 19;
 export const requiredProps = ["id","name"];

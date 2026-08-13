@@ -22,6 +22,8 @@ export const JumpLinksSchema = z.object({
   isVertical: z.boolean().optional(),
   /** Label to add to nav element. */
   label: z.custom<React.ReactNode>().optional(),
+  /** Custom ID applied to label if alwaysShowLabel is applied, or expandable toggle. This is used for internal logic related to aria-label and aria-labelledby */
+  labelId: z.string().optional(),
   /** Offset to add to `scrollPosition`, potentially for a masthead which content scrolls under. */
   offset: z.number().optional().default(0),
   /** Reference to the scrollable element to spy on. Takes precedence over scrollableSelector. Not passing a scrollableRef or scrollableSelector disables spying. */

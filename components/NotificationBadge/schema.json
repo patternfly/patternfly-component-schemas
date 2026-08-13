@@ -10,7 +10,7 @@
     },
     "attentionIcon": {
       "description": "Icon to display for attention variant. (React component or element)",
-      "default": "<AttentionBellIcon />"
+      "default": "<RhUiAttentionBellFillIcon />"
     },
     "children": {
       "description": "Content rendered inside the notification badge. (React component or element)"
@@ -26,7 +26,7 @@
     },
     "icon": {
       "description": "Icon to display in the notification badge. (React component or element)",
-      "default": "<BellIcon />"
+      "default": "<RhUiNotificationFillIcon />"
     },
     "isExpanded": {
       "description": "Flag for applying expanded styling and setting the aria-expanded attribute on the\nnotification badge.",
@@ -46,7 +46,8 @@
       "enum": [
         "read",
         "unread",
-        "attention"
+        "attention",
+        "plain"
       ],
       "default": "NotificationBadgeVariant.read"
     }

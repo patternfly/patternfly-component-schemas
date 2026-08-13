@@ -5,7 +5,7 @@
   "description": "Props for the DataListItemCells component",
   "properties": {
     "className": {
-      "description": "Additional classes added to the DataList item Content Wrapper.  Children should be one ore more <DataListCell> nodes",
+      "description": "Additional classes added to the data list item content wrapper.  Children should be one or more <DataListCell> nodes",
       "type": "string",
       "default": "''"
     },

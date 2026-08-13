@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "MenuState";
 export const componentDescription = "";
-export const propsCount = 5;
-export const requiredProps = ["currentDrilldownMenuId","disableHover","flyoutRef","ouiaStateId","transitionMoveTarget"];
+export const propsCount = 3;
+export const requiredProps = ["currentDrilldownMenuId","flyoutRef","transitionMoveTarget"];

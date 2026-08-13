@@ -10,6 +10,8 @@ export const NavExpandablePropsSchema = z.object({
   className: z.string().optional(),
   /** Group identifier, will be returned with the onToggle and onSelect callback passed to the Nav component */
   groupId: z.any().optional(),
+  /** Icon added before the nav item children. */
+  icon: z.custom<React.ReactNode>().optional(),
   /** Identifier to use for the section aria label */
   id: z.string().optional(),
   /** If true makes the expandable list title active */

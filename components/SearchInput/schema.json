@@ -109,6 +109,10 @@
     "resultsCount": {
       "description": "The number of search results returned. Either a total number of results,\nor a string representing the current result over the total number of results. i.e. \"1 / 5\". (Type: number | string)"
     },
+    "resultsCountContext": {
+      "description": "Screenreader text that will appear after resultsCount to give context for what that value represents to assistive technologies.",
+      "type": "string"
+    },
     "searchInputId": {
       "description": "Id for the search input",
       "type": "string"

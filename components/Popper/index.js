@@ -6,6 +6,6 @@ export { schema };
 
 // Component metadata
 export const componentName = "Popper";
-export const componentDescription = "";
+export const componentDescription = "Extends PopperOptions";
 export const propsCount = 18;
 export const requiredProps = [];

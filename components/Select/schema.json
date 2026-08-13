@@ -94,7 +94,7 @@
       "type": "array"
     },
     "onSelect": {
-      "description": "Callback for updating when item selection changes. You can also specify onClick on the MenuItem. (Type: (event?: React.MouseEvent<Element, MouseEvent>, value?: string | number) => void)"
+      "description": "Callback for updating when item selection changes. You can also specify onClick on the MenuItem. (Function: (event?: React.MouseEvent<Element, MouseEvent>, value?: SelectOptionProps['value']) => void)"
     },
     "onToggleKeydown": {
       "description": "Callback to override the toggle keydown behavior. By default, when the toggle has focus and the menu is open, pressing the up/down arrow keys will focus a valid non-disabled menu item - the first item for the down arrow key and last item for the up arrow key. (Function: (event: KeyboardEvent) => void)"
@@ -111,7 +111,7 @@
       "type": "string"
     },
     "popperProps": {
-      "description": "Additional properties to pass to the popper (Type: SelectPopperProps)"
+      "description": "Additional properties to pass to the popper (Type: PopperOptions)"
     },
     "role": {
       "description": "Determines the accessible role of the menu. For a non-checkbox menu that can have\none or more items selected, pass in \"listbox\".",

@@ -39,7 +39,8 @@
       "enum": [
         "default",
         "error",
-        "success"
+        "success",
+        "warning"
       ]
     },
     "steps": {

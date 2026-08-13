@@ -16,6 +16,10 @@ export const AccordionSchema = z.object({
   headingLevel: z.enum(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']).optional().default('h3'),
   /** Flag to indicate the accordion had a border */
   isBordered: z.boolean().optional().default(false),
+  /** Flag to prevent the accordion from automatically applying plain styling when glass theme is enabled. */
+  isNoPlainOnGlass: z.boolean().optional().default(false),
+  /** Flag to add plain styling to the accordion. */
+  isPlain: z.boolean().optional().default(false),
   /** Sets the toggle icon position for all accordion toggles. */
   togglePosition: z.enum(['start', 'end']).optional().default('end')
 })

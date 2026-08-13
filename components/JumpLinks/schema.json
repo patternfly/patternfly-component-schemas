@@ -60,6 +60,10 @@
     "label": {
       "description": "Label to add to nav element. (React component or element)"
     },
+    "labelId": {
+      "description": "Custom ID applied to label if alwaysShowLabel is applied, or expandable toggle. This is used for internal logic related to aria-label and aria-labelledby",
+      "type": "string"
+    },
     "offset": {
       "description": "Offset to add to `scrollPosition`, potentially for a masthead which content scrolls under.",
       "type": "number",

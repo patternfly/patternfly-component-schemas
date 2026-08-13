@@ -14,6 +14,9 @@
       "type": "string",
       "default": "''"
     },
+    "brandImgProps": {
+      "description": "Additional props for the brand image for the login page (Type: BrandProps)"
+    },
     "brandImgSrc": {
       "description": "Attribute that specifies the URL of the brand image for the login page",
       "type": "string",

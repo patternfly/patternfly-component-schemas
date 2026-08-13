@@ -23,7 +23,7 @@ time this prop is true, the animation will be triggered a single time. */
   /** Adds an accessible label to the notification badge. */
   'Unknown': z.string().optional(),
   /** Determines the variant of the notification badge. */
-  variant: z.enum(['read', 'unread', 'attention']).optional()
+  variant: z.enum(['read', 'unread', 'attention', 'plain']).optional()
 })
 
 export type NotificationBadgePropsProps = z.infer<typeof NotificationBadgePropsSchema>

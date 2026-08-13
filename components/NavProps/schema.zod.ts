@@ -6,6 +6,7 @@ export const NavPropsSchema = z.object({
   children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the container */
   className: z.string().optional(),
+  isTextExpanded: z.boolean().optional(),
   /** Callback for updating when item selection changes */
   onSelect: z.custom<Event>().optional(),
   /** Callback for when a list is expanded or collapsed */
@@ -16,8 +17,8 @@ export const NavPropsSchema = z.object({
   ouiaSafe: z.boolean().optional(),
   /** Accessible label for the nav when there are multiple navs on the page */
   'Unknown': z.string().optional(),
-  /** For horizontal navs */
-  variant: z.enum(['default', 'horizontal', 'horizontal-subnav']).optional()
+  /** The nav variant to use. Docked is in beta. */
+  variant: z.enum(['default', 'horizontal', 'horizontal-subnav', 'docked']).optional()
 })
 
 export type NavPropsProps = z.infer<typeof NavPropsSchema>

@@ -8,6 +8,10 @@
       "description": "Anything that can be rendered inside of list item (React component or element)",
       "default": null
     },
+    "className": {
+      "description": "Additional classes added to the list item",
+      "type": "string"
+    },
     "icon": {
       "description": "Icon for the list item (React component or element)",
       "default": null

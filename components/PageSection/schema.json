@@ -49,6 +49,21 @@
       "description": "Enables the page section to fill the available vertical space if true, or disable filling if false.",
       "type": "boolean"
     },
+    "isNoPlainOnGlass": {
+      "description": "Prevents the page section from automatically applying plain styling when glass theme is enabled.",
+      "type": "boolean",
+      "default": false
+    },
+    "isPlain": {
+      "description": "Adds plain styling to the page section.",
+      "type": "boolean",
+      "default": false
+    },
+    "isStickyStuck": {
+      "description": "Flag indicating if the section has stuck styling, applied when the section is not at the edge of the scroll parent container.",
+      "type": "boolean",
+      "default": false
+    },
     "isWidthLimited": {
       "description": "Limits the width of the section",
       "type": "boolean",
@@ -70,6 +85,13 @@
         "2xl",
         "padding",
         "noPadding"
+      ]
+    },
+    "stickyBase": {
+      "description": "Applies the base sticky positioning to the top or bottom of the scroll parent container.",
+      "enum": [
+        "top",
+        "bottom"
       ]
     },
     "stickyOnBreakpoint": {

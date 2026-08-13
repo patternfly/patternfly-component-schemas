@@ -4,6 +4,10 @@
   "title": "SearchInputExpandable Props",
   "description": "Properties for creating an expandable search input. These properties should be passed into\nthe search input component's expandableInput property.",
   "properties": {
+    "hasAnimations": {
+      "description": "Flag indicating animations should be enabled when the search input expands and collapses. Note: this will change the component's DOM structure. In a future breaking change release, this will become the default behavior and will no longer be needed.",
+      "type": "boolean"
+    },
     "isExpanded": {
       "description": "Flag to indicate if the search input is expanded.",
       "type": "boolean"

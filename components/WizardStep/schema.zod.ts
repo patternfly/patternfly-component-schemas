@@ -21,7 +21,7 @@ export const WizardStepSchema = z.object({
   /** Replaces the step's navigation item or its properties. */
   navItem: z.any().optional(),
   /** Used to determine icon next to the step's navigation item */
-  status: z.enum(['default', 'error', 'success']).optional(),
+  status: z.enum(['default', 'error', 'success', 'warning']).optional(),
   /** Optional list of sub-steps */
   steps: z.array(z.custom<React.ReactElement>()).optional()
 })

@@ -11,6 +11,26 @@
       "description": "Class to add to outer div",
       "type": "string"
     },
+    "hasNoBorder": {
+      "description": "Flag to remove the panel's border",
+      "type": "boolean"
+    },
+    "isAutoHeight": {
+      "description": "When used with a scrollable panel, sets the panel to auto height",
+      "type": "boolean"
+    },
+    "isFullHeight": {
+      "description": "Flag to make the panel fill the available height of its container",
+      "type": "boolean"
+    },
+    "isGlass": {
+      "description": "Modifies the panel to use glass styling when the glass theme is enabled",
+      "type": "boolean"
+    },
+    "isPill": {
+      "description": "Uses pill (fully rounded) border radius for the panel",
+      "type": "boolean"
+    },
     "isScrollable": {
       "description": "Flag to add scrollable styling to the panel",
       "type": "boolean"

@@ -40,6 +40,10 @@
     "expandedIcon": {
       "description": "Icon for all expanded node items. (React component or element)"
     },
+    "hasAnimations": {
+      "description": "Flag indicating whether a tree view has animations. This will always render\nnested tree view items rather than dynamically rendering them. This prop will be removed in\nthe next breaking change release in favor of defaulting to always-rendered items.",
+      "type": "boolean"
+    },
     "hasBadges": {
       "description": "Flag indicating if all nodes in the tree view should have badges.",
       "type": "boolean",

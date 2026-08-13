@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "Accordion";
 export const componentDescription = "";
-export const propsCount = 8;
+export const propsCount = 10;
 export const requiredProps = [];

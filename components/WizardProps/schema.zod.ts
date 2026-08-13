@@ -12,6 +12,9 @@ export const WizardPropsSchema = z.object({
   header: z.custom<React.ReactNode>().optional(),
   /** Custom height of the wizard */
   height: z.any().optional(),
+  isNoPlainOnGlass: z.boolean().optional(),
+  /** Adds plain styling to the wizard. */
+  isPlain: z.boolean().optional(),
   /** Progressively shows steps, where all steps following the active step are hidden. Defaults to false. */
   isProgressive: z.boolean().optional(),
   /** Disables steps that haven't been visited. Defaults to false. */

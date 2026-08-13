@@ -20,6 +20,16 @@
     "height": {
       "description": "Custom height of the wizard (Type: number | string)"
     },
+    "isNoPlainOnGlass": {
+      "description": "Prevents the wizard from automatically applying plain styling when glass theme is enabled.",
+      "type": "boolean",
+      "default": false
+    },
+    "isPlain": {
+      "description": "Adds plain styling to the wizard.",
+      "type": "boolean",
+      "default": false
+    },
     "isProgressive": {
       "description": "Progressively shows steps, where all steps following the active step are hidden. Defaults to false.",
       "type": "boolean",

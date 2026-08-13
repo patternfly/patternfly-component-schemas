@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "PageToggleButton";
 export const componentDescription = "";
-export const propsCount = 29;
+export const propsCount = 39;
 export const requiredProps = [];

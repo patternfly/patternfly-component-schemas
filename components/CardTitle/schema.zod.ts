@@ -7,7 +7,9 @@ export const CardTitleSchema = z.object({
   /** Additional classes added to the CardTitle */
   className: z.string().optional(),
   /** Sets the base component to render. defaults to div */
-  component: z.unknown().optional().default('div')
+  component: z.unknown().optional().default('div'),
+  /** Subtitle of the card title */
+  subtitle: z.custom<React.ReactNode>().optional()
 })
 
 export type CardTitleProps = z.infer<typeof CardTitleSchema>

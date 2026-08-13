@@ -1,5 +1,5 @@
 // PatternFly Component Schemas - JSON Optimized
-// Generated on: 2025-10-14T12:27:01.682Z
+// Generated on: 2026-08-10T16:16:41.226Z
 
 // Load metadata
 const { default: index } = await import('./schemas/index.json', { with: { type: 'json' } });
@@ -12,6 +12,7 @@ export { index };
 export const componentNames = Object.keys(index.components);
 export const componentCount = index.totalComponents;
 export const schemaVersion = index.version;
+export const pfVersion = index.pfVersion;
 
 // Get all schemas on-demand
 export async function getAllSchemas() {

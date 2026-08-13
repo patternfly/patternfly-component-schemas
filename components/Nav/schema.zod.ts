@@ -8,6 +8,8 @@ export const NavSchema = z.object({
   children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the container */
   className: z.string().optional(),
+  /** Flag indicating the docked nav should display text. Only applies when variant is docked. */
+  isTextExpanded: z.boolean().optional(),
   /** Callback for updating when item selection changes */
   onSelect: z.custom<Event>().optional().default('() => undefined'),
   /** Callback for when a list is expanded or collapsed */
@@ -16,8 +18,8 @@ export const NavSchema = z.object({
   ouiaId: z.any().optional(),
   /** Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false. */
   ouiaSafe: z.boolean().optional().default(true),
-  /** For horizontal navs */
-  variant: z.enum(['default', 'horizontal', 'horizontal-subnav']).optional()
+  /** The nav variant to use. Docked is in beta. */
+  variant: z.enum(['default', 'horizontal', 'horizontal-subnav', 'docked']).optional()
 })
 
 export type NavProps = z.infer<typeof NavSchema>

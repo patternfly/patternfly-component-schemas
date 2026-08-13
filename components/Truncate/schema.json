@@ -12,23 +12,35 @@
       "description": "Text to truncate",
       "type": "string"
     },
+    "href": {
+      "description": "An HREF to turn the truncate wrapper into an anchor element. For more custom control, use the\ntooltipProps with a triggerRef property passed in.",
+      "type": "string"
+    },
+    "maxCharsDisplayed": {
+      "description": "The maximum number of characters to display before truncating. This will always truncate content\nwhen its length exceeds the value passed to this prop, and container width/resizing will not affect truncation.",
+      "type": "number"
+    },
+    "omissionContent": {
+      "description": "The content to use to signify omission of characters when using the maxCharsDisplayed prop.\nBy default this will render an ellipsis.",
+      "type": "string"
+    },
     "position": {
       "description": "Where the text will be truncated",
       "enum": [
         "start",
         "middle",
         "end"
-      ],
-      "default": "'end'"
+      ]
     },
     "tooltipPosition": {
-      "description": "Tooltip position (Type: | TooltipPosition\n| 'auto'\n| 'top'\n| 'bottom'\n| 'left'\n| 'right'\n| 'top-start'\n| 'top-end'\n| 'bottom-start'\n| 'bottom-end'\n| 'left-start'\n| 'left-end'\n| 'right-start'\n| 'right-end')",
-      "default": "'top'"
+      "description": "Tooltip position (Type: | TooltipPosition\n| 'auto'\n| 'top'\n| 'bottom'\n| 'left'\n| 'right'\n| 'top-start'\n| 'top-end'\n| 'bottom-start'\n| 'bottom-end'\n| 'left-start'\n| 'left-end'\n| 'right-start'\n| 'right-end')"
+    },
+    "tooltipProps": {
+      "description": "Additional props to pass to the tooltip. (Type: Omit<TooltipProps, 'content'>)"
     },
     "trailingNumChars": {
-      "description": "The number of characters displayed in the second half of the truncation",
-      "type": "number",
-      "default": 7
+      "description": "The number of characters displayed in the second half of a middle truncation. This will be overridden by\nthe maxCharsDisplayed prop.",
+      "type": "number"
     }
   },
   "required": [

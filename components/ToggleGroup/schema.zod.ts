@@ -11,7 +11,9 @@ export const ToggleGroupSchema = z.object({
   /** Additional classes added to the toggle group */
   className: z.string().optional(),
   /** Modifies the toggle group to include compact styling. */
-  isCompact: z.boolean().optional().default(false)
+  isCompact: z.boolean().optional().default(false),
+  /** Modifies the toggle group items to fill the available space. */
+  isFill: z.boolean().optional().default(false)
 })
 
 export type ToggleGroupProps = z.infer<typeof ToggleGroupSchema>

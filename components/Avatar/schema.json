@@ -5,11 +5,32 @@
   "description": "Props for the Avatar component",
   "properties": {
     "alt": {
-      "description": "Attribute that specifies the alternate text of the image for the avatar.",
+      "description": "Specifies the alternate text of the image for the avatar. Will instead set the aria-label when using children or initials; to hide the avatar\nfrom assistive technologies when passing children or initials, pass an empty string to the alt prop.",
       "type": "string"
+    },
+    "children": {
+      "description": "Content rendered inside the avatar, such as custom svgs or icons. (React component or element)"
     },
     "className": {
       "description": "Additional classes added to the avatar.",
+      "type": "string"
+    },
+    "color": {
+      "description": "Color of the avatar.",
+      "enum": [
+        "red",
+        "orangered",
+        "orange",
+        "yellow",
+        "green",
+        "teal",
+        "blue",
+        "purple",
+        "gray"
+      ]
+    },
+    "initials": {
+      "description": "Initials of the avatar.",
       "type": "string"
     },
     "isBordered": {
@@ -26,7 +47,7 @@
       ]
     },
     "src": {
-      "description": "Attribute that specifies the URL of the image for the avatar.",
+      "description": "Specifies the URL of the image for the avatar.",
       "type": "string",
       "default": "''"
     }

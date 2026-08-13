@@ -10,6 +10,8 @@ export const DrawerSchema = z.object({
   isExpanded: z.boolean().optional().default(false),
   /** Indicates if the content element and panel element are displayed side by side. */
   isInline: z.boolean().optional().default(false),
+  /** Indicates if the drawer will have pill styles */
+  isPill: z.boolean().optional().default(false),
   /** Indicates if the drawer will always show both content and panel. */
   isStatic: z.boolean().optional().default(false),
   /** Callback when drawer panel is expanded after waiting 250ms for animation to complete. */

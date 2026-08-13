@@ -5,22 +5,22 @@
   "description": "Props for the DataListAction component",
   "properties": {
     "aria-label": {
-      "description": "Adds accessible text to the DataList Action",
+      "description": "Adds accessible text to the data list action",
       "type": "string"
     },
     "aria-labelledby": {
-      "description": "Adds accessible text to the DataList Action",
+      "description": "Adds accessible text to the data list action",
       "type": "string"
     },
     "children": {
-      "description": "Content rendered as DataList Action  (e.g <Button> or <Dropdown>) (React component or element)"
+      "description": "Content rendered as data list action  (e.g <Button> or <Dropdown>) (React component or element)"
     },
     "className": {
-      "description": "Additional classes added to the DataList Action",
+      "description": "Additional classes added to the data list action",
       "type": "string"
     },
     "id": {
-      "description": "Identify the DataList toggle number",
+      "description": "Identify the data list toggle number",
       "type": "string"
     },
     "visibility": {

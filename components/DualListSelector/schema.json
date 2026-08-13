@@ -5,12 +5,15 @@
   "description": "Acts as a container for all other DualListSelector sub-components when using a\ncomposable dual list selector.",
   "properties": {
     "children": {
-      "description": "Content to be rendered in the dual list selector. (React component or element)",
-      "default": "''"
+      "description": "Content to be rendered in the dual list selector. (React component or element)"
     },
     "className": {
       "description": "Additional classes applied to the dual list selector.",
       "type": "string"
+    },
+    "hasAnimations": {
+      "description": "Flag indicating whether a tree dual list selector has animations. This will always render\nnested dual list selector items rather than dynamically rendering them. This prop will be removed in\nthe next breaking change release in favor of defaulting to always-rendered items.",
+      "type": "boolean"
     },
     "id": {
       "description": "ID of the dual list selector.",

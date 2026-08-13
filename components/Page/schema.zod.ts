@@ -16,6 +16,8 @@ export const PageSchema = z.object({
   className: z.string().optional(),
   /** If true, the managed sidebar is initially open for desktop view */
   defaultManagedSidebarIsOpen: z.boolean().optional().default(true),
+  /** Content to render in the vertical dock when variant of docked is used. At mobile viewports, this content will be replaced with the content passed to masthead. */
+  dockContent: z.custom<React.ReactNode>().optional(),
   /** Sets default drawer size */
   drawerDefaultSize: z.string().optional(),
   /** Sets the maximum drawer size */
@@ -82,6 +84,11 @@ https://github.com/patternfly/patternfly-react/blob/main/packages/react-core/src
   isBreadcrumbWidthLimited: z.boolean().optional().default(false),
   /** Enables children to fill the available vertical space. Child page sections or groups that should fill should be passed the isFilled property. */
   isContentFilled: z.boolean().optional(),
+  /** Flag indicating the docked nav is expanded on mobile. Only applies when variant is docked. */
+  isDockExpanded: z.boolean().optional(),
+  /** Flag indicating the docked nav should display text on desktop. Only applies when variant is docked, and
+will handle toggling the visibility of the text in individual isDocked components. */
+  isDockTextExpanded: z.boolean().optional(),
   /** Flag indicating if the horizontal sub navigation should be in a group */
   isHorizontalSubnavGrouped: z.boolean().optional(),
   /** Flag indicating if horizontal sub navigation width should be limited */
@@ -99,7 +106,7 @@ the sidebar component or add a callback onSidebarToggle function into the Masthe
   mainContainerId: z.string().optional(),
   /** tabIndex to use for the [role="main"] element, null to unset it */
   mainTabIndex: z.any().optional().default(-1),
-  /** Masthead component (e.g. <Masthead />) */
+  /** The horizontal masthead content (e.g. <Masthead />). When using the docked variant, this content will only render at mobile viewports. */
   masthead: z.custom<React.ReactNode>().optional(),
   /** Notification drawer component for an optional notification drawer (e.g. <NotificationDrawer />) */
   notificationDrawer: z.custom<React.ReactNode>().optional(),
@@ -114,7 +121,9 @@ Returns object { mobileView: boolean, windowSize: number } */
 will render without a sidebar. */
   sidebar: z.custom<React.ReactNode>().optional(),
   /** Skip to content component for the page */
-  skipToContent: z.custom<React.ReactElement>().optional()
+  skipToContent: z.custom<React.ReactElement>().optional(),
+  /** Indicates the layout variant */
+  variant: z.enum(['default', 'docked']).optional()
 })
 
 export type PageProps = z.infer<typeof PageSchema>

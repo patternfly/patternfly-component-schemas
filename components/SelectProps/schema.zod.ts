@@ -25,7 +25,7 @@ Triggered by clicking outside of the menu, or by pressing any keys specified in 
   /** Keys that trigger onOpenChange, defaults to tab and escape. It is highly recommended to include Escape in the array, while Tab may be omitted if the menu contains non-menu items that are focusable. */
   onOpenChangeKeys: z.array(z.string()).optional(),
   /** Function callback when user selects an option. */
-  onSelect: z.any().optional(),
+  onSelect: z.custom<Event>().optional(),
   /** Callback to override the toggle keydown behavior. By default, when the toggle has focus and the menu is open, pressing the up/down arrow keys will focus a valid non-disabled menu item - the first item for the down arrow key and last item for the up arrow key. */
   onToggleKeydown: z.custom<Event>().optional(),
   /** Additional properties to pass to the popper */

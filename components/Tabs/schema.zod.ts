@@ -15,7 +15,7 @@ export const TabsSchema = z.object({
   /** Additional classes added to the tabs */
   className: z.string().optional(),
   /** Determines what tag is used around the tabs. Use "nav" to define the tabs inside a navigation region */
-  component: z.enum(['div', 'nav']).optional().default('TabsComponent.div'),
+  component: z.enum(['div', 'nav']).optional(),
   /** The index of the default active tab. Set this for uncontrolled Tabs */
   defaultActiveKey: z.any().optional(),
   /** Flag indicating the default expanded state for uncontrolled expand/collapse of */
@@ -30,12 +30,16 @@ export const TabsSchema = z.object({
   id: z.string().optional(),
   /** Insets at various breakpoints. */
   inset: z.record(z.unknown()).optional(),
+  /** Flag indicating that the add button is disabled when onAdd is passed in */
+  isAddButtonDisabled: z.boolean().optional(),
   /** Enables box styling to the tab component */
   isBox: z.boolean().optional().default(false),
   /** Flag to indicate if the vertical tabs are expanded */
   isExpanded: z.boolean().optional(),
   /** Enables the filled tab list layout */
   isFilled: z.boolean().optional().default(false),
+  /** Enables horizontal nav tab styling */
+  isNav: z.boolean().optional().default(false),
   /** Flag which places overflowing tabs into a menu triggered by the last tab. Additionally an object can be passed with custom settings for the overflow tab. */
   isOverflowHorizontal: z.any().optional(),
   /** Enables subtab tab styling */
@@ -49,9 +53,9 @@ export const TabsSchema = z.object({
   /** Callback for the add button. Passing this property inserts the add button */
   onAdd: z.custom<Event>().optional(),
   /** Callback to handle tab closing and adds a basic close button to all tabs. This is overridden by the tab actions property. */
-  onClose: z.any().optional(),
+  onClose: z.custom<Event>().optional(),
   /** Callback to handle tab selection */
-  onSelect: z.any().optional().default('() => undefined as any'),
+  onSelect: z.custom<Event>().optional().default('() => undefined as any'),
   /** Callback function to toggle the expandable tabs. */
   onToggle: z.custom<Event>().optional().default('(_event: React.MouseEvent, _isExpanded: boolean): void => undefined'),
   /** Value to overwrite the randomly generated data-ouia-component-id. */
@@ -60,6 +64,10 @@ export const TabsSchema = z.object({
   ouiaSafe: z.boolean().optional().default(true),
   /** Please use forwardScrollAriaLabel. Aria-label for the right scroll button */
   rightScrollAriaLabel: z.string().optional().default('Scroll right'),
+  /** A readable string to create an accessible name for the tablist element. This can be used to differentiate multiple tablists on a page, and should be used for subtabs. */
+  tabListAriaLabel: z.string().optional(),
+  /** Id of an element that provides an accessible name for the tablist. Use this when a visible label already exists on the page. */
+  tabListAriaLabelledBy: z.string().optional(),
   /** Aria-label for the expandable toggle */
   toggleAriaLabel: z.string().optional(),
   /** Text that appears in the expandable toggle */

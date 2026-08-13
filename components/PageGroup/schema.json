@@ -35,6 +35,28 @@
       "description": "Enables the page group to fill the available vertical space if true, or disable filling if false.",
       "type": "boolean"
     },
+    "isNoPlainOnGlass": {
+      "description": "Prevents the page group from automatically applying plain styling when glass theme is enabled.",
+      "type": "boolean",
+      "default": false
+    },
+    "isPlain": {
+      "description": "Adds plain styling to the page group.",
+      "type": "boolean",
+      "default": false
+    },
+    "isStickyStuck": {
+      "description": "Flag indicating if the group has stuck styling, applied when the group is not at the edge of the scroll parent container.",
+      "type": "boolean",
+      "default": false
+    },
+    "stickyBase": {
+      "description": "Applies the base sticky positioning to the top or bottom of the scroll parent container.",
+      "enum": [
+        "top",
+        "bottom"
+      ]
+    },
     "stickyOnBreakpoint": {
       "description": "Modifier indicating if the PageBreadcrumb is sticky to the top or bottom at various breakpoints",
       "enum": [

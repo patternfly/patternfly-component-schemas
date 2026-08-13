@@ -7,7 +7,9 @@ export const MastheadLogoSchema = z.object({
   /** Additional classes added to the masthead logo. */
   className: z.string().optional(),
   /** Component type of the masthead logo. */
-  component: z.any().optional()
+  component: z.any().optional(),
+  /** Flag indicating the logo is a compact variant. Used in docked layouts. */
+  isCompact: z.boolean().optional().default(false)
 })
 
 export type MastheadLogoProps = z.infer<typeof MastheadLogoSchema>

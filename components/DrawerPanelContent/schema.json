@@ -12,7 +12,7 @@
       "type": "string"
     },
     "colorVariant": {
-      "description": "Color variant of the background of the drawer panel",
+      "description": "Color variant of the background of the drawer panel.\nThe `no-background`is deprecated; use the `isPlain` prop instead.",
       "enum": [
         "no-background",
         "default",
@@ -32,6 +32,11 @@
       "type": "boolean",
       "default": false
     },
+    "hasNoGlass": {
+      "description": "Flag indicating that the drawer panel should disable glass styles. This prop is intended to work with isPill drawers.",
+      "type": "boolean",
+      "default": false
+    },
     "id": {
       "description": "ID of the drawer panel",
       "type": "string"
@@ -40,6 +45,21 @@
       "description": "The increment amount for keyboard drawer resizing.",
       "type": "number",
       "default": 5
+    },
+    "isGlass": {
+      "description": "Flag indicating that the drawer panel should use glass styles when in glass theme",
+      "type": "boolean",
+      "default": false
+    },
+    "isNoPlainOnGlass": {
+      "description": "Flag indicating that plain styles should be disabled when glass styles are used. This only applies when the drawer is static or inline.",
+      "type": "boolean",
+      "default": false
+    },
+    "isPlain": {
+      "description": "Flag indicating that the drawer panel should use plain styles. This only applies when the drawer is static or inline.",
+      "type": "boolean",
+      "default": false
     },
     "isResizable": {
       "description": "Flag indicating that the drawer panel should be resizable.",

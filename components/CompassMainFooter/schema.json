@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "CompassMainFooter Props",
+  "description": "Props for the CompassMainFooter component",
+  "properties": {
+    "isExpanded": {
+      "description": " (Type: No type info)",
+      "default": true
+    }
+  },
+  "additionalProperties": false
+}

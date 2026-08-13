@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "Tabs";
 export const componentDescription = "";
-export const propsCount = 34;
+export const propsCount = 38;
 export const requiredProps = ["children"];

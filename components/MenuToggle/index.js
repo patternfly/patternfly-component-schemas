@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "MenuToggle";
 export const componentDescription = "";
-export const propsCount = 16;
+export const propsCount = 21;
 export const requiredProps = [];

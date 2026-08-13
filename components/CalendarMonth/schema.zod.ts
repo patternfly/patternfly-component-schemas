@@ -19,6 +19,12 @@ See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Obj
   locale: z.string().optional().default('undefined'),
   /** How to format days in header for screen readers. */
   longWeekdayFormat: z.custom<React.ReactNode>().optional().default('(date) => date.toLocaleDateString(locale, { weekday: 'long' })'),
+  /** The container to append the month select menu to. Defaults to 'inline'.
+If your menu is being cut off you can append it to an element higher up the DOM tree.
+Some examples:
+monthAppendTo={() => document.body};
+monthAppendTo={document.getElementById('target')} */
+  monthAppendTo: z.enum(['inline']).optional().default('inline'),
   /** How to format months in month select. */
   monthFormat: z.custom<React.ReactNode>().optional().default('(date) => date.toLocaleDateString(locale, { month: 'long' })'),
   /** Accessible label for the next month button. */

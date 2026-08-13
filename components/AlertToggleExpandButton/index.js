@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "AlertToggleExpandButton";
 export const componentDescription = "";
-export const propsCount = 29;
+export const propsCount = 37;
 export const requiredProps = [];

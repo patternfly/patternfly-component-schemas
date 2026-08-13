@@ -1,14 +1,13 @@
 // Auto-generated Zod schema for DualListSelectorTreeItemData-deprecated
-// Generated on: 2025-10-10T18:12:17.798Z
 import { z } from 'zod'
 
 export const DualListSelectorTreeItemDataSchema = z.object({
   /** Additional properties to pass to the option badge */
-  badgeProps: z.any().optional(),
+  badgeProps: z.unknown().optional(),
   /** Additional properties to pass to the option checkbox */
-  checkProps: z.any().optional(),
+  checkProps: z.unknown().optional(),
   /** Content rendered inside the dual list selector. */
-  children: z.array(z.any()).optional(),
+  children: z.array(z.unknown()).optional(),
   /** Additional classes applied to the dual list selector. */
   className: z.string().optional(),
   /** Flag indicating this option is expanded by default. */

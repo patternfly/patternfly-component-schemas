@@ -71,7 +71,7 @@
       "description": "Callback for collecting menu heights (Function: (menuId: string, height: number) => void)"
     },
     "onSelect": {
-      "description": "Callback for updating when item selection changes. You can also specify onClick on the MenuItem. (Type: (event?: React.MouseEvent, itemId?: string | number) => void)"
+      "description": "Callback for updating when item selection changes. You can also specify onClick on the MenuItem. (Function: (event?: React.MouseEvent, itemId?: MenuItemProps['itemId']) => void)"
     },
     "ouiaId": {
       "description": "Value to overwrite the randomly generated data-ouia-component-id. (Type: number | string)"

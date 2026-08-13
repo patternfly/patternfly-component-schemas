@@ -35,7 +35,7 @@
         "grey",
         "yellow"
       ],
-      "default": "'grey'"
+      "default": "LabelColor.grey"
     },
     "editableProps": {
       "description": "Additional props passed to the editable label text div. Optionally passing onInput and onBlur callbacks will allow finer custom text input control. (Type: any)"

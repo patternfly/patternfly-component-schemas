@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "ToolbarState";
 export const componentDescription = "";
-export const propsCount = 4;
-export const requiredProps = ["filterInfo","isManagedToggleExpanded","ouiaStateId","windowWidth"];
+export const propsCount = 3;
+export const requiredProps = ["filterInfo","isManagedToggleExpanded","windowWidth"];

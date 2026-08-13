@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "DrawerPanelContent";
 export const componentDescription = "";
-export const propsCount = 14;
+export const propsCount = 18;
 export const requiredProps = [];

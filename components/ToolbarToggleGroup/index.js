@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "ToolbarToggleGroup";
 export const componentDescription = "";
-export const propsCount = 20;
+export const propsCount = 21;
 export const requiredProps = ["breakpoint","toggleIcon"];

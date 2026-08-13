@@ -13,6 +13,11 @@
     },
     "component": {
       "description": "Component type of the masthead logo. (Type: React.ElementType<any> | React.ComponentType<any>)"
+    },
+    "isCompact": {
+      "description": "Flag indicating the logo is a compact variant. Used in docked layouts.",
+      "type": "boolean",
+      "default": false
     }
   },
   "additionalProperties": false

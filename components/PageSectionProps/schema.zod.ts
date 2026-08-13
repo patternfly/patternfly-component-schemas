@@ -19,10 +19,15 @@ export const PageSectionPropsSchema = z.object({
   isCenterAligned: z.boolean().optional(),
   /** Enables the page section to fill the available vertical space if true, or disable filling if false. */
   isFilled: z.boolean().optional(),
+  isNoPlainOnGlass: z.boolean().optional(),
+  /** Adds plain styling to the page section. */
+  isPlain: z.boolean().optional(),
+  isStickyStuck: z.boolean().optional(),
   /** Limits the width of the section */
   isWidthLimited: z.boolean().optional(),
   /** Padding at various breakpoints. */
   padding: z.record(z.unknown()).optional(),
+  stickyBase: z.enum(['top', 'bottom']).optional(),
   /** Modifier indicating if the PageBreadcrumb is sticky to the top or bottom at various breakpoints */
   stickyOnBreakpoint: z.record(z.unknown()).optional(),
   /** Section type variant */

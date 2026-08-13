@@ -4,6 +4,10 @@
   "title": "Radio Props",
   "description": "Props for the Radio component",
   "properties": {
+    "aria-describedby": {
+      "description": "Custom aria-describedby value for the radio input. If not provided and description is set, a unique ID will be generated automatically.",
+      "type": "string"
+    },
     "aria-label": {
       "description": "Aria label for the radio.",
       "type": "string"

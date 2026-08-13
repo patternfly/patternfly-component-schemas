@@ -13,13 +13,18 @@
       "default": "''"
     },
     "colorVariant": {
-      "description": "Color variant of the background of the drawer Section",
+      "description": "Color variant of the background of the drawer section.\nThe `no-background` value is deprecated; use the `isPlain` prop instead.",
       "enum": [
         "no-background",
         "default",
         "secondary"
       ],
       "default": "DrawerColorVariant.default"
+    },
+    "isPlain": {
+      "description": "Flag indicating that the drawer section should use plain styles.",
+      "type": "boolean",
+      "default": false
     }
   },
   "additionalProperties": false

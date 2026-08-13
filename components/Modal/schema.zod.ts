@@ -21,6 +21,8 @@ export const ModalSchema = z.object({
   /** The element to focus when the modal opens. By default the first
 focusable element will receive focus. */
   elementToFocus: z.any().optional(),
+  /** Id of the focus trap in the ModalContent component */
+  focusTrapId: z.string().optional(),
   /** An id to use for the modal box container. */
   id: z.string().optional(),
   /** Flag to show the modal. */

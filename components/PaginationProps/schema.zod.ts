@@ -21,8 +21,11 @@ greater than remaining rows. */
   isLastFullPageShown: z.boolean().optional(),
   /** Flag indicating if pagination should not be sticky on mobile. */
   isStatic: z.boolean().optional(),
-  /** Flag indicating if pagination should stick to its position (based on variant). */
+  /** Flag indicating if pagination should stick to its position (based on variant). For dynamic sticky control, use isStickyBase
+and isStickyStuck instead. */
   isSticky: z.boolean().optional(),
+  isStickyBase: z.boolean().optional(),
+  isStickyStuck: z.boolean().optional(),
   /** Total number of items. */
   itemCount: z.number().optional(),
   /** Last index of items on current page. */

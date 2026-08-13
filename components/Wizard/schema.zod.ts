@@ -12,6 +12,10 @@ export const WizardSchema = z.object({
   header: z.custom<React.ReactNode>().optional(),
   /** Custom height of the wizard */
   height: z.any().optional(),
+  /** Prevents the wizard from automatically applying plain styling when glass theme is enabled. */
+  isNoPlainOnGlass: z.boolean().optional().default(false),
+  /** Adds plain styling to the wizard. */
+  isPlain: z.boolean().optional().default(false),
   /** Progressively shows steps, where all steps following the active step are hidden. Defaults to false. */
   isProgressive: z.boolean().optional().default(false),
   /** Disables steps that haven't been visited. Defaults to false. */

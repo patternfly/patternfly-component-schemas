@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "PopperOptions Props",
+  "description": "Properties of Popper that can be used to customize its behavior.",
+  "properties": {
+    "animationDuration": {
+      "description": "The duration of the CSS fade transition animation.",
+      "type": "number"
+    },
+    "appendTo": {
+      "description": "The container to append the popper to. Defaults to 'inline'.",
+      "enum": [
+        "inline"
+      ]
+    },
+    "direction": {
+      "description": "popper direction",
+      "enum": [
+        "up",
+        "down"
+      ]
+    },
+    "distance": {
+      "description": "Distance of the popper to the trigger",
+      "type": "number"
+    },
+    "enableFlip": {
+      "description": "Enable to flip the popper when it reaches the boundary",
+      "type": "boolean"
+    },
+    "entryDelay": {
+      "description": "Delay in ms before the popper appears",
+      "type": "number"
+    },
+    "exitDelay": {
+      "description": "Delay in ms before the popper disappears",
+      "type": "number"
+    },
+    "flipBehavior": {
+      "description": "The behavior of how the popper flips when it reaches the boundary",
+      "enum": [
+        "flip",
+        "top",
+        "bottom",
+        "left",
+        "right",
+        "top-start",
+        "top-end",
+        "bottom-start",
+        "bottom-end",
+        "left-start",
+        "left-end",
+        "right-start",
+        "right-end"
+      ]
+    },
+    "maxWidth": {
+      "description": "Maximum width of the popper. If the value is \"trigger\", it will set the max width to the trigger element's width",
+      "enum": [
+        "trigger"
+      ]
+    },
+    "minWidth": {
+      "description": "Minimum width of the popper. If the value is \"trigger\", it will set the min width to the trigger element's width",
+      "enum": [
+        "trigger"
+      ]
+    },
+    "offset": {
+      "description": "Override for the popper's offset (Type: OffsetOptions['offset'])"
+    },
+    "onBlur": {
+      "description": "Callback function when trigger is blurred (focus leaves) (Function: (event?: FocusEvent) => void)"
+    },
+    "onDocumentClick": {
+      "description": "Callback function when document is clicked (Function: (event?: MouseEvent, triggerElement?: HTMLElement, popperElement?: HTMLElement) => void)"
+    },
+    "onDocumentKeyDown": {
+      "description": "Callback function when keydown event occurs on document (Function: (event?: KeyboardEvent) => void)"
+    },
+    "onFocus": {
+      "description": "Callback function when trigger is focused (Function: (event?: FocusEvent) => void)"
+    },
+    "onHidden": {
+      "description": "Callback when popper's hide transition has finished executing (Function: () => void)"
+    },
+    "onHide": {
+      "description": "Lifecycle function invoked when the popper begins to transition out. (Function: () => void)"
+    },
+    "onMount": {
+      "description": "Lifecycle function invoked when the popper has been mounted to the DOM. (Function: () => void)"
+    },
+    "onMouseEnter": {
+      "description": "Callback function when mouse enters trigger (Function: (event?: MouseEvent) => void)"
+    },
+    "onMouseLeave": {
+      "description": "Callback function when mouse leaves trigger (Function: (event?: MouseEvent) => void)"
+    },
+    "onPopperClick": {
+      "description": "Callback function when popper is clicked (Function: (event?: MouseEvent) => void)"
+    },
+    "onPopperMouseEnter": {
+      "description": "Callback function when mouse enters popper content (Function: (event?: MouseEvent) => void)"
+    },
+    "onPopperMouseLeave": {
+      "description": "Callback function when mouse leaves popper content (Function: (event?: MouseEvent) => void)"
+    },
+    "onShow": {
+      "description": "Lifecycle function invoked when the popper begins to transition in. (Function: () => void)"
+    },
+    "onShown": {
+      "description": "Lifecycle function invoked when the popper has fully transitioned in. (Function: () => void)"
+    },
+    "onTriggerClick": {
+      "description": "Callback function when trigger is clicked (Function: (event?: MouseEvent) => void)"
+    },
+    "onTriggerEnter": {
+      "description": "Callback function when Enter key is used on trigger (Function: (event?: KeyboardEvent) => void)"
+    },
+    "placement": {
+      "description": "Instead of direction and position can set the placement of the popper (Type: Placement)"
+    },
+    "position": {
+      "description": "Horizontal position of the popper. Use the additional prop preventOverflow if seeing clipping.",
+      "enum": [
+        "right",
+        "left",
+        "center",
+        "start",
+        "end"
+      ]
+    },
+    "positionModifiers": {
+      "description": "Map class names to positions, for example:\n{\n  top: styles.modifiers.top,\n  bottom: styles.modifiers.bottom,\n  left: styles.modifiers.left,\n  right: styles.modifiers.right\n} (Type: {\n    top?: string;\n    right?: string;\n    bottom?: string;\n    left?: string;\n    topStart?: string;\n    topEnd?: string;\n    bottomStart?: string;\n    bottomEnd?: string;\n    leftStart?: string;\n    leftEnd?: string;\n    rightStart?: string;\n    rightEnd?: string;\n  })"
+    },
+    "preventOverflow": {
+      "description": "Flag to prevent the popper from overflowing its container and becoming partially obscured.",
+      "type": "boolean"
+    },
+    "width": {
+      "description": "Custom width of the popper. If the value is \"trigger\", it will set the width to the trigger element's width",
+      "enum": [
+        "trigger"
+      ]
+    },
+    "zIndex": {
+      "description": "z-index of the popper element",
+      "type": "number"
+    }
+  },
+  "additionalProperties": false
+}

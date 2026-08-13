@@ -47,6 +47,16 @@
       "type": "boolean",
       "default": false
     },
+    "isNoPlainOnGlass": {
+      "description": "Flag to prevent the accordion from automatically applying plain styling when glass theme is enabled.",
+      "type": "boolean",
+      "default": false
+    },
+    "isPlain": {
+      "description": "Flag to add plain styling to the accordion.",
+      "type": "boolean",
+      "default": false
+    },
     "togglePosition": {
       "description": "Sets the toggle icon position for all accordion toggles.",
       "enum": [

@@ -15,6 +15,10 @@
       "description": "Additional classes added to the container",
       "type": "string"
     },
+    "isTextExpanded": {
+      "description": "Flag indicating the docked nav should display text. Only applies when variant is docked.",
+      "type": "boolean"
+    },
     "onSelect": {
       "description": "Callback for updating when item selection changes (Type: (\n  event: React.FormEvent<HTMLInputElement>,\n  selectedItem: {\n    groupId: number | string;\n    itemId: number | string;\n    to: string;\n  }\n) => void)",
       "default": "() => undefined"
@@ -32,11 +36,12 @@
       "default": true
     },
     "variant": {
-      "description": "For horizontal navs",
+      "description": "The nav variant to use. Docked is in beta.",
       "enum": [
         "default",
         "horizontal",
-        "horizontal-subnav"
+        "horizontal-subnav",
+        "docked"
       ]
     }
   },

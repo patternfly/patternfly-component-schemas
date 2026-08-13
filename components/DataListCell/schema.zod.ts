@@ -4,17 +4,17 @@ import { z } from 'zod'
 export const DataListCellSchema = z.object({
   /** Aligns the cell content to the right of its parent. */
   alignRight: z.boolean().optional().default(false),
-  /** Content rendered inside the DataList cell */
+  /** Content rendered inside the data list cell */
   children: z.custom<React.ReactNode>().optional().default('null'),
-  /** Additional classes added to the DataList cell */
+  /** Additional classes added to the data list cell */
   className: z.string().optional().default(''),
-  /** Enables the body Content to fill the height of the card */
+  /** Enables the body content to fill the height of the card */
   isFilled: z.boolean().optional().default(true),
-  /** Set to true if the cell content is an Icon */
+  /** Set to true if the cell content is an icon */
   isIcon: z.boolean().optional().default(false),
-  /** Width (from 1-5) to the DataList cell */
+  /** Width (from 1-5) to the data list cell */
   width: z.union([z.literal(1), z.literal(2), z.literal(3), z.literal(4), z.literal(5)]).optional().default(1),
-  /** Determines which wrapping modifier to apply to the DataListCell */
+  /** Determines which wrapping modifier to apply to the data list cell */
   wrapModifier: z.enum(['nowrap', 'truncate', 'breakWord']).optional().default('null')
 })
 

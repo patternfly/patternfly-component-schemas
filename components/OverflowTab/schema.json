@@ -23,6 +23,9 @@
       "type": "array",
       "default": []
     },
+    "popperProps": {
+      "description": "Additional props to spread to the popper menu. (Type: PopperOptions)"
+    },
     "shouldPreventScrollOnItemFocus": {
       "description": "Flag indicating if scroll on focus of the first menu item should occur.",
       "type": "boolean",

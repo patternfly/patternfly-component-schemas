@@ -24,10 +24,18 @@ Set this to false in order to pass multiple, custom PageBody's as children. */
   isCenterAligned: z.boolean().optional().default(false),
   /** Enables the page section to fill the available vertical space if true, or disable filling if false. */
   isFilled: z.boolean().optional(),
+  /** Prevents the page section from automatically applying plain styling when glass theme is enabled. */
+  isNoPlainOnGlass: z.boolean().optional().default(false),
+  /** Adds plain styling to the page section. */
+  isPlain: z.boolean().optional().default(false),
+  /** Flag indicating if the section has stuck styling, applied when the section is not at the edge of the scroll parent container. */
+  isStickyStuck: z.boolean().optional().default(false),
   /** Limits the width of the section */
   isWidthLimited: z.boolean().optional().default(false),
   /** Padding at various breakpoints. */
   padding: z.record(z.unknown()).optional(),
+  /** Applies the base sticky positioning to the top or bottom of the scroll parent container. */
+  stickyBase: z.enum(['top', 'bottom']).optional(),
   /** Modifier indicating if the PageBreadcrumb is sticky to the top or bottom at various breakpoints */
   stickyOnBreakpoint: z.record(z.unknown()).optional(),
   /** Section type variant */

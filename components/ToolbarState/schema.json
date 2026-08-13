@@ -11,10 +11,6 @@
       "description": "Flag used if the user has opted NOT to manage the 'isExpanded' state of the toggle group.\nIndicates whether or not the toggle group is expanded.",
       "type": "boolean"
     },
-    "ouiaStateId": {
-      "description": "",
-      "type": "string"
-    },
     "windowWidth": {
       "description": "Used to keep track of window width so we can collapse expanded content when window is resizing",
       "type": "number"
@@ -23,7 +19,6 @@
   "required": [
     "filterInfo",
     "isManagedToggleExpanded",
-    "ouiaStateId",
     "windowWidth"
   ],
   "additionalProperties": false

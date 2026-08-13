@@ -43,6 +43,10 @@
     "elementToFocus": {
       "description": "The element to focus when the modal opens. By default the first\nfocusable element will receive focus. (Type: HTMLElement | SVGElement | string)"
     },
+    "focusTrapId": {
+      "description": "Id of the focus trap",
+      "type": "string"
+    },
     "isOpen": {
       "description": "Flag to show the modal.",
       "type": "boolean",

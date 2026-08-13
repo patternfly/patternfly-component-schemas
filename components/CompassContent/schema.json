@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "CompassContent Props",
+  "description": "Props for the CompassContent component",
+  "properties": {
+    "children": {
+      "description": "Content of the main Compass area. Typically one or more `Panel` components. (React component or element)"
+    },
+    "className": {
+      "description": "Additional classes added to the CompassContent",
+      "type": "string"
+    },
+    "drawerContent": {
+      "description": "Content rendered in an optional drawer wrapping the CompassContent (React component or element)"
+    },
+    "drawerProps": {
+      "description": "Additional props passed to the drawer (Type: DrawerProps)"
+    }
+  },
+  "required": [
+    "children"
+  ],
+  "additionalProperties": false
+}

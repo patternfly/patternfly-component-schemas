@@ -7,5 +7,5 @@ export { schema };
 // Component metadata
 export const componentName = "FormFieldGroupExpandable";
 export const componentDescription = "";
-export const propsCount = 5;
+export const propsCount = 6;
 export const requiredProps = [];

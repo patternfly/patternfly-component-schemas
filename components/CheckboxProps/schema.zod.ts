@@ -36,7 +36,7 @@ isLabelWrapped is true, or it can be overridden by any element specified in the 
   ouiaId: z.any().optional(),
   /** Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false. */
   ouiaSafe: z.boolean().optional(),
-  /** Aria-label of the checkbox. */
+  /** Custom aria-describedby value for the checkbox input. If not provided and description is set, a unique ID will be generated automatically. */
   'Unknown': z.string().optional()
 })
 

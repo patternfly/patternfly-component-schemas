@@ -8,6 +8,12 @@ export const CalendarPropsSchema = z.object({
   date: z.date().optional(),
   /** Flag to set browser focus on the passed date. * */
   isDateFocused: z.boolean().optional(),
+  /** The container to append the month select menu to. Defaults to 'inline'.
+If your menu is being cut off you can append it to an element higher up the DOM tree.
+Some examples:
+monthAppendTo={() => document.body};
+monthAppendTo={document.getElementById('target')} */
+  monthAppendTo: z.enum(['inline']).optional(),
   /** Callback when date is selected. */
   onChange: z.custom<Event>().optional(),
   /** Callback when month or year is changed. */

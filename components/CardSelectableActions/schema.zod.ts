@@ -1,10 +1,9 @@
 // Auto-generated Zod schema for CardSelectableActions
-// Generated on: 2025-10-10T18:12:17.791Z
 import { z } from 'zod'
 
 export const CardSelectableActionsSchema = z.object({
   /** Content rendered inside the card action */
-  children: z.any().optional(),
+  children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the action */
   className: z.string().optional()
 })

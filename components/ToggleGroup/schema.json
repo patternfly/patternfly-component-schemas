@@ -24,6 +24,11 @@
       "description": "Modifies the toggle group to include compact styling.",
       "type": "boolean",
       "default": false
+    },
+    "isFill": {
+      "description": "Modifies the toggle group items to fill the available space.",
+      "type": "boolean",
+      "default": false
     }
   },
   "additionalProperties": false

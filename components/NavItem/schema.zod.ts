@@ -2,22 +2,24 @@
 import { z } from 'zod'
 
 export const NavItemSchema = z.object({
+  /** React ref for the anchor element within the nav item. */
+  anchorRef: z.unknown().optional(),
   /** Content rendered inside the nav item. */
   children: z.custom<React.ReactNode>().optional(),
   /** Additional classes added to the nav item */
   className: z.string().optional(),
   /** Component used to render NavItems if  React.isValidElement(children) is false */
-  component: z.any().optional().default('a'),
+  component: z.any().optional(),
   /** Flyout of a nav item. This should be a Menu component. Should not be used if the to prop is defined. */
   flyout: z.custom<React.ReactElement>().optional(),
   /** Group identifier, will be returned with the onToggle and onSelect callback passed to the Nav component */
-  groupId: z.any().optional().default('null'),
+  groupId: z.any().optional(),
   /** Icon added before the nav item children. */
   icon: z.custom<React.ReactNode>().optional(),
   /** Flag indicating whether the item is active */
-  isActive: z.boolean().optional().default(false),
+  isActive: z.boolean().optional(),
   /** Item identifier, will be returned with the onToggle and onSelect callback passed to the Nav component */
-  itemId: z.any().optional().default('null'),
+  itemId: z.any().optional(),
   /** Callback for item click */
   onClick: z.any().optional(),
   /** Callback when flyout is opened or closed */
@@ -27,13 +29,13 @@ export const NavItemSchema = z.object({
   /** Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false. */
   ouiaSafe: z.boolean().optional(),
   /** If true prevents the default anchor link action to occur. Set to true if you want to handle navigation yourself. */
-  preventDefault: z.boolean().optional().default(false),
+  preventDefault: z.boolean().optional(),
   /** Whether to set className on children when React.isValidElement(children) */
-  styleChildren: z.boolean().optional().default(true),
+  styleChildren: z.boolean().optional(),
   /** Target navigation link. Should not be used if the flyout prop is defined. */
   to: z.string().optional(),
   /** z-index of the flyout nav item */
-  zIndex: z.number().optional().default(9999)
+  zIndex: z.number().optional()
 })
 
 export type NavItemProps = z.infer<typeof NavItemSchema>

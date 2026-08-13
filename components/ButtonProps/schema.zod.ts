@@ -10,6 +10,8 @@ export const ButtonPropsSchema = z.object({
   component: z.any().optional(),
   /** Adds count number to button */
   countOptions: z.unknown().optional(),
+  /** Adjusts and animates the hamburger icon to indicate what will happen upon clicking the button. */
+  hamburgerVariant: z.enum(['expand', 'collapse']).optional(),
   /** Applies no padding on a plain button variant. Use when plain button is placed inline with text */
   hasNoPadding: z.boolean().optional(),
   /** Icon for the button. */
@@ -23,16 +25,29 @@ export const ButtonPropsSchema = z.object({
   isAriaDisabled: z.boolean().optional(),
   /** Adds block styling to button */
   isBlock: z.boolean().optional(),
+  isCircle: z.boolean().optional(),
   /** Adds clicked styling to button. */
   isClicked: z.boolean().optional(),
   /** Adds danger styling to secondary or link button variants */
   isDanger: z.boolean().optional(),
   /** Adds disabled styling and disables the button using the disabled html attribute */
   isDisabled: z.boolean().optional(),
+  isDocked: z.boolean().optional(),
+  /** Flag indicating whether content the button controls is expanded or not. Required when isHamburger is true. */
+  isExpanded: z.boolean().optional(),
+  /** Adds favorite styling to a button */
+  isFavorite: z.boolean().optional(),
+  /** Flag indicating whether the button is favorited or not, only when isFavorite is true. */
+  isFavorited: z.boolean().optional(),
+  /** Flag indicating the button is a hamburger button. This will override the icon property. */
+  isHamburger: z.boolean().optional(),
   /** Adds inline styling to a link button */
   isInline: z.boolean().optional(),
   /** Adds progress styling to button */
   isLoading: z.boolean().optional(),
+  /** Flag indicating the button is a settings button. This will override the icon property. */
+  isSettings: z.boolean().optional(),
+  isTextExpanded: z.boolean().optional(),
   /** Value to overwrite the randomly generated data-ouia-component-id. */
   ouiaId: z.any().optional(),
   /** Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false. */

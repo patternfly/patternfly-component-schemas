@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "CardSubtitle Props",
+  "description": "Props for the CardSubtitle component",
+  "properties": {
+    "children": {
+      "description": "Content rendered inside the description. (React component or element)",
+      "default": null
+    },
+    "id": {
+      "description": "Id of the description.",
+      "type": "string",
+      "default": "''"
+    }
+  },
+  "additionalProperties": false
+}
